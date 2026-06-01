@@ -17,23 +17,23 @@
            │
            ├── CSS
            │     │
- │     ├── CSS Selectors
- │     ├── CSS Colors
- │     ├── CSS Flexbox
- │     ├── CSS Grid
- │     └── CSS Animation
- │
- ├── JavaScript
- │     │
- │     ├── Variables
- │     ├── Functions
- │     ├── DOM
- │     ├── Events
- │     └── API Fetch
- │
- └── Projects
+           │     ├── CSS Selectors
+           │     ├── CSS Colors
+           │     ├── CSS Flexbox
+           │     ├── CSS Grid
+           │     └── CSS Animation
            │
-           ├── Calculator
-           ├── Portfolio
-           ├── Weather App
-           └── Quiz App
+           ├── JavaScript
+           │     │
+           │     ├── Variables
+           │     ├── Functions
+           │     ├── DOM
+           │     ├── Events
+           │     └── API Fetch
+           │
+           └── Projects
+                   │
+                   ├── Calculator
+                   ├── Portfolio
+                   ├── Weather App
+                   └── Quiz App
