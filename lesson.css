@@ -1,0 +1,115 @@
+/* ==========================
+   LEARNING SECTIONS
+========================== */
+
+.learning-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    gap:25px;
+}
+
+.learning-card{
+    padding:30px;
+    border-radius:24px;
+    transition:.3s;
+    color:white;
+}
+
+.learning-card:hover{
+    transform:translateY(-10px);
+}
+
+.basics-card{
+    background:linear-gradient(135deg,#ff7b00,#ff5500);
+}
+
+.forms-card{
+    background:linear-gradient(135deg,#4F46E5,#6D5DFE);
+}
+
+.media-card{
+    background:linear-gradient(135deg,#00BCD4,#00E5FF);
+}
+
+.tables-card{
+    background:linear-gradient(135deg,#4CAF50,#8BC34A);
+}
+
+.semantic-card{
+    background:linear-gradient(135deg,#E91E63,#FF4081);
+}
+
+.advanced-card{
+    background:linear-gradient(135deg,#673AB7,#9C27B0);
+}
+
+/* ==========================
+   ROADMAP
+========================== */
+
+.roadmap{
+    display:flex;
+    flex-wrap:wrap;
+    gap:20px;
+}
+
+.road-step{
+    flex:1;
+    min-width:120px;
+
+    background:#111827;
+
+    padding:25px;
+
+    text-align:center;
+
+    border-radius:20px;
+
+    border:1px solid rgba(255,255,255,.08);
+}
+
+.road-step span{
+    width:55px;
+    height:55px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    margin:auto auto 15px;
+
+    border-radius:50%;
+
+    background:#4F46E5;
+
+    font-weight:700;
+}
+
+/* ==========================
+   PROJECTS
+========================== */
+
+.project-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:25px;
+}
+
+.project-card{
+    background:#111827;
+    padding:30px;
+    border-radius:24px;
+    border:1px solid rgba(255,255,255,.08);
+    transition:.3s;
+}
+
+.project-card:hover{
+    transform:translateY(-8px);
+    border-color:#4F46E5;
+}
+
+.project-card p{
+    margin-top:10px;
+    color:#94A3B8;
+}
+
