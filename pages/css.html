@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS3 Styling Curriculum & Playground — CodePlay</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../css/lesson.css">
+    <style>
+        .playground-card {
+            background: #111827;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 20px;
+            padding: 25px;
+            margin-bottom: 30px;
+        }
+        .playground-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 25px;
+            margin-top: 20px;
+        }
+        .control-group {
+            margin-bottom: 15px;
+        }
+        .control-group label {
+            display: block;
+            font-size: 0.9rem;
+            color: #cbd5e1;
+            margin-bottom: 6px;
+            font-weight: 500;
+        }
+        .control-group select,
+        .control-group input[type="range"] {
+            width: 100%;
+            padding: 8px 12px;
+            background: #0b1120;
+            color: #fff;
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            border-radius: 8px;
+            font-size: 0.95rem;
+        }
+        .preview-canvas {
+            background: #0b1120;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            min-height: 240px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            overflow: hidden;
+        }
+        .target-box {
+            background: linear-gradient(135deg, #4f46e5, #06b6d4);
+            color: white;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            transition: all 0.2s ease;
+        }
+        .flex-demo-box {
+            background: rgba(79, 70, 229, 0.2);
+            border: 2px dashed #4f46e5;
+            border-radius: 12px;
+            width: 100%;
+            min-height: 220px;
+            display: flex;
+            padding: 10px;
+            gap: 12px;
+            transition: all 0.3s ease;
+        }
+        .flex-child {
+            background: #4f46e5;
+            color: white;
+            font-weight: bold;
+            padding: 15px 20px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        @media (max-width: 900px) {
+            .playground-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header class="navbar">
+    <a href="../index.html" class="logo" style="text-decoration:none;">
+        &lt;/&gt; CodePlay
+    </a>
+
+    <nav class="nav">
+        <a href="../index.html">Home</a>
+        <a href="html.html">HTML</a>
+        <a href="css.html" style="color:#818cf8;font-weight:600;">CSS</a>
+        <a href="javascript.html">JavaScript</a>
+        <a href="projects.html">Projects</a>
+        <a href="editor.html">Editor</a>
+    </nav>
+</header>
+
+<main class="catalog-container">
+
+    <section class="catalog-hero">
+        <span class="badge">
+            🎨 Interactive CSS3 Design Studio
+        </span>
+        <h1>CSS3 Learning &amp; Visual Playground</h1>
+        <p>
+            Master Flexbox, Grid, Box Model, and Animations through real-time interactive property visualizers.
+        </p>
+    </section>
+
+    <!-- Flexbox Interactive Playground -->
+    <div class="playground-card">
+        <h2 style="font-size:1.6rem;margin-bottom:8px;color:#f8fafc;">⚡ Interactive Flexbox Visualizer</h2>
+        <p style="color:#94a3b8;margin-bottom:15px;">Adjust container properties below to see Flexbox alignment update in real time:</p>
+
+        <div class="playground-grid">
+            <div>
+                <div class="control-group">
+                    <label>flex-direction:</label>
+                    <select id="flex-direction">
+                        <option value="row" selected>row (horizontal)</option>
+                        <option value="row-reverse">row-reverse</option>
+                        <option value="column">column (vertical)</option>
+                        <option value="column-reverse">column-reverse</option>
+                    </select>
+                </div>
+
+                <div class="control-group">
+                    <label>justify-content (Main Axis):</label>
+                    <select id="justify-content">
+                        <option value="flex-start">flex-start</option>
+                        <option value="center" selected>center</option>
+                        <option value="flex-end">flex-end</option>
+                        <option value="space-between">space-between</option>
+                        <option value="space-around">space-around</option>
+                        <option value="space-evenly">space-evenly</option>
+                    </select>
+                </div>
+
+                <div class="control-group">
+                    <label>align-items (Cross Axis):</label>
+                    <select id="align-items">
+                        <option value="stretch">stretch</option>
+                        <option value="center" selected>center</option>
+                        <option value="flex-start">flex-start</option>
+                        <option value="flex-end">flex-end</option>
+                    </select>
+                </div>
+
+                <div class="control-group">
+                    <label>gap (Spacing): <span id="gap-val" style="color:#67e8f9;">12px</span></label>
+                    <input type="range" id="flex-gap" min="0" max="40" value="12">
+                </div>
+            </div>
+
+            <div>
+                <div class="flex-demo-box" id="flex-container">
+                    <div class="flex-child">Item 1</div>
+                    <div class="flex-child">Item 2</div>
+                    <div class="flex-child">Item 3</div>
+                </div>
+                <div style="margin-top:15px;background:#0b1120;padding:12px;border-radius:8px;font-family:monospace;color:#38bdf8;" id="flex-code">
+                    display: flex; justify-content: center; align-items: center; gap: 12px;
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Box Model & Border Radius Playground -->
+    <div class="playground-card">
+        <h2 style="font-size:1.6rem;margin-bottom:8px;color:#f8fafc;">📦 Box Model &amp; Border-Radius Playground</h2>
+        <p style="color:#94a3b8;margin-bottom:15px;">Tweak dimensions, padding, and corner curvature dynamically:</p>
+
+        <div class="playground-grid">
+            <div>
+                <div class="control-group">
+                    <label>Border Radius: <span id="radius-val" style="color:#67e8f9;">20px</span></label>
+                    <input type="range" id="box-radius" min="0" max="100" value="20">
+                </div>
+                <div class="control-group">
+                    <label>Padding: <span id="padding-val" style="color:#67e8f9;">30px</span></label>
+                    <input type="range" id="box-padding" min="10" max="60" value="30">
+                </div>
+                <div class="control-group">
+                    <label>Box Shadow Elevation:</label>
+                    <select id="box-shadow-select">
+                        <option value="none">None</option>
+                        <option value="0 10px 25px rgba(79,70,229,0.4)" selected>Indigo Glow (0 10px 25px)</option>
+                        <option value="0 20px 40px rgba(0,0,0,0.6)">Deep Dark Drop Shadow</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="preview-canvas">
+                <div id="target-box" class="target-box" style="padding:30px;border-radius:20px;box-shadow:0 10px 25px rgba(79,70,229,0.4);">
+                    Styled CSS Box
+                </div>
+            </div>
+        </div>
+    </div>
+
+</main>
+
+<footer>
+    <h3>CodePlay</h3>
+    <p>
+        Learn HTML, CSS and JavaScript through interactive examples. <br>
+        &copy; 2026 CodePlay (@N4). Crafted by NASA-YUZAKI. All rights reserved.
+    </p>
+</footer>
+
+<script>
+    // Flexbox Visualizer Script
+    const flexDir = document.getElementById('flex-direction');
+    const flexJust = document.getElementById('justify-content');
+    const flexAlign = document.getElementById('align-items');
+    const flexGap = document.getElementById('flex-gap');
+    const gapVal = document.getElementById('gap-val');
+    const flexCont = document.getElementById('flex-container');
+    const flexCode = document.getElementById('flex-code');
+
+    function updateFlex() {
+        const dir = flexDir.value;
+        const just = flexJust.value;
+        const align = flexAlign.value;
+        const gap = flexGap.value + 'px';
+        gapVal.textContent = gap;
+
+        flexCont.style.flexDirection = dir;
+        flexCont.style.justifyContent = just;
+        flexCont.style.alignItems = align;
+        flexCont.style.gap = gap;
+
+        flexCode.textContent = `display: flex; flex-direction: ${dir}; justify-content: ${just}; align-items: ${align}; gap: ${gap};`;
+    }
+
+    [flexDir, flexJust, flexAlign, flexGap].forEach(el => el.addEventListener('input', updateFlex));
+    updateFlex();
+
+    // Box Model Script
+    const boxRadius = document.getElementById('box-radius');
+    const radiusVal = document.getElementById('radius-val');
+    const boxPadding = document.getElementById('box-padding');
+    const paddingVal = document.getElementById('padding-val');
+    const boxElem = document.getElementById('target-box');
+    const shadowSelect = document.getElementById('box-shadow-select');
+
+    function updateBox() {
+        const rad = boxRadius.value + 'px';
+        const pad = boxPadding.value + 'px';
+        radiusVal.textContent = rad;
+        paddingVal.textContent = pad;
+
+        boxElem.style.borderRadius = rad;
+        boxElem.style.padding = pad;
+        boxElem.style.boxShadow = shadowSelect.value;
+    }
+
+    [boxRadius, boxPadding, shadowSelect].forEach(el => el.addEventListener('input', updateBox));
+    updateBox();
+</script>
+
+</body>
+</html>

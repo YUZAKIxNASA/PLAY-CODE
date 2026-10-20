@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML 166 Lessons Curriculum — CodePlay</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../css/lesson.css">
+</head>
+<body>
+
+<header class="navbar">
+    <a href="../index.html" class="logo" style="text-decoration:none;">
+        &lt;/&gt; CodePlay
+    </a>
+
+    <div class="search-box">
+        <input type="text" id="nav-global-search" placeholder="Quick search lessons...">
+    </div>
+    
+    <nav class="nav">
+        <a href="../index.html">Home</a>
+        <a href="html.html" style="color:#818cf8;font-weight:600;">HTML</a>
+        <a href="css.html">CSS</a>
+        <a href="javascript.html">JavaScript</a>
+        <a href="projects.html">Projects</a>
+        <a href="editor.html">Editor</a>
+    </nav>
+</header>
+
+<main class="catalog-container">
+
+    <section class="catalog-hero">
+        <span class="badge">
+            🚀 166 Interactive Lessons Complete Curriculum
+        </span>
+        <h1>HTML5 Learning Curriculum</h1>
+        <p>
+            Explore all 166 structured HTML lessons with clear syntax explanations, practical examples, 
+            and instant browser previews. Built by <strong>NASA-KUN</strong> for barrier-free web education.
+        </p>
+
+        <div class="results-counter" style="justify-content:center;">
+            <span class="total-pill" id="total-count">166 Total Lessons</span>
+            <span class="counter-badge" id="filtered-count">Showing 166 of 166 lessons</span>
+        </div>
+    </section>
+
+    <!-- Search & Filter Toolbar -->
+    <div class="toolbar-wrap">
+        <div class="search-field-wrap">
+            <span class="search-icon">🔍</span>
+            <input type="text" id="lesson-search-input" placeholder="Search by title, number (e.g. 085), or concept..." autofocus>
+            <button type="button" id="search-clear-btn" class="search-clear-btn" title="Clear search">&times;</button>
+        </div>
+
+        <div class="category-chips" id="category-chips">
+            <!-- Dynamically populated category chips -->
+        </div>
+    </div>
+
+    <!-- 166 Lesson Card Grid -->
+    <div class="lessons-grid" id="lessons-grid">
+        <!-- Rendered dynamically by js/html-directory.js -->
+    </div>
+
+</main>
+
+<footer>
+    <h3>CodePlay</h3>
+    <p>
+        Learn HTML, CSS and JavaScript through interactive examples. <br>
+        &copy; 2026 CodePlay (@N4). Crafted by NASA-YUZAKI. All rights reserved.
+    </p>
+</footer>
+
+<!-- Dataset and Directory Logic -->
+<script type="module" src="../data/html-lessons.js"></script>
+<script type="module" src="../js/html-directory.js"></script>
+
+<script>
+    const navSearch = document.getElementById('nav-global-search');
+    const mainSearch = document.getElementById('lesson-search-input');
+    if (navSearch && mainSearch) {
+        navSearch.addEventListener('input', (e) => {
+            mainSearch.value = e.target.value;
+            mainSearch.dispatchEvent(new Event('input'));
+        });
+    }
+</script>
+
+</body>
+</html>

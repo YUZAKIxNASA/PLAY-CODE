@@ -10,8 +10,14 @@ export default defineConfig({
     rollupOptions: {
       input: {
         main: resolve(__dirname, 'index.html'),
+        notFound: resolve(__dirname, '404.html'),
+        pagesIndex: resolve(__dirname, 'pages/index.html'),
         htmlCatalog: resolve(__dirname, 'pages/html.html'),
-        htmlLesson: resolve(__dirname, 'pages/html-lesson.html')
+        htmlLesson: resolve(__dirname, 'pages/html-lesson.html'),
+        cssPage: resolve(__dirname, 'pages/css.html'),
+        jsPage: resolve(__dirname, 'pages/javascript.html'),
+        projectsPage: resolve(__dirname, 'pages/projects.html'),
+        editorPage: resolve(__dirname, 'pages/editor.html')
       }
     }
   }
