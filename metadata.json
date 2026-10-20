@@ -1,0 +1,6 @@
+{
+  "name": "CodePlay",
+  "description": "Interactive learning platform for web development with code examples, tutorials, and a live editor.",
+  "permissions": [],
+  "capabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
