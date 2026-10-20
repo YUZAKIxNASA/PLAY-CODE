@@ -67,30 +67,30 @@
 
 ## E. Current Phase
 
-- **Active Phase:** **PHASE 0: Project Inspection & Documentation**
-- **Status:** In Progress / Concluding Initial Documentation Setup
-- **Scope Restriction Active:** Zero changes to `index.html`, zero changes to `style.css`, and zero creation of extraneous code files during Phase 0.
+- **Active Phase:** **PHASE 2 (Concluded) — HTML 166 Lessons System Implemented**
+- **Status:** Complete and Verified across all acceptance criteria.
 
 ---
 
 ## F. Completed Work
 
-- [x] **Repository Inspection:** Examined root workspace. Verified presence of `/index.html` (385 lines) and `/style.css` (632 lines). Confirmed that no other code files, subpages, or git repositories currently exist.
-- [x] **Visual Design Audit:** Analyzed and extracted authoritative colors, typography, margins, breakpoints, and card gradients from `style.css`.
-- [x] **PRD Construction:** Authored `/PRD.md` detailing the complete product scope, user personas, section specifications, and quality standards.
-- [x] **Architecture Specification:** Authored `/Architecture.md` outlining static client-side data-driven architecture, URL-based lesson traversal, sandboxed iframe execution, and console bridge.
-- [x] **Development Rules Formulation:** Authored `/Rules.md` establishing 12 strict engineering directives covering tech bans, code preservation, 166-lesson inventory rules, and multilingual translation procedures.
-- [x] **Roadmap Construction:** Authored `/Phases.md` outlining the 9-phase implementation lifecycle (Phase 0 through Phase 8) with gate criteria.
-- [x] **Design System Specification:** Authored `/Design.md` documenting verified design tokens, component metrics, responsive behaviors, and accessibility rules.
-- [x] **Memory & Continuity Setup:** Authored this `/Memory.md` state file.
+- [x] **Repository Inspection (Phase 0):** Examined root workspace. Verified presence of `/index.html` and `/style.css`.
+- [x] **Redundant Duplicate Files Removal:** Safely removed byte-for-byte duplicates `index.original.html` and `style.original.css` after confirming zero external references.
+- [x] **HTML Lesson Data Ingestion (Phase 1):** Ingested all 166 authoritative HTML lessons with 100% fidelity into `data/html-lessons.js`. Preserved duplicate titles (#85 & #86 "Checkbox No Label") and exact title spelling 'TTextare' (#166).
+- [x] **HTML Directory Page (Phase 1):** Constructed `pages/html.html` featuring responsive 166-card grid, instant client-side search, category filter chips, total count badge ("166 Total Lessons"), and dynamic match counter.
+- [x] **HTML Interactive Workspace (Phase 2):** Constructed `pages/html-lesson.html` and `js/html-runner.js` supporting:
+  - Concept explanation, syntax specification, attribute tags, expected output notes.
+  - Educational notices and modern alternatives for obsolete elements (Center, Strike, Marquee, Flash, older table attributes).
+  - Code editor with editable HTML snippet, Tab-key indentation, Run, Reset, and Copy to clipboard controls.
+  - Sandboxed `<iframe>` live preview cleanly separated from the editor.
+  - Traversal controls: Previous and Next following stable lesson IDs (Lesson 85 & 86 traverse smoothly; Lesson 1 disables Previous; Lesson 166 disables Next).
+- [x] **Landing Page Integration:** Connected `index.html` navbar links, hero CTA buttons ("Start Learning" -> `pages/html.html`, "Open Editor" -> `pages/html-lesson.html?lesson=2`), and live search filtering.
+- [x] **Build & Compilation Verification:** Fixed parse error in `index.html` line 68; configured `vite.config.js`; verified compilation via `compile_applet` and `lint_applet` with zero errors.
 
 ---
 
-## G. Incomplete Work (Pending Implementation Phases)
+## G. Incomplete Work (Pending Future Phases)
 
-- [ ] **HTML Lesson Data Ingestion:** Awaiting ingestion of the raw 166-lesson list from NASA-KUN into `data/html-lessons.js` (Phase 1).
-- [ ] **HTML Directory Page:** `pages/html.html` with 166 numbered cards and live search (Phase 1).
-- [ ] **HTML Lesson Interface:** `pages/html-lesson.html` with code editor, sandboxed runner, and Prev/Next traversal (Phase 2).
 - [ ] **CSS Section:** `pages/css.html` with interactive property visualizer (Phase 3).
 - [ ] **JavaScript Section:** `pages/javascript.html` with sandboxed console terminal (Phase 4).
 - [ ] **Projects Showcase:** `pages/projects.html` with real standalone mini-projects (Phase 5).
@@ -102,14 +102,10 @@
 
 ## H. Known Issues & Unverified Items
 
-1. **Unlinked Subpage Navigation in `index.html`:**
-   - `index.html` links to `pages/html.html`, `pages/css.html`, `pages/javascript.html`, and `pages/projects.html`. These files do not yet exist in the file system and will return 404 until created in subsequent phases.
-2. **Static Search Box:**
-   - The search input in `index.html` currently has no JavaScript listener attached.
-3. **Hero CTA Buttons:**
-   - The "Start Learning" and "Open Editor" buttons have `href="#"` and are non-interactive.
-4. **Master 166-Lesson Title List:**
-   - The requirement for 166 HTML lessons is firmly established in project requirements, but the physical file containing the raw 166 lesson titles has not yet been placed into the repository. It is recorded as a confirmed requirement awaiting data ingestion from NASA-KUN.
+1. **Other Tracks (CSS, JS, Projects):**
+   - CSS, JavaScript, and Projects links point to `#categories` on the home page awaiting Phase 3-5 implementations.
+2. **HTML Curriculum Status:**
+   - All 166 HTML lessons are fully implemented, verified, and accessible with functioning code runners.
 
 ---
 

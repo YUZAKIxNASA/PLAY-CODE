@@ -23,12 +23,12 @@
     </div>
     
     <nav class="nav">
-            <a href="#">Home</a>
-            <a href="#">HTML</a>
-            <a href="#">CSS</a>
-            <a href="#">JavaScript</a>
-            <a href="#">Projects</a>
-            <a href="#">Editor</a>
+            <a href="index.html">Home</a>
+            <a href="pages/html.html">HTML</a>
+            <a href="#categories">CSS</a>
+            <a href="#categories">JavaScript</a>
+            <a href="#categories">Projects</a>
+            <a href="pages/html-lesson.html?lesson=2">Editor</a>
         </nav>
 
 </header>
@@ -52,11 +52,11 @@
         </p>
 
         <div class="buttons">
-            <a href="#" class="btn-primary">
+            <a href="pages/html.html" class="btn-primary">
                 Start Learning
             </a>
 
-            <a href="#" class="btn-secondary">
+            <a href="pages/html-lesson.html?lesson=2" class="btn-secondary">
                 Open Editor
             </a>
         </div>
@@ -65,7 +65,7 @@
 
     <div class="code-window">
 
-<pre>&lt;h1&gt;</>play code - @ঔৣ፝N4&lt;/h1&gt;
+<pre>&lt;h1&gt;&lt;/&gt;play code - @ঔৣ፝N4&lt;/h1&gt;
  CodePlay Learning Platform
 
 ✓ 200+ Interactive Examples
@@ -88,7 +88,7 @@ console.log("CodePlay");
 
 </section>
 
-<section class="categories">
+<section class="categories" id="categories">
 
     <h2>Explore Categories</h2>
 
@@ -378,6 +378,34 @@ console.log("CodePlay");
     </p>
 
 </footer>
+
+<script>
+    // Search filter for index.html categories and examples
+    const searchInput = document.querySelector('.search-box input');
+    if (searchInput) {
+        searchInput.addEventListener('input', (e) => {
+            const query = e.target.value.toLowerCase().trim();
+            const cards = document.querySelectorAll('.category-card, .example-card');
+            cards.forEach(card => {
+                const text = card.textContent.toLowerCase();
+                if (!query || text.includes(query)) {
+                    card.style.display = '';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        });
+
+        searchInput.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter') {
+                const query = searchInput.value.trim();
+                if (query.toLowerCase().includes('html') || query) {
+                    window.location.href = 'pages/html.html';
+                }
+            }
+        });
+    }
+</script>
 
 </body>
 </html>

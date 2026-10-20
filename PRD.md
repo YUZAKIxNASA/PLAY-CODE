@@ -50,8 +50,8 @@ The PLAY-CODE platform comprises six core sections accessible via global navigat
 
 | Section | Target Route / Anchor | Core Functional Purpose | Implementation Status |
 | :--- | :--- | :--- | :--- |
-| **Home** | `index.html` (or `/`) | Landing portal, hero banner with animated code window, subject category exploration grid, featured examples, creator profile, and global footer. | Existing in root; interactive hooks pending |
-| **HTML** | `pages/html.html` | Comprehensive directory and dedicated lesson viewer for the full 166-lesson HTML curriculum with live editable runner. | Planned (Phase 1 & Phase 2) |
+| **Home** | `index.html` (or `/`) | Landing portal, hero banner with animated code window, subject category exploration grid, featured examples, creator profile, and global footer. | Live & Connected to HTML curriculum |
+| **HTML** | `pages/html.html` | Comprehensive directory and dedicated lesson viewer for the full 166-lesson HTML curriculum with live editable runner. | Complete (166 Lessons Implemented & Verified) |
 | **CSS** | `pages/css.html` | Visual styling guide, selector reference, Flexbox/Grid visualizers, and interactive CSS property playground. | Planned (Phase 3) |
 | **JavaScript** | `pages/javascript.html` | Fundamentals, DOM manipulation, events, and algorithmic logic with embedded console and sandboxed execution. | Planned (Phase 4) |
 | **Projects** | `pages/projects.html` | Gallery of guided mini-projects (e.g., calculator, digital clock, todo list, portfolio card) with real demo links and code breakdown. | Planned (Phase 5) |

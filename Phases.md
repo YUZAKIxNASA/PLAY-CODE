@@ -93,10 +93,10 @@ To ensure rock-solid stability, visual fidelity, and flawless functionality, the
   - Wire live client-side search filtering by number, title, and topic.
   - Connect cards to target individual lesson URLs (`html-lesson.html?lesson=X`).
 - **Deliverables:**
-  - [ ] `data/html-lessons.js` containing the 166 lesson metadata objects.
-  - [ ] `pages/html.html` with responsive grid matching `index.html` aesthetics.
-  - [ ] Real-time search filter script in `js/search.js`.
-- **Phase Gate / Exit Criteria:** 166 unique cards render with correct numbers, titles, and working click links; search bar filters cards instantly without page reloads.
+  - [x] `data/html-lessons.js` containing the 166 lesson metadata objects.
+  - [x] `pages/html.html` with responsive grid matching `index.html` aesthetics.
+  - [x] Real-time search filter and category chip engine in `js/html-directory.js`.
+- **Phase Gate / Exit Criteria:** 166 unique cards render with correct numbers, titles, and working click links; search bar filters cards instantly without page reloads. (VERIFIED)
 
 ---
 
@@ -114,10 +114,10 @@ To ensure rock-solid stability, visual fidelity, and flawless functionality, the
   - Implement Previous Lesson (`N-1`) and Next Lesson (`N+1`) navigation buttons with boundary enforcement (disabled at 1 and 166).
   - Implement "Back to HTML Directory" link.
 - **Deliverables:**
-  - [ ] `pages/html-lesson.html` template.
-  - [ ] `js/runner.js` supporting sandboxed rendering.
-  - [ ] Verified execution across lessons.
-- **Phase Gate / Exit Criteria:** Traversal smoothly navigates 1 to 166; Run/Reset/Copy work reliably; iframe preview renders safely.
+  - [x] `pages/html-lesson.html` template.
+  - [x] `js/html-runner.js` supporting sandboxed rendering.
+  - [x] Verified execution across lessons.
+- **Phase Gate / Exit Criteria:** Traversal smoothly navigates 1 to 166; Run/Reset/Copy work reliably; iframe preview renders safely. (VERIFIED)
 
 ---
 
