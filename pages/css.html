@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CSS3 Styling Curriculum & Playground — CodePlay</title>
+    <title>CSS 210 Lessons Curriculum — CodePlay</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../style.css">
     <link rel="stylesheet" href="../css/lesson.css">
@@ -13,7 +13,8 @@
             border: 1px solid rgba(255, 255, 255, 0.08);
             border-radius: 20px;
             padding: 25px;
-            margin-bottom: 30px;
+            margin-bottom: 25px;
+            transition: all 0.3s ease;
         }
         .playground-grid {
             display: grid;
@@ -83,6 +84,26 @@
             align-items: center;
             justify-content: center;
         }
+        .playground-toggle-btn {
+            background: #1e293b;
+            color: #a5b4fc;
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            border-radius: 12px;
+            padding: 10px 18px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 25px;
+            transition: all 0.2s ease;
+        }
+        .playground-toggle-btn:hover {
+            background: #4f46e5;
+            color: #fff;
+            border-color: #4f46e5;
+        }
         @media (max-width: 900px) {
             .playground-grid {
                 grid-template-columns: 1fr;
@@ -97,6 +118,10 @@
         &lt;/&gt; CodePlay
     </a>
 
+    <div class="search-box">
+        <input type="text" id="nav-global-search" placeholder="Quick search CSS lessons...">
+    </div>
+    
     <nav class="nav">
         <a href="../index.html">Home</a>
         <a href="html.html">HTML</a>
@@ -111,103 +136,140 @@
 
     <section class="catalog-hero">
         <span class="badge">
-            🎨 Interactive CSS3 Design Studio
+            🎨 210 Interactive Lessons Complete Curriculum
         </span>
-        <h1>CSS3 Learning &amp; Visual Playground</h1>
+        <h1>CSS3 Learning Curriculum &amp; Studio</h1>
         <p>
-            Master Flexbox, Grid, Box Model, and Animations through real-time interactive property visualizers.
+            Master CSS selectors, layout models, Flexbox, Grid, transitions, animations, and modern styling techniques
+            with all 210 structured lessons, interactive runners, and visual property studios.
+            Authored by <strong>NASA-KUN</strong>.
         </p>
+
+        <div class="results-counter" style="justify-content:center;">
+            <span class="total-pill" id="total-count">210 Total Lessons</span>
+            <span class="counter-badge" id="filtered-count">Showing 210 of 210 lessons</span>
+        </div>
     </section>
 
-    <!-- Flexbox Interactive Playground -->
-    <div class="playground-card">
-        <h2 style="font-size:1.6rem;margin-bottom:8px;color:#f8fafc;">⚡ Interactive Flexbox Visualizer</h2>
-        <p style="color:#94a3b8;margin-bottom:15px;">Adjust container properties below to see Flexbox alignment update in real time:</p>
+    <!-- Visual Playground Toggle -->
+    <div style="display:flex; justify-content:center;">
+        <button type="button" id="toggle-visual-studio" class="playground-toggle-btn">
+            <span>⚡</span>
+            <span id="toggle-visual-text">Open Interactive Visual Studio (Flexbox &amp; Box Model)</span>
+            <span id="toggle-arrow">&darr;</span>
+        </button>
+    </div>
 
-        <div class="playground-grid">
-            <div>
-                <div class="control-group">
-                    <label>flex-direction:</label>
-                    <select id="flex-direction">
-                        <option value="row" selected>row (horizontal)</option>
-                        <option value="row-reverse">row-reverse</option>
-                        <option value="column">column (vertical)</option>
-                        <option value="column-reverse">column-reverse</option>
-                    </select>
+    <!-- Collapsible Visual Studio Section -->
+    <div id="visual-studio-container" style="display:none;">
+        <!-- Flexbox Interactive Playground -->
+        <div class="playground-card">
+            <h2 style="font-size:1.4rem;margin-bottom:8px;color:#f8fafc;">⚡ Interactive Flexbox Visualizer</h2>
+            <p style="color:#94a3b8;margin-bottom:15px;font-size:0.95rem;">Adjust container properties below to see Flexbox alignment update in real time:</p>
+
+            <div class="playground-grid">
+                <div>
+                    <div class="control-group">
+                        <label>flex-direction:</label>
+                        <select id="flex-direction">
+                            <option value="row" selected>row (horizontal)</option>
+                            <option value="row-reverse">row-reverse</option>
+                            <option value="column">column (vertical)</option>
+                            <option value="column-reverse">column-reverse</option>
+                        </select>
+                    </div>
+
+                    <div class="control-group">
+                        <label>justify-content (Main Axis):</label>
+                        <select id="justify-content">
+                            <option value="flex-start">flex-start</option>
+                            <option value="center" selected>center</option>
+                            <option value="flex-end">flex-end</option>
+                            <option value="space-between">space-between</option>
+                            <option value="space-around">space-around</option>
+                            <option value="space-evenly">space-evenly</option>
+                        </select>
+                    </div>
+
+                    <div class="control-group">
+                        <label>align-items (Cross Axis):</label>
+                        <select id="align-items">
+                            <option value="stretch">stretch</option>
+                            <option value="center" selected>center</option>
+                            <option value="flex-start">flex-start</option>
+                            <option value="flex-end">flex-end</option>
+                        </select>
+                    </div>
+
+                    <div class="control-group">
+                        <label>gap (Spacing): <span id="gap-val" style="color:#67e8f9;">12px</span></label>
+                        <input type="range" id="flex-gap" min="0" max="40" value="12">
+                    </div>
                 </div>
 
-                <div class="control-group">
-                    <label>justify-content (Main Axis):</label>
-                    <select id="justify-content">
-                        <option value="flex-start">flex-start</option>
-                        <option value="center" selected>center</option>
-                        <option value="flex-end">flex-end</option>
-                        <option value="space-between">space-between</option>
-                        <option value="space-around">space-around</option>
-                        <option value="space-evenly">space-evenly</option>
-                    </select>
-                </div>
-
-                <div class="control-group">
-                    <label>align-items (Cross Axis):</label>
-                    <select id="align-items">
-                        <option value="stretch">stretch</option>
-                        <option value="center" selected>center</option>
-                        <option value="flex-start">flex-start</option>
-                        <option value="flex-end">flex-end</option>
-                    </select>
-                </div>
-
-                <div class="control-group">
-                    <label>gap (Spacing): <span id="gap-val" style="color:#67e8f9;">12px</span></label>
-                    <input type="range" id="flex-gap" min="0" max="40" value="12">
+                <div>
+                    <div class="flex-demo-box" id="flex-container">
+                        <div class="flex-child">Item 1</div>
+                        <div class="flex-child">Item 2</div>
+                        <div class="flex-child">Item 3</div>
+                    </div>
+                    <div style="margin-top:15px;background:#0b1120;padding:12px;border-radius:8px;font-family:monospace;color:#38bdf8;font-size:0.9rem;" id="flex-code">
+                        display: flex; justify-content: center; align-items: center; gap: 12px;
+                    </div>
                 </div>
             </div>
+        </div>
 
-            <div>
-                <div class="flex-demo-box" id="flex-container">
-                    <div class="flex-child">Item 1</div>
-                    <div class="flex-child">Item 2</div>
-                    <div class="flex-child">Item 3</div>
+        <!-- Box Model & Border Radius Playground -->
+        <div class="playground-card">
+            <h2 style="font-size:1.4rem;margin-bottom:8px;color:#f8fafc;">📦 Box Model &amp; Border-Radius Playground</h2>
+            <p style="color:#94a3b8;margin-bottom:15px;font-size:0.95rem;">Tweak dimensions, padding, and corner curvature dynamically:</p>
+
+            <div class="playground-grid">
+                <div>
+                    <div class="control-group">
+                        <label>Border Radius: <span id="radius-val" style="color:#67e8f9;">20px</span></label>
+                        <input type="range" id="box-radius" min="0" max="100" value="20">
+                    </div>
+                    <div class="control-group">
+                        <label>Padding: <span id="padding-val" style="color:#67e8f9;">30px</span></label>
+                        <input type="range" id="box-padding" min="10" max="60" value="30">
+                    </div>
+                    <div class="control-group">
+                        <label>Box Shadow Elevation:</label>
+                        <select id="box-shadow-select">
+                            <option value="none">None</option>
+                            <option value="0 10px 25px rgba(79,70,229,0.4)" selected>Indigo Glow (0 10px 25px)</option>
+                            <option value="0 20px 40px rgba(0,0,0,0.6)">Deep Dark Drop Shadow</option>
+                        </select>
+                    </div>
                 </div>
-                <div style="margin-top:15px;background:#0b1120;padding:12px;border-radius:8px;font-family:monospace;color:#38bdf8;" id="flex-code">
-                    display: flex; justify-content: center; align-items: center; gap: 12px;
+
+                <div class="preview-canvas">
+                    <div id="target-box" class="target-box" style="padding:30px;border-radius:20px;box-shadow:0 10px 25px rgba(79,70,229,0.4);">
+                        Styled CSS Box
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- Box Model & Border Radius Playground -->
-    <div class="playground-card">
-        <h2 style="font-size:1.6rem;margin-bottom:8px;color:#f8fafc;">📦 Box Model &amp; Border-Radius Playground</h2>
-        <p style="color:#94a3b8;margin-bottom:15px;">Tweak dimensions, padding, and corner curvature dynamically:</p>
-
-        <div class="playground-grid">
-            <div>
-                <div class="control-group">
-                    <label>Border Radius: <span id="radius-val" style="color:#67e8f9;">20px</span></label>
-                    <input type="range" id="box-radius" min="0" max="100" value="20">
-                </div>
-                <div class="control-group">
-                    <label>Padding: <span id="padding-val" style="color:#67e8f9;">30px</span></label>
-                    <input type="range" id="box-padding" min="10" max="60" value="30">
-                </div>
-                <div class="control-group">
-                    <label>Box Shadow Elevation:</label>
-                    <select id="box-shadow-select">
-                        <option value="none">None</option>
-                        <option value="0 10px 25px rgba(79,70,229,0.4)" selected>Indigo Glow (0 10px 25px)</option>
-                        <option value="0 20px 40px rgba(0,0,0,0.6)">Deep Dark Drop Shadow</option>
-                    </select>
-                </div>
-            </div>
-
-            <div class="preview-canvas">
-                <div id="target-box" class="target-box" style="padding:30px;border-radius:20px;box-shadow:0 10px 25px rgba(79,70,229,0.4);">
-                    Styled CSS Box
-                </div>
-            </div>
+    <!-- Search & Filter Toolbar -->
+    <div class="toolbar-wrap">
+        <div class="search-field-wrap">
+            <span class="search-icon">🔍</span>
+            <input type="text" id="lesson-search-input" placeholder="Search by title, number (e.g. 054), property, or concept..." autofocus>
+            <button type="button" id="search-clear-btn" class="search-clear-btn" title="Clear search">&times;</button>
         </div>
+
+        <div class="category-chips" id="category-chips">
+            <!-- Dynamically populated category chips -->
+        </div>
+    </div>
+
+    <!-- 210 Lesson Card Grid -->
+    <div class="lessons-grid" id="lessons-grid">
+        <!-- Rendered dynamically by js/css-directory.js -->
     </div>
 
 </main>
@@ -216,11 +278,42 @@
     <h3>CodePlay</h3>
     <p>
         Learn HTML, CSS and JavaScript through interactive examples. <br>
-        &copy; 2026 CodePlay (@N4). Crafted by NASA-YUZAKI. All rights reserved.
+        &copy; 2026 CodePlay (@N4). Crafted by NASA-YUZAKI. Authoritative 210-Lesson CSS System.
     </p>
 </footer>
 
+<!-- Dataset and Directory Logic -->
+<script type="module" src="../data/css-lessons.js"></script>
+<script type="module" src="../js/css-directory.js"></script>
+
 <script>
+    // Quick search from navbar passes value to main search
+    const navSearch = document.getElementById('nav-global-search');
+    const mainSearch = document.getElementById('lesson-search-input');
+    if (navSearch && mainSearch) {
+        navSearch.addEventListener('input', (e) => {
+            mainSearch.value = e.target.value;
+            mainSearch.dispatchEvent(new Event('input'));
+        });
+    }
+
+    // Toggle Visual Studio Drawer
+    const toggleBtn = document.getElementById('toggle-visual-studio');
+    const studioContainer = document.getElementById('visual-studio-container');
+    const toggleText = document.getElementById('toggle-visual-text');
+    const toggleArrow = document.getElementById('toggle-arrow');
+
+    if (toggleBtn && studioContainer) {
+        toggleBtn.addEventListener('click', () => {
+            const isHidden = studioContainer.style.display === 'none';
+            studioContainer.style.display = isHidden ? 'block' : 'none';
+            toggleText.textContent = isHidden 
+                ? 'Hide Interactive Visual Studio' 
+                : 'Open Interactive Visual Studio (Flexbox & Box Model)';
+            toggleArrow.innerHTML = isHidden ? '&uarr;' : '&darr;';
+        });
+    }
+
     // Flexbox Visualizer Script
     const flexDir = document.getElementById('flex-direction');
     const flexJust = document.getElementById('justify-content');
@@ -231,11 +324,12 @@
     const flexCode = document.getElementById('flex-code');
 
     function updateFlex() {
+        if (!flexDir || !flexJust || !flexAlign || !flexGap || !flexCont || !flexCode) return;
         const dir = flexDir.value;
         const just = flexJust.value;
         const align = flexAlign.value;
         const gap = flexGap.value + 'px';
-        gapVal.textContent = gap;
+        if (gapVal) gapVal.textContent = gap;
 
         flexCont.style.flexDirection = dir;
         flexCont.style.justifyContent = just;
@@ -245,8 +339,10 @@
         flexCode.textContent = `display: flex; flex-direction: ${dir}; justify-content: ${just}; align-items: ${align}; gap: ${gap};`;
     }
 
-    [flexDir, flexJust, flexAlign, flexGap].forEach(el => el.addEventListener('input', updateFlex));
-    updateFlex();
+    if (flexDir && flexJust && flexAlign && flexGap) {
+        [flexDir, flexJust, flexAlign, flexGap].forEach(el => el.addEventListener('input', updateFlex));
+        updateFlex();
+    }
 
     // Box Model Script
     const boxRadius = document.getElementById('box-radius');
@@ -257,18 +353,21 @@
     const shadowSelect = document.getElementById('box-shadow-select');
 
     function updateBox() {
+        if (!boxRadius || !boxPadding || !boxElem || !shadowSelect) return;
         const rad = boxRadius.value + 'px';
         const pad = boxPadding.value + 'px';
-        radiusVal.textContent = rad;
-        paddingVal.textContent = pad;
+        if (radiusVal) radiusVal.textContent = rad;
+        if (paddingVal) paddingVal.textContent = pad;
 
         boxElem.style.borderRadius = rad;
         boxElem.style.padding = pad;
         boxElem.style.boxShadow = shadowSelect.value;
     }
 
-    [boxRadius, boxPadding, shadowSelect].forEach(el => el.addEventListener('input', updateBox));
-    updateBox();
+    if (boxRadius && boxPadding && shadowSelect) {
+        [boxRadius, boxPadding, shadowSelect].forEach(el => el.addEventListener('input', updateBox));
+        updateBox();
+    }
 </script>
 
 </body>

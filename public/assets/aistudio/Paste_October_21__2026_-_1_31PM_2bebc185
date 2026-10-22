@@ -1,0 +1,1139 @@
+MASTER PROMPT — PLAY-CODE (@N4)
+COMPLETE CSS LEARNING SYSTEM IMPLEMENTATION
+210 CSS LESSONS — FULL INVENTORY INCLUDED
+
+PROJECT OWNER: NASA-KUN
+PROJECT NAME: PLAY-CODE (@N4)
+IMPLEMENTATION AGENT: Google Antigravity
+
+REPOSITORY:
+https://github.com/YUZAKIxNASA/PLAY-CODE
+
+LIVE WEBSITE:
+https://yuzakixnasa.github.io/PLAY-CODE/
+
+PRIMARY OBJECTIVE:
+Inspect the existing PLAY-CODE repository and implement a complete,
+functional, responsive CSS learning system containing EXACTLY 210 lessons
+using the complete authoritative lesson inventory included in this prompt.
+
+IMPORTANT:
+The CSS lesson inventory is included directly in this prompt.
+DO NOT ask the project owner to provide the CSS list again.
+DO NOT report that the lesson list is missing.
+DO NOT invent a replacement inventory.
+DO NOT stop after creating a plan.
+
+Inspect the repository, understand its architecture, implement the system,
+test the actual functionality, and report verified results.
+
+==================================================
+1. PROJECT SCOPE
+==================================================
+
+Implement the CSS learning system inside the existing PLAY-CODE website.
+
+The CSS implementation must include:
+
+1. CSS category navigation.
+2. CSS lesson listing page.
+3. Exactly 210 numbered CSS lessons.
+4. Searchable lesson cards.
+5. Individual lesson interfaces.
+6. Lesson-specific educational content.
+7. Editable HTML and CSS examples.
+8. Copy Code functionality.
+9. Reset functionality.
+10. Run functionality.
+11. Isolated live preview.
+12. Previous and Next lesson navigation.
+13. Responsive mobile and desktop layouts.
+14. Accurate lesson numbering and titles.
+15. Functional buttons and navigation.
+16. Documentation updates where appropriate.
+17. Regression testing for existing functionality.
+
+Do not rebuild the entire website.
+
+Reuse the existing project architecture wherever possible.
+
+==================================================
+2. FIRST ACTION — INSPECT THE REPOSITORY
+==================================================
+
+Before modifying any file, inspect the existing repository.
+
+Examine the following files and components if present:
+
+- index.html
+- style.css
+- Existing JavaScript files
+- Existing HTML lesson listing
+- Existing HTML lesson interface
+- Existing HTML lesson data
+- Existing CSS category card
+- Existing navigation and search
+- Existing routing and relative paths
+- GitHub Pages configuration
+- PRD.md
+- Architecture.md
+- Rules.md
+- Phases.md
+- Design.md
+- Memory.md
+- Other relevant documentation
+
+These filenames are suggestions for inspection.
+Verify that each file exists before relying on it.
+
+Do not assume the repository has a particular directory structure.
+
+Determine:
+
+- How the current homepage works.
+- How HTML lessons are displayed.
+- How individual lessons are opened.
+- Where lesson data is stored.
+- How search and navigation work.
+- Which components can be reused.
+- How category links are configured.
+- How GitHub Pages paths are handled.
+- Which existing changes are uncommitted.
+- Whether an existing CSS learning implementation already exists.
+
+Before implementation, provide a short inspection report.
+
+Then continue with implementation without waiting for additional permission,
+unless a genuine blocker requires the project owner's decision.
+
+==================================================
+3. PRESERVE THE EXISTING WEBSITE
+==================================================
+
+The existing PLAY-CODE website must remain intact.
+
+Preserve:
+
+- Homepage layout.
+- Existing branding.
+- Logo and header.
+- Navigation.
+- Search functionality.
+- Hero section.
+- Category cards.
+- Typography.
+- Existing colors.
+- Existing borders and spacing.
+- Responsive behavior.
+- Existing HTML learning system.
+- All 166 existing HTML lessons.
+- JavaScript category and its existing content.
+- jQuery category and its existing content.
+- SVG category and its existing content.
+- Tailwind CSS category and its existing content.
+- All unrelated working functionality.
+
+Use the existing design language, including its dark navy background,
+purple and cyan accents, Poppins typography, cards, borders, and spacing
+where applicable.
+
+Do not replace the homepage with a generic template.
+
+Do not redesign unrelated pages.
+
+Do not delete working features.
+
+Do not rename unrelated files unnecessarily.
+
+Do not introduce a competing design system.
+
+Do not break existing category destinations.
+
+==================================================
+4. AUTHORITATIVE CSS INVENTORY
+==================================================
+
+The following 210 entries are the complete authoritative CSS inventory.
+
+Use these exact titles and original numbers.
+
+The inventory itself is the source of truth.
+
+Preserve capitalization, spelling, punctuation, ordering, duplicate entries,
+unusual wording, and original numbering.
+
+Some entries intentionally overlap or contain legacy terminology.
+Keep them as separate lessons and explain the relevant concepts correctly.
+
+Never merge, remove, rename, or reorder lessons.
+
+------------------------------
+CSS LESSONS 1–50
+------------------------------
+
+1. HTML Element selector
+2. ID Slector()
+3. CSS ID Selector (#id)
+4. CSS Class Selector (.class)
+5. CSS Grouping Selector (,)
+6. Inline style
+7. Embedded style
+8. External style
+9. CSS Attribute Selectors
+10. CSS Attribute Equals Selector ([attr="value"])
+11. CSS Attribute Contains Selector ([attr*="value"])
+12. CSS Attribute Starts With Selector ([attr^="value"])
+13. CSS Attribute With Space Selector ([attr~="value"])
+14. CSS Attribute With Pipe Selector ([attr|="value"])
+15. CSS Combinators
+16. CSS Descendant Selector
+17. CSS Child Selector
+18. CSS Adjacent Sibling Selector
+19. CSS General Sibling Selector
+20. Text and background color
+21. Font in css
+22. Text Properties
+23. Font-weight
+24. Word-spacing
+25. Letter-spacing
+26. Line-height
+27. Link in css
+28. CSS Margins
+29. CSS Padding
+30. CSS Width and Height
+31. CSS Min-width and Max-width
+32. CSS Min-height and Max-height
+33. CSS Box Model
+34. CSS Display Property
+35. Display
+36. List Style
+37. Table Style
+38. Border style
+39. Border-radius
+40. Border-color
+41. CSS Outline
+42. CSS Outline Offset
+43. Opacity
+44. Fixed position
+45. Static position
+46. Relative position
+47. absolute position
+48. Absolute position
+49. Absolute with image
+50. Fixed footer
+
+------------------------------
+CSS LESSONS 51–100
+------------------------------
+
+51. CSS Float and Clear
+52. Float
+53. Float and clear
+54. CSS Flexbox
+55. CSS Flex Direction
+56. CSS Justify Content
+57. CSS Align Items
+58. CSS Align Self
+59. CSS Align Content
+60. CSS Flex Wrap
+61. CSS Grid vs. Table Layout
+62. Fraction unit with multiple column
+63. Grid gap
+64. Grid template rows
+65. Column repeat
+66. Repeat - auto-fit
+67. CSS Units (px, em, rem, vh, vw, etc.)
+68. CSS Calc() Function
+69. CSS Clamp() Function
+70. CSS Min() and Max() Functions
+71. CSS Specificity
+72. Specificity Rules 1
+73. Specificity Rules 2
+74. First-child
+75. Last-child
+76. nth-child
+77. nth-child odd and even
+78. nth-last-child
+79. first-line
+80.::first-letter
+81.::before
+82. ::after
+83. :focus
+84.::selection
+85. Lang
+86. Lang pseudo class
+87. Active psuedo class 1
+88. Active psuedo class 2
+89. Input:checked
+90. Input:checked for dropdown
+91. Required
+92. Optional
+93. Disabled
+94. Valid
+95. Out-of-range
+96. Read-only and read-write
+97. Empty selector
+98. Change li color
+99. Simple tooltip
+100. Top bottom right and left tool
+
+------------------------------
+CSS LESSONS 101–150
+------------------------------
+
+101. Background-image
+102. Background-repeat
+103. Background-size
+104. CSS Shadows
+105. CSS Box Shadow
+106. CSS Text Shadow
+107. CSS Transitions
+108. CSS Transition Delay
+109. CSS Transition Duration
+110. CSS Transition Timing Function
+111. Transition duration & property
+112. transition-delay
+113. timing-function
+114. CSS Transformations
+115. CSS Translate
+116. Translate x-axis
+117. Translate y-axis
+118. Translate shorthand
+119. Translate realtime example
+120. CSS Scale
+121. Scale x axis
+122. Scale y axis
+123. Scale shorthand
+124. Scale realtime example
+125. CSS Rotate
+126. Rotate x-axis
+127. Rotate y-axis
+128. Rotate z-axis
+129. Rotate real time example
+130. CSS Skew
+131. Skew x-axis
+132. Skew y-axis
+133. Skew shorthand
+134. Skew realtime example
+135. Combining transforms
+136. CSS Transform Origin
+137. CSS Perspective
+138. CSS Perspective Origin
+139. CSS 3D Transforms
+140. CSS Animations
+141. CSS Keyframes
+142. CSS Animation Iteration Count
+143. CSS Animation Direction
+144. CSS Animation Fill Mode
+145. Keyframes from - to
+146. Keyframes percentage
+147. Simple CSS Animation
+148. Background Image Animation
+149. Image Zoom Animation
+150. Animation using padding
+
+------------------------------
+CSS LESSONS 151–200
+------------------------------
+
+151. Border Animation
+152. Border shadow animation
+153. CSS tooltip
+154. CSS Gradients
+155. CSS Linear Gradient
+156. CSS Radial Gradient
+157. CSS Conic Gradient
+158. CSS Multi-layer Gradients
+159. CSS Media Queries
+160. CSS Aspect Ratio
+161. CSS Variables
+162. CSS variable 1
+163. CSS variable not assigned
+164. CSS variable DOM's structure
+165. CSS Nesting
+166. CSS Container Queries
+167. CSS Subgrid
+168. CSS Clip Path
+169. CSS Masking
+170. CSS Filters
+171. CSS Image Filters
+172. CSS Blend Modes
+173. CSS Scroll Snap
+174. CSS Custom Scrollbar
+175. CSS Shape Outside
+176. CSS Line Clamping
+177. CSS Writing Modes
+178. CSS Logical Properties
+179. CSS Cascade Layers
+180. CSS Typography Best Practices
+181. CSS Sticky Elements
+182. CSS Fixed Footer and Header
+183. CSS Placeholder Styling
+184. CSS Checkbox and Radio Styling
+185. CSS Tooltip Styling
+186. CSS Modal Windows
+187. CSS Flip Cards
+188. CSS Parallax Effects
+189. @supports
+190. ellipsis
+191. image-rendering
+192. Attention to an element
+193. Basic responsiveness
+194. Row Number
+195. Find no alt attribute
+196. Content attr value
+197. Content: url()
+198. Incremental counter
+199. Open & close quote
+200. Global quotes
+
+------------------------------
+CSS LESSONS 201–210
+------------------------------
+
+201. xx-large
+202. CSS Border Radius
+203. Max-width and width
+204. First-letter
+205. before
+206. after
+207. Column-count
+208. Column-gap
+209. Column-rule
+210. CSS Backdrop Filter
+
+==================================================
+5. INVENTORY VALIDATION
+==================================================
+
+Before generating the lesson data, create a validation process.
+
+Verify that:
+
+- Total entries: exactly 210.
+- First lesson number: 1.
+- Last lesson number: 210.
+- All lesson numbers are consecutive.
+- No lesson is missing.
+- No lesson is duplicated because of an accidental data-generation error.
+- Original duplicate or similar titles remain separate entries.
+- All titles match the inventory above.
+- Original ordering is unchanged.
+
+Use the lesson number as the unique lesson identifier.
+
+Recommended data structure:
+
+{
+  id: 1,
+  title: "HTML Element selector",
+  category: "CSS",
+  introduction: "...",
+  explanation: "...",
+  syntax: "...",
+  htmlExample: "...",
+  cssExample: "...",
+  expectedOutput: "...",
+  notes: "...",
+  commonMistakes: "..."
+}
+
+Adapt this structure to the existing project architecture where appropriate.
+
+Do not introduce unnecessary frameworks or dependencies.
+
+If possible, implement an automated inventory validation script or
+equivalent test without adding unnecessary production files.
+
+==================================================
+6. CSS CATEGORY NAVIGATION
+==================================================
+
+Connect the existing CSS category card to the new CSS lesson listing.
+
+Inspect the actual repository paths before modifying the link.
+
+Requirements:
+
+- Use the correct relative path.
+- Match filename capitalization.
+- Support the existing GitHub Pages project URL.
+- Support direct navigation to the listing.
+- Preserve all unrelated category links.
+- Do not assume that root-relative URLs will work.
+- Do not use a path that points to a nonexistent file.
+
+Verify the final destination.
+
+The CSS category card must open the actual lesson listing,
+not a placeholder page.
+
+==================================================
+7. CSS LESSON LISTING PAGE
+==================================================
+
+Implement a complete, responsive CSS lessons listing.
+
+Display all 210 lessons when no search or filter is active.
+
+Every lesson card must contain:
+
+- Original lesson number.
+- Exact lesson title.
+- Clickable navigation.
+- Visible hover state.
+- Keyboard-focus state.
+- Consistent PLAY-CODE styling.
+
+Include:
+
+A. Search
+- Search by lesson title.
+- Filter results dynamically.
+- Preserve original lesson numbers.
+- Support duplicate or similar titles independently.
+- Handle empty searches gracefully.
+
+B. Lesson count
+- Display the total lesson count.
+- Display the current filtered result count.
+- Show 210 lessons when the unfiltered list is displayed.
+- Update the filtered count accurately.
+- Restore 210 when the search is cleared.
+
+C. Layout
+- Responsive card grid.
+- Appropriate spacing.
+- Readable text.
+- Comfortable touch targets.
+- No unwanted page-level horizontal overflow.
+
+D. Empty state
+Display a useful message when no lesson matches the search.
+
+E. Navigation
+Every card must open the correct lesson.
+
+Use stable lesson IDs rather than title-based identification.
+
+==================================================
+8. INDIVIDUAL CSS LESSON INTERFACE
+==================================================
+
+Every lesson must open its own functional lesson interface.
+
+Implement all 210 lessons.
+
+Each lesson page or view must include the following sections.
+
+A. Lesson header
+
+- Original lesson number.
+- Exact original lesson title.
+- Short introduction.
+- Back to CSS Lessons link.
+
+B. Learning content
+
+- Clear explanation.
+- Relevant CSS syntax.
+- Relevant selectors or properties.
+- Practical HTML and CSS example.
+- Expected rendered result.
+- Important notes.
+- Common mistakes.
+- Modern usage guidance where relevant.
+
+C. Code editor
+
+Provide editable HTML and CSS source.
+
+Use separate editor tabs or panels if appropriate.
+
+Include:
+
+- HTML editor.
+- CSS editor.
+- Copy Code button.
+- Reset button.
+- Run button.
+
+D. Live preview
+
+Render the current HTML and CSS.
+
+The preview must:
+
+- Update when Run is clicked.
+- Use the current editor contents.
+- Remain separate from the editor.
+- Resize appropriately.
+- Display animations and layout examples where supported.
+- Avoid breaking the parent learning interface.
+
+E. Lesson navigation
+
+Include:
+
+- Previous Lesson.
+- Next Lesson.
+- Back to CSS Lessons.
+
+Navigation must follow the original lesson numbers.
+
+Lesson 1 must not navigate to lesson 0.
+
+Lesson 210 must not navigate to lesson 211.
+
+Show an appropriate disabled state when navigation is unavailable.
+
+==================================================
+9. LESSON CONTENT REQUIREMENTS
+==================================================
+
+Every lesson must have meaningful, topic-specific educational content.
+
+Do not repeat the same generic explanation across all 210 lessons.
+
+Create suitable explanations, syntax, HTML examples, CSS examples,
+and expected results for each individual topic.
+
+Examples of required behavior:
+
+SELECTORS:
+Demonstrate the actual selector and the elements it matches.
+
+TEXT AND TYPOGRAPHY:
+Show the visible effects of colors, spacing, fonts, line height,
+font weight, and related properties.
+
+BOX MODEL:
+Demonstrate content, padding, borders, margins, and sizing.
+
+POSITIONING:
+Demonstrate static, relative, absolute, fixed, and sticky positioning
+with a suitable visual example.
+
+FLEXBOX:
+Demonstrate direction, alignment, wrapping, and distribution.
+
+GRID:
+Demonstrate columns, rows, gaps, repeat(), auto-fit, and fractional units.
+
+PSEUDO-CLASSES AND PSEUDO-ELEMENTS:
+Show their actual behavior using appropriate HTML elements.
+
+FORMS:
+Demonstrate focus, checked, required, disabled, valid, and other
+relevant states.
+
+BACKGROUNDS AND SHADOWS:
+Display visible background and shadow differences.
+
+TRANSITIONS:
+Provide a clear interactive example that demonstrates the transition.
+
+TRANSFORMS:
+Demonstrate translation, scaling, rotation, skewing, transform origins,
+perspective, and combined transformations.
+
+ANIMATIONS:
+Show the actual animation in the live preview.
+
+GRADIENTS:
+Demonstrate linear, radial, conic, and multilayer gradients.
+
+RESPONSIVE DESIGN:
+Provide examples that respond to preview dimensions where practical.
+
+MODERN CSS:
+Explain variables, nesting, container queries, subgrid, cascade layers,
+logical properties, masking, filters, and other relevant modern features.
+
+LEGACY OR UNUSUAL TOPICS:
+Preserve the exact original title.
+Teach the correct underlying concept.
+Explain modern alternatives where appropriate.
+
+DUPLICATE OR OVERLAPPING TOPICS:
+Keep every lesson separate.
+Give each lesson an appropriate example and explanation.
+
+Do not claim that every CSS property is supported in every browser.
+
+Where relevant, explain browser support and limitations.
+
+==================================================
+10. CODE EDITOR AND LIVE PREVIEW
+==================================================
+
+Implement the editor using the existing project architecture.
+
+Prefer HTML, CSS, and vanilla JavaScript.
+
+Do not add a framework unless the existing architecture genuinely requires it.
+
+A. Copy Code
+
+Copy the actual current editor contents.
+
+If both HTML and CSS are available, make the copied content useful and
+clearly distinguish the HTML and CSS sections.
+
+Provide visible feedback after a successful copy.
+
+If the Clipboard API is unavailable, implement a usable fallback.
+
+B. Reset
+
+Restore the original HTML and CSS examples for the current lesson.
+
+Reset must not affect other lessons.
+
+C. Run
+
+Render the current editor contents.
+
+The preview must reflect edits made since the last run.
+
+D. Preview isolation
+
+Use a sandboxed iframe where appropriate.
+
+Choose iframe sandbox permissions carefully.
+
+Do not grant unnecessary permissions.
+
+Keep user-edited HTML and CSS isolated from the parent interface.
+
+Do not use eval() to execute arbitrary editor input.
+
+Do not inject unnecessary JavaScript into lessons that only require HTML
+and CSS.
+
+Prevent malformed editor content from breaking the parent interface.
+
+Handle unsupported CSS features gracefully.
+
+==================================================
+11. FILE ORGANIZATION
+==================================================
+
+Inspect the existing architecture before selecting filenames.
+
+Reuse existing components where practical.
+
+Create only the files needed to implement the CSS learning system.
+
+Possible components include:
+
+- CSS lesson listing page.
+- CSS lesson interface.
+- CSS lesson data.
+- CSS listing/navigation JavaScript.
+- CSS editor and preview logic.
+- CSS-specific stylesheet, if needed.
+
+These are suggestions, not mandatory filenames.
+
+Do not duplicate the entire HTML lesson engine unnecessarily.
+
+Do not create a second homepage.
+
+Do not create unused files.
+
+Do not delete unrelated files.
+
+Keep lesson data separate from interface code if appropriate.
+
+Use stable lesson identifiers.
+
+Ensure all relative imports and links work under GitHub Pages.
+
+==================================================
+12. RESPONSIVE DESIGN
+==================================================
+
+Test the implementation at representative viewport sizes for:
+
+- Narrow Android phones.
+- iPhone-sized screens.
+- Tablets.
+- Laptops.
+- Desktop monitors.
+
+Requirements:
+
+- No unwanted page-level horizontal overflow.
+- Readable lesson titles.
+- Usable search controls.
+- Responsive lesson cards.
+- Comfortable touch targets.
+- Usable code editors on mobile.
+- Responsive live preview.
+- Properly wrapped long code lines.
+- Functional navigation.
+- Consistent spacing.
+- Accessible focus states.
+
+Do not optimize only for desktop.
+
+Distinguish actual browser testing from assumptions based on CSS inspection.
+
+==================================================
+13. ACCESSIBILITY AND USABILITY
+==================================================
+
+Ensure:
+
+- Keyboard-accessible lesson cards.
+- Visible focus indicators.
+- Accessible button labels.
+- Appropriate semantic HTML.
+- Sufficient text contrast.
+- Usable form controls.
+- Useful empty-search feedback.
+- Clear copy/reset/run feedback.
+- Properly labeled editor panels.
+- Appropriate iframe titles.
+- Reduced-motion support for animations where practical.
+
+Do not make controls look interactive if they do not work.
+
+==================================================
+14. DOCUMENTATION
+==================================================
+
+Inspect existing documentation conventions first.
+
+If these files exist, update relevant documentation as appropriate:
+
+- PRD.md
+- Architecture.md
+- Rules.md
+- Phases.md
+- Design.md
+- Memory.md
+
+Do not create redundant documentation files unnecessarily.
+
+Preserve useful historical information.
+
+Record:
+
+- What was implemented.
+- Which files changed.
+- The final lesson count.
+- Validation results.
+- Testing performed.
+- Known limitations.
+- Remaining work.
+- Git and deployment status.
+
+Never record an unverified test as passed.
+
+==================================================
+15. REQUIRED TESTING
+==================================================
+
+Perform actual tests after implementation.
+
+A. INVENTORY TESTS
+
+Verify:
+
+- Exactly 210 CSS lesson entries.
+- Numbering from 1 through 210.
+- Exact titles.
+- Correct ordering.
+- No missing entries.
+- No accidental merging of duplicates.
+
+B. LISTING TESTS
+
+Verify:
+
+- CSS category card opens the listing.
+- Direct listing URL works.
+- All 210 lessons appear without filtering.
+- Search filters actual titles.
+- Filtered count updates correctly.
+- Clearing search restores 210 lessons.
+- Duplicate and similar titles remain accessible.
+- Empty-search state works.
+
+C. LESSON TESTS
+
+Verify:
+
+- Each lesson opens the correct content.
+- Lesson number and title are correct.
+- Previous navigation works.
+- Next navigation works.
+- Lesson 1 has no invalid previous destination.
+- Lesson 210 has no invalid next destination.
+- Back navigation returns to the CSS listing.
+
+D. EDITOR TESTS
+
+Verify:
+
+- HTML editor is editable.
+- CSS editor is editable.
+- Copy uses current editor content.
+- Reset restores the original example.
+- Run updates the preview.
+- Preview reflects current HTML and CSS.
+- Malformed CSS does not break the parent page.
+- Controls work on mobile and desktop.
+
+E. REGRESSION TESTS
+
+Verify:
+
+- Homepage still works.
+- Existing HTML category still works.
+- All 166 HTML lessons remain available.
+- JavaScript category remains intact.
+- jQuery category remains intact.
+- SVG category remains intact.
+- Tailwind CSS category remains intact.
+- Other category links remain functional.
+- Existing search and navigation remain functional.
+- Relative paths work under the project URL.
+- No relevant new console errors appear.
+
+F. RESPONSIVE TESTS
+
+Test representative mobile, tablet, laptop, and desktop viewports.
+
+Verify:
+
+- Layout behavior.
+- Text readability.
+- Navigation.
+- Editor usability.
+- Preview sizing.
+- Horizontal overflow.
+
+G. DEPLOYMENT TESTS
+
+Determine whether the changes are:
+
+- Implemented locally.
+- Committed.
+- Pushed to GitHub.
+- Deployed to GitHub Pages.
+- Verified on the live website.
+
+Do not claim that the live website has changed unless the deployed version
+has actually been checked.
+
+==================================================
+16. GIT AND CHANGE SAFETY
+==================================================
+
+Before modifying files:
+
+- Inspect Git status.
+- Identify existing uncommitted changes.
+- Preserve unrelated work.
+- Avoid overwriting user modifications.
+
+Do not:
+
+- Force-push.
+- Delete unrelated files.
+- Reset the repository unnecessarily.
+- Overwrite unrelated features.
+- Commit secrets or credentials.
+- Claim that changes were pushed without confirmation.
+
+If repository tools permit authorized editing and pushing, make only the
+necessary changes and report the actual result.
+
+Otherwise, explain the exact remaining Git steps.
+
+==================================================
+17. ADDITIONAL CATEGORY INVENTORIES
+==================================================
+
+The project owner has also supplied inventories for:
+
+- HTML: 166 lessons.
+- JavaScript: 230 lessons.
+- jQuery: 123 lessons.
+- SVG: 118 lessons.
+- Tailwind CSS: 18 lessons.
+
+These inventories are separate from the 210 CSS lessons.
+
+For this task:
+
+1. Preserve the existing HTML learning system and its 166 lessons.
+2. Preserve existing JavaScript content and navigation.
+3. Preserve existing jQuery content and navigation.
+4. Preserve existing SVG content and navigation.
+5. Preserve existing Tailwind CSS content and navigation.
+6. Do not accidentally replace these categories with CSS content.
+7. Do not change their lesson inventories as part of this implementation.
+8. Do not claim these categories were fully tested unless they were tested.
+
+The complete CSS inventory in Section 4 is the authoritative list for
+the implementation requested in this prompt.
+
+If a future task requires implementing another category, use that category's
+own authoritative inventory.
+
+Do not block the current CSS implementation by asking for its list again.
+
+==================================================
+18. IMPLEMENTATION WORKFLOW
+==================================================
+
+Follow this workflow:
+
+PHASE 1 — INSPECTION
+
+Inspect the repository, current architecture, documentation, and Git status.
+
+PHASE 2 — INITIAL REPORT
+
+Summarize the relevant files and explain how the CSS system will integrate
+with the existing website.
+
+PHASE 3 — INVENTORY VALIDATION
+
+Validate the 210 entries in Section 4.
+
+PHASE 4 — IMPLEMENTATION
+
+Implement the CSS category navigation, listing, lesson interfaces,
+lesson-specific content, editors, live previews, and navigation.
+
+PHASE 5 — INTEGRATION
+
+Integrate with the existing design system and preserve all unrelated features.
+
+PHASE 6 — TESTING
+
+Perform inventory, functional, navigation, editor, regression, and
+responsive tests.
+
+PHASE 7 — DOCUMENTATION
+
+Update relevant existing documentation with verified implementation status.
+
+PHASE 8 — FINAL REPORT
+
+Report actual results and remaining limitations.
+
+IMPORTANT:
+Do not stop after writing the inspection report.
+Do not stop after proposing a plan.
+Continue to implementation and testing.
+
+If a genuine blocker prevents completion, identify the exact blocker,
+complete all independent work that remains possible, and report what
+could not be completed.
+
+==================================================
+19. FINAL ACCEPTANCE CRITERIA
+==================================================
+
+The implementation is acceptable only when the following criteria
+have been verified:
+
+[ ] The existing website is preserved.
+[ ] The CSS category opens the correct listing.
+[ ] The listing contains exactly 210 lessons.
+[ ] All original titles are preserved.
+[ ] All original lesson numbers are preserved.
+[ ] Lesson ordering is correct.
+[ ] Search works correctly.
+[ ] Total and filtered counts are accurate.
+[ ] Every lesson opens the correct interface.
+[ ] All lessons have meaningful, topic-specific content.
+[ ] HTML and CSS editors work.
+[ ] Copy Code works.
+[ ] Reset works.
+[ ] Run works.
+[ ] Live preview works.
+[ ] Preview remains isolated from the parent interface.
+[ ] Previous and Next navigation work.
+[ ] Lesson 1 and lesson 210 have correct boundary behavior.
+[ ] Responsive behavior has been tested.
+[ ] All 166 existing HTML lessons remain available.
+[ ] Other categories remain intact.
+[ ] Relative paths work correctly.
+[ ] Relevant regression tests pass.
+[ ] Documentation reflects verified results.
+[ ] Git and deployment status are reported accurately.
+
+Do not mark a criterion as passed unless it has actually been verified.
+
+==================================================
+20. FINAL REPORT FORMAT
+==================================================
+
+After implementation and testing, provide a clear report containing:
+
+1. Implementation summary.
+2. Initial repository inspection findings.
+3. Files modified.
+4. Files created.
+5. Files deleted, if any, with reasons.
+6. CSS inventory validation results.
+7. Lesson listing and search results.
+8. Lesson navigation results.
+9. Editor and preview results.
+10. Responsive testing results.
+11. HTML regression results.
+12. Other category preservation results.
+13. Documentation changes.
+14. Git commit and push status.
+15. GitHub Pages deployment status.
+16. Known issues.
+17. Incomplete features.
+18. Remaining actions, if any.
+
+Clearly distinguish:
+
+- Passed tests.
+- Failed tests.
+- Tests not performed.
+- Features not implemented.
+- Changes not deployed.
+
+Never fabricate test results.
+
+Never report 100% completion unless every required acceptance criterion
+has been verified.
+
+==================================================
+FINAL DIRECTIVE
+==================================================
+
+Implement the complete PLAY-CODE CSS learning system using the exact
+210-lesson inventory embedded in this prompt.
+
+Preserve the existing website, branding, design, navigation, and
+all working HTML functionality.
+
+Use verified project-relative paths.
+
+Build meaningful lesson-specific educational content for all 210 lessons.
+
+Provide a functional lesson listing, search, accurate counts, editable
+HTML and CSS examples, Copy Code, Reset, Run, isolated live preview,
+and correct Previous/Next navigation.
+
+Test the implementation and report the actual results.
+
+The CSS lesson inventory is already included above.
+Do not ask the project owner to provide it again.
+
+Inspect first.
+Implement second.
+Test third.
+Report verified results last.

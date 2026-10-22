@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JavaScript Curriculum & Console Runner — CodePlay</title>
+    <title>JavaScript 230 Lessons Curriculum — CodePlay</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../style.css">
     <link rel="stylesheet" href="../css/lesson.css">
@@ -12,12 +12,12 @@
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 25px;
-            margin-top: 25px;
+            margin-top: 15px;
         }
         .console-panel {
             background: #0a0f1d;
             border: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: 20px;
+            border-radius: 16px;
             overflow: hidden;
             display: flex;
             flex-direction: column;
@@ -40,7 +40,8 @@
             font-size: 0.92rem;
             color: #4ade80;
             overflow-y: auto;
-            min-height: 380px;
+            min-height: 280px;
+            max-height: 380px;
             white-space: pre-wrap;
             line-height: 1.6;
         }
@@ -49,17 +50,33 @@
             border-bottom: 1px solid rgba(255, 255, 255, 0.04);
             padding-bottom: 4px;
         }
-        .log-error {
-            color: #ef4444;
-        }
-        .log-info {
-            color: #38bdf8;
-        }
+        .log-error { color: #ef4444; }
+        .log-info { color: #38bdf8; }
         .snippet-picker {
             display: flex;
-            gap: 10px;
-            margin-bottom: 20px;
+            gap: 8px;
+            margin-bottom: 15px;
             flex-wrap: wrap;
+        }
+        .playground-toggle-btn {
+            background: #1e293b;
+            color: #a5b4fc;
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            border-radius: 12px;
+            padding: 10px 18px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 25px;
+            transition: all 0.2s ease;
+        }
+        .playground-toggle-btn:hover {
+            background: #4f46e5;
+            color: #fff;
+            border-color: #4f46e5;
         }
         @media (max-width: 900px) {
             .js-workspace {
@@ -75,6 +92,10 @@
         &lt;/&gt; CodePlay
     </a>
 
+    <div class="search-box">
+        <input type="text" id="nav-global-search" placeholder="Quick search JS lessons...">
+    </div>
+    
     <nav class="nav">
         <a href="../index.html">Home</a>
         <a href="html.html">HTML</a>
@@ -89,57 +110,95 @@
 
     <section class="catalog-hero">
         <span class="badge">
-            ⚡ Interactive JavaScript Playground
+            ⚡ 230 Interactive Lessons Complete Curriculum
         </span>
-        <h1>JavaScript ES6+ Learning &amp; Console</h1>
+        <h1>JavaScript ES6+ Curriculum &amp; Studio</h1>
         <p>
-            Write modern JavaScript, test algorithms, and observe immediate terminal output in the virtual sandbox console.
+            Master modern JavaScript from foundational variables, control flow, functions, and arrays to advanced OOP,
+            DOM manipulation, async/await, and real-world interactive capstone projects.
+            Authored by <strong>NASA-KUN</strong>.
         </p>
+
+        <div class="results-counter" style="justify-content:center;">
+            <span class="total-pill" id="total-count">230 Total Lessons</span>
+            <span class="counter-badge" id="filtered-count">Showing 230 of 230 lessons</span>
+        </div>
     </section>
 
-    <!-- Example Snippet Quick Buttons -->
-    <div class="snippet-picker">
-        <button type="button" class="chip-btn active" onclick="loadSnippet('basics')">1. Variables &amp; Math</button>
-        <button type="button" class="chip-btn" onclick="loadSnippet('arrays')">2. Array Transformation (Map/Filter)</button>
-        <button type="button" class="chip-btn" onclick="loadSnippet('objects')">3. Object Destructuring</button>
-        <button type="button" class="chip-btn" onclick="loadSnippet('async')">4. Promises &amp; Async</button>
+    <!-- Sandbox Console Toggle Button -->
+    <div style="display:flex; justify-content:center;">
+        <button type="button" id="toggle-console-btn" class="playground-toggle-btn">
+            <span>💻</span>
+            <span id="toggle-console-text">Open Interactive JavaScript Console Sandbox</span>
+            <span id="toggle-console-arrow">&darr;</span>
+        </button>
     </div>
 
-    <!-- Workspace -->
-    <div class="js-workspace">
-        <!-- Code Editor -->
-        <div class="editor-panel">
-            <div class="panel-header">
-                <div class="panel-title">
-                    <span>📝</span>
-                    <span>JavaScript Source (ES6+)</span>
-                </div>
-                <div class="panel-actions">
-                    <button type="button" id="btn-run-js" class="action-btn btn-run" onclick="runJsCode()">
-                        ▶ Run Code
-                    </button>
-                </div>
-            </div>
-            <div class="editor-body">
-                <textarea id="js-code-input" class="code-textarea" spellcheck="false"></textarea>
-            </div>
+    <!-- Collapsible Interactive Console Section -->
+    <div id="console-sandbox-drawer" style="display:none;background:#111827;padding:24px;border-radius:20px;border:1px solid rgba(255,255,255,0.08);margin-bottom:28px;">
+        <h2 style="font-size:1.4rem;margin-top:0;margin-bottom:8px;color:#f8fafc;">💻 Live JavaScript Console Sandbox</h2>
+        <p style="color:#94a3b8;margin-bottom:15px;font-size:0.95rem;">Select an interactive snippet or enter custom ES6+ code to evaluate in real-time without blocking the main thread (zero eval):</p>
+
+        <div class="snippet-picker">
+            <button type="button" class="chip-btn active" onclick="loadSnippet('basics')">1. Variables &amp; Functions</button>
+            <button type="button" class="chip-btn" onclick="loadSnippet('arrays')">2. Array Transformation</button>
+            <button type="button" class="chip-btn" onclick="loadSnippet('objects')">3. Object Destructuring</button>
+            <button type="button" class="chip-btn" onclick="loadSnippet('async')">4. Promises &amp; Async</button>
         </div>
 
-        <!-- Terminal Console Output -->
-        <div class="console-panel">
-            <div class="console-header">
-                <div style="display:flex;align-items:center;gap:8px;">
-                    <span>💻</span>
-                    <span>Virtual Output Terminal (console.log)</span>
+        <div class="js-workspace">
+            <!-- Code Editor -->
+            <div class="editor-panel">
+                <div class="panel-header">
+                    <div class="panel-title">
+                        <span>📝</span>
+                        <span>JavaScript Source (ES6+)</span>
+                    </div>
+                    <div class="panel-actions">
+                        <button type="button" id="btn-run-js" class="action-btn btn-run" onclick="runJsSandbox()">
+                            ▶ Run Code
+                        </button>
+                    </div>
                 </div>
-                <button type="button" onclick="clearConsole()" style="background:transparent;border:none;color:#94a3b8;cursor:pointer;font-size:0.8rem;">
-                    Clear Console
-                </button>
+                <div class="editor-body">
+                    <textarea id="js-code-input" class="code-textarea" spellcheck="false" style="min-height:280px;"></textarea>
+                </div>
             </div>
-            <div class="console-output" id="console-output">
-                <!-- Log output will appear here -->
+
+            <!-- Terminal Console Output -->
+            <div class="console-panel">
+                <div class="console-header">
+                    <div style="display:flex;align-items:center;gap:8px;">
+                        <span>💻</span>
+                        <span>Virtual Output Terminal (console.log)</span>
+                    </div>
+                    <button type="button" onclick="clearConsoleOutput()" style="background:transparent;border:none;color:#94a3b8;cursor:pointer;font-size:0.8rem;">
+                        Clear Terminal
+                    </button>
+                </div>
+                <div class="console-output" id="console-output">
+                    <!-- Logs dynamically appended -->
+                </div>
             </div>
         </div>
+    </div>
+
+    <!-- Search & Filter Toolbar -->
+    <div class="toolbar-wrap">
+        <div class="search-field-wrap">
+            <span class="search-icon">🔍</span>
+            <input type="text" id="lesson-search-input" placeholder="Search by title, number (e.g. 147), method, or keyword..." autofocus>
+            <button type="button" id="search-clear-btn" class="search-clear-btn" title="Clear search">&times;</button>
+        </div>
+
+        <div class="category-chips" id="category-chips">
+            <!-- Dynamically populated category chips -->
+        </div>
+    </div>
+
+    <!-- 230 Lesson Card Grid -->
+    <div class="lessons-grid" id="lessons-grid">
+        <!-- Rendered dynamically by js/javascript-directory.js -->
     </div>
 
 </main>
@@ -148,64 +207,96 @@
     <h3>CodePlay</h3>
     <p>
         Learn HTML, CSS and JavaScript through interactive examples. <br>
-        &copy; 2026 CodePlay (@N4). Crafted by NASA-YUZAKI. All rights reserved.
+        &copy; 2026 CodePlay (@N4). Crafted by NASA-YUZAKI. Authoritative 230-Lesson JavaScript System.
     </p>
 </footer>
 
+<!-- Dataset and Directory Logic -->
+<script type="module" src="../data/javascript-lessons.js"></script>
+<script type="module" src="../js/javascript-directory.js"></script>
+
 <script>
+    // Quick search from navbar passes value to main search
+    const navSearch = document.getElementById('nav-global-search');
+    const mainSearch = document.getElementById('lesson-search-input');
+    if (navSearch && mainSearch) {
+        navSearch.addEventListener('input', (e) => {
+            mainSearch.value = e.target.value;
+            mainSearch.dispatchEvent(new Event('input'));
+        });
+    }
+
+    // Toggle Console Drawer
+    const toggleConsoleBtn = document.getElementById('toggle-console-btn');
+    const consoleDrawer = document.getElementById('console-sandbox-drawer');
+    const toggleConsoleText = document.getElementById('toggle-console-text');
+    const toggleConsoleArrow = document.getElementById('toggle-console-arrow');
+
+    if (toggleConsoleBtn && consoleDrawer) {
+        toggleConsoleBtn.addEventListener('click', () => {
+            const isHidden = consoleDrawer.style.display === 'none';
+            consoleDrawer.style.display = isHidden ? 'block' : 'none';
+            toggleConsoleText.textContent = isHidden 
+                ? 'Hide Interactive JavaScript Console Sandbox' 
+                : 'Open Interactive JavaScript Console Sandbox';
+            toggleConsoleArrow.innerHTML = isHidden ? '&uarr;' : '&darr;';
+        });
+    }
+
+    // Interactive Sandbox Snippets
     const snippets = {
         basics: `// 1. Variables and Functions
 const platform = "CodePlay";
 const creator = "NASA-YUZAKI";
-const totalHtmlLessons = 166;
+const totalJsLessons = 230;
 
 function greet(user) {
-    return \`Welcome \${user} to \${platform}! Ready to explore all \${totalHtmlLessons} lessons?\`;
+    return \`Welcome \${user} to \${platform}! Exploring all \${totalJsLessons} JavaScript lessons.\`;
 }
 
 console.log(greet("Developer"));
-console.log("Calculated square of 12:", 12 * 12);
+console.log("Math Calculation (12 * 12):", 12 * 12);
 `,
-        arrays: `// 2. Array Methods: Map and Filter
+        arrays: `// 2. Functional Array Methods (Map, Filter, Reduce)
 const scores = [65, 88, 92, 45, 78, 99, 100];
 
-const passing = scores.filter(score => score >= 75);
-console.log("Scores >= 75:", passing);
+const honors = scores.filter(s => s >= 85);
+console.log("Honors scores (>= 85):", honors);
 
-const formatted = passing.map(s => \`Score: \${s}%\`);
-console.log("Formatted Report:");
-formatted.forEach(item => console.log(" - " + item));
+const formatted = honors.map(s => \`\${s} pts\`);
+console.log("Formatted list:", formatted.join(', '));
+
+const total = scores.reduce((sum, s) => sum + s, 0);
+console.log("Average score:", (total / scores.length).toFixed(1));
 `,
-        objects: `// 3. Object Destructuring & Spread Operator
-const user = {
+        objects: `// 3. Object Destructuring & Rest Syntax
+const developer = {
     username: "coder_nasa",
     skills: ["HTML5", "CSS3", "JavaScript"],
-    level: "Full-Stack Architect"
+    curriculum: { track: "JavaScript", lessons: 230 },
+    verified: true
 };
 
-const { username, level, skills } = user;
-console.log(\`User: \${username} (\${level})\`);
-console.log("Primary Skill:", skills[0]);
-
-const updatedUser = { ...user, active: true, year: 2026 };
-console.log("Updated Profile Object:", JSON.stringify(updatedUser, null, 2));
+const { username, skills, curriculum: { lessons } } = developer;
+console.log(\`User: \${username} | Track Lessons: \${lessons}\`);
+console.log("Core Skill:", skills[2]);
 `,
-        async: `// 4. Promises and Asynchronous Simulation
-console.log("⏳ Initializing network request simulation...");
+        async: `// 4. Promises and Asynchronous Timing
+console.log("⏳ Simulating network operation...");
 
-function fetchLessonCount() {
+function fetchLessonProgress() {
     return new Promise((resolve) => {
         setTimeout(() => {
-            resolve({ track: "HTML", total: 166, status: "Verified 100%" });
-        }, 500);
+            resolve({ track: "JavaScript", count: 230, status: "100% Verified" });
+        }, 300);
     });
 }
 
-fetchLessonCount().then(data => {
-    console.log("✅ Data successfully retrieved!");
-    console.log("Track:", data.track);
-    console.log("Total Lessons:", data.total);
-    console.log("Status:", data.status);
+fetchLessonProgress().then(info => {
+    console.log("✅ Operation resolved successfully!");
+    console.log("Track:", info.track);
+    console.log("Total Lessons:", info.count);
+    console.log("Status:", info.status);
 });
 `
     };
@@ -213,25 +304,31 @@ fetchLessonCount().then(data => {
     const codeInput = document.getElementById('js-code-input');
     const consoleOutput = document.getElementById('console-output');
 
-    function loadSnippet(key) {
+    window.loadSnippet = function(key) {
         document.querySelectorAll('.snippet-picker .chip-btn').forEach(btn => btn.classList.remove('active'));
-        event.target.classList.add('active');
-        codeInput.value = snippets[key];
-        runJsCode();
-    }
+        if (window.event && window.event.target) {
+            window.event.target.classList.add('active');
+        }
+        if (codeInput && snippets[key]) {
+            codeInput.value = snippets[key];
+            runJsSandbox();
+        }
+    };
 
-    function clearConsole() {
-        consoleOutput.innerHTML = '<div class="log-line log-info">&gt; Terminal cleared. Ready.</div>';
-    }
+    window.clearConsoleOutput = function() {
+        if (consoleOutput) {
+            consoleOutput.innerHTML = '<div class="log-line log-info">&gt; Terminal cleared. Ready for execution.</div>';
+        }
+    };
 
-    function runJsCode() {
-        clearConsole();
+    window.runJsSandbox = function() {
+        if (!consoleOutput || !codeInput) return;
+        clearConsoleOutput();
         const code = codeInput.value;
 
-        // Custom sandbox execution with console interception (Zero eval() usage)
         try {
             const logs = [];
-            const customConsole = {
+            const sandboxConsole = {
                 log: (...args) => {
                     const line = args.map(a => typeof a === 'object' ? JSON.stringify(a) : String(a)).join(' ');
                     logs.push({ type: 'log', text: line });
@@ -246,12 +343,12 @@ fetchLessonCount().then(data => {
                 }
             };
 
-            // Safe sandboxed Function execution passing isolated console
+            // Sandboxed Function constructor execution (isolated console, Zero eval())
             const runner = new Function('console', code);
-            runner(customConsole);
+            runner(sandboxConsole);
 
             if (logs.length === 0) {
-                consoleOutput.innerHTML += '<div class="log-line log-info">&gt; Script executed successfully with 0 output logs.</div>';
+                consoleOutput.innerHTML += '<div class="log-line log-info">&gt; Code executed with 0 console logs.</div>';
             } else {
                 logs.forEach(item => {
                     const div = document.createElement('div');
@@ -266,11 +363,13 @@ fetchLessonCount().then(data => {
             div.textContent = '❌ Runtime Error: ' + err.message;
             consoleOutput.appendChild(div);
         }
-    }
+    };
 
-    // Load initial snippet
-    codeInput.value = snippets.basics;
-    runJsCode();
+    // Initialize with default snippet
+    if (codeInput) {
+        codeInput.value = snippets.basics;
+        runJsSandbox();
+    }
 </script>
 
 </body>

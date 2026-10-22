@@ -17,7 +17,11 @@ export default defineConfig({
         htmlCatalog: resolve(__dirname, 'pages/html.html'),
         htmlLesson: resolve(__dirname, 'pages/html-lesson.html'),
         cssPage: resolve(__dirname, 'pages/css.html'),
+        cssLesson: resolve(__dirname, 'pages/css-lesson.html'),
         jsPage: resolve(__dirname, 'pages/javascript.html'),
+        jsLesson: resolve(__dirname, 'pages/javascript-lesson.html'),
+        phpPage: resolve(__dirname, 'pages/php.html'),
+        phpLesson: resolve(__dirname, 'pages/php-lesson.html'),
         projectsPage: resolve(__dirname, 'pages/projects.html'),
         editorPage: resolve(__dirname, 'pages/editor.html')
       }
