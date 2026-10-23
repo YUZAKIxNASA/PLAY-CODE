@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SQL &amp; MySQL 205 Examples Curriculum — CodePlay</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../css/lesson.css">
+    <style>
+        .sql-workspace {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 25px;
+            margin-top: 15px;
+        }
+        .console-panel {
+            background: #0a0f1d;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 16px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+        .console-header {
+            background: #172033;
+            padding: 12px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+            font-size: 0.9rem;
+            color: #e2e8f0;
+            font-weight: 600;
+        }
+        .console-output {
+            flex-grow: 1;
+            padding: 18px;
+            font-family: 'Consolas', 'Courier New', monospace;
+            font-size: 0.92rem;
+            color: #67e8f9;
+            overflow-y: auto;
+            min-height: 280px;
+            max-height: 380px;
+            white-space: pre-wrap;
+            line-height: 1.6;
+        }
+        .snippet-picker {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 15px;
+            flex-wrap: wrap;
+        }
+        .playground-toggle-btn {
+            background: #1e293b;
+            color: #67e8f9;
+            border: 1px solid rgba(6, 182, 212, 0.3);
+            border-radius: 12px;
+            padding: 10px 18px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 25px;
+            transition: all 0.2s ease;
+        }
+        .playground-toggle-btn:hover {
+            background: #0891b2;
+            color: #fff;
+            border-color: #06b6d4;
+        }
+        @media (max-width: 900px) {
+            .sql-workspace {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header class="navbar">
+    <a href="../index.html" class="logo" style="text-decoration:none;">
+        &lt;/&gt; CodePlay
+    </a>
+
+    <div class="search-box">
+        <input type="text" id="nav-global-search" placeholder="Quick search SQL examples...">
+    </div>
+    
+    <nav class="nav">
+        <a href="../index.html">Home</a>
+        <a href="html.html">HTML</a>
+        <a href="css.html">CSS</a>
+        <a href="javascript.html">JavaScript</a>
+        <a href="php.html">PHP</a>
+        <a href="python.html">Python</a>
+        <a href="sql.html" style="color:#38bdf8;font-weight:600;">SQL</a>
+        <a href="projects.html">Projects</a>
+        <a href="editor.html">Editor</a>
+    </nav>
+</header>
+
+<main class="catalog-container">
+
+    <section class="catalog-hero" style="background: radial-gradient(circle at center top, rgba(6, 182, 212, 0.22) 0%, transparent 65%);">
+        <span class="badge" style="background:rgba(6,182,212,0.15);color:#67e8f9;border-color:rgba(6,182,212,0.35);">
+            🗄️ 205 Comprehensive Examples &bull; 16 Categories Complete
+        </span>
+        <h1>SQL &amp; MySQL Relational Database Curriculum</h1>
+        <p>
+            Master SQL query construction and MySQL database engineering from core table structures, data types, and filtering
+            to multi-table joins, aggregate rollups, window functions, CTEs, indexes, ACID transactions, and PHP+MySQL integration.
+        </p>
+
+        <div class="results-counter" style="justify-content:center;">
+            <span class="total-pill" id="total-count" style="background:rgba(6,182,212,0.2);color:#67e8f9;border-color:rgba(6,182,212,0.4);">205 Total Examples</span>
+            <span class="counter-badge" id="filtered-count">Showing 205 of 205 examples</span>
+        </div>
+    </section>
+
+    <!-- Interactive Studio Drawer Toggle -->
+    <div style="display:flex; justify-content:center;">
+        <button type="button" id="toggle-console-btn" class="playground-toggle-btn">
+            <span>🗄️</span>
+            <span id="toggle-console-text">Open Interactive SQL Syntax Studio</span>
+            <span id="toggle-console-arrow">&darr;</span>
+        </button>
+    </div>
+
+    <!-- Collapsible Interactive SQL Studio Section -->
+    <div id="console-sandbox-drawer" style="display:none;background:#111827;padding:24px;border-radius:20px;border:1px solid rgba(255,255,255,0.08);margin-bottom:28px;">
+        <h2 style="font-size:1.4rem;margin-top:0;margin-bottom:8px;color:#f8fafc;">🗄️ Live SQL Syntax &amp; Query Studio</h2>
+        <p style="color:#94a3b8;margin-bottom:15px;font-size:0.95rem;">Select an interactive query preset to explore relational SQL syntax and expected tabular output:</p>
+
+        <div class="snippet-picker">
+            <button type="button" class="chip-btn active" onclick="loadSqlSnippet('basics')">1. Server Inspection &amp; Metadata</button>
+            <button type="button" class="chip-btn" onclick="loadSqlSnippet('joins')">2. INNER &amp; LEFT JOINs</button>
+            <button type="button" class="chip-btn" onclick="loadSqlSnippet('window')">3. Window Functions (DENSE_RANK)</button>
+            <button type="button" class="chip-btn" onclick="loadSqlSnippet('transactions')">4. ACID Transactions &amp; Locks</button>
+        </div>
+
+        <div class="sql-workspace">
+            <!-- Code Editor -->
+            <div class="editor-panel">
+                <div class="panel-header">
+                    <div class="panel-title">
+                        <span>📝</span>
+                        <span>SQL Statement Editor</span>
+                    </div>
+                    <div class="panel-actions">
+                        <button type="button" id="btn-run-sql" class="action-btn btn-run" onclick="runSqlStudio()">
+                            ▶ Run Query
+                        </button>
+                    </div>
+                </div>
+                <div class="editor-body">
+                    <textarea id="sql-code-input" class="code-textarea" spellcheck="false" style="min-height:280px;"></textarea>
+                </div>
+            </div>
+
+            <!-- Terminal Output -->
+            <div class="console-panel">
+                <div class="console-header">
+                    <div style="display:flex;align-items:center;gap:8px;">
+                        <span>💻</span>
+                        <span>Tabular Query Output (MySQL CLI)</span>
+                    </div>
+                    <button type="button" onclick="clearSqlOutput()" style="background:transparent;border:none;color:#94a3b8;cursor:pointer;font-size:0.8rem;">
+                        Clear Output
+                    </button>
+                </div>
+                <div class="console-output" id="sql-console-output">
+                    <!-- Logs dynamically appended -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Search & Filter Toolbar -->
+    <div class="toolbar-wrap">
+        <div class="search-field-wrap">
+            <span class="search-icon">🔍</span>
+            <input type="text" id="lesson-search-input" placeholder="Search by title, number (e.g. 086), keyword, or category..." autofocus>
+            <button type="button" id="search-clear-btn" class="search-clear-btn" title="Clear search">&times;</button>
+        </div>
+
+        <div class="category-chips" id="category-chips">
+            <!-- Dynamically populated category chips across all 16 categories -->
+        </div>
+    </div>
+
+    <!-- 205 Lesson Card Grid -->
+    <div class="lessons-grid" id="lessons-grid">
+        <!-- Rendered dynamically by js/sql-directory.js -->
+    </div>
+
+</main>
+
+<footer>
+    <h3>CodePlay</h3>
+    <p>
+        Learn HTML, CSS, JavaScript, PHP, Python, and SQL through interactive examples. <br>
+        &copy; 2026 CodePlay (@N4). Authoritative 205-Example SQL/MySQL System.
+    </p>
+</footer>
+
+<!-- Dataset and Directory Logic -->
+<script type="module" src="../data/sql-lessons.js"></script>
+<script type="module" src="../js/sql-directory.js"></script>
+
+<script>
+    // Quick search from navbar passes value to main search
+    const navSearch = document.getElementById('nav-global-search');
+    const mainSearch = document.getElementById('lesson-search-input');
+    if (navSearch && mainSearch) {
+        navSearch.addEventListener('input', (e) => {
+            mainSearch.value = e.target.value;
+            mainSearch.dispatchEvent(new Event('input'));
+        });
+    }
+
+    // Toggle Studio Drawer
+    const toggleBtn = document.getElementById('toggle-console-btn');
+    const drawer = document.getElementById('console-sandbox-drawer');
+    const toggleText = document.getElementById('toggle-console-text');
+    const toggleArrow = document.getElementById('toggle-console-arrow');
+
+    if (toggleBtn && drawer) {
+        toggleBtn.addEventListener('click', () => {
+            const isHidden = drawer.style.display === 'none';
+            drawer.style.display = isHidden ? 'block' : 'none';
+            toggleText.textContent = isHidden 
+                ? 'Hide Interactive SQL Syntax Studio' 
+                : 'Open Interactive SQL Syntax Studio';
+            toggleArrow.innerHTML = isHidden ? '&uarr;' : '&darr;';
+        });
+    }
+
+    // Interactive SQL Snippets
+    const sqlSnippets = {
+        basics: `-- Query server metadata and active session
+SELECT 
+    VERSION() AS mysql_version,
+    CURRENT_USER() AS connected_user,
+    DATABASE() AS current_database,
+    NOW() AS server_time;`,
+        joins: `-- Department Headcount and Staff Join
+SELECT 
+    d.dept_name,
+    COUNT(e.emp_id) AS total_employees,
+    COALESCE(ROUND(AVG(e.salary), 2), 0.00) AS avg_salary
+FROM departments d
+LEFT JOIN employees e ON d.dept_id = e.dept_id
+GROUP BY d.dept_name
+ORDER BY total_employees DESC;`,
+        window: `-- High Earner Ranking via DENSE_RANK()
+SELECT 
+    name, dept, salary,
+    DENSE_RANK() OVER (PARTITION BY dept ORDER BY salary DESC) AS rank_in_dept
+FROM employees
+ORDER BY dept, rank_in_dept;`,
+        transactions: `-- Atomic Fund Transfer with Row Locking
+START TRANSACTION;
+    SELECT balance FROM wallets WHERE user_id = 1 FOR UPDATE;
+    UPDATE wallets SET balance = balance - 100.00 WHERE user_id = 1;
+    UPDATE wallets SET balance = balance + 100.00 WHERE user_id = 2;
+COMMIT;`
+    };
+
+    const sqlOutputs = {
+        basics: `+-------------------+--------------------+------------------+---------------------+
+| mysql_version     | connected_user     | current_database | server_time         |
++-------------------+--------------------+------------------+---------------------+
+| 8.3.0-commercial  | root@localhost     | playcode         | 2026-10-23 10:00:00 |
++-------------------+--------------------+------------------+---------------------+
+1 row in set (0.00 sec)`,
+        joins: `+---------------+-----------------+------------+
+| dept_name     | total_employees | avg_salary |
++---------------+-----------------+------------+
+| Engineering   |               8 |   98500.00 |
+| Sales         |               4 |   74250.00 |
+| Operations    |               2 |   61000.00 |
++---------------+-----------------+------------+
+3 rows in set (0.01 sec)`,
+        window: `+---------+-------------+-----------+--------------+
+| name    | dept        | salary    | rank_in_dept |
++---------+-------------+-----------+--------------+
+| Charlie | Engineering | 110000.00 |            1 |
+| Alice   | Engineering |  95000.00 |            2 |
+| Marcus  | Sales       |  88000.00 |            1 |
+| David   | Sales       |  80000.00 |            2 |
++---------+-------------+-----------+--------------+
+4 rows in set (0.00 sec)`,
+        transactions: `Query OK, 0 rows affected (0.00 sec)
+Query OK, 1 row affected (0.00 sec)
+Query OK, 1 row affected (0.00 sec)
+Query OK, 0 rows affected (0.01 sec) - Transaction committed successfully.`
+    };
+
+    let activeSnippetKey = 'basics';
+
+    window.loadSqlSnippet = function(key) {
+        activeSnippetKey = key;
+        const textarea = document.getElementById('sql-code-input');
+        if (textarea && sqlSnippets[key]) {
+            textarea.value = sqlSnippets[key];
+        }
+        document.querySelectorAll('.snippet-picker .chip-btn').forEach(btn => {
+            btn.classList.toggle('active', btn.getAttribute('onclick')?.includes(key));
+        });
+        runSqlStudio();
+    };
+
+    window.runSqlStudio = function() {
+        const outputEl = document.getElementById('sql-console-output');
+        if (!outputEl) return;
+        const out = sqlOutputs[activeSnippetKey] || "Query OK, 1 row affected (0.00 sec)";
+        outputEl.innerHTML = `<span style="color:#94a3b8;">-- Executed at ${new Date().toLocaleTimeString()}</span>\n` + out;
+    };
+
+    window.clearSqlOutput = function() {
+        const outputEl = document.getElementById('sql-console-output');
+        if (outputEl) {
+            outputEl.innerHTML = '<span style="color:#64748b;font-style:italic;">Output cleared. Click "Run Query" to execute.</span>';
+        }
+    };
+
+    // Initialize drawer default
+    const initialTextarea = document.getElementById('sql-code-input');
+    if (initialTextarea) {
+        initialTextarea.value = sqlSnippets.basics;
+    }
+</script>
+
+</body>
+</html>

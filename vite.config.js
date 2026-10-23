@@ -24,6 +24,8 @@ export default defineConfig({
         phpLesson: resolve(__dirname, 'pages/php-lesson.html'),
         pythonPage: resolve(__dirname, 'pages/python.html'),
         pythonLesson: resolve(__dirname, 'pages/python-lesson.html'),
+        sqlPage: resolve(__dirname, 'pages/sql.html'),
+        sqlLesson: resolve(__dirname, 'pages/sql-lesson.html'),
         projectsPage: resolve(__dirname, 'pages/projects.html'),
         editorPage: resolve(__dirname, 'pages/editor.html')
       }

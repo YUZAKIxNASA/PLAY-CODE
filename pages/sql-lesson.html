@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SQL Example Workspace — CodePlay</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../css/lesson.css">
+    <style>
+        .terminal-container {
+            background: #0a0f1d;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 14px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            min-height: 380px;
+        }
+        .terminal-header {
+            background: #172033;
+            padding: 10px 16px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+            font-size: 0.85rem;
+            color: #cbd5e1;
+            font-weight: 600;
+        }
+        .terminal-body {
+            flex: 1;
+            padding: 16px;
+            font-family: 'Consolas', 'Courier New', monospace;
+            font-size: 0.92rem;
+            color: #67e8f9;
+            overflow-y: auto;
+            max-height: 520px;
+            white-space: pre-wrap;
+            line-height: 1.6;
+        }
+        .log-entry {
+            margin-bottom: 6px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+            padding-bottom: 4px;
+        }
+    </style>
+</head>
+<body>
+
+<header class="navbar">
+    <a href="../index.html" class="logo" style="text-decoration:none;">
+        &lt;/&gt; CodePlay
+    </a>
+
+    <div class="search-box">
+        <input type="text" id="nav-lesson-search" placeholder="Search another SQL example..." onclick="window.location.href='sql.html'">
+    </div>
+    
+    <nav class="nav">
+        <a href="../index.html">Home</a>
+        <a href="html.html">HTML</a>
+        <a href="css.html">CSS</a>
+        <a href="javascript.html">JavaScript</a>
+        <a href="php.html">PHP</a>
+        <a href="python.html">Python</a>
+        <a href="sql.html" style="color:#38bdf8;font-weight:600;">SQL</a>
+        <a href="projects.html">Projects</a>
+        <a href="editor.html">Editor</a>
+    </nav>
+</header>
+
+<main class="lesson-container">
+
+    <!-- Breadcrumb Traversal -->
+    <div class="breadcrumb-nav">
+        <a href="../index.html">Home</a>
+        <span class="breadcrumb-sep">&gt;</span>
+        <a href="sql.html">SQL Curriculum</a>
+        <span class="breadcrumb-sep">&gt;</span>
+        <span id="breadcrumb-title" style="color:#e2e8f0;font-weight:600;">Example Details</span>
+    </div>
+
+    <!-- Lesson Top Navigation Bar -->
+    <div class="lesson-top-bar">
+        <div class="lesson-title-meta">
+            <span class="lesson-num-badge" id="lesson-badge" style="background:rgba(6,182,212,0.15);color:#67e8f9;border-color:rgba(6,182,212,0.3);">Example #001 of 205</span>
+            <span class="lesson-cat-tag" id="lesson-category" style="background:rgba(14,165,233,0.15);color:#7dd3fc;border-color:rgba(14,165,233,0.3);">Category</span>
+            <h1 id="lesson-title">Loading Example...</h1>
+        </div>
+
+        <div class="lesson-nav-controls">
+            <a id="prev-btn-top" class="nav-ctrl-btn" title="Previous Example">&larr; Previous</a>
+            <a href="sql.html" class="nav-ctrl-btn" style="background:#111827;border-color:rgba(255,255,255,0.2);">Catalog</a>
+            <a id="next-btn-top" class="nav-ctrl-btn" title="Next Example">Next &rarr;</a>
+        </div>
+    </div>
+
+    <!-- Server Dependency Banner (populated dynamically if requiresNewServer is true) -->
+    <div id="server-banner" style="display:none;"></div>
+
+    <!-- Educational & Concept Breakdown Card -->
+    <section class="lesson-concept-card">
+        <h2>💡 Problem Description &amp; Core Concept</h2>
+        <div id="lesson-summary" style="line-height:1.7;color:#cbd5e1;font-size:1.02rem;margin-bottom:18px;">
+            Loading detailed problem explanation and educational background...
+        </div>
+
+        <div class="concept-subgrid">
+            <div class="concept-subbox">
+                <h4>📐 Required Schema &amp; Tables</h4>
+                <pre id="lesson-schema" style="background:#0b1120;padding:12px;border-radius:10px;border:1px solid rgba(255,255,255,0.08);color:#38bdf8;font-family:'Consolas',monospace;font-size:0.88rem;white-space:pre-wrap;"></pre>
+                
+                <h4 style="margin-top:14px;">📚 Prerequisites</h4>
+                <p id="lesson-prereq" style="color:#94a3b8;font-size:0.9rem;margin:4px 0 0;line-height:1.5;"></p>
+            </div>
+
+            <div class="concept-subbox">
+                <h4>🏷️ Keywords &amp; SQL Clauses</h4>
+                <div id="lesson-attributes" style="display:flex;flex-wrap:wrap;gap:6px;margin-top:6px;"></div>
+            </div>
+        </div>
+
+        <div class="guidance-grid" style="margin-top:18px;">
+            <div id="lesson-notes" class="pro-tip-box" style="background:rgba(6,182,212,0.1);border-left:4px solid #06b6d4;padding:12px 16px;border-radius:8px;color:#cffafe;font-size:0.92rem;line-height:1.6;"></div>
+            <div id="lesson-mistakes" class="mistake-box" style="background:rgba(239,68,68,0.1);border-left:4px solid #ef4444;padding:12px 16px;border-radius:8px;color:#fca5a5;font-size:0.92rem;line-height:1.6;margin-top:12px;"></div>
+            <div id="lesson-security" class="security-box" style="background:rgba(16,185,129,0.1);border-left:4px solid #10b981;padding:12px 16px;border-radius:8px;color:#a7f3d0;font-size:0.92rem;line-height:1.6;margin-top:12px;"></div>
+        </div>
+    </section>
+
+    <!-- Interactive Code Editor & CLI Execution Terminal Workspace -->
+    <div class="workspace-grid">
+        
+        <!-- Left: Code Editor -->
+        <div class="editor-panel">
+            <div class="panel-header">
+                <div class="panel-title">
+                    <span>📝</span>
+                    <span>SQL Query Source Code</span>
+                </div>
+                <div class="panel-actions">
+                    <button type="button" id="btn-copy" class="action-btn" title="Copy code to clipboard">📋 Copy</button>
+                    <button type="button" id="btn-reset" class="action-btn" title="Reset to original code">↺ Reset</button>
+                    <button type="button" id="btn-run" class="action-btn btn-run" title="Execute script (Ctrl + Enter)">▶ Run</button>
+                </div>
+            </div>
+
+            <div class="editor-body">
+                <textarea id="sql-editor" class="code-textarea" spellcheck="false" placeholder="Enter SQL code here..."></textarea>
+            </div>
+        </div>
+
+        <!-- Right: Execution Terminal -->
+        <div class="preview-panel">
+            <div class="terminal-container">
+                <div class="terminal-header">
+                    <div style="display:flex;align-items:center;gap:8px;">
+                        <span>💻</span>
+                        <span>MySQL CLI Execution Terminal</span>
+                    </div>
+                    <button type="button" id="btn-clear-term" style="background:transparent;border:none;color:#94a3b8;cursor:pointer;font-size:0.8rem;">
+                        Clear
+                    </button>
+                </div>
+                <div class="terminal-body" id="terminal-body">
+                    <!-- Logs dynamically appended -->
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Expected Output & Result Breakdown -->
+    <section class="lesson-expected-card" style="margin-top:28px;background:#111827;border:1px solid rgba(255,255,255,0.08);border-radius:18px;padding:22px;">
+        <h3 style="color:#f8fafc;margin-top:0;font-size:1.2rem;display:flex;align-items:center;gap:8px;">
+            <span>🎯</span>
+            <span>Verified Expected Output &amp; Result Breakdown</span>
+        </h3>
+        
+        <p style="color:#94a3b8;font-size:0.9rem;margin-bottom:10px;">
+            Below is the verified standard output produced by executing this query against a compliant MySQL 8.0+ server:
+        </p>
+
+        <pre id="lesson-expected" style="background:#030712;padding:14px;border-radius:10px;border:1px solid rgba(255,255,255,0.06);color:#67e8f9;font-family:'Consolas',monospace;font-size:0.92rem;white-space:pre-wrap;"></pre>
+
+        <div style="margin-top:14px;padding:12px 16px;background:#172033;border-radius:10px;border:1px solid rgba(255,255,255,0.06);">
+            <strong style="color:#38bdf8;">Explanation of Result:</strong>
+            <p id="lesson-result-explanation" style="margin:6px 0 0;color:#cbd5e1;font-size:0.92rem;line-height:1.6;"></p>
+        </div>
+    </section>
+
+    <!-- Bottom Traversal Controls -->
+    <div class="lesson-bottom-nav">
+        <a id="prev-btn-bottom" class="nav-ctrl-btn">&larr; Previous Example</a>
+        <a href="sql.html" class="nav-ctrl-btn" style="background:#1e293b;">Back to SQL Catalog</a>
+        <a id="next-btn-bottom" class="nav-ctrl-btn">Next Example &rarr;</a>
+    </div>
+
+</main>
+
+<!-- Toast Notification -->
+<div id="toast-msg" class="toast">Action completed</div>
+
+<footer>
+    <h3>CodePlay</h3>
+    <p>
+        Learn HTML, CSS, JavaScript, PHP, Python, and SQL through interactive examples. <br>
+        &copy; 2026 CodePlay (@N4). Authoritative 205-Example SQL/MySQL System.
+    </p>
+</footer>
+
+<!-- Dataset and Runner Engine -->
+<script type="module" src="../data/sql-lessons.js"></script>
+<script type="module" src="../js/sql-runner.js"></script>
+
+</body>
+</html>
