@@ -22,6 +22,8 @@ export default defineConfig({
         jsLesson: resolve(__dirname, 'pages/javascript-lesson.html'),
         phpPage: resolve(__dirname, 'pages/php.html'),
         phpLesson: resolve(__dirname, 'pages/php-lesson.html'),
+        pythonPage: resolve(__dirname, 'pages/python.html'),
+        pythonLesson: resolve(__dirname, 'pages/python-lesson.html'),
         projectsPage: resolve(__dirname, 'pages/projects.html'),
         editorPage: resolve(__dirname, 'pages/editor.html')
       }

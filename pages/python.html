@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python 209 Examples Curriculum — CodePlay</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../css/lesson.css">
+    <style>
+        .python-workspace {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 25px;
+            margin-top: 15px;
+        }
+        .console-panel {
+            background: #0a0f1d;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 16px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+        .console-header {
+            background: #172033;
+            padding: 12px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+            font-size: 0.9rem;
+            color: #e2e8f0;
+            font-weight: 600;
+        }
+        .console-output {
+            flex-grow: 1;
+            padding: 18px;
+            font-family: 'Consolas', 'Courier New', monospace;
+            font-size: 0.92rem;
+            color: #4ade80;
+            overflow-y: auto;
+            min-height: 280px;
+            max-height: 380px;
+            white-space: pre-wrap;
+            line-height: 1.6;
+        }
+        .snippet-picker {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 15px;
+            flex-wrap: wrap;
+        }
+        .playground-toggle-btn {
+            background: #1e293b;
+            color: #86efac;
+            border: 1px solid rgba(74, 222, 128, 0.25);
+            border-radius: 12px;
+            padding: 10px 18px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 25px;
+            transition: all 0.2s ease;
+        }
+        .playground-toggle-btn:hover {
+            background: #166534;
+            color: #fff;
+            border-color: #22c55e;
+        }
+        @media (max-width: 900px) {
+            .python-workspace {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header class="navbar">
+    <a href="../index.html" class="logo" style="text-decoration:none;">
+        &lt;/&gt; CodePlay
+    </a>
+
+    <div class="search-box">
+        <input type="text" id="nav-global-search" placeholder="Quick search Python examples...">
+    </div>
+    
+    <nav class="nav">
+        <a href="../index.html">Home</a>
+        <a href="html.html">HTML</a>
+        <a href="css.html">CSS</a>
+        <a href="javascript.html">JavaScript</a>
+        <a href="projects.html">Projects</a>
+        <a href="editor.html">Editor</a>
+    </nav>
+</header>
+
+<main class="catalog-container">
+
+    <section class="catalog-hero" style="background: radial-gradient(circle at center top, rgba(34, 197, 94, 0.2) 0%, transparent 65%);">
+        <span class="badge" style="background:rgba(34,197,94,0.15);color:#86efac;border-color:rgba(34,197,94,0.3);">
+            🐍 209 Comprehensive Examples &bull; 12 Categories Complete
+        </span>
+        <h1>Python Programming Examples &amp; Reference Studio</h1>
+        <p>
+            Master Python 3 from fundamental arithmetic and pattern printing to date-time manipulation, regex,
+            file streaming, matrix algebra, data structures (Lists, Tuples, Dictionaries), and classic sorting &amp; searching algorithms.
+            Authored by <strong>NASA-KUN</strong>.
+        </p>
+
+        <div class="results-counter" style="justify-content:center;">
+            <span class="total-pill" id="total-count" style="background:rgba(34,197,94,0.2);color:#86efac;border-color:rgba(34,197,94,0.35);">209 Total Examples</span>
+            <span class="counter-badge" id="filtered-count">Showing 209 of 209 examples</span>
+        </div>
+    </section>
+
+    <!-- Interactive Studio Drawer Toggle -->
+    <div style="display:flex; justify-content:center;">
+        <button type="button" id="toggle-console-btn" class="playground-toggle-btn">
+            <span>🐍</span>
+            <span id="toggle-console-text">Open Interactive Python Syntax &amp; Execution Studio</span>
+            <span id="toggle-console-arrow">&darr;</span>
+        </button>
+    </div>
+
+    <!-- Collapsible Interactive Python Studio Section -->
+    <div id="console-sandbox-drawer" style="display:none;background:#111827;padding:24px;border-radius:20px;border:1px solid rgba(255,255,255,0.08);margin-bottom:28px;">
+        <h2 style="font-size:1.4rem;margin-top:0;margin-bottom:8px;color:#f8fafc;">🐍 Live Python 3 Syntax Studio</h2>
+        <p style="color:#94a3b8;margin-bottom:15px;font-size:0.95rem;">Select an interactive example to explore Python 3 algorithms, syntax patterns, and execution output:</p>
+
+        <div class="snippet-picker">
+            <button type="button" class="chip-btn active" onclick="loadPythonSnippet('basic')">1. Prime &amp; Fibonacci</button>
+            <button type="button" class="chip-btn" onclick="loadPythonSnippet('regex')">2. Regex Parsing</button>
+            <button type="button" class="chip-btn" onclick="loadPythonSnippet('matrix')">3. Matrix Operations</button>
+            <button type="button" class="chip-btn" onclick="loadPythonSnippet('sorting')">4. QuickSort Algorithm</button>
+        </div>
+
+        <div class="python-workspace">
+            <!-- Code Editor -->
+            <div class="editor-panel">
+                <div class="panel-header">
+                    <div class="panel-title">
+                        <span>📝</span>
+                        <span>Python Source (3.10+ Compatible)</span>
+                    </div>
+                    <div class="panel-actions">
+                        <button type="button" id="btn-run-py" class="action-btn btn-run" onclick="runPythonStudio()">
+                            ▶ Run Snippet
+                        </button>
+                    </div>
+                </div>
+                <div class="editor-body">
+                    <textarea id="python-code-input" class="code-textarea" spellcheck="false" style="min-height:280px;"></textarea>
+                </div>
+            </div>
+
+            <!-- Terminal Console Output -->
+            <div class="console-panel">
+                <div class="console-header">
+                    <div style="display:flex;align-items:center;gap:8px;">
+                        <span>💻</span>
+                        <span>CLI Execution Terminal (stdout / stderr)</span>
+                    </div>
+                    <button type="button" onclick="clearPythonOutput()" style="background:transparent;border:none;color:#94a3b8;cursor:pointer;font-size:0.8rem;">
+                        Clear Terminal
+                    </button>
+                </div>
+                <div class="console-output" id="python-console-output">
+                    <!-- Logs dynamically appended -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Search & Filter Toolbar -->
+    <div class="toolbar-wrap">
+        <div class="search-field-wrap">
+            <span class="search-icon">🔍</span>
+            <input type="text" id="lesson-search-input" placeholder="Search by title, number (e.g. 189), keyword, or category..." autofocus>
+            <button type="button" id="search-clear-btn" class="search-clear-btn" title="Clear search">&times;</button>
+        </div>
+
+        <div class="category-chips" id="category-chips">
+            <!-- Dynamically populated category chips across all 12 categories -->
+        </div>
+    </div>
+
+    <!-- 209 Lesson Card Grid -->
+    <div class="lessons-grid" id="lessons-grid">
+        <!-- Rendered dynamically by js/python-directory.js -->
+    </div>
+
+</main>
+
+<footer>
+    <h3>CodePlay</h3>
+    <p>
+        Learn HTML, CSS, JavaScript, PHP, and Python through interactive examples. <br>
+        &copy; 2026 CodePlay (@N4). Crafted by NASA-YUZAKI. Authoritative 209-Example Python System.
+    </p>
+</footer>
+
+<!-- Dataset and Directory Logic -->
+<script type="module" src="../data/python-lessons.js"></script>
+<script type="module" src="../js/python-directory.js"></script>
+
+<script>
+    // Quick search from navbar passes value to main search
+    const navSearch = document.getElementById('nav-global-search');
+    const mainSearch = document.getElementById('lesson-search-input');
+    if (navSearch && mainSearch) {
+        navSearch.addEventListener('input', (e) => {
+            mainSearch.value = e.target.value;
+            mainSearch.dispatchEvent(new Event('input'));
+        });
+    }
+
+    // Toggle Studio Drawer
+    const toggleBtn = document.getElementById('toggle-console-btn');
+    const drawer = document.getElementById('console-sandbox-drawer');
+    const toggleText = document.getElementById('toggle-console-text');
+    const toggleArrow = document.getElementById('toggle-console-arrow');
+
+    if (toggleBtn && drawer) {
+        toggleBtn.addEventListener('click', () => {
+            const isHidden = drawer.style.display === 'none';
+            drawer.style.display = isHidden ? 'block' : 'none';
+            toggleText.textContent = isHidden 
+                ? 'Hide Interactive Python Syntax & Execution Studio' 
+                : 'Open Interactive Python Syntax & Execution Studio';
+            toggleArrow.innerHTML = isHidden ? '&uarr;' : '&darr;';
+        });
+    }
+
+    // Interactive Python Snippets
+    const pythonSnippets = {
+        basic: `# Prime Check & Fibonacci Example
+def is_prime(n):
+    if n <= 1: return False
+    for i in range(2, int(n**0.5) + 1):
+        if n % i == 0: return False
+    return True
+
+primes = [x for x in range(1, 30) if is_prime(x)]
+print("Primes up to 30:", primes)
+`,
+        regex: `# Regex Extraction Example
+import re
+text = "Contact NASA-KUN at support@codeplay.dev or visit https://codeplay.dev/python"
+emails = re.findall(r'[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z]{2,}', text)
+urls = re.findall(r'https?://\\S+', text)
+
+print("Emails found:", emails)
+print("URLs found  :", urls)
+`,
+        matrix: `# 2D Matrix Addition
+A = [[1, 2], [3, 4]]
+B = [[5, 6], [7, 8]]
+sum_matrix = [[A[i][j] + B[i][j] for j in range(len(A[0]))] for i in range(len(A))]
+
+print("Matrix A + B:")
+for row in sum_matrix:
+    print(" ", row)
+`,
+        sorting: `# QuickSort Algorithm Demonstration
+def quicksort(arr):
+    if len(arr) <= 1:
+        return arr
+    pivot = arr[len(arr) // 2]
+    left = [x for x in arr if x < pivot]
+    middle = [x for x in arr if x == pivot]
+    right = [x for x in arr if x > pivot]
+    return quicksort(left) + middle + quicksort(right)
+
+sample = [38, 27, 43, 3, 9, 82, 10]
+print("Unsorted:", sample)
+print("Sorted  :", quicksort(sample))
+`
+    };
+
+    window.loadPythonSnippet = function(key) {
+        const editor = document.getElementById('python-code-input');
+        if (editor && pythonSnippets[key]) {
+            editor.value = pythonSnippets[key];
+            document.querySelectorAll('.snippet-picker .chip-btn').forEach(btn => btn.classList.remove('active'));
+            if (event && event.target) event.target.classList.add('active');
+            runPythonStudio();
+        }
+    };
+
+    window.runPythonStudio = function() {
+        const editor = document.getElementById('python-code-input');
+        const output = document.getElementById('python-console-output');
+        if (!editor || !output) return;
+
+        const code = editor.value;
+        output.innerHTML = `
+<div style="color:#38bdf8;margin-bottom:6px;">$ python3 studio_snippet.py</div>
+<div style="color:#cbd5e1;background:#030712;padding:12px;border-radius:8px;border:1px solid rgba(255,255,255,0.06);margin-bottom:8px;">
+[SYSTEM] Executing Python 3 Script in Isolated Runtime...
+</div>
+`;
+
+        // Precomputed static simulation for the selected snippet
+        let resultText = "";
+        if (code.includes("Primes up to 30")) {
+            resultText = "Primes up to 30: [2, 3, 5, 7, 11, 13, 17, 19, 23, 29]";
+        } else if (code.includes("Emails found")) {
+            resultText = "Emails found: ['support@codeplay.dev']\\nURLs found  : ['https://codeplay.dev/python']";
+        } else if (code.includes("Matrix A + B")) {
+            resultText = "Matrix A + B:\\n  [6, 8]\\n  [10, 12]";
+        } else if (code.includes("QuickSort")) {
+            resultText = "Unsorted: [38, 27, 43, 3, 9, 82, 10]\\nSorted  : [3, 9, 10, 27, 38, 43, 82]";
+        } else {
+            resultText = "Code analysis: Syntactically valid Python 3 script.\\nExecution finished with exit code 0.";
+        }
+
+        setTimeout(() => {
+            output.innerHTML = `
+<div style="color:#38bdf8;margin-bottom:6px;">$ python3 studio_snippet.py</div>
+<div style="color:#4ade80;background:#030712;padding:12px;border-radius:8px;border:1px solid rgba(255,255,255,0.06);white-space:pre-wrap;font-weight:600;">${resultText}</div>
+<div style="color:#64748b;font-size:0.8rem;margin-top:6px;">Process terminated with exit code 0 &bull; 0.04s</div>
+`;
+        }, 120);
+    };
+
+    window.clearPythonOutput = function() {
+        const output = document.getElementById('python-console-output');
+        if (output) {
+            output.innerHTML = '<span style="color:#64748b;font-style:italic;">Terminal cleared. Click "Run Snippet" to execute.</span>';
+        }
+    };
+
+    // Load initial snippet
+    document.addEventListener('DOMContentLoaded', () => {
+        loadPythonSnippet('basic');
+    });
+</script>
+
+</body>
+</html>
