@@ -209,16 +209,16 @@
         &lt;/&gt; CodePlay
     </a>
 
+    <div class="search-box">
+        <input type="text" id="nav-global-search" placeholder="Search projects...">
+    </div>
+
     <nav class="nav">
         <a href="../index.html">Home</a>
         <a href="html.html">HTML</a>
         <a href="css.html">CSS</a>
         <a href="javascript.html">JavaScript</a>
-        <a href="typescript.html">TypeScript</a>
-        <a href="php.html">PHP</a>
-        <a href="python.html">Python</a>
-        <a href="sql.html">SQL</a>
-        <a href="projects.html" style="color:#38bdf8;font-weight:600;">Projects</a>
+        <a href="projects.html" style="color:#818cf8;font-weight:600;">Projects</a>
         <a href="editor.html">Editor</a>
     </nav>
 </header>
@@ -980,8 +980,21 @@
         input.value = '';
     };
 
-    function escapeHtml(str) {
-        return str.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+    // Real-time project search filtering
+    const navSearch = document.getElementById('nav-global-search');
+    if (navSearch) {
+        navSearch.addEventListener('input', (e) => {
+            const query = e.target.value.toLowerCase().trim();
+            const cards = document.querySelectorAll('.project-card');
+            cards.forEach(card => {
+                const text = card.textContent.toLowerCase();
+                if (!query || text.includes(query)) {
+                    card.style.display = '';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        });
     }
 </script>
 

@@ -26,14 +26,13 @@
     </div>
     
     <nav class="nav">
-            <a href="index.html">Home</a>
-            <a href="pages/html.html">HTML</a>
-            <a href="pages/css.html">CSS</a>
-            <a href="pages/javascript.html">JavaScript</a>
-            <a href="pages/typescript.html">TypeScript</a>
-            <a href="pages/projects.html">Projects</a>
-            <a href="pages/editor.html">Editor</a>
-        </nav>
+        <a href="index.html">Home</a>
+        <a href="pages/html.html">HTML</a>
+        <a href="pages/css.html">CSS</a>
+        <a href="pages/javascript.html">JavaScript</a>
+        <a href="pages/projects.html">Projects</a>
+        <a href="pages/editor.html">Editor</a>
+    </nav>
 
 </header>
 
@@ -400,9 +399,33 @@ console.log("CodePlay");
 
         searchInput.addEventListener('keydown', (e) => {
             if (e.key === 'Enter') {
-                const query = searchInput.value.trim();
-                if (query.toLowerCase().includes('html') || query) {
+                const query = searchInput.value.trim().toLowerCase();
+                if (!query) return;
+
+                if (query.includes('css')) {
+                    window.location.href = 'pages/css.html';
+                } else if (query.includes('js') || query.includes('javascript')) {
+                    window.location.href = 'pages/javascript.html';
+                } else if (query.includes('project')) {
+                    window.location.href = 'pages/projects.html';
+                } else if (query.includes('editor')) {
+                    window.location.href = 'pages/editor.html';
+                } else if (query.includes('php')) {
+                    window.location.href = 'pages/php.html';
+                } else if (query.includes('python')) {
+                    window.location.href = 'pages/python.html';
+                } else if (query.includes('sql')) {
+                    window.location.href = 'pages/sql.html';
+                } else if (query.includes('typescript')) {
+                    window.location.href = 'pages/typescript.html';
+                } else if (query.includes('html')) {
                     window.location.href = 'pages/html.html';
+                } else {
+                    const firstVisible = Array.from(document.querySelectorAll('.category-card'))
+                        .find(card => card.style.display !== 'none' && card.href);
+                    if (firstVisible) {
+                        window.location.href = firstVisible.href;
+                    }
                 }
             }
         });

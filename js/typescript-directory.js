@@ -163,7 +163,7 @@ document.addEventListener('DOMContentLoaded', () => {
         searchInput.addEventListener('input', (e) => {
             searchQuery = e.target.value;
             if (searchClearBtn) {
-                searchClearBtn.style.display = searchQuery.length ? 'block' : 'none';
+                searchClearBtn.style.display = searchQuery.length ? 'flex' : 'none';
             }
             filterAndRender();
         });

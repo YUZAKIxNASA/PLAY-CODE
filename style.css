@@ -436,29 +436,63 @@ footer p{
 
     .navbar{
         flex-direction:column;
-        gap:15px;
+        gap:12px;
+        padding:14px 5%;
+    }
+
+    .search-box{
+        width:100%;
+        max-width:420px;
     }
 
     .search-box input{
         width:100%;
     }
 
+    .nav{
+        justify-content:center;
+        gap:10px 18px;
+        width:100%;
+    }
+
+}
+
+@media(max-width:480px){
+    .navbar{
+        padding:12px 4%;
+        gap:10px;
+    }
+
+    .nav{
+        gap:8px 14px;
+    }
+
+    .nav a{
+        font-size:0.92rem;
+    }
 }
 
 /* ==========================
    NAV
 ========================== */
 
-
-        .nav{
+.nav{
     display:flex;
     gap:20px;
+    align-items:center;
+    flex-wrap:wrap;
 }
 
 .nav a{
     text-decoration:none;
     color:#eaffea;
     font-weight:500;
+    transition:color 0.2s ease;
+    white-space:nowrap;
+}
+
+.nav a:hover{
+    color:#818cf8;
 }
 
 

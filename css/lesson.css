@@ -41,29 +41,39 @@
 }
 
 /* Search & Filter Toolbar */
-.toolbar-wrap {
+.toolbar-wrap,
+.catalog-controls {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 20px;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 16px;
     margin-bottom: 30px;
     background: #111827;
-    padding: 18px 24px;
+    padding: 20px 24px;
     border-radius: 20px;
     border: 1px solid rgba(255, 255, 255, 0.08);
-}
-
-.search-field-wrap {
-    position: relative;
-    flex: 1;
-    min-width: 280px;
-    max-width: 500px;
-}
-
-.search-field-wrap input {
     width: 100%;
-    padding: 14px 44px 14px 46px;
+    box-sizing: border-box;
+}
+
+.search-field-wrap,
+.search-input-wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+}
+
+.search-field-wrap input,
+.search-input-wrapper input,
+.search-field {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    padding: 14px 44px 14px 48px;
     background: #0b1120;
     border: 1px solid rgba(255, 255, 255, 0.12);
     border-radius: 50px;
@@ -73,9 +83,20 @@
     transition: all 0.3s ease;
 }
 
-.search-field-wrap input:focus {
-    border-color: #4f46e5;
-    box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.25);
+.search-field-wrap input::placeholder,
+.search-input-wrapper input::placeholder,
+.search-field::placeholder {
+    color: #94a3b8;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.search-field-wrap input:focus,
+.search-input-wrapper input:focus,
+.search-field:focus {
+    border-color: #0284c7;
+    box-shadow: 0 0 0 3px rgba(2, 132, 199, 0.25);
 }
 
 .search-icon {
@@ -86,14 +107,17 @@
     color: #94a3b8;
     font-size: 1.1rem;
     pointer-events: none;
+    line-height: 1;
+    z-index: 2;
 }
 
-.search-clear-btn {
+.search-clear-btn,
+.search-clear {
     position: absolute;
     right: 14px;
     top: 50%;
     transform: translateY(-50%);
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.12);
     border: none;
     color: #cbd5e1;
     width: 24px;
@@ -104,11 +128,15 @@
     align-items: center;
     justify-content: center;
     font-size: 0.85rem;
+    line-height: 1;
     transition: background 0.2s;
+    z-index: 2;
 }
 
-.search-clear-btn:hover {
-    background: rgba(255, 255, 255, 0.2);
+.search-clear-btn:hover,
+.search-clear:hover {
+    background: rgba(255, 255, 255, 0.25);
+    color: #fff;
 }
 
 .results-counter {
@@ -142,7 +170,10 @@
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
-    margin-bottom: 25px;
+    width: 100%;
+    box-sizing: border-box;
+    align-items: center;
+    margin: 0;
 }
 
 .chip-btn {
@@ -155,6 +186,9 @@
     font-weight: 500;
     cursor: pointer;
     transition: all 0.25s ease;
+    box-sizing: border-box;
+    line-height: 1.35;
+    text-align: center;
 }
 
 .chip-btn:hover {
@@ -164,10 +198,10 @@
 }
 
 .chip-btn.active {
-    background: #4f46e5;
+    background: #0284c7;
     color: #fff;
-    border-color: #4f46e5;
-    box-shadow: 0 4px 15px rgba(79, 70, 229, 0.35);
+    border-color: #38bdf8;
+    box-shadow: 0 4px 15px rgba(2, 132, 199, 0.35);
 }
 
 /* 166-Lesson Grid */
@@ -177,7 +211,8 @@
     gap: 22px;
 }
 
-.lesson-card-item {
+.lesson-card-item,
+.lesson-card {
     background: #111827;
     border: 1px solid rgba(255, 255, 255, 0.08);
     border-radius: 20px;
@@ -190,9 +225,12 @@
     transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
     position: relative;
     overflow: hidden;
+    box-sizing: border-box;
+    width: 100%;
 }
 
-.lesson-card-item::before {
+.lesson-card-item::before,
+.lesson-card::before {
     content: '';
     position: absolute;
     top: 0;
@@ -205,7 +243,9 @@
 }
 
 .lesson-card-item:hover,
-.lesson-card-item:focus {
+.lesson-card-item:focus,
+.lesson-card:hover,
+.lesson-card:focus {
     transform: translateY(-7px);
     border-color: rgba(79, 70, 229, 0.5);
     box-shadow: 0 16px 32px -8px rgba(0, 0, 0, 0.5), 0 0 25px rgba(79, 70, 229, 0.2);
@@ -213,7 +253,9 @@
 }
 
 .lesson-card-item:hover::before,
-.lesson-card-item:focus::before {
+.lesson-card-item:focus::before,
+.lesson-card:hover::before,
+.lesson-card:focus::before {
     opacity: 1;
 }
 
@@ -660,17 +702,23 @@
         font-size: 1.35rem;
     }
 
-    .toolbar-wrap {
+    .toolbar-wrap,
+    .catalog-controls {
         flex-direction: column;
         align-items: stretch;
+        padding: 18px 20px;
     }
 
-    .search-field-wrap {
+    .search-field-wrap,
+    .search-input-wrapper {
         max-width: 100%;
+        min-width: 0;
+        width: 100%;
     }
 
     .results-counter {
-        justify-content: space-between;
+        justify-content: center;
+        flex-wrap: wrap;
     }
 
     .lesson-bottom-nav {
@@ -680,6 +728,160 @@
 
     .lesson-bottom-nav .nav-ctrl-btn {
         justify-content: center;
+    }
+}
+
+@media (max-width: 640px) {
+    .catalog-container,
+    .lesson-container {
+        padding: 20px 4%;
+    }
+
+    .catalog-hero {
+        padding: 28px 16px 22px;
+        margin-bottom: 22px;
+    }
+
+    .catalog-hero h1 {
+        font-size: 1.75rem;
+        line-height: 1.25;
+    }
+
+    .catalog-hero p {
+        font-size: 0.95rem;
+        margin-bottom: 18px;
+    }
+
+    .toolbar-wrap,
+    .catalog-controls {
+        padding: 14px 14px;
+        border-radius: 16px;
+        gap: 12px;
+        margin-bottom: 22px;
+    }
+
+    .search-field-wrap input,
+    .search-input-wrapper input,
+    .search-field {
+        padding: 12px 38px 12px 42px;
+        font-size: 0.9rem;
+    }
+
+    .search-icon {
+        left: 14px;
+        font-size: 1rem;
+    }
+
+    .search-clear-btn,
+    .search-clear {
+        right: 12px;
+        width: 22px;
+        height: 22px;
+    }
+
+    .category-chips {
+        gap: 8px 8px;
+    }
+
+    .chip-btn {
+        padding: 7px 13px;
+        font-size: 0.8rem;
+    }
+
+    .lessons-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .lesson-card-item,
+    .lesson-card {
+        padding: 18px 16px;
+        border-radius: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .catalog-container,
+    .lesson-container {
+        padding: 16px 10px;
+    }
+
+    .catalog-hero {
+        padding: 22px 12px 18px;
+    }
+
+    .catalog-hero h1 {
+        font-size: 1.5rem;
+    }
+
+    .results-counter {
+        flex-direction: column;
+        gap: 8px;
+        align-items: center;
+    }
+
+    .toolbar-wrap,
+    .catalog-controls {
+        padding: 12px 10px;
+        border-radius: 14px;
+        gap: 10px;
+    }
+
+    .search-field-wrap input,
+    .search-input-wrapper input,
+    .search-field {
+        padding: 11px 34px 11px 38px;
+        font-size: 0.84rem;
+    }
+
+    .search-icon {
+        left: 12px;
+        font-size: 0.92rem;
+    }
+
+    .search-clear-btn,
+    .search-clear {
+        right: 10px;
+        width: 20px;
+        height: 20px;
+    }
+
+    .category-chips {
+        gap: 6px 6px;
+    }
+
+    .chip-btn {
+        padding: 6px 11px;
+        font-size: 0.76rem;
+    }
+}
+
+@media (max-width: 360px) {
+    .catalog-container,
+    .lesson-container {
+        padding: 12px 6px;
+    }
+
+    .toolbar-wrap,
+    .catalog-controls {
+        padding: 10px 8px;
+    }
+
+    .search-field-wrap input,
+    .search-input-wrapper input,
+    .search-field {
+        padding: 10px 30px 10px 34px;
+        font-size: 0.8rem;
+    }
+
+    .search-icon {
+        left: 10px;
+        font-size: 0.88rem;
+    }
+
+    .chip-btn {
+        padding: 5px 9px;
+        font-size: 0.72rem;
     }
 }
 
