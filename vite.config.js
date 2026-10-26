@@ -26,6 +26,8 @@ export default defineConfig({
         pythonLesson: resolve(__dirname, 'pages/python-lesson.html'),
         sqlPage: resolve(__dirname, 'pages/sql.html'),
         sqlLesson: resolve(__dirname, 'pages/sql-lesson.html'),
+        typescriptPage: resolve(__dirname, 'pages/typescript.html'),
+        typescriptLesson: resolve(__dirname, 'pages/typescript-lesson.html'),
         projectsPage: resolve(__dirname, 'pages/projects.html'),
         editorPage: resolve(__dirname, 'pages/editor.html')
       }
