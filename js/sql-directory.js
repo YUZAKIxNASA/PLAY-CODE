@@ -1,3 +1,4 @@
+/** [YZN-261029-014] Authorship: YUZAKI NASA (@ঔৣ፝ N4!) · PLAY-CODE / CodePlay */
 /**
  * PLAY-CODE (@N4) — SQL / MySQL 205 Examples Directory Engine
  * Handles rendering of all 205 SQL/MySQL examples, real-time client-side search,

@@ -1,3 +1,4 @@
+/** [YZN-261029-010] Authorship: YUZAKI NASA (@ঔৣ፝ N4!) · PLAY-CODE / CodePlay */
 /**
  * PLAY-CODE (@N4) — PHP Lesson Directory Engine
  * Handles rendering of all 200 PHP lessons across 14 categories,

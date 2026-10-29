@@ -1,3 +1,4 @@
+/** [YZN-261029-028] Authorship: YUZAKI NASA (@ঔৣ፝ N4!) · PLAY-CODE / CodePlay */
 // PLAY-CODE (@N4) — Complete 330 jQuery Lessons Dataset
 // Authoritative curriculum dataset spanning 11 categories
 window.JQUERY_LESSONS = [

@@ -1,3 +1,4 @@
+/** [YZN-261029-020] Authorship: YUZAKI NASA (@ঔৣ፝ N4!) · PLAY-CODE / CodePlay */
 /**
  * PLAY-CODE (@N4) — Master HTML 166 Lessons Curriculum Dataset
  * Project Owner: NASA-KUN

@@ -1,3 +1,4 @@
+/** [YZN-261029-027] Authorship: YUZAKI NASA (@ঔৣ፝ N4!) · PLAY-CODE / CodePlay */
 // PLAY-CODE @N4! 10 Real-World TypeScript Projects Dataset
 window.TYPESCRIPT_PROJECTS = [
   {

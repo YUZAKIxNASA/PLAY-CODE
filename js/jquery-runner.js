@@ -1,3 +1,4 @@
+/** [YZN-261029-019] Authorship: YUZAKI NASA (@ঔৣ፝ N4!) · PLAY-CODE / CodePlay */
 /**
  * PLAY-CODE (@N4) — jQuery Interactive Lesson Runner & Sandbox Controller
  * Manages dynamic lesson loading, code editor actions, sandboxed iframe execution,

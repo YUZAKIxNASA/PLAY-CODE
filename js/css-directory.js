@@ -1,3 +1,4 @@
+/** [YZN-261029-006] Authorship: YUZAKI NASA (@ঔৣ፝ N4!) · PLAY-CODE / CodePlay */
 /**
  * PLAY-CODE (@N4) — CSS Lesson Directory Engine
  * Handles rendering of all 210 CSS lessons, instant client-side search, category filtering,

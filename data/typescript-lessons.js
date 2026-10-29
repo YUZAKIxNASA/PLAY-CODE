@@ -1,3 +1,4 @@
+/** [YZN-261029-026] Authorship: YUZAKI NASA (@ঔৣ፝ N4!) · PLAY-CODE / CodePlay */
 // PLAY-CODE @N4! Authoritative TypeScript Curriculum Dataset (265 Lessons across 16 Categories)
 window.TYPESCRIPT_LESSONS = [
   {

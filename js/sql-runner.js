@@ -1,3 +1,4 @@
+/** [YZN-261029-015] Authorship: YUZAKI NASA (@ঔৣ፝ N4!) · PLAY-CODE / CodePlay */
 /**
  * PLAY-CODE (@N4) — Interactive SQL Lesson Runner Engine
  * Handles URL parameter extraction (?lesson=X), lesson state loading,

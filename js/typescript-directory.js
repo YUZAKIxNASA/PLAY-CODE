@@ -1,3 +1,4 @@
+/** [YZN-261029-016] Authorship: YUZAKI NASA (@ঔৣ፝ N4!) · PLAY-CODE / CodePlay */
 /**
  * PLAY-CODE (@N4) — TypeScript 265 Lessons Directory Engine
  * Handles rendering of all 265 TypeScript lessons, real-time client-side search,

@@ -1,3 +1,4 @@
+/** [YZN-261029-025] Authorship: YUZAKI NASA (@ঔৣ፝ N4!) · PLAY-CODE / CodePlay */
 window.SQL_LESSONS = [
   {
     "id": 1,
