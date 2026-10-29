@@ -87,22 +87,28 @@ document.addEventListener('DOMContentLoaded', () => {
             return;
         }
 
-        gridContainer.innerHTML = list.map(lesson => `
-            <a href="html-lesson.html?lesson=${lesson.id}" class="lesson-card-item" data-lesson-id="${lesson.id}">
-                <div>
-                    <div class="lesson-card-header">
-                        <span class="lesson-num-badge">#${lesson.number}</span>
-                        <span class="lesson-cat-tag">${escapeHtml(lesson.category)}</span>
+        gridContainer.innerHTML = list.map(lesson => {
+            const syntaxSnippet = lesson.syntax && lesson.syntax !== 'N/A' && !lesson.syntax.startsWith('N/A')
+                ? `<code class="mini-prop-badge" style="background:#431407;color:#fdba74;border-color:rgba(249,115,22,0.25);">${escapeHtml(lesson.syntax)}</code>`
+                : '';
+            return `
+                <a href="html-lesson.html?lesson=${lesson.id}" class="lesson-card-item" data-lesson-id="${lesson.id}">
+                    <div>
+                        <div class="lesson-card-header">
+                            <span class="lesson-num-badge" style="background:rgba(249,115,22,0.15);color:#fb923c;border-color:rgba(249,115,22,0.3);">#${lesson.number}</span>
+                            <span class="lesson-cat-tag" style="background:rgba(14,165,233,0.12);color:#7dd3fc;border-color:rgba(14,165,233,0.25);">${escapeHtml(lesson.category)}</span>
+                        </div>
+                        <h3>${escapeHtml(lesson.title)}</h3>
+                        <p>${escapeHtml(lesson.summary)}</p>
+                        ${syntaxSnippet ? `<div style="margin-top:10px;display:flex;gap:6px;flex-wrap:wrap;align-items:center;">${syntaxSnippet}</div>` : ''}
                     </div>
-                    <h3>${escapeHtml(lesson.title)}</h3>
-                    <p>${escapeHtml(lesson.summary)}</p>
-                </div>
-                <div class="lesson-card-footer">
-                    <span class="action-label">Explore Lesson &rarr;</span>
-                    <span style="font-size:0.8rem;color:#64748b;font-family:monospace;">Lesson ${lesson.id}/166</span>
-                </div>
-            </a>
-        `).join('');
+                    <div class="lesson-card-footer">
+                        <span class="action-label" style="color:#f97316;">Explore Lesson &rarr;</span>
+                        <span style="font-size:0.8rem;color:#64748b;font-family:monospace;">Lesson ${lesson.id}/166</span>
+                    </div>
+                </a>
+            `;
+        }).join('');
     }
 
     function filterAndRender() {

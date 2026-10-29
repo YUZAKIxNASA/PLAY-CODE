@@ -25,42 +25,103 @@ body{
 
 .navbar{
     width:100%;
-    padding:18px 7%;
+    padding:14px 5%;
     display:flex;
     justify-content:space-between;
     align-items:center;
-
+    gap:16px;
     position:sticky;
     top:0;
-
     backdrop-filter:blur(20px);
-    background:rgba(11,17,32,.8);
-
+    -webkit-backdrop-filter:blur(20px);
+    background:rgba(11,17,32,.92);
+    border-bottom:1px solid rgba(255,255,255,0.06);
     z-index:1000;
+    box-sizing:border-box;
 }
 
 .logo{
-    font-size:1.6rem;
+    font-size:1.5rem;
     font-weight:700;
     color:#4F46E5;
+    flex-shrink:0;
+    text-decoration:none;
+    display:inline-flex;
+    align-items:center;
+    transition:color 0.2s ease;
+}
+
+.logo:hover{
+    color:#818cf8;
+}
+
+.search-box{
+    flex:0 1 280px;
+    max-width:320px;
+    min-width:160px;
+    box-sizing:border-box;
 }
 
 .search-box input{
-    width:260px;
-    padding:12px 18px;
-
-    border:none;
+    width:100%;
+    padding:10px 18px;
+    border:1px solid rgba(255,255,255,0.12);
     outline:none;
-
     border-radius:50px;
-
     background:#111827;
     color:#fff;
+    font-size:0.88rem;
+    box-sizing:border-box;
+    transition:border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.search-box input:focus{
+    border-color:#4F46E5;
+    box-shadow:0 0 0 3px rgba(79,70,229,0.25);
 }
 
 .search-box input::placeholder{
     color:#9CA3AF;
 }
+
+/* ==========================
+   NAV
+========================== */
+
+.nav{
+    display:flex;
+    gap:6px 12px;
+    align-items:center;
+    flex-wrap:wrap;
+    justify-content:flex-end;
+}
+
+.nav a{
+    text-decoration:none;
+    color:#cbd5e1;
+    font-weight:500;
+    font-size:0.92rem;
+    transition:color 0.2s ease, background-color 0.2s ease;
+    white-space:nowrap;
+    padding:6px 10px;
+    border-radius:8px;
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+}
+
+.nav a:hover{
+    color:#ffffff;
+    background:rgba(255,255,255,0.06);
+}
+
+.nav a.active,
+.nav a[style*="font-weight:600"],
+.nav a[style*="font-weight: 600"]{
+    color:#818cf8;
+    background:rgba(79,70,229,0.12);
+}
+
 
 /* ==========================
    HERO
@@ -436,63 +497,89 @@ footer p{
 
     .navbar{
         flex-direction:column;
-        gap:12px;
-        padding:14px 5%;
+        align-items:center;
+        gap:10px;
+        padding:12px 4%;
     }
 
     .search-box{
         width:100%;
-        max-width:420px;
+        max-width:440px;
+        flex:1 1 auto;
     }
 
     .search-box input{
         width:100%;
+        padding:9px 16px;
     }
 
     .nav{
         justify-content:center;
-        gap:10px 18px;
+        gap:6px 8px;
         width:100%;
+    }
+
+    .nav a{
+        font-size:0.88rem;
+        padding:5px 8px;
     }
 
 }
 
 @media(max-width:480px){
     .navbar{
-        padding:12px 4%;
-        gap:10px;
+        padding:10px 3%;
+        gap:8px;
+    }
+
+    .logo{
+        font-size:1.35rem;
+    }
+
+    .search-box{
+        width:100%;
+        max-width:100%;
+    }
+
+    .search-box input{
+        font-size:0.84rem;
+        padding:8px 14px;
     }
 
     .nav{
-        gap:8px 14px;
+        gap:4px 6px;
+        justify-content:center;
     }
 
     .nav a{
-        font-size:0.92rem;
+        font-size:0.82rem;
+        padding:4px 7px;
     }
 }
 
-/* ==========================
-   NAV
-========================== */
+@media(max-width:360px){
+    .navbar{
+        padding:8px 2%;
+        gap:6px;
+    }
 
-.nav{
-    display:flex;
-    gap:20px;
-    align-items:center;
-    flex-wrap:wrap;
-}
+    .logo{
+        font-size:1.25rem;
+    }
 
-.nav a{
-    text-decoration:none;
-    color:#eaffea;
-    font-weight:500;
-    transition:color 0.2s ease;
-    white-space:nowrap;
-}
+    .search-box input{
+        font-size:0.8rem;
+        padding:7px 12px;
+    }
 
-.nav a:hover{
-    color:#818cf8;
+    .nav{
+        gap:3px 5px;
+    }
+
+    .nav a{
+        font-size:0.76rem;
+        padding:4px 6px;
+    }
 }
 
 

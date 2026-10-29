@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery Lesson Workspace — CodePlay</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../css/lesson.css">
+    <style>
+        .terminal-container {
+            background: #0a0f1d;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 14px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            margin-top: 20px;
+        }
+        .terminal-header {
+            background: #172033;
+            padding: 10px 16px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+            font-size: 0.85rem;
+            color: #cbd5e1;
+            font-weight: 600;
+        }
+        .terminal-body {
+            padding: 14px;
+            font-family: 'Consolas', 'Courier New', monospace;
+            font-size: 0.88rem;
+            color: #2dd4bf;
+            overflow-y: auto;
+            min-height: 140px;
+            max-height: 220px;
+            white-space: pre-wrap;
+            line-height: 1.5;
+        }
+        .toast-popup {
+            position: fixed;
+            bottom: 24px;
+            right: 24px;
+            background: #00bfa5;
+            color: #0b1120;
+            padding: 12px 20px;
+            border-radius: 10px;
+            font-weight: 700;
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.5);
+            display: none;
+            z-index: 1000;
+            transition: opacity 0.3s ease;
+        }
+    </style>
+</head>
+<body>
+
+<header class="navbar">
+    <a href="../index.html" class="logo" style="text-decoration:none;">
+        &lt;/&gt; CodePlay
+    </a>
+
+    <div class="search-box">
+        <input type="text" id="nav-lesson-search" placeholder="Search another jQuery lesson..." onclick="window.location.href='jquery.html'">
+    </div>
+    
+    <nav class="nav">
+        <a href="../index.html">Home</a>
+        <a href="html.html">HTML</a>
+        <a href="css.html">CSS</a>
+        <a href="javascript.html">JavaScript</a>
+        <a href="projects.html">Projects</a>
+        <a href="editor.html">Editor</a>
+    </nav>
+</header>
+
+<main class="lesson-container">
+
+    <!-- Breadcrumb Traversal -->
+    <div class="breadcrumb-nav">
+        <a href="../index.html">Home</a>
+        <span class="breadcrumb-sep">&gt;</span>
+        <a href="jquery.html">jQuery Curriculum</a>
+        <span class="breadcrumb-sep">&gt;</span>
+        <span id="breadcrumb-title" style="color:#e2e8f0;font-weight:600;">Lesson Details</span>
+    </div>
+
+    <!-- Lesson Top Navigation Bar -->
+    <div class="lesson-top-bar">
+        <div class="lesson-title-meta">
+            <span class="lesson-num-badge" id="lesson-badge" style="background:rgba(0,191,165,0.15);color:#2dd4bf;border-color:rgba(0,191,165,0.3);">Lesson #001 of 330</span>
+            <span class="lesson-cat-tag" id="lesson-category" style="background:rgba(20,184,166,0.15);color:#5eead4;border-color:rgba(20,184,166,0.3);">Category</span>
+            <h1 id="lesson-title">Loading Lesson...</h1>
+        </div>
+
+        <div class="lesson-nav-controls">
+            <a id="prev-btn-top" class="nav-ctrl-btn" title="Previous Lesson">&larr; Previous</a>
+            <a href="jquery.html" class="nav-ctrl-btn" style="background:#111827;border-color:rgba(255,255,255,0.2);">Catalog</a>
+            <a id="next-btn-top" class="nav-ctrl-btn" title="Next Lesson">Next &rarr;</a>
+        </div>
+    </div>
+
+    <!-- Main Split Workspace -->
+    <div class="lesson-workspace">
+        
+        <!-- Left Column: Code Workspace, Sandbox Preview & Execution Terminal -->
+        <div class="code-column">
+            
+            <!-- Code Editor Panel -->
+            <div class="editor-panel">
+                <div class="panel-header" style="display:flex;justify-content:space-between;align-items:center;">
+                    <div class="panel-title">
+                        <span>📝</span>
+                        <span>jQuery HTML &amp; Script Editor</span>
+                    </div>
+
+                    <div class="panel-actions" style="display:flex;gap:8px;">
+                        <button type="button" id="btn-copy" class="action-btn" title="Copy code to clipboard">
+                            📋 Copy
+                        </button>
+                        <button type="button" id="btn-reset" class="action-btn" title="Reset to default code">
+                            ↺ Reset
+                        </button>
+                        <button type="button" id="btn-run" class="action-btn btn-run" style="background:#00bfa5;color:#0b1120;font-weight:bold;" title="Compile and run (Ctrl + Enter)">
+                            ▶ Run Code
+                        </button>
+                    </div>
+                </div>
+
+                <div class="editor-body">
+                    <textarea id="code-editor" class="code-textarea" spellcheck="false" style="min-height:280px;font-family:'Consolas','Courier New',monospace;"></textarea>
+                </div>
+            </div>
+
+            <!-- Sandboxed Live Preview Panel -->
+            <div class="preview-panel" style="margin-top:20px;background:#111827;border:1px solid rgba(255,255,255,0.1);border-radius:14px;overflow:hidden;">
+                <div class="panel-header" style="background:#172033;padding:10px 16px;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid rgba(255,255,255,0.08);">
+                    <div class="panel-title" style="font-size:0.85rem;color:#cbd5e1;font-weight:600;display:flex;align-items:center;gap:6px;">
+                        <span>⚡</span>
+                        <span>Sandboxed Live Preview (jQuery 3.7.1 Runtime)</span>
+                    </div>
+                    <span style="font-size:0.75rem;color:#10b981;font-weight:600;display:inline-flex;align-items:center;gap:4px;">
+                        <span style="width:7px;height:7px;background:#10b981;border-radius:50%;display:inline-block;"></span>
+                        Live Sandboxed View
+                    </span>
+                </div>
+                <div class="preview-body">
+                    <iframe id="preview-frame" class="preview-iframe" sandbox="allow-scripts allow-modals" title="jQuery Output Preview" style="width:100%;min-height:240px;border:none;background:#0b1120;"></iframe>
+                </div>
+            </div>
+
+            <!-- Execution Terminal -->
+            <div class="terminal-container">
+                <div class="terminal-header">
+                    <span>⚡ Console &amp; Execution Output</span>
+                    <button type="button" id="btn-clear-term" class="action-btn" style="background:transparent;border:none;color:#94a3b8;cursor:pointer;">Clear</button>
+                </div>
+                <div id="terminal-body" class="terminal-body">
+                    <!-- Populated dynamically -->
+                </div>
+            </div>
+
+            <!-- Expected Output & Explanation Accordion Card -->
+            <div class="card" style="background:#111827;border:1px solid rgba(255,255,255,0.08);border-radius:14px;padding:20px;margin-top:20px;">
+                <h3 style="font-size:1.1rem;color:#f8fafc;margin-top:0;margin-bottom:10px;">📋 Expected Output &amp; Result Explanation</h3>
+                <div style="background:#0b1120;padding:12px;border-radius:8px;font-family:monospace;color:#2dd4bf;font-size:0.88rem;white-space:pre-wrap;margin-bottom:12px;" id="lesson-expected"></div>
+                <p id="lesson-result-explanation" style="color:#cbd5e1;font-size:0.92rem;line-height:1.6;margin:0;"></p>
+            </div>
+
+        </div>
+
+        <!-- Right Column: Concept Explanation & Guidance -->
+        <div class="info-column">
+            
+            <!-- Summary & Objective -->
+            <div class="card" style="background:#111827;border:1px solid rgba(255,255,255,0.08);border-radius:16px;padding:22px;margin-bottom:20px;">
+                <h2 style="font-size:1.25rem;color:#f8fafc;margin-top:0;margin-bottom:12px;">📖 Concept &amp; Objectives</h2>
+                <div id="lesson-summary" style="color:#cbd5e1;font-size:0.93rem;line-height:1.6;"></div>
+            </div>
+
+            <!-- Prerequisites & Schema -->
+            <div class="card" style="background:#111827;border:1px solid rgba(255,255,255,0.08);border-radius:16px;padding:22px;margin-bottom:20px;">
+                <h3 style="font-size:1.1rem;color:#f8fafc;margin-top:0;margin-bottom:12px;">⚙️ Prerequisites &amp; Environment</h3>
+                <p style="color:#94a3b8;font-size:0.9rem;margin-bottom:8px;"><strong>Prerequisites:</strong> <span id="lesson-prereq" style="color:#e2e8f0;"></span></p>
+                <p style="color:#94a3b8;font-size:0.9rem;margin:0;"><strong>Required Environment:</strong> <span id="lesson-schema" style="color:#e2e8f0;"></span></p>
+            </div>
+
+            <!-- Pro-Tips & Notes -->
+            <div class="card" style="background:#111827;border:1px solid rgba(255,255,255,0.08);border-radius:16px;padding:22px;margin-bottom:20px;">
+                <h3 style="font-size:1.1rem;color:#f8fafc;margin-top:0;margin-bottom:8px;">💡 Pro-Tips &amp; Best Practices</h3>
+                <p id="lesson-notes" style="color:#cbd5e1;font-size:0.92rem;line-height:1.6;margin:0;"></p>
+            </div>
+
+            <!-- Common Mistakes -->
+            <div class="card" style="background:#111827;border:1px solid rgba(239,68,68,0.2);border-radius:16px;padding:22px;margin-bottom:20px;">
+                <h3 style="font-size:1.1rem;color:#fca5a5;margin-top:0;margin-bottom:8px;">⚠️ Common Pitfalls &amp; Mistakes</h3>
+                <p id="lesson-mistakes" style="color:#fecaca;font-size:0.92rem;line-height:1.6;margin:0;"></p>
+            </div>
+
+            <!-- Security & Defensive Coding -->
+            <div class="card" style="background:#111827;border:1px solid rgba(16,185,129,0.25);border-radius:16px;padding:22px;margin-bottom:20px;">
+                <h3 style="font-size:1.1rem;color:#6ee7b7;margin-top:0;margin-bottom:8px;">🛡️ Security &amp; Defensive Coding</h3>
+                <p id="lesson-security" style="color:#a7f3d0;font-size:0.92rem;line-height:1.6;margin:0;"></p>
+            </div>
+
+            <!-- Keywords and Methods -->
+            <div class="card" style="background:#111827;border:1px solid rgba(255,255,255,0.08);border-radius:16px;padding:22px;">
+                <h3 style="font-size:1.1rem;color:#f8fafc;margin-top:0;margin-bottom:12px;">🏷️ Keywords &amp; Methods</h3>
+                <div id="lesson-keywords" style="display:flex;flex-wrap:wrap;gap:6px;"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- Bottom Navigation Controls -->
+    <div class="lesson-bottom-bar" style="margin-top:40px;display:flex;justify-content:space-between;align-items:center;padding:20px 0;border-top:1px solid rgba(255,255,255,0.08);">
+        <a id="prev-btn-bottom" class="nav-ctrl-btn">&larr; Previous Lesson</a>
+        <a href="jquery.html" class="nav-ctrl-btn" style="background:#111827;">Back to Catalog</a>
+        <a id="next-btn-bottom" class="nav-ctrl-btn">Next Lesson &rarr;</a>
+    </div>
+
+</main>
+
+<div id="toast-msg" class="toast-popup"></div>
+
+<footer>
+    <h3>CodePlay</h3>
+    <p>
+        Learn HTML, CSS, JavaScript, PHP, Python, SQL, TypeScript, and jQuery through interactive examples. <br>
+        &copy; 2026 CodePlay (@ঔৣ፝ N4!). Authoritative 330-Lesson jQuery Mastery System.
+    </p>
+</footer>
+
+<!-- Dataset and Runner Logic -->
+<script type="module" src="../data/jquery-lessons.js"></script>
+<script type="module" src="../js/jquery-runner.js"></script>
+
+</body>
+</html>

@@ -105,10 +105,13 @@
     top: 50%;
     transform: translateY(-50%);
     color: #94a3b8;
-    font-size: 1.1rem;
+    font-size: 1.05rem;
     pointer-events: none;
     line-height: 1;
     z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .search-clear-btn,
@@ -169,11 +172,11 @@
 .category-chips {
     display: flex;
     flex-wrap: wrap;
-    gap: 10px;
+    gap: 10px 12px;
     width: 100%;
     box-sizing: border-box;
     align-items: center;
-    margin: 0;
+    margin: 4px 0 0;
 }
 
 .chip-btn {
@@ -189,6 +192,10 @@
     box-sizing: border-box;
     line-height: 1.35;
     text-align: center;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 36px;
 }
 
 .chip-btn:hover {
@@ -204,11 +211,13 @@
     box-shadow: 0 4px 15px rgba(2, 132, 199, 0.35);
 }
 
-/* 166-Lesson Grid */
+/* 166+ Lesson Grid */
 .lessons-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
     gap: 22px;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .lesson-card-item,
@@ -216,7 +225,7 @@
     background: #111827;
     border: 1px solid rgba(255, 255, 255, 0.08);
     border-radius: 20px;
-    padding: 24px;
+    padding: 22px 24px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -227,6 +236,7 @@
     overflow: hidden;
     box-sizing: border-box;
     width: 100%;
+    min-width: 0;
 }
 
 .lesson-card-item::before,
@@ -243,19 +253,19 @@
 }
 
 .lesson-card-item:hover,
-.lesson-card-item:focus,
+.lesson-card-item:focus-visible,
 .lesson-card:hover,
-.lesson-card:focus {
-    transform: translateY(-7px);
+.lesson-card:focus-visible {
+    transform: translateY(-6px);
     border-color: rgba(79, 70, 229, 0.5);
     box-shadow: 0 16px 32px -8px rgba(0, 0, 0, 0.5), 0 0 25px rgba(79, 70, 229, 0.2);
     outline: none;
 }
 
 .lesson-card-item:hover::before,
-.lesson-card-item:focus::before,
+.lesson-card-item:focus-visible::before,
 .lesson-card:hover::before,
-.lesson-card:focus::before {
+.lesson-card:focus-visible::before {
     opacity: 1;
 }
 
@@ -264,6 +274,7 @@
     justify-content: space-between;
     align-items: center;
     margin-bottom: 14px;
+    gap: 8px;
 }
 
 .lesson-num-badge {
@@ -275,35 +286,50 @@
     padding: 4px 10px;
     border-radius: 8px;
     letter-spacing: 0.5px;
+    white-space: nowrap;
+    font-variant-numeric: tabular-nums;
+    font-family: 'Consolas', 'Courier New', monospace;
+    flex-shrink: 0;
 }
 
 .lesson-cat-tag {
     font-size: 0.75rem;
     color: #06b6d4;
     background: rgba(6, 182, 212, 0.1);
+    border: 1px solid rgba(6, 182, 212, 0.25);
     padding: 4px 8px;
     border-radius: 6px;
     font-weight: 500;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 65%;
+    flex-shrink: 1;
 }
 
-.lesson-card-item h3 {
-    font-size: 1.25rem;
+.lesson-card-item h3,
+.lesson-card h3 {
+    font-size: 1.22rem;
     font-weight: 600;
     margin-bottom: 10px;
     color: #f8fafc;
     line-height: 1.35;
+    word-break: break-word;
+    overflow-wrap: break-word;
 }
 
-.lesson-card-item p {
+.lesson-card-item p,
+.lesson-card p {
     color: #94a3b8;
     font-size: 0.88rem;
     line-height: 1.6;
-    margin-bottom: 18px;
+    margin-bottom: 16px;
     flex-grow: 1;
     display: -webkit-box;
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
     overflow: hidden;
+    word-break: break-word;
 }
 
 .lesson-card-footer {
@@ -311,20 +337,24 @@
     justify-content: space-between;
     align-items: center;
     padding-top: 14px;
-    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    border-top: 1px solid rgba(255, 255, 255, 0.06);
+    margin-top: auto;
+    gap: 8px;
 }
 
 .action-label {
     color: #818cf8;
     font-weight: 600;
     font-size: 0.88rem;
-    display: flex;
+    display: inline-flex;
     align-items: center;
     gap: 6px;
-    transition: transform 0.2s;
+    transition: transform 0.2s ease;
+    white-space: nowrap;
 }
 
-.lesson-card-item:hover .action-label {
+.lesson-card-item:hover .action-label,
+.lesson-card:hover .action-label {
     transform: translateX(4px);
     color: #a5b4fc;
 }
@@ -780,12 +810,13 @@
     }
 
     .category-chips {
-        gap: 8px 8px;
+        gap: 8px 10px;
     }
 
     .chip-btn {
-        padding: 7px 13px;
-        font-size: 0.8rem;
+        padding: 7px 14px;
+        font-size: 0.82rem;
+        min-height: 34px;
     }
 
     .lessons-grid {
@@ -822,37 +853,38 @@
 
     .toolbar-wrap,
     .catalog-controls {
-        padding: 12px 10px;
-        border-radius: 14px;
-        gap: 10px;
+        padding: 14px 12px;
+        border-radius: 16px;
+        gap: 12px;
     }
 
     .search-field-wrap input,
     .search-input-wrapper input,
     .search-field {
-        padding: 11px 34px 11px 38px;
-        font-size: 0.84rem;
+        padding: 11px 36px 11px 40px;
+        font-size: 0.86rem;
     }
 
     .search-icon {
-        left: 12px;
-        font-size: 0.92rem;
+        left: 14px;
+        font-size: 0.95rem;
     }
 
     .search-clear-btn,
     .search-clear {
-        right: 10px;
-        width: 20px;
-        height: 20px;
+        right: 12px;
+        width: 22px;
+        height: 22px;
     }
 
     .category-chips {
-        gap: 6px 6px;
+        gap: 8px 8px;
     }
 
     .chip-btn {
-        padding: 6px 11px;
-        font-size: 0.76rem;
+        padding: 6px 13px;
+        font-size: 0.8rem;
+        min-height: 32px;
     }
 }
 
@@ -864,24 +896,29 @@
 
     .toolbar-wrap,
     .catalog-controls {
-        padding: 10px 8px;
+        padding: 12px 8px;
     }
 
     .search-field-wrap input,
     .search-input-wrapper input,
     .search-field {
-        padding: 10px 30px 10px 34px;
-        font-size: 0.8rem;
+        padding: 10px 32px 10px 36px;
+        font-size: 0.82rem;
     }
 
     .search-icon {
-        left: 10px;
-        font-size: 0.88rem;
+        left: 12px;
+        font-size: 0.9rem;
+    }
+
+    .category-chips {
+        gap: 6px 6px;
     }
 
     .chip-btn {
-        padding: 5px 9px;
-        font-size: 0.72rem;
+        padding: 5px 10px;
+        font-size: 0.76rem;
+        min-height: 30px;
     }
 }
 

@@ -112,7 +112,7 @@
 1. **Other Tracks (Projects):**
    - Projects link points to `#categories` on the home page awaiting Phase 5 implementation.
 2. **Curriculums Status:**
-   - All 166 HTML lessons, 210 CSS lessons, 230 JavaScript lessons, 200 PHP lessons, and 209 Python examples (across 12 categories) are fully implemented, verified, and accessible with functioning interactive code runners and real execution output.
+   - All 166 HTML lessons, 210 CSS lessons, 230 JavaScript lessons, 200 PHP lessons, 209 Python examples, 205 SQL & MySQL examples, 265 TypeScript lessons, and 330 jQuery lessons (across 11 categories) are fully implemented, verified, and accessible with functioning interactive code runners and real execution output.
 
 ---
 

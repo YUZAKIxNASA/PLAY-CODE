@@ -98,37 +98,28 @@ document.addEventListener('DOMContentLoaded', () => {
                 : '';
 
             const serverBadge = lesson.requiresNewServer 
-                ? `<span class="lesson-tag-server" style="background:rgba(234,179,8,0.15);color:#fde047;border:1px solid rgba(234,179,8,0.3);padding:2px 7px;border-radius:4px;font-size:0.75rem;font-weight:700;">⚠️ [REQUIRES NEW SERVER]</span>`
+                ? `<span style="font-size:0.75rem;background:rgba(234,179,8,0.15);color:#fde047;padding:2px 6px;border-radius:4px;border:1px solid rgba(234,179,8,0.3);font-weight:600;">⚠️ SERVER REQUIRED</span>`
                 : '';
 
             return `
-                <div class="lesson-card" data-id="${lesson.id}">
-                    <div class="lesson-card-header">
-                        <span class="lesson-badge" style="background:rgba(2,132,199,0.15);color:#38bdf8;border:1px solid rgba(2,132,199,0.3);padding:3px 8px;border-radius:6px;font-size:0.8rem;font-weight:700;">#${lesson.number}</span>
-                        <span class="lesson-category" style="color:#94a3b8;font-size:0.8rem;">${escapeHtml(lesson.category)}</span>
-                    </div>
-
-                    <h3 class="lesson-title" style="margin:10px 0 6px;font-size:1.15rem;color:#f8fafc;">
-                        <a href="typescript-lesson.html?lesson=${lesson.id}" style="color:inherit;text-decoration:none;">
-                            ${escapeHtml(lesson.cleanTitle || lesson.title)}
-                        </a>
-                    </h3>
-
-                    ${serverBadge ? `<div style="margin-bottom:8px;">${serverBadge}</div>` : ''}
-
-                    <p class="lesson-desc" style="color:#94a3b8;font-size:0.9rem;line-height:1.5;margin-bottom:12px;">
-                        ${escapeHtml(truncate(description, 140))}
-                    </p>
-
-                    <div class="lesson-card-footer" style="display:flex;justify-content:space-between;align-items:center;margin-top:auto;padding-top:10px;border-top:1px solid rgba(255,255,255,0.06);">
-                        <div class="mini-tags">
-                            ${keywordsSnippet}
+                <a href="typescript-lesson.html?lesson=${lesson.id}" class="lesson-card-item" data-lesson-id="${lesson.id}">
+                    <div>
+                        <div class="lesson-card-header">
+                            <span class="lesson-num-badge" style="background:rgba(2,132,199,0.15);color:#38bdf8;border-color:rgba(2,132,199,0.3);">#${lesson.number}</span>
+                            <span class="lesson-cat-tag" style="background:rgba(14,165,233,0.12);color:#7dd3fc;border-color:rgba(14,165,233,0.25);">${escapeHtml(lesson.category)}</span>
                         </div>
-                        <a href="typescript-lesson.html?lesson=${lesson.id}" class="action-btn" style="background:#0284c7;color:#fff;padding:6px 14px;border-radius:8px;font-size:0.85rem;font-weight:600;text-decoration:none;display:inline-flex;align-items:center;gap:4px;">
-                            Practice &rarr;
-                        </a>
+                        <h3>${escapeHtml(lesson.cleanTitle || lesson.title)}</h3>
+                        <p>${escapeHtml(description)}</p>
+                        <div style="margin-top:10px;display:flex;gap:6px;flex-wrap:wrap;align-items:center;">
+                            ${keywordsSnippet}
+                            ${serverBadge}
+                        </div>
                     </div>
-                </div>
+                    <div class="lesson-card-footer">
+                        <span class="action-label" style="color:#38bdf8;">Explore Lesson &rarr;</span>
+                        <span style="font-size:0.8rem;color:#64748b;font-family:monospace;">Lesson ${lesson.id}/265</span>
+                    </div>
+                </a>
             `;
         }).join('');
     }

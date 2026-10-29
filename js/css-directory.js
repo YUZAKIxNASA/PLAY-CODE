@@ -90,22 +90,22 @@ document.addEventListener('DOMContentLoaded', () => {
         gridContainer.innerHTML = list.map(lesson => {
             const description = lesson.introduction || lesson.explanation || '';
             const propsSnippet = lesson.selectorsOrProps && lesson.selectorsOrProps.length 
-                ? lesson.selectorsOrProps.slice(0, 3).map(p => `<code class="mini-prop-badge">${escapeHtml(p)}</code>`).join(' ')
+                ? lesson.selectorsOrProps.slice(0, 3).map(p => `<code class="mini-prop-badge" style="background:#172554;color:#93c5fd;border-color:rgba(59,130,246,0.3);">${escapeHtml(p)}</code>`).join(' ')
                 : '';
 
             return `
                 <a href="css-lesson.html?lesson=${lesson.id}" class="lesson-card-item" data-lesson-id="${lesson.id}">
                     <div>
                         <div class="lesson-card-header">
-                            <span class="lesson-num-badge">#${lesson.number}</span>
-                            <span class="lesson-cat-tag">${escapeHtml(lesson.category)}</span>
+                            <span class="lesson-num-badge" style="background:rgba(37,99,235,0.15);color:#93c5fd;border-color:rgba(37,99,235,0.3);">#${lesson.number}</span>
+                            <span class="lesson-cat-tag" style="background:rgba(14,165,233,0.12);color:#7dd3fc;border-color:rgba(14,165,233,0.25);">${escapeHtml(lesson.category)}</span>
                         </div>
                         <h3>${escapeHtml(lesson.title)}</h3>
                         <p>${escapeHtml(description)}</p>
-                        ${propsSnippet ? `<div style="margin-top:8px;display:flex;gap:5px;flex-wrap:wrap;">${propsSnippet}</div>` : ''}
+                        ${propsSnippet ? `<div style="margin-top:10px;display:flex;gap:6px;flex-wrap:wrap;align-items:center;">${propsSnippet}</div>` : ''}
                     </div>
                     <div class="lesson-card-footer">
-                        <span class="action-label">Explore Lesson &rarr;</span>
+                        <span class="action-label" style="color:#3b82f6;">Explore Lesson &rarr;</span>
                         <span style="font-size:0.8rem;color:#64748b;font-family:monospace;">Lesson ${lesson.id}/210</span>
                     </div>
                 </a>

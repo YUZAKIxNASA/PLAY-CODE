@@ -28,6 +28,8 @@ export default defineConfig({
         sqlLesson: resolve(__dirname, 'pages/sql-lesson.html'),
         typescriptPage: resolve(__dirname, 'pages/typescript.html'),
         typescriptLesson: resolve(__dirname, 'pages/typescript-lesson.html'),
+        jqueryPage: resolve(__dirname, 'pages/jquery.html'),
+        jqueryLesson: resolve(__dirname, 'pages/jquery-lesson.html'),
         projectsPage: resolve(__dirname, 'pages/projects.html'),
         editorPage: resolve(__dirname, 'pages/editor.html')
       }
