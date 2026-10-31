@@ -26,23 +26,23 @@ body{
 
 .navbar{
     width:100%;
-    padding:14px 5%;
+    padding:18px 7%;
     display:flex;
     justify-content:space-between;
     align-items:center;
-    gap:16px;
+    gap:20px;
     position:sticky;
     top:0;
     backdrop-filter:blur(20px);
     -webkit-backdrop-filter:blur(20px);
-    background:rgba(11,17,32,.92);
+    background:rgba(11,17,32,.8);
     border-bottom:1px solid rgba(255,255,255,0.06);
     z-index:1000;
     box-sizing:border-box;
 }
 
 .logo{
-    font-size:1.5rem;
+    font-size:1.6rem;
     font-weight:700;
     color:#4F46E5;
     flex-shrink:0;
@@ -57,28 +57,26 @@ body{
 }
 
 .search-box{
-    flex:0 1 280px;
-    max-width:320px;
-    min-width:160px;
-    box-sizing:border-box;
+    display:flex;
+    align-items:center;
+    flex-shrink:0;
 }
 
 .search-box input{
-    width:100%;
-    padding:10px 18px;
-    border:1px solid rgba(255,255,255,0.12);
+    width:260px;
+    padding:12px 18px;
+    border:none;
     outline:none;
     border-radius:50px;
     background:#111827;
     color:#fff;
-    font-size:0.88rem;
+    font-size:0.95rem;
     box-sizing:border-box;
-    transition:border-color 0.2s ease, box-shadow 0.2s ease;
+    transition:box-shadow 0.2s ease;
 }
 
 .search-box input:focus{
-    border-color:#4F46E5;
-    box-shadow:0 0 0 3px rgba(79,70,229,0.25);
+    box-shadow:0 0 0 2px #4F46E5;
 }
 
 .search-box input::placeholder{
@@ -91,36 +89,30 @@ body{
 
 .nav{
     display:flex;
-    gap:6px 12px;
+    gap:20px;
     align-items:center;
-    flex-wrap:wrap;
-    justify-content:flex-end;
+    flex-wrap:nowrap;
+    white-space:nowrap;
 }
 
 .nav a{
     text-decoration:none;
-    color:#cbd5e1;
+    color:#eaffea;
     font-weight:500;
-    font-size:0.92rem;
-    transition:color 0.2s ease, background-color 0.2s ease;
+    font-size:1rem;
+    transition:color 0.2s ease;
     white-space:nowrap;
-    padding:6px 10px;
-    border-radius:8px;
-    display:inline-flex;
-    align-items:center;
-    justify-content:center;
 }
 
 .nav a:hover{
-    color:#ffffff;
-    background:rgba(255,255,255,0.06);
+    color:#818cf8;
 }
 
 .nav a.active,
 .nav a[style*="font-weight:600"],
 .nav a[style*="font-weight: 600"]{
     color:#818cf8;
-    background:rgba(79,70,229,0.12);
+    font-weight:600;
 }
 
 
@@ -301,6 +293,18 @@ section h2{
 .category-card h3{
     font-size:1.5rem;
     margin-bottom:12px;
+    display:flex;
+    align-items:center;
+    gap:10px;
+}
+
+.category-logo{
+    width:28px;
+    height:28px;
+    object-fit:contain;
+    flex-shrink:0;
+    display:inline-block;
+    filter:drop-shadow(0 2px 4px rgba(0,0,0,0.25));
 }
 
 .category-card p{
@@ -499,42 +503,71 @@ footer p{
     .navbar{
         flex-direction:column;
         align-items:center;
-        gap:10px;
-        padding:12px 4%;
+        gap:14px;
+        padding:14px 4%;
+    }
+
+    .logo{
+        font-size:1.55rem;
     }
 
     .search-box{
         width:100%;
         max-width:440px;
-        flex:1 1 auto;
+        display:flex;
+        justify-content:center;
     }
 
     .search-box input{
         width:100%;
-        padding:9px 16px;
+        padding:11px 18px;
     }
 
     .nav{
         justify-content:center;
-        gap:6px 8px;
+        gap:10px 18px;
         width:100%;
+        max-width:480px;
+        flex-wrap:wrap;
     }
 
     .nav a{
-        font-size:0.88rem;
-        padding:5px 8px;
+        font-size:0.95rem;
+        padding:4px 6px;
     }
 
 }
 
+@media(min-width:901px) and (max-width:1150px){
+    .navbar{
+        padding:16px 4%;
+        gap:14px;
+    }
+
+    .search-box input{
+        width:210px;
+        padding:10px 16px;
+        font-size:0.9rem;
+    }
+
+    .nav{
+        gap:14px;
+        flex-wrap:nowrap;
+    }
+
+    .nav a{
+        font-size:0.95rem;
+    }
+}
+
 @media(max-width:480px){
     .navbar{
-        padding:10px 3%;
-        gap:8px;
+        padding:12px 3%;
+        gap:10px;
     }
 
     .logo{
-        font-size:1.35rem;
+        font-size:1.4rem;
     }
 
     .search-box{
@@ -543,25 +576,25 @@ footer p{
     }
 
     .search-box input{
-        font-size:0.84rem;
-        padding:8px 14px;
+        font-size:0.88rem;
+        padding:9px 16px;
     }
 
     .nav{
-        gap:4px 6px;
+        gap:8px 12px;
         justify-content:center;
     }
 
     .nav a{
-        font-size:0.82rem;
-        padding:4px 7px;
+        font-size:0.88rem;
+        padding:3px 5px;
     }
 }
 
 @media(max-width:360px){
     .navbar{
-        padding:8px 2%;
-        gap:6px;
+        padding:10px 2%;
+        gap:8px;
     }
 
     .logo{
@@ -569,17 +602,17 @@ footer p{
     }
 
     .search-box input{
-        font-size:0.8rem;
-        padding:7px 12px;
+        font-size:0.82rem;
+        padding:8px 14px;
     }
 
     .nav{
-        gap:3px 5px;
+        gap:6px 8px;
     }
 
     .nav a{
-        font-size:0.76rem;
-        padding:4px 6px;
+        font-size:0.8rem;
+        padding:2px 4px;
     }
 }
 
