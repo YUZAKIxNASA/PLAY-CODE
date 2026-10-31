@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
+  <rect width="128" height="128" rx="24" fill="#A23B72"/>
+  <path fill="#FFFFFF" d="M64 22c-7 0-14 4-17 10 3-1 6-2 9-2 11 0 20 9 20 20 0 3-.6 6-1.7 9 7-3 12-10 12-18 0-11-9-19-22.3-19z"/>
+  <path fill="#FFFFFF" d="M64 36c-18 0-32 14-32 32s14 32 32 32c8 0 15-3 20-8l-6-6c-4 4-9 6-14 6-13 0-24-11-24-24s11-24 24-24c5 0 10 2 14 6l6-6c-5-5-12-8-20-8z"/>
+  <text x="76" y="80" font-family="'Poppins', sans-serif" font-weight="800" font-size="28" fill="#FFFFFF">C</text>
+</svg>

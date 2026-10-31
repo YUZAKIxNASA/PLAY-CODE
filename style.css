@@ -411,6 +411,128 @@ section h2{
     background:linear-gradient(135deg,#536dfe,#7986cb);
 }
 
+/* Categories 21–50 */
+
+.c-lang{
+    background:linear-gradient(135deg,#52616B,#414E56);
+}
+
+.objectivec{
+    background:linear-gradient(135deg,#A23B72,#8A2E5E);
+}
+
+.scala{
+    background:linear-gradient(135deg,#8C3A4B,#732D3B);
+}
+
+.haskell{
+    background:linear-gradient(135deg,#345B63,#25464D);
+}
+
+.lua{
+    background:linear-gradient(135deg,#394B75,#293859);
+}
+
+.matlab{
+    background:linear-gradient(135deg,#A64B2A,#8A3B1D);
+}
+
+.julia{
+    background:linear-gradient(135deg,#704C91,#573775);
+}
+
+.elixir{
+    background:linear-gradient(135deg,#654A78,#4F385E);
+}
+
+.erlang{
+    background:linear-gradient(135deg,#9B3D3D,#7F2F2F);
+}
+
+.clojure{
+    background:linear-gradient(135deg,#596B56,#445441);
+}
+
+.fsharp{
+    background:linear-gradient(135deg,#315F91,#224973);
+}
+
+.ocaml{
+    background:linear-gradient(135deg,#A65E28,#87491C);
+}
+
+.fortran{
+    background:linear-gradient(135deg,#286B5C,#1C5448);
+}
+
+.cobol{
+    background:linear-gradient(135deg,#596477,#454E5F);
+}
+
+.pascal{
+    background:linear-gradient(135deg,#63436F,#4F3259);
+}
+
+.ada{
+    background:linear-gradient(135deg,#76533B,#5E3F2A);
+}
+
+.prolog{
+    background:linear-gradient(135deg,#386B91,#285473);
+}
+
+.smalltalk{
+    background:linear-gradient(135deg,#39765B,#295D46);
+}
+
+.groovy{
+    background:linear-gradient(135deg,#8B493B,#70372B);
+}
+
+.zig{
+    background:linear-gradient(135deg,#8B741F,#6E5B15);
+}
+
+.nim{
+    background:linear-gradient(135deg,#39704A,#2A5738);
+}
+
+.solidity{
+    background:linear-gradient(135deg,#46566B,#354254);
+}
+
+.vyper{
+    background:linear-gradient(135deg,#34766B,#255C53);
+}
+
+.move-lang{
+    background:linear-gradient(135deg,#62477C,#4D3563);
+}
+
+.coffeescript{
+    background:linear-gradient(135deg,#756A5D,#5E5448);
+}
+
+.elm{
+    background:linear-gradient(135deg,#A05A36,#824425);
+}
+
+.purescript{
+    background:linear-gradient(135deg,#345A78,#24435C);
+}
+
+.hack{
+    background:linear-gradient(135deg,#77703A,#5F592B);
+}
+
+.racket{
+    background:linear-gradient(135deg,#963F55,#7A2F42);
+}
+
+.dlang{
+    background:linear-gradient(135deg,#46505C,#343C46);
+}
+
 .project{
     background:linear-gradient(#A855F7,#A855F7,#A855F7);
 }

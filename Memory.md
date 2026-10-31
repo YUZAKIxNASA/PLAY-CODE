@@ -95,6 +95,9 @@
   - Projects: Verified and updated to `3 Practice Projects`
   - Unimplemented Categories (Python, SQL, TypeScript, jQuery, Java, C#, C++, Go, Ruby, Swift, Kotlin, Rust, Dart, R, Perl, VBA): Replaced fake counts with styled `Coming Soon` labels and removed invalid/broken links.
 - [x] **Navigation & Vite Configuration Integration:** Added PHP to global navigation across all pages (`index.html`, `pages/*.html`) and configured `vite.config.js` with `phpPage` and `phpLesson` inputs.
+- [x] **Navbar Restoration & Stabilization:** Restored original CodePlay navbar design with borderless search pill, clean `#eaffea` typography, and single-row nowrap layout to permanently eliminate awkward wrapping of the Editor link across desktops and tablets.
+- [x] **Official SVG Logo Asset System:** Replaced category emojis across all language categories with clean, sharp 128x128 official vector SVGs stored in `/assets/logos/` and `/public/assets/logos/`.
+- [x] **Explore Categories Expansion (21–50):** Extended the Explore Categories section from 20 to 50 programming language categories in exact numbered sequence (C, Objective-C, Scala, Haskell, Lua, MATLAB, Julia, Elixir, Erlang, Clojure, F#, OCaml, Fortran, COBOL, Pascal, Ada, Prolog, Smalltalk, Groovy, Zig, Nim, Solidity, Vyper, Move, CoffeeScript, Elm, PureScript, Hack, Racket, D) plus Projects. Each new card features a unique validated HEX color (0 duplicates or collisions) and Coming Soon status label.
 - [x] **Build & Compilation Verification:** Verified compilation via `compile_applet` and `lint_applet` with zero errors.
 
 ---
