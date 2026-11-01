@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
+  <rect width="128" height="128" rx="24" fill="#2A3542"/>
+  <rect x="34" y="34" width="60" height="60" rx="14" fill="#475569" stroke="#94A3B8" stroke-width="3"/>
+  <path d="M48 64 C48 52 56 46 64 46 C72 46 80 52 80 64 C80 76 72 82 64 82 C56 82 48 76 48 64 Z" fill="none" stroke="#F59E0B" stroke-width="5"/>
+  <circle cx="64" cy="64" r="6" fill="#38BDF8"/>
+  <text x="64" y="108" font-family="'Poppins',sans-serif" font-size="12" font-weight="bold" fill="#CBD5E1" text-anchor="middle">FE</text>
+</svg>

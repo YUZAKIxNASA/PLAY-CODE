@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
+  <rect width="128" height="128" rx="24" fill="#3D1B0F"/>
+  <rect x="30" y="28" width="68" height="72" rx="8" fill="#1E293B" stroke="#F97316" stroke-width="3"/>
+  <text x="64" y="72" font-family="'Poppins',sans-serif" font-size="28" font-weight="bold" fill="#FB923C" text-anchor="middle">[T]</text>
+</svg>

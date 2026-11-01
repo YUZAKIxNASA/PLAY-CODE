@@ -107,6 +107,10 @@ console.log("CodePlay");
                 <span class="tab-title">Section 3</span>
                 <span class="tab-range">101–150</span>
             </button>
+            <button type="button" class="section-tab-btn" id="tab-section-4" onclick="switchCategorySection(4)" aria-selected="false" aria-controls="category-grid-4">
+                <span class="tab-title">Section 4</span>
+                <span class="tab-range">151–200</span>
+            </button>
         </div>
 
         <div class="section-meta-info">
@@ -1182,6 +1186,312 @@ console.log("CodePlay");
 
     </div>
 
+    <!-- Section 4 Grid (Categories 151–200) -->
+    <div class="category-grid" id="category-grid-4" data-section="4" style="display:none;">
+
+        <!-- 151: GLSL -->
+        <div class="category-card glsl" data-category="151">
+            <h3><img src="assets/logos/glsl.svg" alt="GLSL" class="category-logo"> GLSL</h3>
+            <p>C-like shading language for real-time graphics pipelines</p>
+            <span class="coming-soon">Coming Soon</span>
+        </div>
+        <!-- 152: Metal Shading Language -->
+        <div class="category-card metal-shading" data-category="152">
+            <h3><img src="assets/logos/metal.svg" alt="Metal Shading Language" class="category-logo"> Metal Shading Language</h3>
+            <p>Apple's high-performance C++14 shading language for GPUs</p>
+            <span class="coming-soon">Coming Soon</span>
+        </div>
+        <!-- 153: CUDA C -->
+        <div class="category-card cuda-c" data-category="153">
+            <h3><img src="assets/logos/cuda.svg" alt="CUDA C" class="category-logo"> CUDA C</h3>
+            <p>NVIDIA parallel computing extension for massive GPU parallelism</p>
+            <span class="coming-soon">Coming Soon</span>
+        </div>
+        <!-- 154: OpenCL C -->
+        <div class="category-card opencl-c" data-category="154">
+            <h3><img src="assets/logos/opencl.svg" alt="OpenCL C" class="category-logo"> OpenCL C</h3>
+            <p>Cross-platform heterogeneous parallel computing language</p>
+            <span class="coming-soon">Coming Soon</span>
+        </div>
+        <!-- 155: Futhark -->
+        <div class="category-card futhark-155" data-category="155">
+            <h3><img src="assets/logos/futhark.svg" alt="Futhark" class="category-logo"> Futhark</h3>
+            <p>Purely functional parallel language generating optimized GPU code</p>
+            <span class="coming-soon">Coming Soon</span>
+        </div>
+        <!-- 156: Halide -->
+        <div class="category-card halide-156" data-category="156">
+            <h3><img src="assets/logos/halide.svg" alt="Halide" class="category-logo"> Halide</h3>
+            <p>Domain-specific language for image processing and tensor pipelines</p>
+            <span class="coming-soon">Coming Soon</span>
+        </div>
+        <!-- 157: Cg -->
+        <div class="category-card cg-157" data-category="157">
+            <h3><img src="assets/logos/cg.svg" alt="Cg" class="category-logo"> Cg</h3>
+            <p>High-level graphics shading language created by NVIDIA</p>
+            <span class="coming-soon">Coming Soon</span>
+        </div>
+        <!-- 158: ShaderLab -->
+        <div class="category-card shaderlab" data-category="158">
+            <h3><img src="assets/logos/shaderlab.svg" alt="ShaderLab" class="category-logo"> ShaderLab</h3>
+            <p>Unity's declarative language for configuring multi-pass shaders</p>
+            <span class="coming-soon">Coming Soon</span>
+        </div>
+        <!-- 159: Slang -->
+        <div class="category-card slang-159" data-category="159">
+            <h3><img src="assets/logos/slang.svg" alt="Slang" class="category-logo"> Slang</h3>
+            <p>Modern modular shading language with generics and reflection</p>
+            <span class="coming-soon">Coming Soon</span>
+        </div>
+        <!-- 160: WGSL -->
+        <div class="category-card wgsl-160" data-category="160">
+            <h3><img src="assets/logos/wgsl.svg" alt="WGSL" class="category-logo"> WGSL</h3>
+            <p>WebGPU Shading Language standard for browser graphics & compute</p>
+            <span class="coming-soon">Coming Soon</span>
+        </div>
+        <!-- 161: Frege -->
+        <div class="category-card frege-161" data-category="161">
+            <h3><img src="assets/logos/frege.svg" alt="Frege" class="category-logo"> Frege</h3>
+            <p>Purely functional Haskell-style language running on the JVM</p>
+            <span class="coming-soon">Coming Soon</span>
+        </div>
+        <!-- 162: Eta -->
+        <div class="category-card eta-162" data-category="162">
+            <h3><img src="assets/logos/eta.svg" alt="Eta" class="category-logo"> Eta</h3>
+            <p>Pure lazy functional programming language with direct Java interop</p>
+            <span class="coming-soon">Coming Soon</span>
+        </div>
+        <!-- 163: Ceylon -->
+        <div class="category-card ceylon-163" data-category="163">
+            <h3><img src="assets/logos/ceylon.svg" alt="Ceylon" class="category-logo"> Ceylon</h3>
+            <p>Statically typed modular language by Red Hat for JVM & JS</p>
+            <span class="coming-soon">Coming Soon</span>
+        </div>
+        <!-- 164: Fantom -->
+        <div class="category-card fantom-lang" data-category="164">
+            <h3><img src="assets/logos/fantom.svg" alt="Fantom" class="category-logo"> Fantom</h3>
+            <p>Portable object-oriented language targeting JVM, .NET, and browsers</p>
+            <span class="coming-soon">Coming Soon</span>
+        </div>
+        <!-- 165: Gosu -->
+        <div class="category-card gosu-lang" data-category="165">
+            <h3><img src="assets/logos/gosu.svg" alt="Gosu" class="category-logo"> Gosu</h3>
+            <p>Pragmatic object-oriented general-purpose language for the JVM</p>
+            <span class="coming-soon">Coming Soon</span>
+        </div>
+        <!-- 166: X++ -->
+        <div class="category-card xplusplus-166" data-category="166">
+            <h3><img src="assets/logos/xplusplus.svg" alt="X++" class="category-logo"> X++</h3>
+            <p>Enterprise object-oriented language for Microsoft Dynamics 365</p>
+            <span class="coming-soon">Coming Soon</span>
+        </div>
+        <!-- 167: Xtend -->
+        <div class="category-card xtend-167" data-category="167">
+            <h3><img src="assets/logos/xtend.svg" alt="Xtend" class="category-logo"> Xtend</h3>
+            <p>Expressive Java dialect featuring rich templates and lambda macros</p>
+            <span class="coming-soon">Coming Soon</span>
+        </div>
+        <!-- 168: Jython -->
+        <div class="category-card jython-lang" data-category="168">
+            <h3><img src="assets/logos/jython.svg" alt="Jython" class="category-logo"> Jython</h3>
+            <p>Python implementation seamlessly integrated with Java Virtual Machine</p>
+            <span class="coming-soon">Coming Soon</span>
+        </div>
+        <!-- 169: JRuby -->
+        <div class="category-card jruby-lang" data-category="169">
+            <h3><img src="assets/logos/jruby.svg" alt="JRuby" class="category-logo"> JRuby</h3>
+            <p>High-performance Ruby implementation on the Java Virtual Machine</p>
+            <span class="coming-soon">Coming Soon</span>
+        </div>
+        <!-- 170: IronPython -->
+        <div class="category-card ironpython-lang" data-category="170">
+            <h3><img src="assets/logos/ironpython.svg" alt="IronPython" class="category-logo"> IronPython</h3>
+            <p>Python implementation running on Microsoft .NET and DLR</p>
+            <span class="coming-soon">Coming Soon</span>
+        </div>
+        <!-- 171: Cython -->
+        <div class="category-card cython-lang" data-category="171">
+            <h3><img src="assets/logos/cython.svg" alt="Cython" class="category-logo"> Cython</h3>
+            <p>Superset language compiling Python syntax to fast C/C++ extensions</p>
+            <span class="coming-soon">Coming Soon</span>
+        </div>
+        <!-- 172: RPython -->
+        <div class="category-card rpython-172" data-category="172">
+            <h3><img src="assets/logos/rpython.svg" alt="RPython" class="category-logo"> RPython</h3>
+            <p>Restricted Python dialect used to build PyPy and fast virtual machines</p>
+            <span class="coming-soon">Coming Soon</span>
+        </div>
+        <!-- 173: Numba -->
+        <div class="category-card numba-lang" data-category="173">
+            <h3><img src="assets/logos/numba.svg" alt="Numba" class="category-logo"> Numba</h3>
+            <p>JIT compiler converting Python and NumPy functions to machine code</p>
+            <span class="coming-soon">Coming Soon</span>
+        </div>
+        <!-- 174: Brython -->
+        <div class="category-card brython-lang" data-category="174">
+            <h3><img src="assets/logos/brython.svg" alt="Brython" class="category-logo"> Brython</h3>
+            <p>Python 3 implementation running client-side inside web browsers</p>
+            <span class="coming-soon">Coming Soon</span>
+        </div>
+        <!-- 175: Transcrypt -->
+        <div class="category-card transcrypt-lang" data-category="175">
+            <h3><img src="assets/logos/transcrypt.svg" alt="Transcrypt" class="category-logo"> Transcrypt</h3>
+            <p>Precompiler converting Python 3 code into fast, compact JavaScript</p>
+            <span class="coming-soon">Coming Soon</span>
+        </div>
+        <!-- 176: Skulpt -->
+        <div class="category-card skulpt-lang" data-category="176">
+            <h3><img src="assets/logos/skulpt.svg" alt="Skulpt" class="category-logo"> Skulpt</h3>
+            <p>In-browser pure JavaScript execution engine for Python code</p>
+            <span class="coming-soon">Coming Soon</span>
+        </div>
+        <!-- 177: Coconut -->
+        <div class="category-card coconut-177" data-category="177">
+            <h3><img src="assets/logos/coconut.svg" alt="Coconut" class="category-logo"> Coconut</h3>
+            <p>Functional programming extension for Python with pattern matching</p>
+            <span class="coming-soon">Coming Soon</span>
+        </div>
+        <!-- 178: Starlark -->
+        <div class="category-card starlark-lang" data-category="178">
+            <h3><img src="assets/logos/starlark.svg" alt="Starlark" class="category-logo"> Starlark</h3>
+            <p>Deterministic, hermetic Python-like dialect for Bazel build rules</p>
+            <span class="coming-soon">Coming Soon</span>
+        </div>
+        <!-- 179: Jsonnet -->
+        <div class="category-card jsonnet-179" data-category="179">
+            <h3><img src="assets/logos/jsonnet.svg" alt="Jsonnet" class="category-logo"> Jsonnet</h3>
+            <p>Data templating language extending JSON with functions and logic</p>
+            <span class="coming-soon">Coming Soon</span>
+        </div>
+        <!-- 180: Dhall -->
+        <div class="category-card dhall-180" data-category="180">
+            <h3><img src="assets/logos/dhall.svg" alt="Dhall" class="category-logo"> Dhall</h3>
+            <p>Programmable configuration language guaranteed to terminate safely</p>
+            <span class="coming-soon">Coming Soon</span>
+        </div>
+        <!-- 181: CUE -->
+        <div class="category-card cue-181" data-category="181">
+            <h3><img src="assets/logos/cue.svg" alt="CUE" class="category-logo"> CUE</h3>
+            <p>Validation, data templating, and configuration language with lattices</p>
+            <span class="coming-soon">Coming Soon</span>
+        </div>
+        <!-- 182: Nix -->
+        <div class="category-card nix-lang" data-category="182">
+            <h3><img src="assets/logos/nix.svg" alt="Nix" class="category-logo"> Nix</h3>
+            <p>Purely functional language for reproducible builds and package config</p>
+            <span class="coming-soon">Coming Soon</span>
+        </div>
+        <!-- 183: HCL -->
+        <div class="category-card hcl-lang" data-category="183">
+            <h3><img src="assets/logos/hcl.svg" alt="HCL" class="category-logo"> HCL</h3>
+            <p>HashiCorp Configuration Language for Terraform infrastructure</p>
+            <span class="coming-soon">Coming Soon</span>
+        </div>
+        <!-- 184: Puppet DSL -->
+        <div class="category-card puppet-dsl" data-category="184">
+            <h3><img src="assets/logos/puppet.svg" alt="Puppet DSL" class="category-logo"> Puppet DSL</h3>
+            <p>Declarative configuration management language for IT automation</p>
+            <span class="coming-soon">Coming Soon</span>
+        </div>
+        <!-- 185: Makefile -->
+        <div class="category-card makefile-lang" data-category="185">
+            <h3><img src="assets/logos/makefile.svg" alt="Makefile" class="category-logo"> Makefile</h3>
+            <p>Direct rule-based build automation language executed by GNU Make</p>
+            <span class="coming-soon">Coming Soon</span>
+        </div>
+        <!-- 186: CMake -->
+        <div class="category-card cmake-lang" data-category="186">
+            <h3><img src="assets/logos/cmake.svg" alt="CMake" class="category-logo"> CMake</h3>
+            <p>Cross-platform generator language for managing software build processes</p>
+            <span class="coming-soon">Coming Soon</span>
+        </div>
+        <!-- 187: Meson -->
+        <div class="category-card meson-build" data-category="187">
+            <h3><img src="assets/logos/meson.svg" alt="Meson" class="category-logo"> Meson</h3>
+            <p>High-productivity, user-friendly build system specification language</p>
+            <span class="coming-soon">Coming Soon</span>
+        </div>
+        <!-- 188: Bazel -->
+        <div class="category-card bazel-build" data-category="188">
+            <h3><img src="assets/logos/bazel.svg" alt="Bazel" class="category-logo"> Bazel</h3>
+            <p>Fast, scalable multi-language build system with hermetic guarantees</p>
+            <span class="coming-soon">Coming Soon</span>
+        </div>
+        <!-- 189: Dockerfile -->
+        <div class="category-card dockerfile-lang" data-category="189">
+            <h3><img src="assets/logos/dockerfile.svg" alt="Dockerfile" class="category-logo"> Dockerfile</h3>
+            <p>Declarative syntax for automated building of containerized images</p>
+            <span class="coming-soon">Coming Soon</span>
+        </div>
+        <!-- 190: YAML -->
+        <div class="category-card yaml-lang" data-category="190">
+            <h3><img src="assets/logos/yaml.svg" alt="YAML" class="category-logo"> YAML</h3>
+            <p>Human-readable data serialization standard for application configs</p>
+            <span class="coming-soon">Coming Soon</span>
+        </div>
+        <!-- 191: JSON -->
+        <div class="category-card json-lang" data-category="191">
+            <h3><img src="assets/logos/json.svg" alt="JSON" class="category-logo"> JSON</h3>
+            <p>Ubiquitous, lightweight standard for structured data interchange</p>
+            <span class="coming-soon">Coming Soon</span>
+        </div>
+        <!-- 192: TOML -->
+        <div class="category-card toml-lang" data-category="192">
+            <h3><img src="assets/logos/toml.svg" alt="TOML" class="category-logo"> TOML</h3>
+            <p>Minimal, human-friendly configuration file format with clear mapping</p>
+            <span class="coming-soon">Coming Soon</span>
+        </div>
+        <!-- 193: XML -->
+        <div class="category-card xml-lang" data-category="193">
+            <h3><img src="assets/logos/xml.svg" alt="XML" class="category-logo"> XML</h3>
+            <p>Extensible markup language for hierarchical document serialization</p>
+            <span class="coming-soon">Coming Soon</span>
+        </div>
+        <!-- 194: XSLT -->
+        <div class="category-card xslt-lang" data-category="194">
+            <h3><img src="assets/logos/xslt.svg" alt="XSLT" class="category-logo"> XSLT</h3>
+            <p>Transformational rule language for converting XML into other formats</p>
+            <span class="coming-soon">Coming Soon</span>
+        </div>
+        <!-- 195: XPath -->
+        <div class="category-card xpath-lang" data-category="195">
+            <h3><img src="assets/logos/xpath.svg" alt="XPath" class="category-logo"> XPath</h3>
+            <p>Expression language for addressing and selecting nodes in XML trees</p>
+            <span class="coming-soon">Coming Soon</span>
+        </div>
+        <!-- 196: XQuery -->
+        <div class="category-card xquery-lang" data-category="196">
+            <h3><img src="assets/logos/xquery.svg" alt="XQuery" class="category-logo"> XQuery</h3>
+            <p>Functional query language designed to query collections of XML data</p>
+            <span class="coming-soon">Coming Soon</span>
+        </div>
+        <!-- 197: SPARQL -->
+        <div class="category-card sparql-lang" data-category="197">
+            <h3><img src="assets/logos/sparql.svg" alt="SPARQL" class="category-logo"> SPARQL</h3>
+            <p>Semantic web query language for querying RDF triple stores and graph data</p>
+            <span class="coming-soon">Coming Soon</span>
+        </div>
+        <!-- 198: Cypher -->
+        <div class="category-card cypher-lang" data-category="198">
+            <h3><img src="assets/logos/cypher.svg" alt="Cypher" class="category-logo"> Cypher</h3>
+            <p>Declarative graph query language for Neo4j property graph traversal</p>
+            <span class="coming-soon">Coming Soon</span>
+        </div>
+        <!-- 199: Gremlin -->
+        <div class="category-card gremlin-lang" data-category="199">
+            <h3><img src="assets/logos/gremlin.svg" alt="Gremlin" class="category-logo"> Gremlin</h3>
+            <p>Graph traversal machine language developed by Apache TinkerPop</p>
+            <span class="coming-soon">Coming Soon</span>
+        </div>
+        <!-- 200: CQL -->
+        <div class="category-card cql-lang" data-category="200">
+            <h3><img src="assets/logos/cql.svg" alt="CQL" class="category-logo"> CQL</h3>
+            <p>Cassandra Query Language for distributed columnar data stores</p>
+            <span class="coming-soon">Coming Soon</span>
+        </div>
+
+    </div>
+
 </section>
 
 <section class="featured">
@@ -1312,7 +1622,7 @@ console.log("CodePlay");
 </footer>
 
 <script>
-    // Section Switcher Logic (Section 1: 1–50, Section 2: 51–100, Section 3: 101–150)
+    // Section Switcher Logic (Section 1: 1–50, Section 2: 51–100, Section 3: 101–150, Section 4: 151–200)
     let currentCategorySection = 1;
 
     function switchCategorySection(sectionNum) {
@@ -1320,13 +1630,15 @@ console.log("CodePlay");
         const grid1 = document.getElementById('category-grid-1');
         const grid2 = document.getElementById('category-grid-2');
         const grid3 = document.getElementById('category-grid-3');
+        const grid4 = document.getElementById('category-grid-4');
         const tab1 = document.getElementById('tab-section-1');
         const tab2 = document.getElementById('tab-section-2');
         const tab3 = document.getElementById('tab-section-3');
+        const tab4 = document.getElementById('tab-section-4');
         const badge = document.getElementById('section-counter-badge');
 
-        const grids = [grid1, grid2, grid3];
-        const tabs = [tab1, tab2, tab3];
+        const grids = [grid1, grid2, grid3, grid4];
+        const tabs = [tab1, tab2, tab3, tab4];
 
         grids.forEach((g, idx) => {
             if (g) g.style.display = (idx + 1 === sectionNum) ? 'grid' : 'none';
@@ -1344,19 +1656,22 @@ console.log("CodePlay");
             if (sectionNum === 1) badge.textContent = 'Showing Section 1: Languages 1–50 (50 Languages)';
             else if (sectionNum === 2) badge.textContent = 'Showing Section 2: Languages 51–100 (50 Languages)';
             else if (sectionNum === 3) badge.textContent = 'Showing Section 3: Languages 101–150 (50 Languages)';
+            else if (sectionNum === 4) badge.textContent = 'Showing Section 4: Languages 151–200 (50 Languages)';
         }
     }
 
-    // URL parameter or hash check on load (?section=2 / ?section=3 or #section-2 / #section-3)
+    // URL parameter or hash check on load (?section=2 / 3 / 4 or #section-2 / 3 / 4)
     const urlParams = new URLSearchParams(window.location.search);
     const secParam = urlParams.get('section');
     if (secParam === '2' || window.location.hash === '#section-2') {
         switchCategorySection(2);
     } else if (secParam === '3' || window.location.hash === '#section-3') {
         switchCategorySection(3);
+    } else if (secParam === '4' || window.location.hash === '#section-4') {
+        switchCategorySection(4);
     }
 
-    // Search filter across all 3 sections and example cards
+    // Search filter across all 4 sections and example cards
     const searchInput = document.querySelector('.search-box input');
     if (searchInput) {
         searchInput.addEventListener('input', (e) => {
@@ -1364,13 +1679,15 @@ console.log("CodePlay");
             const grid1 = document.getElementById('category-grid-1');
             const grid2 = document.getElementById('category-grid-2');
             const grid3 = document.getElementById('category-grid-3');
+            const grid4 = document.getElementById('category-grid-4');
             const badge = document.getElementById('section-counter-badge');
 
             if (query) {
-                // When actively querying, open all 3 grids so no language is missed
+                // When actively querying, open all 4 grids so no language is missed
                 if (grid1) grid1.style.display = 'grid';
                 if (grid2) grid2.style.display = 'grid';
                 if (grid3) grid3.style.display = 'grid';
+                if (grid4) grid4.style.display = 'grid';
                 let matchCount = 0;
                 const cards = document.querySelectorAll('.category-card, .example-card');
                 cards.forEach(card => {

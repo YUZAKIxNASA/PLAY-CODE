@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
+  <rect width="128" height="128" rx="24" fill="#441022"/>
+  <polygon points="64,28 96,52 84,94 44,94 32,52" fill="#E11D48" stroke="#FDA4AF" stroke-width="3"/>
+  <polygon points="64,28 78,52 64,94 50,52" fill="#BE123C"/>
+  <text x="64" y="68" font-family="'Poppins',sans-serif" font-size="22" font-weight="900" fill="#FFFFFF" text-anchor="middle">J</text>
+</svg>

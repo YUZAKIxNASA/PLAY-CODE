@@ -61,6 +61,9 @@ Every new page (`pages/*.html`), interactive component, code workspace, and moda
 | **Go** | `linear-gradient(135deg, #FF9800, #FFC107)` |
 | **Rust** | `linear-gradient(135deg, #FF9800, #FFB74D)` |
 | **Kotlin** | `linear-gradient(135deg, #00E676, #69F0AE)` |
+| **Section 2 (51–100)** | 50 unique high-contrast gradient pairs (Obliq #51 to Verona #100) |
+| **Section 3 (101–150)** | 50 unique high-contrast gradient pairs (Mojo #101 to HLSL #150) |
+| **Section 4 (151–200)** | 50 unique high-contrast gradient pairs (GLSL #151 to CQL #200) with Sky Cyan active accent (`#0EA5E9` to `#0284C7`) |
 
 ---
 

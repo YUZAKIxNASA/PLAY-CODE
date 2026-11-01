@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
+  <rect width="128" height="128" rx="24" fill="#0F3A5A"/>
+  <circle cx="64" cy="64" r="40" fill="none" stroke="#38BDF8" stroke-width="4"/>
+  <ellipse cx="64" cy="64" rx="20" ry="40" fill="none" stroke="#38BDF8" stroke-width="3"/>
+  <line x1="24" y1="64" x2="104" y2="64" stroke="#38BDF8" stroke-width="3"/>
+  <text x="64" y="71" font-family="'Poppins',sans-serif" font-size="20" font-weight="bold" fill="#FACC15" text-anchor="middle">PY</text>
+</svg>
