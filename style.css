@@ -31,8 +31,6 @@ body{
     justify-content:space-between;
     align-items:center;
     gap:20px;
-    position:sticky;
-    top:0;
     backdrop-filter:blur(20px);
     -webkit-backdrop-filter:blur(20px);
     background:rgba(11,17,32,.8);
@@ -260,6 +258,86 @@ section h2{
 }
 
 /* ==========================
+   CATEGORY SECTION NAVIGATION
+========================== */
+
+.section-nav-wrapper{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    flex-wrap:wrap;
+    gap:16px;
+    margin-bottom:32px;
+    padding:0 4px;
+}
+
+.section-tabs{
+    display:inline-flex;
+    background:#111827;
+    border:1px solid rgba(255,255,255,.08);
+    border-radius:18px;
+    padding:6px;
+    gap:6px;
+}
+
+.section-tab-btn{
+    display:flex;
+    align-items:center;
+    gap:8px;
+    padding:10px 22px;
+    background:transparent;
+    border:none;
+    color:#94a3b8;
+    font-family:'Poppins',sans-serif;
+    font-size:0.95rem;
+    font-weight:500;
+    border-radius:14px;
+    cursor:pointer;
+    transition:all 0.3s ease;
+    white-space:nowrap;
+}
+
+.section-tab-btn:hover{
+    color:#ffffff;
+    background:rgba(255,255,255,.05);
+}
+
+.section-tab-btn.active{
+    background:#4F46E5;
+    color:#ffffff;
+    font-weight:600;
+    box-shadow:0 6px 20px rgba(79,70,229,.35);
+}
+
+.section-tab-btn .tab-range{
+    font-size:0.8rem;
+    opacity:0.85;
+    background:rgba(0,0,0,0.25);
+    padding:2px 8px;
+    border-radius:10px;
+}
+
+.section-tab-btn.active .tab-range{
+    background:rgba(255,255,255,0.22);
+}
+
+.section-meta-info{
+    display:flex;
+    align-items:center;
+}
+
+.section-counter-badge{
+    display:inline-block;
+    padding:8px 18px;
+    background:rgba(255,255,255,.05);
+    border:1px solid rgba(255,255,255,.08);
+    border-radius:30px;
+    color:#cbd5e1;
+    font-size:0.9rem;
+    font-weight:500;
+}
+
+/* ==========================
    CATEGORY GRID
 ========================== */
 
@@ -332,83 +410,84 @@ section h2{
 
 /* Card Colors */
 
-.html{background:linear-gradient(135deg,#ff7b00,#ff5500);
+.html{
+    background:linear-gradient(135deg,#A34828,#87381D);
 }
 
-.css{background:linear-gradient(135deg,#2196F3,#0057FF);
+.css{
+    background:linear-gradient(135deg,#265C8C,#1B476E);
 }
 
 .js{
-    background:linear-gradient(135deg,#FFD600,#FFB300);
+    background:linear-gradient(135deg,#96751C,#7A5E12);
 }
 
-
 .php{
-    background:linear-gradient(135deg,#7873f5,#5b4bff);
+    background:linear-gradient(135deg,#534E8C,#403C70);
 }
 
 .python{
-    background:linear-gradient(135deg,#4caf50,#8bc34a);
+    background:linear-gradient(135deg,#2E6848,#225036);
 }
 
 .sql{
-    background:linear-gradient(135deg,#00c9ff,#00e5ff);
+    background:linear-gradient(135deg,#236B7D,#185261);
 }
 
 .typescript{
-    background:linear-gradient(135deg,#0284c7,#2563eb);
+    background:linear-gradient(135deg,#2A5A87,#1E4366);
 }
 
 .jquery{
-    background:linear-gradient(135deg,#00bfa5,#00e5d0);
+    background:linear-gradient(135deg,#246D73,#195459);
 }
 
 .java{
-    background:linear-gradient(135deg,#ff5252,#ff7043);
+    background:linear-gradient(135deg,#943838,#782B2B);
 }
 
 .csharp{
-    background:linear-gradient(135deg,#2979ff,#448aff);
+    background:linear-gradient(135deg,#6E3D7D,#572E63);
 }
 
 .cpp{
-    background:linear-gradient(135deg,#7cb342,#9ccc65);
+    background:linear-gradient(135deg,#2B5377,#1E3F5C);
 }
 
 .go{
-    background:linear-gradient(135deg,#ff9800,#ffc107);
+    background:linear-gradient(135deg,#216E85,#165569);
 }
 
 .ruby{
-    background:linear-gradient(135deg,#7c4dff,#9575cd);
+    background:linear-gradient(135deg,#99333F,#7D2530);
 }
 
 .swift{
-    background:linear-gradient(135deg,#42a5f5,#64b5f6);
+    background:linear-gradient(135deg,#9E4C2C,#823A1E);
 }
 
 .kotlin{
-    background:linear-gradient(135deg,#00e676,#69f0ae);
+    background:linear-gradient(135deg,#5B4482,#473366);
 }
 
 .rust{
-    background:linear-gradient(135deg,#ff9800,#ffb74d);
+    background:linear-gradient(135deg,#8F4829,#73371E);
 }
 
 .dart{
-    background:linear-gradient(135deg,#40c4ff,#80d8ff);
+    background:linear-gradient(135deg,#255F80,#194A64);
 }
 
 .rlang{
-    background:linear-gradient(135deg,#8bc34a,#aed581);
+    background:linear-gradient(135deg,#355375,#263E59);
 }
 
 .perl{
-    background:linear-gradient(135deg,#ff4081,#f06292);
+    background:linear-gradient(135deg,#8C3759,#702944);
 }
 
 .vba{
-    background:linear-gradient(135deg,#536dfe,#7986cb);
+    background:linear-gradient(135deg,#28634B,#1D4C38);
 }
 
 /* Categories 21–50 */
@@ -535,6 +614,208 @@ section h2{
 
 .project{
     background:linear-gradient(#A855F7,#A855F7,#A855F7);
+}
+
+/* Categories 51–100 (Section 2) */
+
+.obliq{
+    background:linear-gradient(135deg,#335C67,#25444D);
+}
+
+.zonnon{
+    background:linear-gradient(135deg,#5B3A60,#472B4B);
+}
+
+.lagoona{
+    background:linear-gradient(135deg,#2C6E6E,#1F5252);
+}
+
+.blue-lang{
+    background:linear-gradient(135deg,#274C77,#1B3859);
+}
+
+.green-lang{
+    background:linear-gradient(135deg,#35682D,#274F21);
+}
+
+.curry{
+    background:linear-gradient(135deg,#B36B00,#945800);
+}
+
+.hope-lang{
+    background:linear-gradient(135deg,#7D3C5E,#632D49);
+}
+
+.miranda{
+    background:linear-gradient(135deg,#3A506B,#2B3C50);
+}
+
+.krc{
+    background:linear-gradient(135deg,#795548,#5D4037);
+}
+
+.sasl{
+    background:linear-gradient(135deg,#455A64,#37474F);
+}
+
+.gofer{
+    background:linear-gradient(135deg,#4A6572,#344955);
+}
+
+.orwell{
+    background:linear-gradient(135deg,#5C6B73,#455057);
+}
+
+.cayenne{
+    background:linear-gradient(135deg,#A83232,#8A2727);
+}
+
+.epigram{
+    background:linear-gradient(135deg,#6B4C85,#523868);
+}
+
+.futhark{
+    background:linear-gradient(135deg,#1E6B52,#144F3C);
+}
+
+.halide{
+    background:linear-gradient(135deg,#2A6F97,#1E5373);
+}
+
+.cg-lang{
+    background:linear-gradient(135deg,#3A7D44,#2B5E33);
+}
+
+.slang{
+    background:linear-gradient(135deg,#8338EC,#6829C2);
+}
+
+.wgsl{
+    background:linear-gradient(135deg,#9D4EDD,#7B3AA8);
+}
+
+.frege{
+    background:linear-gradient(135deg,#3D5A80,#2B405B);
+}
+
+.ceylon{
+    background:linear-gradient(135deg,#C05C38,#A24727);
+}
+
+.eta-lang{
+    background:linear-gradient(135deg,#466060,#324747);
+}
+
+.xplusplus{
+    background:linear-gradient(135deg,#006699,#004C73);
+}
+
+.xtend{
+    background:linear-gradient(135deg,#5A6B32,#435024);
+}
+
+.rpython{
+    background:linear-gradient(135deg,#2B7A78,#1D5A58);
+}
+
+.coconut{
+    background:linear-gradient(135deg,#8D5B4C,#6E4539);
+}
+
+.dhall{
+    background:linear-gradient(135deg,#4A5859,#354041);
+}
+
+.cue-lang{
+    background:linear-gradient(135deg,#E06D53,#BC523B);
+}
+
+.nickel{
+    background:linear-gradient(135deg,#5A716E,#425553);
+}
+
+.jsonnet{
+    background:linear-gradient(135deg,#486581,#334E68);
+}
+
+.chapel-variants{
+    background:linear-gradient(135deg,#1B6A7A,#134D59);
+}
+
+.bqn{
+    background:linear-gradient(135deg,#386641,#28492E);
+}
+
+.uiua{
+    background:linear-gradient(135deg,#6A4C93,#523A73);
+}
+
+.nial{
+    background:linear-gradient(135deg,#2F5D62,#214246);
+}
+
+.klong{
+    background:linear-gradient(135deg,#5E503F,#463A2D);
+}
+
+.kitten{
+    background:linear-gradient(135deg,#805B75,#65455C);
+}
+
+.retro-lang{
+    background:linear-gradient(135deg,#8F5D38,#734728);
+}
+
+.eighth-lang{
+    background:linear-gradient(135deg,#2E5A88,#204163);
+}
+
+.staple{
+    background:linear-gradient(135deg,#4B5358,#383E42);
+}
+
+.om-lang{
+    background:linear-gradient(135deg,#7B4B94,#603775);
+}
+
+.lil-lang{
+    background:linear-gradient(135deg,#9A4867,#7C3450);
+}
+
+.mun-lang{
+    background:linear-gradient(135deg,#2C6975,#1F4F59);
+}
+
+.nelua{
+    background:linear-gradient(135deg,#2D728F,#1F566D);
+}
+
+.gravity-lang{
+    background:linear-gradient(135deg,#605B56,#494440);
+}
+
+.wren-variants{
+    background:linear-gradient(135deg,#A25936,#834325);
+}
+
+.ring-variants{
+    background:linear-gradient(135deg,#546A7B,#3E505E);
+}
+
+.hylo{
+    background:linear-gradient(135deg,#0B6E6E,#064F4F);
+}
+
+.val-lang{
+    background:linear-gradient(135deg,#3B6064,#284548);
+}
+
+.austral{
+    background:linear-gradient(135deg,#7A4069,#613052);
+}
+
+.verona{
+    background:linear-gradient(135deg,#445D78,#32475C);
 }
 
 /* ==========================
@@ -738,6 +1019,32 @@ footer p{
     }
 }
 
+@media(max-width:768px){
+    .section-nav-wrapper{
+        flex-direction:column;
+        align-items:stretch;
+        gap:14px;
+    }
+    .section-tabs{
+        width:100%;
+        display:grid;
+        grid-template-columns:1fr 1fr;
+    }
+    .section-tab-btn{
+        justify-content:center;
+        padding:9px 12px;
+        font-size:0.88rem;
+    }
+    .section-meta-info{
+        justify-content:center;
+        text-align:center;
+    }
+    .section-counter-badge{
+        font-size:0.82rem;
+        width:100%;
+        text-align:center;
+    }
+}
 
 section h2{
     text-align:center;
