@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
+  <rect width="128" height="128" rx="24" fill="#7B283A"/>
+  <path d="M36 34v60l28-18 28 18V34z" fill="none" stroke="#FFFFFF" stroke-width="7" stroke-linejoin="round"/>
+  <text x="64" y="68" font-family="serif" font-size="32" font-weight="bold" fill="#FFFFFF" text-anchor="middle">λ</text>
+</svg>

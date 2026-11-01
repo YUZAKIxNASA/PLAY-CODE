@@ -103,6 +103,10 @@ console.log("CodePlay");
                 <span class="tab-title">Section 2</span>
                 <span class="tab-range">51–100</span>
             </button>
+            <button type="button" class="section-tab-btn" id="tab-section-3" onclick="switchCategorySection(3)" aria-selected="false" aria-controls="category-grid-3">
+                <span class="tab-title">Section 3</span>
+                <span class="tab-range">101–150</span>
+            </button>
         </div>
 
         <div class="section-meta-info">
@@ -823,6 +827,361 @@ console.log("CodePlay");
 
     </div>
 
+    <!-- Section 3 Grid (Categories 101–150) -->
+    <div class="category-grid" id="category-grid-3" data-section="3" style="display:none;">
+
+        <!-- 101: Mojo -->
+        <div class="category-card mojo" data-category="101">
+            <h3><img src="assets/logos/mojo.svg" alt="Mojo" class="category-logo"> Mojo</h3>
+            <p>High-performance AI hardware &amp; systems language</p>
+            <span class="coming-soon">Coming Soon</span>
+        </div>
+
+        <!-- 102: Carbon -->
+        <div class="category-card carbon" data-category="102">
+            <h3><img src="assets/logos/carbon.svg" alt="Carbon" class="category-logo"> Carbon</h3>
+            <p>Experimental fast successor language to C++</p>
+            <span class="coming-soon">Coming Soon</span>
+        </div>
+
+        <!-- 103: Gleam -->
+        <div class="category-card gleam" data-category="103">
+            <h3><img src="assets/logos/gleam.svg" alt="Gleam" class="category-logo"> Gleam</h3>
+            <p>Type-safe functional language for BEAM &amp; JS</p>
+            <span class="coming-soon">Coming Soon</span>
+        </div>
+
+        <!-- 104: Idris -->
+        <div class="category-card idris" data-category="104">
+            <h3><img src="assets/logos/idris.svg" alt="Idris" class="category-logo"> Idris</h3>
+            <p>Purely functional language with full dependent types</p>
+            <span class="coming-soon">Coming Soon</span>
+        </div>
+
+        <!-- 105: Agda -->
+        <div class="category-card agda" data-category="105">
+            <h3><img src="assets/logos/agda.svg" alt="Agda" class="category-logo"> Agda</h3>
+            <p>Dependently typed language &amp; proof assistant</p>
+            <span class="coming-soon">Coming Soon</span>
+        </div>
+
+        <!-- 106: Coq -->
+        <div class="category-card coq" data-category="106">
+            <h3><img src="assets/logos/coq.svg" alt="Coq" class="category-logo"> Coq</h3>
+            <p>Formal proof management system &amp; functional language</p>
+            <span class="coming-soon">Coming Soon</span>
+        </div>
+
+        <!-- 107: Lean -->
+        <div class="category-card lean-lang" data-category="107">
+            <h3><img src="assets/logos/lean.svg" alt="Lean" class="category-logo"> Lean</h3>
+            <p>Modern theorem prover &amp; pure functional language</p>
+            <span class="coming-soon">Coming Soon</span>
+        </div>
+
+        <!-- 108: Eiffel -->
+        <div class="category-card eiffel" data-category="108">
+            <h3><img src="assets/logos/eiffel.svg" alt="Eiffel" class="category-logo"> Eiffel</h3>
+            <p>Object-oriented language pioneering Design by Contract</p>
+            <span class="coming-soon">Coming Soon</span>
+        </div>
+
+        <!-- 109: Io -->
+        <div class="category-card io-lang" data-category="109">
+            <h3><img src="assets/logos/io.svg" alt="Io" class="category-logo"> Io</h3>
+            <p>Pure prototype-based object-oriented language</p>
+            <span class="coming-soon">Coming Soon</span>
+        </div>
+
+        <!-- 110: Self -->
+        <div class="category-card self-lang" data-category="110">
+            <h3><img src="assets/logos/self.svg" alt="Self" class="category-logo"> Self</h3>
+            <p>Prototype-based language that pioneered JIT VMs</p>
+            <span class="coming-soon">Coming Soon</span>
+        </div>
+
+        <!-- 111: Factor -->
+        <div class="category-card factor" data-category="111">
+            <h3><img src="assets/logos/factor.svg" alt="Factor" class="category-logo"> Factor</h3>
+            <p>Modern concatenative stack programming language</p>
+            <span class="coming-soon">Coming Soon</span>
+        </div>
+
+        <!-- 112: Raku -->
+        <div class="category-card raku" data-category="112">
+            <h3><img src="assets/logos/raku.svg" alt="Raku" class="category-logo"> Raku</h3>
+            <p>Expressive multi-paradigm language with rich grammars</p>
+            <span class="coming-soon">Coming Soon</span>
+        </div>
+
+        <!-- 113: Hy -->
+        <div class="category-card hy-lang" data-category="113">
+            <h3><img src="assets/logos/hy.svg" alt="Hy" class="category-logo"> Hy</h3>
+            <p>Lisp dialect embedded into Python ASTs</p>
+            <span class="coming-soon">Coming Soon</span>
+        </div>
+
+        <!-- 114: Janet -->
+        <div class="category-card janet" data-category="114">
+            <h3><img src="assets/logos/janet.svg" alt="Janet" class="category-logo"> Janet</h3>
+            <p>Pragmatic embeddable functional Lisp with C interop</p>
+            <span class="coming-soon">Coming Soon</span>
+        </div>
+
+        <!-- 115: Fennel -->
+        <div class="category-card fennel" data-category="115">
+            <h3><img src="assets/logos/fennel.svg" alt="Fennel" class="category-logo"> Fennel</h3>
+            <p>Lisp dialect that compiles directly into clean Lua</p>
+            <span class="coming-soon">Coming Soon</span>
+        </div>
+
+        <!-- 116: Vala -->
+        <div class="category-card vala" data-category="116">
+            <h3><img src="assets/logos/vala.svg" alt="Vala" class="category-logo"> Vala</h3>
+            <p>Object-oriented language targeting the GNOME GObject system</p>
+            <span class="coming-soon">Coming Soon</span>
+        </div>
+
+        <!-- 117: Genie -->
+        <div class="category-card genie" data-category="117">
+            <h3><img src="assets/logos/genie.svg" alt="Genie" class="category-logo"> Genie</h3>
+            <p>Python-like concise syntax for the GObject platform</p>
+            <span class="coming-soon">Coming Soon</span>
+        </div>
+
+        <!-- 118: Red -->
+        <div class="category-card red-lang" data-category="118">
+            <h3><img src="assets/logos/red.svg" alt="Red" class="category-logo"> Red</h3>
+            <p>Next-gen full-stack systems and symbolic language</p>
+            <span class="coming-soon">Coming Soon</span>
+        </div>
+
+        <!-- 119: Rebol -->
+        <div class="category-card rebol" data-category="119">
+            <h3><img src="assets/logos/rebol.svg" alt="Rebol" class="category-logo"> Rebol</h3>
+            <p>Relative Expression Based Object Language for data exchange</p>
+            <span class="coming-soon">Coming Soon</span>
+        </div>
+
+        <!-- 120: Icon -->
+        <div class="category-card icon-lang" data-category="120">
+            <h3><img src="assets/logos/icon.svg" alt="Icon" class="category-logo"> Icon</h3>
+            <p>Goal-directed language with expression generators</p>
+            <span class="coming-soon">Coming Soon</span>
+        </div>
+
+        <!-- 121: Dylan -->
+        <div class="category-card dylan" data-category="121">
+            <h3><img src="assets/logos/dylan.svg" alt="Dylan" class="category-logo"> Dylan</h3>
+            <p>Advanced dynamic language with CLOS object system</p>
+            <span class="coming-soon">Coming Soon</span>
+        </div>
+
+        <!-- 122: Curry -->
+        <div class="category-card curry-122" data-category="122">
+            <h3><img src="assets/logos/curry122.svg" alt="Curry" class="category-logo"> Curry</h3>
+            <p>Declarative language uniting functional &amp; logic paradigms</p>
+            <span class="coming-soon">Coming Soon</span>
+        </div>
+
+        <!-- 123: Mercury -->
+        <div class="category-card mercury-lang" data-category="123">
+            <h3><img src="assets/logos/mercury.svg" alt="Mercury" class="category-logo"> Mercury</h3>
+            <p>High-performance purely declarative logic language</p>
+            <span class="coming-soon">Coming Soon</span>
+        </div>
+
+        <!-- 124: Oz -->
+        <div class="category-card oz-lang" data-category="124">
+            <h3><img src="assets/logos/oz.svg" alt="Oz" class="category-logo"> Oz</h3>
+            <p>Multi-paradigm language for concurrent computation</p>
+            <span class="coming-soon">Coming Soon</span>
+        </div>
+
+        <!-- 125: Chapel -->
+        <div class="category-card chapel-lang" data-category="125">
+            <h3><img src="assets/logos/chapel125.svg" alt="Chapel" class="category-logo"> Chapel</h3>
+            <p>Scalable parallel programming for supercomputers</p>
+            <span class="coming-soon">Coming Soon</span>
+        </div>
+
+        <!-- 126: X10 -->
+        <div class="category-card x10-lang" data-category="126">
+            <h3><img src="assets/logos/x10.svg" alt="X10" class="category-logo"> X10</h3>
+            <p>Partitioned Global Address Space parallel language</p>
+            <span class="coming-soon">Coming Soon</span>
+        </div>
+
+        <!-- 127: Fortress -->
+        <div class="category-card fortress" data-category="127">
+            <h3><img src="assets/logos/fortress.svg" alt="Fortress" class="category-logo"> Fortress</h3>
+            <p>High-performance parallel language with math syntax</p>
+            <span class="coming-soon">Coming Soon</span>
+        </div>
+
+        <!-- 128: Pony -->
+        <div class="category-card pony-lang" data-category="128">
+            <h3><img src="assets/logos/pony.svg" alt="Pony" class="category-logo"> Pony</h3>
+            <p>Actor-model language with compile-time memory safety</p>
+            <span class="coming-soon">Coming Soon</span>
+        </div>
+
+        <!-- 129: Ballerina -->
+        <div class="category-card ballerina" data-category="129">
+            <h3><img src="assets/logos/ballerina.svg" alt="Ballerina" class="category-logo"> Ballerina</h3>
+            <p>Cloud-native language designed for distributed APIs</p>
+            <span class="coming-soon">Coming Soon</span>
+        </div>
+
+        <!-- 130: Haxe -->
+        <div class="category-card haxe" data-category="130">
+            <h3><img src="assets/logos/haxe.svg" alt="Haxe" class="category-logo"> Haxe</h3>
+            <p>Cross-compiler targeting modern web, desktop &amp; mobile</p>
+            <span class="coming-soon">Coming Soon</span>
+        </div>
+
+        <!-- 131: ActionScript -->
+        <div class="category-card actionscript" data-category="131">
+            <h3><img src="assets/logos/actionscript.svg" alt="ActionScript" class="category-logo"> ActionScript</h3>
+            <p>Object-oriented language for Flash web experiences</p>
+            <span class="coming-soon">Coming Soon</span>
+        </div>
+
+        <!-- 132: Processing -->
+        <div class="category-card processing" data-category="132">
+            <h3><img src="assets/logos/processing.svg" alt="Processing" class="category-logo"> Processing</h3>
+            <p>Flexible software sketchbook for visual arts &amp; coding</p>
+            <span class="coming-soon">Coming Soon</span>
+        </div>
+
+        <!-- 133: Arduino (C++ based) -->
+        <div class="category-card arduino-lang" data-category="133">
+            <h3><img src="assets/logos/arduino.svg" alt="Arduino (C++ based)" class="category-logo"> Arduino (C++ based)</h3>
+            <p>Open-source microcontroller hardware programming</p>
+            <span class="coming-soon">Coming Soon</span>
+        </div>
+
+        <!-- 134: MicroPython -->
+        <div class="category-card micropython" data-category="134">
+            <h3><img src="assets/logos/micropython.svg" alt="MicroPython" class="category-logo"> MicroPython</h3>
+            <p>Efficient Python 3 implementation for microcontrollers</p>
+            <span class="coming-soon">Coming Soon</span>
+        </div>
+
+        <!-- 135: CircuitPython -->
+        <div class="category-card circuitpython" data-category="135">
+            <h3><img src="assets/logos/circuitpython.svg" alt="CircuitPython" class="category-logo"> CircuitPython</h3>
+            <p>Beginner-friendly hardware Python for microcontrollers</p>
+            <span class="coming-soon">Coming Soon</span>
+        </div>
+
+        <!-- 136: Brainfuck -->
+        <div class="category-card brainfuck" data-category="136">
+            <h3><img src="assets/logos/brainfuck.svg" alt="Brainfuck" class="category-logo"> Brainfuck</h3>
+            <p>Famous minimalist esoteric tape language</p>
+            <span class="coming-soon">Coming Soon</span>
+        </div>
+
+        <!-- 137: Malbolge -->
+        <div class="category-card malbolge" data-category="137">
+            <h3><img src="assets/logos/malbolge.svg" alt="Malbolge" class="category-logo"> Malbolge</h3>
+            <p>Intentionally obscure esoteric computing language</p>
+            <span class="coming-soon">Coming Soon</span>
+        </div>
+
+        <!-- 138: Whitespace -->
+        <div class="category-card whitespace-lang" data-category="138">
+            <h3><img src="assets/logos/whitespace.svg" alt="Whitespace" class="category-logo"> Whitespace</h3>
+            <p>Esoteric language using only spaces, tabs &amp; linefeeds</p>
+            <span class="coming-soon">Coming Soon</span>
+        </div>
+
+        <!-- 139: LOLCODE -->
+        <div class="category-card lolcode" data-category="139">
+            <h3><img src="assets/logos/lolcode.svg" alt="LOLCODE" class="category-logo"> LOLCODE</h3>
+            <p>Esoteric language inspired by Internet meme speech</p>
+            <span class="coming-soon">Coming Soon</span>
+        </div>
+
+        <!-- 140: Piet -->
+        <div class="category-card piet-lang" data-category="140">
+            <h3><img src="assets/logos/piet.svg" alt="Piet" class="category-logo"> Piet</h3>
+            <p>Esoteric visual language using geometric pixel paintings</p>
+            <span class="coming-soon">Coming Soon</span>
+        </div>
+
+        <!-- 141: Befunge -->
+        <div class="category-card befunge" data-category="141">
+            <h3><img src="assets/logos/befunge.svg" alt="Befunge" class="category-logo"> Befunge</h3>
+            <p>Two-dimensional esoteric language with directional flow</p>
+            <span class="coming-soon">Coming Soon</span>
+        </div>
+
+        <!-- 142: INTERCAL -->
+        <div class="category-card intercal" data-category="142">
+            <h3><img src="assets/logos/intercal.svg" alt="INTERCAL" class="category-logo"> INTERCAL</h3>
+            <p>Satirical parody compiler language created in 1972</p>
+            <span class="coming-soon">Coming Soon</span>
+        </div>
+
+        <!-- 143: Shakespeare -->
+        <div class="category-card shakespeare-lang" data-category="143">
+            <h3><img src="assets/logos/shakespeare.svg" alt="Shakespeare" class="category-logo"> Shakespeare</h3>
+            <p>Esoteric language written as theatrical play scripts</p>
+            <span class="coming-soon">Coming Soon</span>
+        </div>
+
+        <!-- 144: Chef -->
+        <div class="category-card chef-lang" data-category="144">
+            <h3><img src="assets/logos/chef.svg" alt="Chef" class="category-logo"> Chef</h3>
+            <p>Esoteric language where programs are cooking recipes</p>
+            <span class="coming-soon">Coming Soon</span>
+        </div>
+
+        <!-- 145: Rockstar -->
+        <div class="category-card rockstar" data-category="145">
+            <h3><img src="assets/logos/rockstar.svg" alt="Rockstar" class="category-logo"> Rockstar</h3>
+            <p>Turing-complete language reading like rock power ballads</p>
+            <span class="coming-soon">Coming Soon</span>
+        </div>
+
+        <!-- 146: Squirrel -->
+        <div class="category-card squirrel-lang" data-category="146">
+            <h3><img src="assets/logos/squirrel.svg" alt="Squirrel" class="category-logo"> Squirrel</h3>
+            <p>Lightweight embeddable C-like scripting language</p>
+            <span class="coming-soon">Coming Soon</span>
+        </div>
+
+        <!-- 147: AngelScript -->
+        <div class="category-card angelscript" data-category="147">
+            <h3><img src="assets/logos/angelscript.svg" alt="AngelScript" class="category-logo"> AngelScript</h3>
+            <p>Statically-typed game scripting language with C++ syntax</p>
+            <span class="coming-soon">Coming Soon</span>
+        </div>
+
+        <!-- 148: GDScript -->
+        <div class="category-card gdscript" data-category="148">
+            <h3><img src="assets/logos/gdscript.svg" alt="GDScript" class="category-logo"> GDScript</h3>
+            <p>High-level scripting language for the Godot Game Engine</p>
+            <span class="coming-soon">Coming Soon</span>
+        </div>
+
+        <!-- 149: UnrealScript -->
+        <div class="category-card unrealscript" data-category="149">
+            <h3><img src="assets/logos/unrealscript.svg" alt="UnrealScript" class="category-logo"> UnrealScript</h3>
+            <p>Object-oriented language for legacy Unreal Engines</p>
+            <span class="coming-soon">Coming Soon</span>
+        </div>
+
+        <!-- 150: HLSL -->
+        <div class="category-card hlsl" data-category="150">
+            <h3><img src="assets/logos/hlsl.svg" alt="HLSL" class="category-logo"> HLSL</h3>
+            <p>High-Level Shading Language for Direct3D pipelines</p>
+            <span class="coming-soon">Coming Soon</span>
+        </div>
+
+    </div>
+
 </section>
 
 <section class="featured">
@@ -953,63 +1312,65 @@ console.log("CodePlay");
 </footer>
 
 <script>
-    // Section Switcher Logic (Section 1: 1–50, Section 2: 51–100)
+    // Section Switcher Logic (Section 1: 1–50, Section 2: 51–100, Section 3: 101–150)
     let currentCategorySection = 1;
 
     function switchCategorySection(sectionNum) {
         currentCategorySection = sectionNum;
         const grid1 = document.getElementById('category-grid-1');
         const grid2 = document.getElementById('category-grid-2');
+        const grid3 = document.getElementById('category-grid-3');
         const tab1 = document.getElementById('tab-section-1');
         const tab2 = document.getElementById('tab-section-2');
+        const tab3 = document.getElementById('tab-section-3');
         const badge = document.getElementById('section-counter-badge');
 
-        if (sectionNum === 1) {
-            if (grid1) grid1.style.display = 'grid';
-            if (grid2) grid2.style.display = 'none';
-            if (tab1) {
-                tab1.classList.add('active');
-                tab1.setAttribute('aria-selected', 'true');
+        const grids = [grid1, grid2, grid3];
+        const tabs = [tab1, tab2, tab3];
+
+        grids.forEach((g, idx) => {
+            if (g) g.style.display = (idx + 1 === sectionNum) ? 'grid' : 'none';
+        });
+
+        tabs.forEach((t, idx) => {
+            if (t) {
+                const isActive = (idx + 1 === sectionNum);
+                t.classList.toggle('active', isActive);
+                t.setAttribute('aria-selected', isActive ? 'true' : 'false');
             }
-            if (tab2) {
-                tab2.classList.remove('active');
-                tab2.setAttribute('aria-selected', 'false');
-            }
-            if (badge) badge.textContent = 'Showing Section 1: Languages 1–50 (50 Languages)';
-        } else {
-            if (grid1) grid1.style.display = 'none';
-            if (grid2) grid2.style.display = 'grid';
-            if (tab2) {
-                tab2.classList.add('active');
-                tab2.setAttribute('aria-selected', 'true');
-            }
-            if (tab1) {
-                tab1.classList.remove('active');
-                tab1.setAttribute('aria-selected', 'false');
-            }
-            if (badge) badge.textContent = 'Showing Section 2: Languages 51–100 (50 Languages)';
+        });
+
+        if (badge) {
+            if (sectionNum === 1) badge.textContent = 'Showing Section 1: Languages 1–50 (50 Languages)';
+            else if (sectionNum === 2) badge.textContent = 'Showing Section 2: Languages 51–100 (50 Languages)';
+            else if (sectionNum === 3) badge.textContent = 'Showing Section 3: Languages 101–150 (50 Languages)';
         }
     }
 
-    // URL parameter or hash check on load (?section=2 or #section-2)
+    // URL parameter or hash check on load (?section=2 / ?section=3 or #section-2 / #section-3)
     const urlParams = new URLSearchParams(window.location.search);
-    if (urlParams.get('section') === '2' || window.location.hash === '#section-2') {
+    const secParam = urlParams.get('section');
+    if (secParam === '2' || window.location.hash === '#section-2') {
         switchCategorySection(2);
+    } else if (secParam === '3' || window.location.hash === '#section-3') {
+        switchCategorySection(3);
     }
 
-    // Search filter across both sections and example cards
+    // Search filter across all 3 sections and example cards
     const searchInput = document.querySelector('.search-box input');
     if (searchInput) {
         searchInput.addEventListener('input', (e) => {
             const query = e.target.value.toLowerCase().trim();
             const grid1 = document.getElementById('category-grid-1');
             const grid2 = document.getElementById('category-grid-2');
+            const grid3 = document.getElementById('category-grid-3');
             const badge = document.getElementById('section-counter-badge');
 
             if (query) {
-                // When actively querying, open both grids so no language is missed
+                // When actively querying, open all 3 grids so no language is missed
                 if (grid1) grid1.style.display = 'grid';
                 if (grid2) grid2.style.display = 'grid';
+                if (grid3) grid3.style.display = 'grid';
                 let matchCount = 0;
                 const cards = document.querySelectorAll('.category-card, .example-card');
                 cards.forEach(card => {

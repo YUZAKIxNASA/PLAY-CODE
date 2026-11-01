@@ -818,6 +818,208 @@ section h2{
     background:linear-gradient(135deg,#445D78,#32475C);
 }
 
+/* Categories 101–150 (Section 3) */
+
+.mojo{
+    background:linear-gradient(135deg,#B84A1C,#943812);
+}
+
+.carbon{
+    background:linear-gradient(135deg,#3E4E59,#2D3A42);
+}
+
+.gleam{
+    background:linear-gradient(135deg,#D48C46,#B06F30);
+}
+
+.idris{
+    background:linear-gradient(135deg,#7B283A,#611B2A);
+}
+
+.agda{
+    background:linear-gradient(135deg,#1F5673,#153E54);
+}
+
+.coq{
+    background:linear-gradient(135deg,#A64253,#853140);
+}
+
+.lean-lang{
+    background:linear-gradient(135deg,#2E6171,#204652);
+}
+
+.eiffel{
+    background:linear-gradient(135deg,#2B4162,#1C2C44);
+}
+
+.io-lang{
+    background:linear-gradient(135deg,#703D57,#562C42);
+}
+
+.self-lang{
+    background:linear-gradient(135deg,#3F5E78,#2C4458);
+}
+
+.factor{
+    background:linear-gradient(135deg,#8B5A2B,#6E451F);
+}
+
+.raku{
+    background:linear-gradient(135deg,#483D8B,#362D6E);
+}
+
+.hy-lang{
+    background:linear-gradient(135deg,#2E7D6A,#205E4F);
+}
+
+.janet{
+    background:linear-gradient(135deg,#8C386A,#6E2852);
+}
+
+.fennel{
+    background:linear-gradient(135deg,#3A7056,#295440);
+}
+
+.vala{
+    background:linear-gradient(135deg,#4A4E69,#35384D);
+}
+
+.genie{
+    background:linear-gradient(135deg,#5C5470,#443D54);
+}
+
+.red-lang{
+    background:linear-gradient(135deg,#A82828,#851B1B);
+}
+
+.rebol{
+    background:linear-gradient(135deg,#9C3D28,#7D2E1C);
+}
+
+.icon-lang{
+    background:linear-gradient(135deg,#4F6367,#39484B);
+}
+
+.dylan{
+    background:linear-gradient(135deg,#6B3E75,#522D5B);
+}
+
+.curry-122{
+    background:linear-gradient(135deg,#B55A1B,#924410);
+}
+
+.mercury-lang{
+    background:linear-gradient(135deg,#1D6363,#124848);
+}
+
+.oz-lang{
+    background:linear-gradient(135deg,#3C5B6F,#294050);
+}
+
+.chapel-lang{
+    background:linear-gradient(135deg,#186B80,#0E4E5E);
+}
+
+.x10-lang{
+    background:linear-gradient(135deg,#245973,#174054);
+}
+
+.fortress{
+    background:linear-gradient(135deg,#734046,#592F34);
+}
+
+.pony-lang{
+    background:linear-gradient(135deg,#80475E,#653347);
+}
+
+.ballerina{
+    background:linear-gradient(135deg,#216869,#154B4C);
+}
+
+.haxe{
+    background:linear-gradient(135deg,#B3541E,#914012);
+}
+
+.actionscript{
+    background:linear-gradient(135deg,#943126,#76241B);
+}
+
+.processing{
+    background:linear-gradient(135deg,#235789,#163E63);
+}
+
+.arduino-lang{
+    background:linear-gradient(135deg,#007A78,#005958);
+}
+
+.micropython{
+    background:linear-gradient(135deg,#1B6B48,#114F34);
+}
+
+.circuitpython{
+    background:linear-gradient(135deg,#663399,#4D2475);
+}
+
+.brainfuck{
+    background:linear-gradient(135deg,#3E424B,#2B2E34);
+}
+
+.malbolge{
+    background:linear-gradient(135deg,#5A3846,#432733);
+}
+
+.whitespace-lang{
+    background:linear-gradient(135deg,#465362,#323C47);
+}
+
+.lolcode{
+    background:linear-gradient(135deg,#A04332,#823324);
+}
+
+.piet-lang{
+    background:linear-gradient(135deg,#8C3B58,#6F2B43);
+}
+
+.befunge{
+    background:linear-gradient(135deg,#3B5249,#283A33);
+}
+
+.intercal{
+    background:linear-gradient(135deg,#685634,#504124);
+}
+
+.shakespeare-lang{
+    background:linear-gradient(135deg,#7B3F00,#5E3000);
+}
+
+.chef-lang{
+    background:linear-gradient(135deg,#934B00,#743900);
+}
+
+.rockstar{
+    background:linear-gradient(135deg,#7E22CE,#6315A8);
+}
+
+.squirrel-lang{
+    background:linear-gradient(135deg,#8A4A2D,#6D371F);
+}
+
+.angelscript{
+    background:linear-gradient(135deg,#1C6758,#114B40);
+}
+
+.gdscript{
+    background:linear-gradient(135deg,#355C7D,#24415A);
+}
+
+.unrealscript{
+    background:linear-gradient(135deg,#1A365D,#10243E);
+}
+
+.hlsl{
+    background:linear-gradient(135deg,#513B56,#3C2A40);
+}
+
 /* ==========================
    FEATURED EXAMPLES
 ========================== */
@@ -1028,12 +1230,18 @@ footer p{
     .section-tabs{
         width:100%;
         display:grid;
-        grid-template-columns:1fr 1fr;
+        grid-template-columns:repeat(3, 1fr);
+        gap:6px;
     }
     .section-tab-btn{
         justify-content:center;
-        padding:9px 12px;
-        font-size:0.88rem;
+        padding:9px 8px;
+        font-size:0.85rem;
+    }
+    @media(max-width:540px){
+        .section-tabs{
+            grid-template-columns:1fr;
+        }
     }
     .section-meta-info{
         justify-content:center;

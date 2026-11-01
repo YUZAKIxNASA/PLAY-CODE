@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
+  <rect width="128" height="128" rx="24" fill="#943126"/>
+  <rect x="28" y="28" width="72" height="72" rx="14" fill="none" stroke="#FFFFFF" stroke-width="7"/>
+  <text x="64" y="76" font-family="sans-serif" font-size="34" font-weight="bold" fill="#FFFFFF" text-anchor="middle">AS3</text>
+</svg>
