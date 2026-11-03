@@ -122,6 +122,10 @@ console.log("CodePlay");
                 <span class="tab-title">Section 4</span>
                 <span class="tab-range">151–200</span>
             </button>
+            <button type="button" class="section-tab-btn" id="tab-section-5" onclick="switchCategorySection(5)" aria-selected="false" aria-controls="category-grid-5">
+                <span class="tab-title">Section 5</span>
+                <span class="tab-range">201–250</span>
+            </button>
         </div>
 
         <div class="section-meta-info">
@@ -1503,6 +1507,501 @@ console.log("CodePlay");
 
     </div>
 
+    <!-- Section 5: Languages 201–250 Redesigned UI -->
+    <div id="section5-wrapper" style="display: none; width: 100%;">
+        <!-- Section 5 Specific Toolbar -->
+        <div class="section5-toolbar">
+            <div class="section5-toolbar-top">
+                <div class="section5-search-wrap">
+                    <span class="section5-search-icon">🔍</span>
+                    <input type="text" id="sec5-search-input" class="section5-search-input" placeholder="Search entries (e.g. Svelte, Markdown, MathML)...">
+                </div>
+                <div class="section5-page-size-wrap">
+                    <label for="sec5-page-size-select">Cards Per Page:</label>
+                    <select id="sec5-page-size-select" class="section5-page-size-select">
+                        <option value="12" selected>12 per page</option>
+                        <option value="24">24 per page</option>
+                        <option value="36">36 per page</option>
+                        <option value="50">50 (All)</option>
+                        <option value="all">Show All</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Category Filter Chips -->
+            <div class="section5-filters" id="sec5-filter-chips">
+                <button type="button" class="section5-filter-btn active" data-filter="all">All (50)</button>
+                <button type="button" class="section5-filter-btn" data-filter="query">Query &amp; Big Data (3)</button>
+                <button type="button" class="section5-filter-btn" data-filter="templates">Web &amp; Templates (16)</button>
+                <button type="button" class="section5-filter-btn" data-filter="styling">CSS Preprocessors (4)</button>
+                <button type="button" class="section5-filter-btn" data-filter="markup">Docs &amp; Markup (6)</button>
+                <button type="button" class="section5-filter-btn" data-filter="diagrams">Diagrams &amp; Graphics (6)</button>
+                <button type="button" class="section5-filter-btn" data-filter="industrial">CAD &amp; Industrial (6)</button>
+                <button type="button" class="section5-filter-btn" data-filter="math">Math &amp; Scientific (9)</button>
+            </div>
+        </div>
+
+        <!-- Section 5 Category Cards Grid -->
+        <div class="category-grid" id="category-grid-5" data-section="5">
+        <a href="pages/section5-entry.html?entry=201" class="category-card sec5-card hiveql" data-category="query" data-id="201" data-name="hiveql">
+            <div class="sec5-card-top">
+                <span class="sec5-num-badge">#201</span>
+                <span class="sec5-cat-tag">Query & Big Data</span>
+            </div>
+            <h3><img src="assets/logos/hiveql.svg" alt="HiveQL" class="category-logo"> HiveQL</h3>
+            <p>SQL-like declarative query language for Apache Hive on Hadoop</p>
+            <div class="sec5-cta-btn">Interactive Studio &rarr;</div>
+        </a>
+        <a href="pages/section5-entry.html?entry=202" class="category-card sec5-card piglatin" data-category="query" data-id="202" data-name="pig latin">
+            <div class="sec5-card-top">
+                <span class="sec5-num-badge">#202</span>
+                <span class="sec5-cat-tag">Query & Big Data</span>
+            </div>
+            <h3><img src="assets/logos/piglatin.svg" alt="Pig Latin" class="category-logo"> Pig Latin</h3>
+            <p>High-level data-flow procedural language for Apache Pig on Hadoop</p>
+            <div class="sec5-cta-btn">Interactive Studio &rarr;</div>
+        </a>
+        <a href="pages/section5-entry.html?entry=203" class="category-card sec5-card datalog" data-category="query" data-id="203" data-name="datalog">
+            <div class="sec5-card-top">
+                <span class="sec5-num-badge">#203</span>
+                <span class="sec5-cat-tag">Query & Big Data</span>
+            </div>
+            <h3><img src="assets/logos/datalog.svg" alt="Datalog" class="category-logo"> Datalog</h3>
+            <p>Declarative logic programming and deductive query language</p>
+            <div class="sec5-cta-btn">Interactive Studio &rarr;</div>
+        </a>
+        <a href="pages/section5-entry.html?entry=204" class="category-card sec5-card svelte" data-category="templates" data-id="204" data-name="svelte">
+            <div class="sec5-card-top">
+                <span class="sec5-num-badge">#204</span>
+                <span class="sec5-cat-tag">Web & Component Frameworks</span>
+            </div>
+            <h3><img src="assets/logos/svelte.svg" alt="Svelte" class="category-logo"> Svelte</h3>
+            <p>Cybernetically enhanced reactive compiler for component web interfaces</p>
+            <div class="sec5-cta-btn">Interactive Studio &rarr;</div>
+        </a>
+        <a href="pages/section5-entry.html?entry=205" class="category-card sec5-card jsx-lang" data-category="templates" data-id="205" data-name="jsx">
+            <div class="sec5-card-top">
+                <span class="sec5-num-badge">#205</span>
+                <span class="sec5-cat-tag">Web & Component Frameworks</span>
+            </div>
+            <h3><img src="assets/logos/jsx.svg" alt="JSX" class="category-logo"> JSX</h3>
+            <p>XML-like syntax extension for JavaScript popularized by React</p>
+            <div class="sec5-cta-btn">Interactive Studio &rarr;</div>
+        </a>
+        <a href="pages/section5-entry.html?entry=206" class="category-card sec5-card tsx-lang" data-category="templates" data-id="206" data-name="tsx">
+            <div class="sec5-card-top">
+                <span class="sec5-num-badge">#206</span>
+                <span class="sec5-cat-tag">Web & Component Frameworks</span>
+            </div>
+            <h3><img src="assets/logos/tsx.svg" alt="TSX" class="category-logo"> TSX</h3>
+            <p>Typed syntax extension combining TypeScript and JSX</p>
+            <div class="sec5-cta-btn">Interactive Studio &rarr;</div>
+        </a>
+        <a href="pages/section5-entry.html?entry=207" class="category-card sec5-card handlebars" data-category="templates" data-id="207" data-name="handlebars">
+            <div class="sec5-card-top">
+                <span class="sec5-num-badge">#207</span>
+                <span class="sec5-cat-tag">Template Engines</span>
+            </div>
+            <h3><img src="assets/logos/handlebars.svg" alt="Handlebars" class="category-logo"> Handlebars</h3>
+            <p>Semantic, logic-less template engine extending Mustache syntax</p>
+            <div class="sec5-cta-btn">Interactive Studio &rarr;</div>
+        </a>
+        <a href="pages/section5-entry.html?entry=208" class="category-card sec5-card mustache" data-category="templates" data-id="208" data-name="mustache">
+            <div class="sec5-card-top">
+                <span class="sec5-num-badge">#208</span>
+                <span class="sec5-cat-tag">Template Engines</span>
+            </div>
+            <h3><img src="assets/logos/mustache.svg" alt="Mustache" class="category-logo"> Mustache</h3>
+            <p>Minimalist logic-less template engine available across 30+ languages</p>
+            <div class="sec5-cta-btn">Interactive Studio &rarr;</div>
+        </a>
+        <a href="pages/section5-entry.html?entry=209" class="category-card sec5-card pug-lang" data-category="templates" data-id="209" data-name="pug">
+            <div class="sec5-card-top">
+                <span class="sec5-num-badge">#209</span>
+                <span class="sec5-cat-tag">Template Engines</span>
+            </div>
+            <h3><img src="assets/logos/pug.svg" alt="Pug" class="category-logo"> Pug</h3>
+            <p>High-performance indentation-sensitive HTML template engine for Node.js</p>
+            <div class="sec5-cta-btn">Interactive Studio &rarr;</div>
+        </a>
+        <a href="pages/section5-entry.html?entry=210" class="category-card sec5-card haml-lang" data-category="templates" data-id="210" data-name="haml">
+            <div class="sec5-card-top">
+                <span class="sec5-num-badge">#210</span>
+                <span class="sec5-cat-tag">Template Engines</span>
+            </div>
+            <h3><img src="assets/logos/haml.svg" alt="Haml" class="category-logo"> Haml</h3>
+            <p>HTML Abstraction Markup Language for clean, DRY markup in Ruby</p>
+            <div class="sec5-cta-btn">Interactive Studio &rarr;</div>
+        </a>
+        <a href="pages/section5-entry.html?entry=211" class="category-card sec5-card slim-lang" data-category="templates" data-id="211" data-name="slim">
+            <div class="sec5-card-top">
+                <span class="sec5-num-badge">#211</span>
+                <span class="sec5-cat-tag">Template Engines</span>
+            </div>
+            <h3><img src="assets/logos/slim.svg" alt="Slim" class="category-logo"> Slim</h3>
+            <p>Fast, lightweight Ruby templating engine with ultra-minimal syntax</p>
+            <div class="sec5-cta-btn">Interactive Studio &rarr;</div>
+        </a>
+        <a href="pages/section5-entry.html?entry=212" class="category-card sec5-card erb-lang" data-category="templates" data-id="212" data-name="erb">
+            <div class="sec5-card-top">
+                <span class="sec5-num-badge">#212</span>
+                <span class="sec5-cat-tag">Template Engines</span>
+            </div>
+            <h3><img src="assets/logos/erb.svg" alt="ERB" class="category-logo"> ERB</h3>
+            <p>Embedded RuBy templating system included in Ruby standard library</p>
+            <div class="sec5-cta-btn">Interactive Studio &rarr;</div>
+        </a>
+        <a href="pages/section5-entry.html?entry=213" class="category-card sec5-card jinja" data-category="templates" data-id="213" data-name="jinja">
+            <div class="sec5-card-top">
+                <span class="sec5-num-badge">#213</span>
+                <span class="sec5-cat-tag">Template Engines</span>
+            </div>
+            <h3><img src="assets/logos/jinja.svg" alt="Jinja" class="category-logo"> Jinja</h3>
+            <p>Full-featured, designer-friendly Python template engine (Flask / Django inspired)</p>
+            <div class="sec5-cta-btn">Interactive Studio &rarr;</div>
+        </a>
+        <a href="pages/section5-entry.html?entry=214" class="category-card sec5-card liquid-lang" data-category="templates" data-id="214" data-name="liquid">
+            <div class="sec5-card-top">
+                <span class="sec5-num-badge">#214</span>
+                <span class="sec5-cat-tag">Template Engines</span>
+            </div>
+            <h3><img src="assets/logos/liquid.svg" alt="Liquid" class="category-logo"> Liquid</h3>
+            <p>Secure, open-source Ruby template engine created by Shopify</p>
+            <div class="sec5-cta-btn">Interactive Studio &rarr;</div>
+        </a>
+        <a href="pages/section5-entry.html?entry=215" class="category-card sec5-card twig-lang" data-category="templates" data-id="215" data-name="twig">
+            <div class="sec5-card-top">
+                <span class="sec5-num-badge">#215</span>
+                <span class="sec5-cat-tag">Template Engines</span>
+            </div>
+            <h3><img src="assets/logos/twig.svg" alt="Twig" class="category-logo"> Twig</h3>
+            <p>Modern, fast, and secure PHP template engine used in Symfony & Drupal</p>
+            <div class="sec5-cta-btn">Interactive Studio &rarr;</div>
+        </a>
+        <a href="pages/section5-entry.html?entry=216" class="category-card sec5-card blade-lang" data-category="templates" data-id="216" data-name="blade">
+            <div class="sec5-card-top">
+                <span class="sec5-num-badge">#216</span>
+                <span class="sec5-cat-tag">Template Engines</span>
+            </div>
+            <h3><img src="assets/logos/blade.svg" alt="Blade" class="category-logo"> Blade</h3>
+            <p>Simple, powerful templating engine included in Laravel PHP framework</p>
+            <div class="sec5-cta-btn">Interactive Studio &rarr;</div>
+        </a>
+        <a href="pages/section5-entry.html?entry=217" class="category-card sec5-card smarty" data-category="templates" data-id="217" data-name="smarty">
+            <div class="sec5-card-top">
+                <span class="sec5-num-badge">#217</span>
+                <span class="sec5-cat-tag">Template Engines</span>
+            </div>
+            <h3><img src="assets/logos/smarty.svg" alt="Smarty" class="category-logo"> Smarty</h3>
+            <p>Pioneering PHP template/presentation framework separating logic and design</p>
+            <div class="sec5-cta-btn">Interactive Studio &rarr;</div>
+        </a>
+        <a href="pages/section5-entry.html?entry=218" class="category-card sec5-card ejs-lang" data-category="templates" data-id="218" data-name="ejs">
+            <div class="sec5-card-top">
+                <span class="sec5-num-badge">#218</span>
+                <span class="sec5-cat-tag">Template Engines</span>
+            </div>
+            <h3><img src="assets/logos/ejs.svg" alt="EJS" class="category-logo"> EJS</h3>
+            <p>Embedded JavaScript templating for Node.js web applications</p>
+            <div class="sec5-cta-btn">Interactive Studio &rarr;</div>
+        </a>
+        <a href="pages/section5-entry.html?entry=219" class="category-card sec5-card nunjucks" data-category="templates" data-id="219" data-name="nunjucks">
+            <div class="sec5-card-top">
+                <span class="sec5-num-badge">#219</span>
+                <span class="sec5-cat-tag">Template Engines</span>
+            </div>
+            <h3><img src="assets/logos/nunjucks.svg" alt="Nunjucks" class="category-logo"> Nunjucks</h3>
+            <p>Rich, powerful Jinja-inspired templating engine for JavaScript and Node.js</p>
+            <div class="sec5-cta-btn">Interactive Studio &rarr;</div>
+        </a>
+        <a href="pages/section5-entry.html?entry=220" class="category-card sec5-card sass-lang" data-category="styling" data-id="220" data-name="sass">
+            <div class="sec5-card-top">
+                <span class="sec5-num-badge">#220</span>
+                <span class="sec5-cat-tag">CSS Preprocessors</span>
+            </div>
+            <h3><img src="assets/logos/sass.svg" alt="Sass" class="category-logo"> Sass</h3>
+            <p>Original indented syntax for Syntactically Awesome Style Sheets</p>
+            <div class="sec5-cta-btn">Interactive Studio &rarr;</div>
+        </a>
+        <a href="pages/section5-entry.html?entry=221" class="category-card sec5-card scss-lang" data-category="styling" data-id="221" data-name="scss">
+            <div class="sec5-card-top">
+                <span class="sec5-num-badge">#221</span>
+                <span class="sec5-cat-tag">CSS Preprocessors</span>
+            </div>
+            <h3><img src="assets/logos/scss.svg" alt="SCSS" class="category-logo"> SCSS</h3>
+            <p>Sassy CSS syntax maintaining 100% backward compatibility with standard CSS</p>
+            <div class="sec5-cta-btn">Interactive Studio &rarr;</div>
+        </a>
+        <a href="pages/section5-entry.html?entry=222" class="category-card sec5-card less-lang" data-category="styling" data-id="222" data-name="less">
+            <div class="sec5-card-top">
+                <span class="sec5-num-badge">#222</span>
+                <span class="sec5-cat-tag">CSS Preprocessors</span>
+            </div>
+            <h3><img src="assets/logos/less.svg" alt="Less" class="category-logo"> Less</h3>
+            <p>Dynamic stylesheet language extending CSS with variables and mixins</p>
+            <div class="sec5-cta-btn">Interactive Studio &rarr;</div>
+        </a>
+        <a href="pages/section5-entry.html?entry=223" class="category-card sec5-card stylus-lang" data-category="styling" data-id="223" data-name="stylus">
+            <div class="sec5-card-top">
+                <span class="sec5-num-badge">#223</span>
+                <span class="sec5-cat-tag">CSS Preprocessors</span>
+            </div>
+            <h3><img src="assets/logos/stylus.svg" alt="Stylus" class="category-logo"> Stylus</h3>
+            <p>Ultra-expressive, dynamic, and flexible CSS preprocessor for Node.js</p>
+            <div class="sec5-cta-btn">Interactive Studio &rarr;</div>
+        </a>
+        <a href="pages/section5-entry.html?entry=224" class="category-card sec5-card markdown-lang" data-category="markup" data-id="224" data-name="markdown">
+            <div class="sec5-card-top">
+                <span class="sec5-num-badge">#224</span>
+                <span class="sec5-cat-tag">Docs & Markup</span>
+            </div>
+            <h3><img src="assets/logos/markdown.svg" alt="Markdown" class="category-logo"> Markdown</h3>
+            <p>Lightweight, ubiquitous plain-text formatting syntax that converts to HTML</p>
+            <div class="sec5-cta-btn">Interactive Studio &rarr;</div>
+        </a>
+        <a href="pages/section5-entry.html?entry=225" class="category-card sec5-card restructuredtext" data-category="markup" data-id="225" data-name="restructuredtext">
+            <div class="sec5-card-top">
+                <span class="sec5-num-badge">#225</span>
+                <span class="sec5-cat-tag">Docs & Markup</span>
+            </div>
+            <h3><img src="assets/logos/restructuredtext.svg" alt="reStructuredText" class="category-logo"> reStructuredText</h3>
+            <p>Extensible plaintext markup language standard for Python docstrings & Sphinx</p>
+            <div class="sec5-cta-btn">Interactive Studio &rarr;</div>
+        </a>
+        <a href="pages/section5-entry.html?entry=226" class="category-card sec5-card asciidoc-lang" data-category="markup" data-id="226" data-name="asciidoc">
+            <div class="sec5-card-top">
+                <span class="sec5-num-badge">#226</span>
+                <span class="sec5-cat-tag">Docs & Markup</span>
+            </div>
+            <h3><img src="assets/logos/asciidoc.svg" alt="AsciiDoc" class="category-logo"> AsciiDoc</h3>
+            <p>Human-readable document format for writing books, manuals, and technical specs</p>
+            <div class="sec5-cta-btn">Interactive Studio &rarr;</div>
+        </a>
+        <a href="pages/section5-entry.html?entry=227" class="category-card sec5-card latex-lang" data-category="markup" data-id="227" data-name="latex">
+            <div class="sec5-card-top">
+                <span class="sec5-num-badge">#227</span>
+                <span class="sec5-cat-tag">Docs & Markup</span>
+            </div>
+            <h3><img src="assets/logos/latex.svg" alt="LaTeX" class="category-logo"> LaTeX</h3>
+            <p>Document preparation system for high-quality scientific and mathematical typography</p>
+            <div class="sec5-cta-btn">Interactive Studio &rarr;</div>
+        </a>
+        <a href="pages/section5-entry.html?entry=228" class="category-card sec5-card tex-lang" data-category="markup" data-id="228" data-name="tex">
+            <div class="sec5-card-top">
+                <span class="sec5-num-badge">#228</span>
+                <span class="sec5-cat-tag">Docs & Markup</span>
+            </div>
+            <h3><img src="assets/logos/tex.svg" alt="TeX" class="category-logo"> TeX</h3>
+            <p>Foundational typesetting engine designed by Donald Knuth for pristine typography</p>
+            <div class="sec5-cta-btn">Interactive Studio &rarr;</div>
+        </a>
+        <a href="pages/section5-entry.html?entry=229" class="category-card sec5-card orgmode" data-category="markup" data-id="229" data-name="org-mode">
+            <div class="sec5-card-top">
+                <span class="sec5-num-badge">#229</span>
+                <span class="sec5-cat-tag">Docs & Markup</span>
+            </div>
+            <h3><img src="assets/logos/orgmode.svg" alt="Org-mode" class="category-logo"> Org-mode</h3>
+            <p>Authoring, note-taking, project planning, and literate programming system</p>
+            <div class="sec5-cta-btn">Interactive Studio &rarr;</div>
+        </a>
+        <a href="pages/section5-entry.html?entry=230" class="category-card sec5-card mermaid-lang" data-category="diagrams" data-id="230" data-name="mermaid">
+            <div class="sec5-card-top">
+                <span class="sec5-num-badge">#230</span>
+                <span class="sec5-cat-tag">Diagrams & Graphics</span>
+            </div>
+            <h3><img src="assets/logos/mermaid.svg" alt="Mermaid" class="category-logo"> Mermaid</h3>
+            <p>JavaScript-based diagramming and charting tool using Markdown-inspired text</p>
+            <div class="sec5-cta-btn">Interactive Studio &rarr;</div>
+        </a>
+        <a href="pages/section5-entry.html?entry=231" class="category-card sec5-card plantuml" data-category="diagrams" data-id="231" data-name="plantuml">
+            <div class="sec5-card-top">
+                <span class="sec5-num-badge">#231</span>
+                <span class="sec5-cat-tag">Diagrams & Graphics</span>
+            </div>
+            <h3><img src="assets/logos/plantuml.svg" alt="PlantUML" class="category-logo"> PlantUML</h3>
+            <p>Component and UML diagram generator from plain human-readable descriptions</p>
+            <div class="sec5-cta-btn">Interactive Studio &rarr;</div>
+        </a>
+        <a href="pages/section5-entry.html?entry=232" class="category-card sec5-card graphviz-dot" data-category="diagrams" data-id="232" data-name="graphviz (dot)">
+            <div class="sec5-card-top">
+                <span class="sec5-num-badge">#232</span>
+                <span class="sec5-cat-tag">Diagrams & Graphics</span>
+            </div>
+            <h3><img src="assets/logos/graphviz.svg" alt="Graphviz (DOT)" class="category-logo"> Graphviz (DOT)</h3>
+            <p>Pioneering graph visualization software using the expressive DOT language</p>
+            <div class="sec5-cta-btn">Interactive Studio &rarr;</div>
+        </a>
+        <a href="pages/section5-entry.html?entry=233" class="category-card sec5-card postscript-lang" data-category="diagrams" data-id="233" data-name="postscript">
+            <div class="sec5-card-top">
+                <span class="sec5-num-badge">#233</span>
+                <span class="sec5-cat-tag">Diagrams & Graphics</span>
+            </div>
+            <h3><img src="assets/logos/postscript.svg" alt="PostScript" class="category-logo"> PostScript</h3>
+            <p>Turing-complete stack-based page description language created by Adobe</p>
+            <div class="sec5-cta-btn">Interactive Studio &rarr;</div>
+        </a>
+        <a href="pages/section5-entry.html?entry=234" class="category-card sec5-card svg-lang" data-category="diagrams" data-id="234" data-name="svg">
+            <div class="sec5-card-top">
+                <span class="sec5-num-badge">#234</span>
+                <span class="sec5-cat-tag">Diagrams & Graphics</span>
+            </div>
+            <h3><img src="assets/logos/svg-vector.svg" alt="SVG" class="category-logo"> SVG</h3>
+            <p>W3C standard XML-based vector graphics language for 2D browser visuals</p>
+            <div class="sec5-cta-btn">Interactive Studio &rarr;</div>
+        </a>
+        <a href="pages/section5-entry.html?entry=235" class="category-card sec5-card mathml-lang" data-category="diagrams" data-id="235" data-name="mathml">
+            <div class="sec5-card-top">
+                <span class="sec5-num-badge">#235</span>
+                <span class="sec5-cat-tag">Diagrams & Graphics</span>
+            </div>
+            <h3><img src="assets/logos/mathml.svg" alt="MathML" class="category-logo"> MathML</h3>
+            <p>W3C XML standard for describing mathematical notations and formulas</p>
+            <div class="sec5-cta-btn">Interactive Studio &rarr;</div>
+        </a>
+        <a href="pages/section5-entry.html?entry=236" class="category-card sec5-card openscad" data-category="industrial" data-id="236" data-name="openscad">
+            <div class="sec5-card-top">
+                <span class="sec5-num-badge">#236</span>
+                <span class="sec5-cat-tag">CAD & Industrial</span>
+            </div>
+            <h3><img src="assets/logos/openscad.svg" alt="OpenSCAD" class="category-logo"> OpenSCAD</h3>
+            <p>Script-driven 3D CAD modeler for creating solid 3D CAD objects with code</p>
+            <div class="sec5-cta-btn">Interactive Studio &rarr;</div>
+        </a>
+        <a href="pages/section5-entry.html?entry=237" class="category-card sec5-card gcode-lang" data-category="industrial" data-id="237" data-name="g-code">
+            <div class="sec5-card-top">
+                <span class="sec5-num-badge">#237</span>
+                <span class="sec5-cat-tag">CAD & Industrial</span>
+            </div>
+            <h3><img src="assets/logos/gcode.svg" alt="G-code" class="category-logo"> G-code</h3>
+            <p>Foundational computer numerical control (CNC) programming language</p>
+            <div class="sec5-cta-btn">Interactive Studio &rarr;</div>
+        </a>
+        <a href="pages/section5-entry.html?entry=238" class="category-card sec5-card ladder-logic" data-category="industrial" data-id="238" data-name="ladder logic">
+            <div class="sec5-card-top">
+                <span class="sec5-num-badge">#238</span>
+                <span class="sec5-cat-tag">CAD & Industrial</span>
+            </div>
+            <h3><img src="assets/logos/ladderlogic.svg" alt="Ladder Logic" class="category-logo"> Ladder Logic</h3>
+            <p>Visual graphical programming language representing PLC relay logic circuits</p>
+            <div class="sec5-cta-btn">Interactive Studio &rarr;</div>
+        </a>
+        <a href="pages/section5-entry.html?entry=239" class="category-card sec5-card structured-text" data-category="industrial" data-id="239" data-name="structured text">
+            <div class="sec5-card-top">
+                <span class="sec5-num-badge">#239</span>
+                <span class="sec5-cat-tag">CAD & Industrial</span>
+            </div>
+            <h3><img src="assets/logos/structuredtext.svg" alt="Structured Text" class="category-logo"> Structured Text</h3>
+            <p>Pascal-like high-level programming language defined in IEC 61131-3 for PLCs</p>
+            <div class="sec5-cta-btn">Interactive Studio &rarr;</div>
+        </a>
+        <a href="pages/section5-entry.html?entry=240" class="category-card sec5-card modelica" data-category="industrial" data-id="240" data-name="modelica">
+            <div class="sec5-card-top">
+                <span class="sec5-num-badge">#240</span>
+                <span class="sec5-cat-tag">CAD & Industrial</span>
+            </div>
+            <h3><img src="assets/logos/modelica.svg" alt="Modelica" class="category-logo"> Modelica</h3>
+            <p>Declarative, equation-based object-oriented language for complex physical systems</p>
+            <div class="sec5-cta-btn">Interactive Studio &rarr;</div>
+        </a>
+        <a href="pages/section5-entry.html?entry=241" class="category-card sec5-card simulink" data-category="industrial" data-id="241" data-name="simulink">
+            <div class="sec5-card-top">
+                <span class="sec5-num-badge">#241</span>
+                <span class="sec5-cat-tag">CAD & Industrial</span>
+            </div>
+            <h3><img src="assets/logos/simulink.svg" alt="Simulink" class="category-logo"> Simulink</h3>
+            <p>Block-diagram visual environment for multidomain simulation and Model-Based Design</p>
+            <div class="sec5-cta-btn">Interactive Studio &rarr;</div>
+        </a>
+        <a href="pages/section5-entry.html?entry=242" class="category-card sec5-card scilab" data-category="math" data-id="242" data-name="scilab">
+            <div class="sec5-card-top">
+                <span class="sec5-num-badge">#242</span>
+                <span class="sec5-cat-tag">Math & Scientific</span>
+            </div>
+            <h3><img src="assets/logos/scilab.svg" alt="Scilab" class="category-logo"> Scilab</h3>
+            <p>Open-source software for numerical computation and scientific data analysis</p>
+            <div class="sec5-cta-btn">Interactive Studio &rarr;</div>
+        </a>
+        <a href="pages/section5-entry.html?entry=243" class="category-card sec5-card gnu-octave" data-category="math" data-id="243" data-name="gnu octave">
+            <div class="sec5-card-top">
+                <span class="sec5-num-badge">#243</span>
+                <span class="sec5-cat-tag">Math & Scientific</span>
+            </div>
+            <h3><img src="assets/logos/octave.svg" alt="GNU Octave" class="category-logo"> GNU Octave</h3>
+            <p>High-level language primarily intended for numerical computations (MATLAB compatible)</p>
+            <div class="sec5-cta-btn">Interactive Studio &rarr;</div>
+        </a>
+        <a href="pages/section5-entry.html?entry=244" class="category-card sec5-card sagemath" data-category="math" data-id="244" data-name="sagemath">
+            <div class="sec5-card-top">
+                <span class="sec5-num-badge">#244</span>
+                <span class="sec5-cat-tag">Math & Scientific</span>
+            </div>
+            <h3><img src="assets/logos/sagemath.svg" alt="SageMath" class="category-logo"> SageMath</h3>
+            <p>Open-source mathematics software system unifying Python, GAP, PARI/GP, and Maxima</p>
+            <div class="sec5-cta-btn">Interactive Studio &rarr;</div>
+        </a>
+        <a href="pages/section5-entry.html?entry=245" class="category-card sec5-card gap-math" data-category="math" data-id="245" data-name="gap">
+            <div class="sec5-card-top">
+                <span class="sec5-num-badge">#245</span>
+                <span class="sec5-cat-tag">Math & Scientific</span>
+            </div>
+            <h3><img src="assets/logos/gap.svg" alt="GAP" class="category-logo"> GAP</h3>
+            <p>System for computational discrete algebra with focus on computational group theory</p>
+            <div class="sec5-cta-btn">Interactive Studio &rarr;</div>
+        </a>
+        <a href="pages/section5-entry.html?entry=246" class="category-card sec5-card magma-math" data-category="math" data-id="246" data-name="magma">
+            <div class="sec5-card-top">
+                <span class="sec5-num-badge">#246</span>
+                <span class="sec5-cat-tag">Math & Scientific</span>
+            </div>
+            <h3><img src="assets/logos/magma.svg" alt="Magma" class="category-logo"> Magma</h3>
+            <p>High-performance computer algebra system for algebra, number theory, and geometry</p>
+            <div class="sec5-cta-btn">Interactive Studio &rarr;</div>
+        </a>
+        <a href="pages/section5-entry.html?entry=247" class="category-card sec5-card pari-gp" data-category="math" data-id="247" data-name="pari/gp">
+            <div class="sec5-card-top">
+                <span class="sec5-num-badge">#247</span>
+                <span class="sec5-cat-tag">Math & Scientific</span>
+            </div>
+            <h3><img src="assets/logos/parigp.svg" alt="PARI/GP" class="category-logo"> PARI/GP</h3>
+            <p>Specialized computer algebra system designed for fast computations in number theory</p>
+            <div class="sec5-cta-btn">Interactive Studio &rarr;</div>
+        </a>
+        <a href="pages/section5-entry.html?entry=248" class="category-card sec5-card maxima-math" data-category="math" data-id="248" data-name="maxima">
+            <div class="sec5-card-top">
+                <span class="sec5-num-badge">#248</span>
+                <span class="sec5-cat-tag">Math & Scientific</span>
+            </div>
+            <h3><img src="assets/logos/maxima.svg" alt="Maxima" class="category-logo"> Maxima</h3>
+            <p>Full-featured computer algebra system based on MIT's legendary 1960s Macsyma</p>
+            <div class="sec5-cta-btn">Interactive Studio &rarr;</div>
+        </a>
+        <a href="pages/section5-entry.html?entry=249" class="category-card sec5-card axiom-math" data-category="math" data-id="249" data-name="axiom">
+            <div class="sec5-card-top">
+                <span class="sec5-num-badge">#249</span>
+                <span class="sec5-cat-tag">Math & Scientific</span>
+            </div>
+            <h3><img src="assets/logos/axiom.svg" alt="Axiom" class="category-logo"> Axiom</h3>
+            <p>Rigorous scientific computer algebra system featuring strongly-typed mathematical domains</p>
+            <div class="sec5-cta-btn">Interactive Studio &rarr;</div>
+        </a>
+        <a href="pages/section5-entry.html?entry=250" class="category-card sec5-card occam-lang" data-category="math" data-id="250" data-name="occam">
+            <div class="sec5-card-top">
+                <span class="sec5-num-badge">#250</span>
+                <span class="sec5-cat-tag">Concurrency & Distributed</span>
+            </div>
+            <h3><img src="assets/logos/occam.svg" alt="Occam" class="category-logo"> Occam</h3>
+            <p>Pioneering concurrent programming language built on Hoare's Communicating Sequential Processes (CSP)</p>
+            <div class="sec5-cta-btn">Interactive Studio &rarr;</div>
+        </a>
+        </div>
+
+        <!-- Dynamic Pagination Bar -->
+        <div class="section5-pagination-bar" id="sec5-pagination-bar">
+            <div class="pagination-info" id="sec5-pagination-info">Showing 1–12 of 50 entries</div>
+            <div class="pagination-controls" id="sec5-pagination-controls"></div>
+        </div>
+    </div>
+
 </section>
 
 <section class="featured">
@@ -1633,8 +2132,14 @@ console.log("CodePlay");
 </footer>
 
 <script>
-    // Section Switcher Logic (Section 1: 1–50, Section 2: 51–100, Section 3: 101–150, Section 4: 151–200)
+    // Section Switcher Logic (Sections 1 to 5: 1–250)
     let currentCategorySection = 1;
+
+    // Section 5 State Management (Pagination & Filters)
+    let sec5CurrentPage = 1;
+    let sec5PageSize = 12;
+    let sec5ActiveFilter = 'all';
+    let sec5SearchTerm = '';
 
     function switchCategorySection(sectionNum) {
         currentCategorySection = sectionNum;
@@ -1642,18 +2147,28 @@ console.log("CodePlay");
         const grid2 = document.getElementById('category-grid-2');
         const grid3 = document.getElementById('category-grid-3');
         const grid4 = document.getElementById('category-grid-4');
+        const wrapper5 = document.getElementById('section5-wrapper');
+
         const tab1 = document.getElementById('tab-section-1');
         const tab2 = document.getElementById('tab-section-2');
         const tab3 = document.getElementById('tab-section-3');
         const tab4 = document.getElementById('tab-section-4');
+        const tab5 = document.getElementById('tab-section-5');
         const badge = document.getElementById('section-counter-badge');
 
         const grids = [grid1, grid2, grid3, grid4];
-        const tabs = [tab1, tab2, tab3, tab4];
+        const tabs = [tab1, tab2, tab3, tab4, tab5];
 
         grids.forEach((g, idx) => {
             if (g) g.style.display = (idx + 1 === sectionNum) ? 'grid' : 'none';
         });
+
+        if (wrapper5) {
+            wrapper5.style.display = (sectionNum === 5) ? 'block' : 'none';
+            if (sectionNum === 5) {
+                updateSection5Display();
+            }
+        }
 
         tabs.forEach((t, idx) => {
             if (t) {
@@ -1668,10 +2183,162 @@ console.log("CodePlay");
             else if (sectionNum === 2) badge.textContent = 'Showing Section 2: Languages 51–100 (50 Languages)';
             else if (sectionNum === 3) badge.textContent = 'Showing Section 3: Languages 101–150 (50 Languages)';
             else if (sectionNum === 4) badge.textContent = 'Showing Section 4: Languages 151–200 (50 Languages)';
+            else if (sectionNum === 5) badge.textContent = 'Showing Section 5: Languages & Frameworks 201–250 (50 Entries)';
         }
     }
 
-    // URL parameter or hash check on load (?section=2 / 3 / 4 or #section-2 / 3 / 4)
+    // Section 5 Pagination & Filtering Engine
+    function getSection5MatchingCards() {
+        const grid5 = document.getElementById('category-grid-5');
+        if (!grid5) return [];
+        const cards = Array.from(grid5.querySelectorAll('.sec5-card'));
+        return cards.filter(card => {
+            const matchesCat = (sec5ActiveFilter === 'all') || (card.getAttribute('data-category') === sec5ActiveFilter);
+            const name = card.getAttribute('data-name') || '';
+            const text = card.textContent.toLowerCase();
+            const matchesSearch = !sec5SearchTerm || text.includes(sec5SearchTerm) || name.includes(sec5SearchTerm);
+            return matchesCat && matchesSearch;
+        });
+    }
+
+    function updateSection5Display() {
+        const grid5 = document.getElementById('category-grid-5');
+        const infoEl = document.getElementById('sec5-pagination-info');
+        const controlsEl = document.getElementById('sec5-pagination-controls');
+        if (!grid5) return;
+
+        const allCards = Array.from(grid5.querySelectorAll('.sec5-card'));
+        const matchedCards = getSection5MatchingCards();
+        const totalMatches = matchedCards.length;
+
+        const effectivePageSize = (sec5PageSize === 'all') ? totalMatches : parseInt(sec5PageSize, 10);
+        const totalPages = effectivePageSize > 0 ? Math.ceil(totalMatches / effectivePageSize) : 1;
+
+        if (sec5CurrentPage > totalPages) sec5CurrentPage = totalPages || 1;
+        if (sec5CurrentPage < 1) sec5CurrentPage = 1;
+
+        // Hide all cards first
+        allCards.forEach(c => c.style.display = 'none');
+
+        // Show cards in current slice
+        const startIndex = (sec5CurrentPage - 1) * effectivePageSize;
+        const endIndex = (sec5PageSize === 'all') ? totalMatches : Math.min(startIndex + effectivePageSize, totalMatches);
+
+        matchedCards.slice(startIndex, endIndex).forEach(c => {
+            c.style.display = 'flex';
+        });
+
+        // Update info string
+        if (infoEl) {
+            if (totalMatches === 0) {
+                infoEl.textContent = 'No matching entries found.';
+            } else {
+                infoEl.textContent = `Showing ${startIndex + 1}–${endIndex} of ${totalMatches} entries`;
+            }
+        }
+
+        // Render Pagination Controls
+        if (controlsEl) {
+            controlsEl.innerHTML = '';
+            if (totalPages <= 1) return; // No pagination controls needed if single page
+
+            // First & Prev Buttons
+            const btnFirst = document.createElement('button');
+            btnFirst.type = 'button';
+            btnFirst.className = 'page-btn';
+            btnFirst.textContent = '« First';
+            btnFirst.disabled = (sec5CurrentPage === 1);
+            btnFirst.onclick = () => { sec5CurrentPage = 1; updateSection5Display(); };
+            controlsEl.appendChild(btnFirst);
+
+            const btnPrev = document.createElement('button');
+            btnPrev.type = 'button';
+            btnPrev.className = 'page-btn';
+            btnPrev.textContent = '‹ Prev';
+            btnPrev.disabled = (sec5CurrentPage === 1);
+            btnPrev.onclick = () => { sec5CurrentPage--; updateSection5Display(); };
+            controlsEl.appendChild(btnPrev);
+
+            // Numbered Buttons
+            for (let p = 1; p <= totalPages; p++) {
+                const btnPage = document.createElement('button');
+                btnPage.type = 'button';
+                btnPage.className = 'page-btn' + (p === sec5CurrentPage ? ' active' : '');
+                btnPage.textContent = p;
+                btnPage.onclick = () => { sec5CurrentPage = p; updateSection5Display(); };
+                controlsEl.appendChild(btnPage);
+            }
+
+            // Next & Last Buttons
+            const btnNext = document.createElement('button');
+            btnNext.type = 'button';
+            btnNext.className = 'page-btn';
+            btnNext.textContent = 'Next ›';
+            btnNext.disabled = (sec5CurrentPage === totalPages);
+            btnNext.onclick = () => { sec5CurrentPage++; updateSection5Display(); };
+            controlsEl.appendChild(btnNext);
+
+            const btnLast = document.createElement('button');
+            btnLast.type = 'button';
+            btnLast.className = 'page-btn';
+            btnLast.textContent = 'Last »';
+            btnLast.disabled = (sec5CurrentPage === totalPages);
+            btnLast.onclick = () => { sec5CurrentPage = totalPages; updateSection5Display(); };
+            controlsEl.appendChild(btnLast);
+
+            // Direct Page Jump
+            const jumpWrap = document.createElement('div');
+            jumpWrap.className = 'page-jump-wrap';
+            jumpWrap.innerHTML = `<span style="color:#94A3B8;font-size:0.8rem;margin-left:6px;">Go to:</span>
+                <input type="number" min="1" max="${totalPages}" value="${sec5CurrentPage}" class="page-jump-input" id="sec5-jump-input">`;
+            controlsEl.appendChild(jumpWrap);
+
+            const jumpInput = jumpWrap.querySelector('#sec5-jump-input');
+            jumpInput.addEventListener('change', (e) => {
+                const p = parseInt(e.target.value, 10);
+                if (p >= 1 && p <= totalPages) {
+                    sec5CurrentPage = p;
+                    updateSection5Display();
+                } else {
+                    e.target.value = sec5CurrentPage;
+                }
+            });
+        }
+    }
+
+    // Attach Section 5 Event Listeners
+    const sec5SearchInput = document.getElementById('sec5-search-input');
+    if (sec5SearchInput) {
+        sec5SearchInput.addEventListener('input', (e) => {
+            sec5SearchTerm = e.target.value.toLowerCase().trim();
+            sec5CurrentPage = 1;
+            updateSection5Display();
+        });
+    }
+
+    const sec5PageSizeSelect = document.getElementById('sec5-page-size-select');
+    if (sec5PageSizeSelect) {
+        sec5PageSizeSelect.addEventListener('change', (e) => {
+            sec5PageSize = e.target.value;
+            sec5CurrentPage = 1;
+            updateSection5Display();
+        });
+    }
+
+    const sec5FilterChips = document.getElementById('sec5-filter-chips');
+    if (sec5FilterChips) {
+        sec5FilterChips.addEventListener('click', (e) => {
+            const btn = e.target.closest('.section5-filter-btn');
+            if (!btn) return;
+            sec5FilterChips.querySelectorAll('.section5-filter-btn').forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+            sec5ActiveFilter = btn.getAttribute('data-filter') || 'all';
+            sec5CurrentPage = 1;
+            updateSection5Display();
+        });
+    }
+
+    // URL parameter or hash check on load (?section=2..5 or #section-2..5)
     const urlParams = new URLSearchParams(window.location.search);
     const secParam = urlParams.get('section');
     if (secParam === '2' || window.location.hash === '#section-2') {
@@ -1680,9 +2347,11 @@ console.log("CodePlay");
         switchCategorySection(3);
     } else if (secParam === '4' || window.location.hash === '#section-4') {
         switchCategorySection(4);
+    } else if (secParam === '5' || window.location.hash === '#section-5') {
+        switchCategorySection(5);
     }
 
-    // Search filter across all 4 sections and example cards
+    // Search filter across all 5 sections and example cards
     const searchInput = document.querySelector('.search-box input');
     if (searchInput) {
         searchInput.addEventListener('input', (e) => {
@@ -1691,20 +2360,25 @@ console.log("CodePlay");
             const grid2 = document.getElementById('category-grid-2');
             const grid3 = document.getElementById('category-grid-3');
             const grid4 = document.getElementById('category-grid-4');
+            const wrapper5 = document.getElementById('section5-wrapper');
+            const grid5 = document.getElementById('category-grid-5');
             const badge = document.getElementById('section-counter-badge');
 
             if (query) {
-                // When actively querying, open all 4 grids so no language is missed
+                // When actively querying, open all grids so no language is missed
                 if (grid1) grid1.style.display = 'grid';
                 if (grid2) grid2.style.display = 'grid';
                 if (grid3) grid3.style.display = 'grid';
                 if (grid4) grid4.style.display = 'grid';
+                if (wrapper5) wrapper5.style.display = 'block';
+                if (grid5) grid5.style.display = 'grid';
+
                 let matchCount = 0;
                 const cards = document.querySelectorAll('.category-card, .example-card');
                 cards.forEach(card => {
                     const text = card.textContent.toLowerCase();
                     if (text.includes(query)) {
-                        card.style.display = '';
+                        card.style.display = card.classList.contains('sec5-card') ? 'flex' : '';
                         if (card.classList.contains('category-card')) matchCount++;
                     } else {
                         card.style.display = 'none';
@@ -1714,7 +2388,9 @@ console.log("CodePlay");
             } else {
                 // Restore active section visibility and cards
                 const cards = document.querySelectorAll('.category-card, .example-card');
-                cards.forEach(card => card.style.display = '');
+                cards.forEach(card => {
+                    if (!card.classList.contains('sec5-card')) card.style.display = '';
+                });
                 switchCategorySection(currentCategorySection);
             }
         });

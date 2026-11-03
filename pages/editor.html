@@ -101,6 +101,47 @@
                 min-height: 350px;
             }
         }
+        .viewport-controls {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            background: #0B1120;
+            padding: 4px 8px;
+            border-radius: 10px;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+        .viewport-btn {
+            background: transparent;
+            border: none;
+            color: #94A3B8;
+            padding: 4px 10px;
+            border-radius: 6px;
+            font-size: 0.78rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        .viewport-btn.active {
+            background: #4F46E5;
+            color: #FFFFFF;
+        }
+        .auto-run-label {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 0.82rem;
+            color: #CBD5E1;
+            cursor: pointer;
+            user-select: none;
+            padding: 4px 8px;
+            border-radius: 8px;
+            background: #0B1120;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+        .auto-run-label input {
+            cursor: pointer;
+            accent-color: #4F46E5;
+        }
     </style>
 </head>
 <body>
@@ -125,10 +166,22 @@
             <button class="ide-tab" onclick="switchTab('js')">⚡ JavaScript</button>
         </div>
 
-        <div style="display:flex;gap:10px;">
+        <div class="viewport-controls">
+            <span style="font-size:0.75rem;color:#64748B;font-weight:600;padding-right:4px;">VIEWPORT:</span>
+            <button type="button" class="viewport-btn active" id="vp-desktop" onclick="setViewport('desktop')">🖥️ Desktop</button>
+            <button type="button" class="viewport-btn" id="vp-tablet" onclick="setViewport('tablet')">💻 Tablet (768px)</button>
+            <button type="button" class="viewport-btn" id="vp-mobile" onclick="setViewport('mobile')">📱 Mobile (375px)</button>
+        </div>
+
+        <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;">
+            <label class="auto-run-label">
+                <input type="checkbox" id="auto-run-toggle" checked onchange="toggleAutoRun(this.checked)">
+                <span>⚡ Auto-Run</span>
+            </label>
+            <button class="action-btn btn-copy" onclick="downloadProject()">💾 Export HTML</button>
             <button class="action-btn btn-reset" onclick="resetIde()">↺ Reset</button>
             <button class="action-btn btn-copy" onclick="copyCurrentCode()">📋 Copy</button>
-            <button class="action-btn btn-run" onclick="compileIde()">▶ Run Preview</button>
+            <button class="action-btn btn-run" onclick="compileIde()">▶ Run</button>
         </div>
     </div>
 
@@ -137,8 +190,8 @@
             <textarea id="ide-input" class="ide-textarea" spellcheck="false"></textarea>
         </div>
 
-        <div class="ide-preview-container">
-            <iframe id="ide-preview" class="ide-iframe" sandbox="allow-scripts" title="Preview Sandbox"></iframe>
+        <div class="ide-preview-container" id="ide-preview-wrapper" style="display:flex;justify-content:center;align-items:center;background:#060913;">
+            <iframe id="ide-preview" class="ide-iframe" sandbox="allow-scripts" title="Preview Sandbox" style="transition:max-width 0.3s ease;"></iframe>
         </div>
     </div>
 </div>
@@ -290,6 +343,80 @@ button:hover {
     inputEl.value = store.html;
     compileIde();
 
+    // Export complete standalone HTML file
+    function downloadProject() {
+        store[currentTab] = inputEl.value;
+        const completeDoc = `<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exported Project — CodePlay</title>
+  <style>
+${store.css}
+  </style>
+</head>
+<body>
+${store.html}
+  <script>
+    try {
+${store.js}
+    } catch (err) {
+      console.error(err);
+    }
+  <\/script>
+</body>
+</html>`;
+        const blob = new Blob([completeDoc], { type: 'text/html' });
+        const a = document.createElement('a');
+        a.href = URL.createObjectURL(blob);
+        a.download = 'codeplay-project.html';
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+        showToast('💾 Downloaded codeplay-project.html!');
+    }
+
+    // Viewport switching (Desktop 100%, Tablet 768px, Mobile 375px)
+    function setViewport(mode) {
+        const preview = document.getElementById('ide-preview');
+        const btnDesktop = document.getElementById('vp-desktop');
+        const btnTablet = document.getElementById('vp-tablet');
+        const btnMobile = document.getElementById('vp-mobile');
+
+        [btnDesktop, btnTablet, btnMobile].forEach(b => b.classList.remove('active'));
+
+        if (mode === 'mobile') {
+            preview.style.maxWidth = '375px';
+            btnMobile.classList.add('active');
+            showToast('📱 Switched to Mobile View (375px)');
+        } else if (mode === 'tablet') {
+            preview.style.maxWidth = '768px';
+            btnTablet.classList.add('active');
+            showToast('💻 Switched to Tablet View (768px)');
+        } else {
+            preview.style.maxWidth = '100%';
+            btnDesktop.classList.add('active');
+            showToast('🖥️ Switched to Full Desktop View');
+        }
+    }
+
+    // Auto-Run live compiling
+    let isAutoRun = true;
+    let debounceTimer = null;
+    function toggleAutoRun(enabled) {
+        isAutoRun = enabled;
+        showToast(isAutoRun ? '⚡ Auto-Run Enabled' : '⏸️ Auto-Run Disabled (Manual Run Only)');
+    }
+
+    inputEl.addEventListener('input', () => {
+        if (!isAutoRun) return;
+        clearTimeout(debounceTimer);
+        debounceTimer = setTimeout(() => {
+            compileIde();
+        }, 350);
+    });
+
     // Tab key support
     inputEl.addEventListener('keydown', (e) => {
         if (e.key === 'Tab') {
@@ -298,6 +425,10 @@ button:hover {
             const end = inputEl.selectionEnd;
             inputEl.value = inputEl.value.substring(0, start) + '  ' + inputEl.value.substring(end);
             inputEl.selectionStart = inputEl.selectionEnd = start + 2;
+            if (isAutoRun) {
+                clearTimeout(debounceTimer);
+                debounceTimer = setTimeout(() => compileIde(), 350);
+            }
         }
     });
 </script>

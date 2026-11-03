@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
+  <rect width="128" height="128" rx="24" fill="#1B365D"/>
+  <path d="M64 22 L102 44 L102 84 L64 106 L26 84 L26 44 Z" fill="none" stroke="#60A5FA" stroke-width="4"/>
+  <path d="M64 22 L64 106 M26 44 L102 84 M102 44 L26 84" stroke="rgba(96,165,250,0.4)" stroke-width="2"/>
+  <polygon points="64,36 90,52 64,68 38,52" fill="#3B82F6"/>
+  <text x="64" y="98" font-family="'Poppins',sans-serif" font-size="16" font-weight="bold" fill="#FFFFFF" text-anchor="middle">GLSL</text>
+</svg>

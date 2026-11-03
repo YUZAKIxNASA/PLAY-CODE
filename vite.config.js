@@ -31,7 +31,8 @@ export default defineConfig({
         jqueryPage: resolve(__dirname, 'pages/jquery.html'),
         jqueryLesson: resolve(__dirname, 'pages/jquery-lesson.html'),
         projectsPage: resolve(__dirname, 'pages/projects.html'),
-        editorPage: resolve(__dirname, 'pages/editor.html')
+        editorPage: resolve(__dirname, 'pages/editor.html'),
+        section5Entry: resolve(__dirname, 'pages/section5-entry.html')
       }
     }
   }

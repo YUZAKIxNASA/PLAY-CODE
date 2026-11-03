@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
+  <rect width="128" height="128" rx="24" fill="#421414"/>
+  <rect x="30" y="28" width="68" height="72" rx="8" fill="#1E293B" stroke="#EF4444" stroke-width="3"/>
+  <text x="64" y="62" font-family="'Poppins',sans-serif" font-size="16" font-weight="900" fill="#EF4444" text-anchor="middle">YAML</text>
+  <line x1="42" y1="74" x2="72" y2="74" stroke="#F87171" stroke-width="3" stroke-linecap="round"/>
+  <line x1="50" y1="84" x2="86" y2="84" stroke="#F87171" stroke-width="3" stroke-linecap="round"/>
+</svg>
