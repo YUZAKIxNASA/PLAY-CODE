@@ -1748,6 +1748,161 @@ section h2{
 }
 
 /* ==========================
+   SECTION 6: LANGUAGES 251–300
+   (Calibrated to Match Entries 1–250 Jewel-Tone Palette & Logos)
+========================== */
+.limbo-lang{
+    background:linear-gradient(135deg,#136B63,#0A453F);
+}
+.alef-lang{
+    background:linear-gradient(135deg,#7D1B1B,#540F0F);
+}
+.llvm-ir{
+    background:linear-gradient(135deg,#8C2411,#5E1508);
+}
+.mips-asm{
+    background:linear-gradient(135deg,#193E7A,#0E2752);
+}
+.arm-asm{
+    background:linear-gradient(135deg,#125675,#0A374D);
+}
+.x86-asm{
+    background:linear-gradient(135deg,#134F7D,#0A3354);
+}
+.x86-64-asm{
+    background:linear-gradient(135deg,#1D4478,#102B4D);
+}
+.riscv-asm{
+    background:linear-gradient(135deg,#1C4066,#0E2742);
+}
+.asm-6502{
+    background:linear-gradient(135deg,#7D480E,#542E07);
+}
+.z80-asm{
+    background:linear-gradient(135deg,#176348,#0E4230);
+}
+.m68k-asm{
+    background:linear-gradient(135deg,#53248F,#361461);
+}
+.pic-asm{
+    background:linear-gradient(135deg,#8A350E,#5E2207);
+}
+.avr-asm{
+    background:linear-gradient(135deg,#165A6E,#0D3A47);
+}
+.masm-lang{
+    background:linear-gradient(135deg,#145385,#0C3759);
+}
+.nasm-lang{
+    background:linear-gradient(135deg,#1C3B6E,#102447);
+}
+.fasm-lang{
+    background:linear-gradient(135deg,#78192E,#520E1E);
+}
+.jasmin-lang{
+    background:linear-gradient(135deg,#7D4712,#542E0A);
+}
+.smali-lang{
+    background:linear-gradient(135deg,#216E3A,#144724);
+}
+.cil-lang{
+    background:linear-gradient(135deg,#48208F,#2F1261);
+}
+.java-bytecode{
+    background:linear-gradient(135deg,#8A2323,#5E1414);
+}
+.ook-lang{
+    background:linear-gradient(135deg,#8C3711,#5E2308);
+}
+.false-lang{
+    background:linear-gradient(135deg,#15664A,#0C422F);
+}
+.underload-lang{
+    background:linear-gradient(135deg,#37365C,#22223D);
+}
+.unlambda-lang{
+    background:linear-gradient(135deg,#6E5610,#4A3908);
+}
+.iota-lang{
+    background:linear-gradient(135deg,#1E488F,#112E61);
+}
+.jot-lang{
+    background:linear-gradient(135deg,#125E6E,#0A3F4A);
+}
+.lazy-k-lang{
+    background:linear-gradient(135deg,#14635D,#0C423E);
+}
+.thue-lang{
+    background:linear-gradient(135deg,#5C2096,#3E1266);
+}
+.hexagony-lang{
+    background:linear-gradient(135deg,#7D3A15,#57240B);
+}
+.emojicode-lang{
+    background:linear-gradient(135deg,#8A6216,#5C3E0A);
+}
+.befunge-lang{
+    background:linear-gradient(135deg,#1C6936,#114522);
+}
+.piet-lang{
+    background:linear-gradient(135deg,#384252,#212933);
+}
+.whitespace-lang{
+    background:linear-gradient(135deg,#384352,#232B36);
+}
+.chef-lang{
+    background:linear-gradient(135deg,#7D2319,#54140D);
+}
+.arnoldc-lang{
+    background:linear-gradient(135deg,#781D1D,#521010);
+}
+.bf-plus-plus{
+    background:linear-gradient(135deg,#691D3E,#451027);
+}
+.deadfish-lang{
+    background:linear-gradient(135deg,#135466,#0C3945);
+}
+.cow-lang{
+    background:linear-gradient(135deg,#196131,#0E401E);
+}
+.grass-lang{
+    background:linear-gradient(135deg,#145C45,#0C3D2E);
+}
+.velato-lang{
+    background:linear-gradient(135deg,#44378A,#2C225E);
+}
+.befunge-93{
+    background:linear-gradient(135deg,#78440E,#522C07);
+}
+.malbolge-lang{
+    background:linear-gradient(135deg,#5E1212,#3D0B0B);
+}
+.bytecode-asm{
+    background:linear-gradient(135deg,#1C4482,#102B57);
+}
+.basic09-lang{
+    background:linear-gradient(135deg,#1A573B,#0F3B27);
+}
+.gw-basic{
+    background:linear-gradient(135deg,#12476E,#0A2E4A);
+}
+.vbscript-full{
+    background:linear-gradient(135deg,#14537D,#0C3754);
+}
+.vbscript-short{
+    background:linear-gradient(135deg,#27327D,#161F54);
+}
+.jscript-lang{
+    background:linear-gradient(135deg,#75560A,#4F3A06);
+}
+.actionscript3{
+    background:linear-gradient(135deg,#851C1C,#571010);
+}
+.lingo-lang{
+    background:linear-gradient(135deg,#7A4515,#522C0A);
+}
+
+/* ==========================
    FEATURED EXAMPLES
 ========================== */
 

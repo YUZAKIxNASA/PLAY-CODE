@@ -1,6 +1,1 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
-  <rect width="128" height="128" rx="24" fill="#934B00"/>
-  <path d="M44 64c-12 0-14-18-2-24 0-14 18-20 22-8 8-12 24-4 22 8 12 4 10 24-2 24H44z" fill="#FFFFFF"/>
-  <rect x="44" y="68" width="40" height="24" rx="4" fill="#FFFFFF"/>
-  <line x1="44" y1="78" x2="84" y2="78" stroke="#934B00" stroke-width="3"/>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128"><rect width="128" height="128" rx="24" fill="#DC2626"/><path d="M44 64 C40 48 52 40 64 40 C76 40 88 48 84 64 Z" fill="#FEE2E2" stroke="#FFFFFF" stroke-width="3"/><rect x="44" y="64" width="40" height="14" rx="3" fill="#FFFFFF"/><text x="64" y="112" font-family="Poppins" font-size="13" font-weight="700" fill="#FFFFFF" text-anchor="middle">CHEF</text></svg>
