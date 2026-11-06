@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128">
+  <defs>
+    <linearGradient id="watG" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#654FF0"/>
+      <stop offset="100%" stop-color="#4E33E4"/>
+    </linearGradient>
+  </defs>
+  <rect width="128" height="128" rx="28" fill="url(#watG)"/>
+  <text x="64" y="60" font-family="'Poppins', monospace" font-size="28" font-weight="700" text-anchor="middle" fill="#FFFFFF">WAT</text>
+  <text x="64" y="90" font-family="'Poppins', monospace" font-size="22" font-weight="600" text-anchor="middle" fill="#C7D2FE">(module)</text>
+</svg>

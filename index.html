@@ -98,7 +98,41 @@ console.log("CodePlay");
 
     <!-- Showing Pagination / Results Status Box -->
     <div class="section-meta-box">
-        <span class="section-counter-badge" id="section-counter-badge">Showing Page 1 of 6: Section 1 (Languages 1–50) — 50 of 301 Entries</span>
+        <span class="section-counter-badge" id="section-counter-badge">Showing Page 1 of 7: Section 1 (Languages 1–50) — 50 of 351 Entries</span>
+    </div>
+
+    <!-- Section Navigation Buttons (Sections 1–7) -->
+    <div class="section-nav-wrapper" role="navigation" aria-label="Explore Categories Section Navigation">
+        <div class="section-nav-group">
+            <button type="button" class="section-nav-btn active" data-section="1" onclick="goToSection(1)">
+                <span class="sec-btn-title">Section 1</span>
+                <span class="sec-btn-range">1–50</span>
+            </button>
+            <button type="button" class="section-nav-btn" data-section="2" onclick="goToSection(2)">
+                <span class="sec-btn-title">Section 2</span>
+                <span class="sec-btn-range">51–100</span>
+            </button>
+            <button type="button" class="section-nav-btn" data-section="3" onclick="goToSection(3)">
+                <span class="sec-btn-title">Section 3</span>
+                <span class="sec-btn-range">101–150</span>
+            </button>
+            <button type="button" class="section-nav-btn" data-section="4" onclick="goToSection(4)">
+                <span class="sec-btn-title">Section 4</span>
+                <span class="sec-btn-range">151–200</span>
+            </button>
+            <button type="button" class="section-nav-btn" data-section="5" onclick="goToSection(5)">
+                <span class="sec-btn-title">Section 5</span>
+                <span class="sec-btn-range">201–250</span>
+            </button>
+            <button type="button" class="section-nav-btn" data-section="6" onclick="goToSection(6)">
+                <span class="sec-btn-title">Section 6</span>
+                <span class="sec-btn-range">251–300</span>
+            </button>
+            <button type="button" class="section-nav-btn" data-section="7" onclick="goToSection(7)">
+                <span class="sec-btn-title">Section 7</span>
+                <span class="sec-btn-range">351–400</span>
+            </button>
+        </div>
     </div>
 
     <!-- Controls Panel: Search Box & Cards Per Page -->
@@ -130,7 +164,7 @@ console.log("CodePlay");
         </div>
     </div>
 
-    <!-- Single Continuous Category Grid (All Categories 1–300 + Projects) -->
+    <!-- Single Continuous Category Grid (All Categories 1–400 + Projects) -->
     <div class="category-grid" id="category-grid">
                 <!-- html -->
         <a href="pages/html.html" class="category-card html">
@@ -3032,6 +3066,507 @@ console.log("CodePlay");
             <div class="card-bottom">
                 <span class="coming-soon">Coming Soon</span>
                 <span class="card-num">300</span>
+            </div>
+        </a>
+
+
+        <!-- 351: Flix -->
+        <a href="pages/section7-entry.html?entry=351" class="category-card flix-lang" data-category="351">
+            <h3><img src="assets/logos/flix.svg" alt="Flix" class="category-logo"> Flix</h3>
+            <p>Functional, imperative, and logic programming language featuring polymorphic effects and first-class Datalog</p>
+            <div class="card-bottom">
+                <span class="coming-soon">Coming Soon</span>
+                <span class="card-num">351</span>
+            </div>
+        </a>
+
+        <!-- 352: Idris 2 -->
+        <a href="pages/section7-entry.html?entry=352" class="category-card idris2-lang" data-category="352">
+            <h3><img src="assets/logos/idris2.svg" alt="Idris 2" class="category-logo"> Idris 2</h3>
+            <p>Purely functional programming language with first-class dependent types and quantitative type theory</p>
+            <div class="card-bottom">
+                <span class="coming-soon">Coming Soon</span>
+                <span class="card-num">352</span>
+            </div>
+        </a>
+
+        <!-- 353: Liquid Haskell -->
+        <a href="pages/section7-entry.html?entry=353" class="category-card liquid-haskell" data-category="353">
+            <h3><img src="assets/logos/liquid-haskell.svg" alt="Liquid Haskell" class="category-logo"> Liquid Haskell</h3>
+            <p>Refinement type checker for Haskell augmenting types with logical predicates verified by SMT solvers</p>
+            <div class="card-bottom">
+                <span class="coming-soon">Coming Soon</span>
+                <span class="card-num">353</span>
+            </div>
+        </a>
+
+        <!-- 354: Purescript -->
+        <a href="pages/section7-entry.html?entry=354" class="category-card purescript-lang" data-category="354">
+            <h3><img src="assets/logos/purescript.svg" alt="Purescript" class="category-logo"> Purescript</h3>
+            <p>Strongly typed, purely functional programming language compiling to clean, readable JavaScript and WebAssembly</p>
+            <div class="card-bottom">
+                <span class="coming-soon">Coming Soon</span>
+                <span class="card-num">354</span>
+            </div>
+        </a>
+
+        <!-- 355: Grain -->
+        <a href="pages/section7-entry.html?entry=355" class="category-card grain-lang" data-category="355">
+            <h3><img src="assets/logos/grain.svg" alt="Grain" class="category-logo"> Grain</h3>
+            <p>Modern, functional, WebAssembly-first programming language with strong type inference and pattern matching</p>
+            <div class="card-bottom">
+                <span class="coming-soon">Coming Soon</span>
+                <span class="card-num">355</span>
+            </div>
+        </a>
+
+        <!-- 356: AssemblyScript -->
+        <a href="pages/section7-entry.html?entry=356" class="category-card assemblyscript-lang" data-category="356">
+            <h3><img src="assets/logos/assemblyscript.svg" alt="AssemblyScript" class="category-logo"> AssemblyScript</h3>
+            <p>TypeScript-like language compiling strictly to WebAssembly binary format using Binaryen</p>
+            <div class="card-bottom">
+                <span class="coming-soon">Coming Soon</span>
+                <span class="card-num">356</span>
+            </div>
+        </a>
+
+        <!-- 357: Wasm Text -->
+        <a href="pages/section7-entry.html?entry=357" class="category-card wasm-text" data-category="357">
+            <h3><img src="assets/logos/wasm-text.svg" alt="Wasm Text" class="category-logo"> Wasm Text</h3>
+            <p>Human-readable S-expression text format (WAT) for low-level WebAssembly bytecode modules</p>
+            <div class="card-bottom">
+                <span class="coming-soon">Coming Soon</span>
+                <span class="card-num">357</span>
+            </div>
+        </a>
+
+        <!-- 358: Moonbit -->
+        <a href="pages/section7-entry.html?entry=358" class="category-card moonbit-lang" data-category="358">
+            <h3><img src="assets/logos/moonbit.svg" alt="Moonbit" class="category-logo"> Moonbit</h3>
+            <p>Fast, compact, memory-safe language designed by IDEA Research specifically for cloud WebAssembly and AI agents</p>
+            <div class="card-bottom">
+                <span class="coming-soon">Coming Soon</span>
+                <span class="card-num">358</span>
+            </div>
+        </a>
+
+        <!-- 359: Vlang -->
+        <a href="pages/section7-entry.html?entry=359" class="category-card vlang-lang" data-category="359">
+            <h3><img src="assets/logos/vlang.svg" alt="Vlang" class="category-logo"> Vlang</h3>
+            <p>Simple, fast, safe, compiled language for developing maintainable software with zero dependencies</p>
+            <div class="card-bottom">
+                <span class="coming-soon">Coming Soon</span>
+                <span class="card-num">359</span>
+            </div>
+        </a>
+
+        <!-- 360: Odin -->
+        <a href="pages/section7-entry.html?entry=360" class="category-card odin-lang" data-category="360">
+            <h3><img src="assets/logos/odin.svg" alt="Odin" class="category-logo"> Odin</h3>
+            <p>Data-oriented, imperative programming language designed for high performance, modern architectures, and simplicity</p>
+            <div class="card-bottom">
+                <span class="coming-soon">Coming Soon</span>
+                <span class="card-num">360</span>
+            </div>
+        </a>
+
+        <!-- 361: Jai -->
+        <a href="pages/section7-entry.html?entry=361" class="category-card jai-lang" data-category="361">
+            <h3><img src="assets/logos/jai.svg" alt="Jai" class="category-logo"> Jai</h3>
+            <p>High-level systems programming language designed specifically for video game programmers by Jonathan Blow</p>
+            <div class="card-bottom">
+                <span class="coming-soon">Coming Soon</span>
+                <span class="card-num">361</span>
+            </div>
+        </a>
+
+        <!-- 362: C3 -->
+        <a href="pages/section7-entry.html?entry=362" class="category-card c3-lang" data-category="362">
+            <h3><img src="assets/logos/c3.svg" alt="C3" class="category-logo"> C3</h3>
+            <p>Evolution of C providing modern ergonomics, compile-time introspection, and safety while retaining full ABI parity</p>
+            <div class="card-bottom">
+                <span class="coming-soon">Coming Soon</span>
+                <span class="card-num">362</span>
+            </div>
+        </a>
+
+        <!-- 363: Hare -->
+        <a href="pages/section7-entry.html?entry=363" class="category-card hare-lang" data-category="363">
+            <h3><img src="assets/logos/hare.svg" alt="Hare" class="category-logo"> Hare</h3>
+            <p>Systems programming language designed to be simple, stable, and robust, with a 100% static type system</p>
+            <div class="card-bottom">
+                <span class="coming-soon">Coming Soon</span>
+                <span class="card-num">363</span>
+            </div>
+        </a>
+
+        <!-- 364: Zig Language -->
+        <a href="pages/section7-entry.html?entry=364" class="category-card zig-language" data-category="364">
+            <h3><img src="assets/logos/zig-lang.svg" alt="Zig Language" class="category-logo"> Zig Language</h3>
+            <p>General-purpose programming language and toolchain for maintaining robust, optimal, and reusable software</p>
+            <div class="card-bottom">
+                <span class="coming-soon">Coming Soon</span>
+                <span class="card-num">364</span>
+            </div>
+        </a>
+
+        <!-- 365: Cyclone -->
+        <a href="pages/section7-entry.html?entry=365" class="category-card cyclone-lang" data-category="365">
+            <h3><img src="assets/logos/cyclone.svg" alt="Cyclone" class="category-logo"> Cyclone</h3>
+            <p>Safe dialect of C designed to prevent buffer overflows, dangling pointers, and format string vulnerabilities</p>
+            <div class="card-bottom">
+                <span class="coming-soon">Coming Soon</span>
+                <span class="card-num">365</span>
+            </div>
+        </a>
+
+        <!-- 366: Vala Language -->
+        <a href="pages/section7-entry.html?entry=366" class="category-card vala-language" data-category="366">
+            <h3><img src="assets/logos/vala-lang.svg" alt="Vala Language" class="category-logo"> Vala Language</h3>
+            <p>Object-oriented programming language designed for GNOME developers compiling directly to standard C code</p>
+            <div class="card-bottom">
+                <span class="coming-soon">Coming Soon</span>
+                <span class="card-num">366</span>
+            </div>
+        </a>
+
+        <!-- 367: Seed7 -->
+        <a href="pages/section7-entry.html?entry=367" class="category-card seed7-lang" data-category="367">
+            <h3><img src="assets/logos/seed7.svg" alt="Seed7" class="category-logo"> Seed7</h3>
+            <p>Extensible general-purpose programming language where developers can define new statements and syntax rules</p>
+            <div class="card-bottom">
+                <span class="coming-soon">Coming Soon</span>
+                <span class="card-num">367</span>
+            </div>
+        </a>
+
+        <!-- 368: Euphoria -->
+        <a href="pages/section7-entry.html?entry=368" class="category-card euphoria-lang" data-category="368">
+            <h3><img src="assets/logos/euphoria.svg" alt="Euphoria" class="category-logo"> Euphoria</h3>
+            <p>Simple, flexible, and extremely fast dynamic procedural language with recursive sequence data structures</p>
+            <div class="card-bottom">
+                <span class="coming-soon">Coming Soon</span>
+                <span class="card-num">368</span>
+            </div>
+        </a>
+
+        <!-- 369: Boo -->
+        <a href="pages/section7-entry.html?entry=369" class="category-card boo-lang" data-category="369">
+            <h3><img src="assets/logos/boo.svg" alt="Boo" class="category-logo"> Boo</h3>
+            <p>Object-oriented, statically typed programming language for the .NET CLI with Python-inspired whitespace syntax</p>
+            <div class="card-bottom">
+                <span class="coming-soon">Coming Soon</span>
+                <span class="card-num">369</span>
+            </div>
+        </a>
+
+        <!-- 370: Nemerle -->
+        <a href="pages/section7-entry.html?entry=370" class="category-card nemerle-lang" data-category="370">
+            <h3><img src="assets/logos/nemerle.svg" alt="Nemerle" class="category-logo"> Nemerle</h3>
+            <p>High-level, statically typed multi-paradigm language for the .NET platform featuring powerful Lisp-style macros</p>
+            <div class="card-bottom">
+                <span class="coming-soon">Coming Soon</span>
+                <span class="card-num">370</span>
+            </div>
+        </a>
+
+        <!-- 371: Cobra -->
+        <a href="pages/section7-entry.html?entry=371" class="category-card cobra-lang" data-category="371">
+            <h3><img src="assets/logos/cobra.svg" alt="Cobra" class="category-logo"> Cobra</h3>
+            <p>Object-oriented language for .NET and Mono featuring Design by Contract, static and dynamic typing, and built-in unit tests</p>
+            <div class="card-bottom">
+                <span class="coming-soon">Coming Soon</span>
+                <span class="card-num">371</span>
+            </div>
+        </a>
+
+        <!-- 372: IronRuby -->
+        <a href="pages/section7-entry.html?entry=372" class="category-card ironruby-lang" data-category="372">
+            <h3><img src="assets/logos/ironruby.svg" alt="IronRuby" class="category-logo"> IronRuby</h3>
+            <p>Open-source implementation of the Ruby programming language tightly integrated with the .NET Dynamic Language Runtime</p>
+            <div class="card-bottom">
+                <span class="coming-soon">Coming Soon</span>
+                <span class="card-num">372</span>
+            </div>
+        </a>
+
+        <!-- 373: Rubinius -->
+        <a href="pages/section7-entry.html?entry=373" class="category-card rubinius-lang" data-category="373">
+            <h3><img src="assets/logos/rubinius.svg" alt="Rubinius" class="category-logo"> Rubinius</h3>
+            <p>Alternative Ruby implementation with an LLVM-based Just-In-Time compiler and low-latency concurrent garbage collector</p>
+            <div class="card-bottom">
+                <span class="coming-soon">Coming Soon</span>
+                <span class="card-num">373</span>
+            </div>
+        </a>
+
+        <!-- 374: TruffleRuby -->
+        <a href="pages/section7-entry.html?entry=374" class="category-card truffleruby-lang" data-category="374">
+            <h3><img src="assets/logos/truffleruby.svg" alt="TruffleRuby" class="category-logo"> TruffleRuby</h3>
+            <p>High-performance implementation of the Ruby programming language built on Oracle's GraalVM and Truffle framework</p>
+            <div class="card-bottom">
+                <span class="coming-soon">Coming Soon</span>
+                <span class="card-num">374</span>
+            </div>
+        </a>
+
+        <!-- 375: Opal -->
+        <a href="pages/section7-entry.html?entry=375" class="category-card opal-lang" data-category="375">
+            <h3><img src="assets/logos/opal.svg" alt="Opal" class="category-logo"> Opal</h3>
+            <p>Source-to-source Ruby-to-JavaScript compiler bringing Ruby's elegant syntax directly into web browser environments</p>
+            <div class="card-bottom">
+                <span class="coming-soon">Coming Soon</span>
+                <span class="card-num">375</span>
+            </div>
+        </a>
+
+        <!-- 376: Crystal Language -->
+        <a href="pages/section7-entry.html?entry=376" class="category-card crystal-language" data-category="376">
+            <h3><img src="assets/logos/crystal-lang.svg" alt="Crystal Language" class="category-logo"> Crystal Language</h3>
+            <p>Compiled language combining Ruby-like developer happiness with C-like execution speed and full static typing</p>
+            <div class="card-bottom">
+                <span class="coming-soon">Coming Soon</span>
+                <span class="card-num">376</span>
+            </div>
+        </a>
+
+        <!-- 377: Mint -->
+        <a href="pages/section7-entry.html?entry=377" class="category-card mint-lang" data-category="377">
+            <h3><img src="assets/logos/mint.svg" alt="Mint" class="category-logo"> Mint</h3>
+            <p>Refreshing, type-safe programming language specifically designed for building single-page web applications</p>
+            <div class="card-bottom">
+                <span class="coming-soon">Coming Soon</span>
+                <span class="card-num">377</span>
+            </div>
+        </a>
+
+        <!-- 378: Imba -->
+        <a href="pages/section7-entry.html?entry=378" class="category-card imba-lang" data-category="378">
+            <h3><img src="assets/logos/imba.svg" alt="Imba" class="category-logo"> Imba</h3>
+            <p>Full-stack web programming language compiling to high-speed JavaScript with built-in DOM tags and scoped styling</p>
+            <div class="card-bottom">
+                <span class="coming-soon">Coming Soon</span>
+                <span class="card-num">378</span>
+            </div>
+        </a>
+
+        <!-- 379: LiveScript -->
+        <a href="pages/section7-entry.html?entry=379" class="category-card livescript-lang" data-category="379">
+            <h3><img src="assets/logos/livescript.svg" alt="LiveScript" class="category-logo"> LiveScript</h3>
+            <p>Functional programming language that compiles to JavaScript, expanding upon CoffeeScript with prelude functions</p>
+            <div class="card-bottom">
+                <span class="coming-soon">Coming Soon</span>
+                <span class="card-num">379</span>
+            </div>
+        </a>
+
+        <!-- 380: Dart Native -->
+        <a href="pages/section7-entry.html?entry=380" class="category-card dart-native" data-category="380">
+            <h3><img src="assets/logos/dart-native.svg" alt="Dart Native" class="category-logo"> Dart Native</h3>
+            <p>Ahead-Of-Time (AOT) compiled Dart executable targeting ARM64 and x86-64 native machine code</p>
+            <div class="card-bottom">
+                <span class="coming-soon">Coming Soon</span>
+                <span class="card-num">380</span>
+            </div>
+        </a>
+
+        <!-- 381: ALGOL 60 -->
+        <a href="pages/section7-entry.html?entry=381" class="category-card algol60-lang" data-category="381">
+            <h3><img src="assets/logos/algol60.svg" alt="ALGOL 60" class="category-logo"> ALGOL 60</h3>
+            <p>Monumental language that introduced structured programming, block scopes, recursion, and BNF syntax grammar</p>
+            <div class="card-bottom">
+                <span class="coming-soon">Coming Soon</span>
+                <span class="card-num">381</span>
+            </div>
+        </a>
+
+        <!-- 382: ALGOL 68 -->
+        <a href="pages/section7-entry.html?entry=382" class="category-card algol68-lang" data-category="382">
+            <h3><img src="assets/logos/algol68.svg" alt="ALGOL 68" class="category-logo"> ALGOL 68</h3>
+            <p>Extremely expressive language featuring orthogonal design, generalized types (modes), and concurrent processing</p>
+            <div class="card-bottom">
+                <span class="coming-soon">Coming Soon</span>
+                <span class="card-num">382</span>
+            </div>
+        </a>
+
+        <!-- 383: Simula -->
+        <a href="pages/section7-entry.html?entry=383" class="category-card simula-lang" data-category="383">
+            <h3><img src="assets/logos/simula.svg" alt="Simula" class="category-logo"> Simula</h3>
+            <p>The world's first object-oriented programming language, introducing classes, inheritance, objects, and coroutines</p>
+            <div class="card-bottom">
+                <span class="coming-soon">Coming Soon</span>
+                <span class="card-num">383</span>
+            </div>
+        </a>
+
+        <!-- 384: BCPL -->
+        <a href="pages/section7-entry.html?entry=384" class="category-card bcpl-lang" data-category="384">
+            <h3><img src="assets/logos/bcpl.svg" alt="BCPL" class="category-logo"> BCPL</h3>
+            <p>Typeless systems language designed for compiler writing and operating systems, famous for inventing the brace '{ }' block</p>
+            <div class="card-bottom">
+                <span class="coming-soon">Coming Soon</span>
+                <span class="card-num">384</span>
+            </div>
+        </a>
+
+        <!-- 385: B -->
+        <a href="pages/section7-entry.html?entry=385" class="category-card b-lang" data-category="385">
+            <h3><img src="assets/logos/b-lang.svg" alt="B" class="category-logo"> B</h3>
+            <p>Typeless systems language developed at Bell Labs by Ken Thompson and Dennis Ritchie that led directly to C</p>
+            <div class="card-bottom">
+                <span class="coming-soon">Coming Soon</span>
+                <span class="card-num">385</span>
+            </div>
+        </a>
+
+        <!-- 386: CPL -->
+        <a href="pages/section7-entry.html?entry=386" class="category-card cpl-lang" data-category="386">
+            <h3><img src="assets/logos/cpl.svg" alt="CPL" class="category-logo"> CPL</h3>
+            <p>Influential multi-paradigm language developed jointly by Cambridge and London Universities that originated BCPL</p>
+            <div class="card-bottom">
+                <span class="coming-soon">Coming Soon</span>
+                <span class="card-num">386</span>
+            </div>
+        </a>
+
+        <!-- 387: PL/M -->
+        <a href="pages/section7-entry.html?entry=387" class="category-card plm-lang" data-category="387">
+            <h3><img src="assets/logos/plm.svg" alt="PL/M" class="category-logo"> PL/M</h3>
+            <p>High-level programming language developed by Gary Kildall for Intel 8008, 8080, and 8086 microprocessors</p>
+            <div class="card-bottom">
+                <span class="coming-soon">Coming Soon</span>
+                <span class="card-num">387</span>
+            </div>
+        </a>
+
+        <!-- 388: PL/0 -->
+        <a href="pages/section7-entry.html?entry=388" class="category-card pl0-lang" data-category="388">
+            <h3><img src="assets/logos/pl0.svg" alt="PL/0" class="category-logo"> PL/0</h3>
+            <p>Educational programming language designed by Niklaus Wirth to teach compiler construction</p>
+            <div class="card-bottom">
+                <span class="coming-soon">Coming Soon</span>
+                <span class="card-num">388</span>
+            </div>
+        </a>
+
+        <!-- 389: SNOBOL -->
+        <a href="pages/section7-entry.html?entry=389" class="category-card snobol-lang" data-category="389">
+            <h3><img src="assets/logos/snobol.svg" alt="SNOBOL" class="category-logo"> SNOBOL</h3>
+            <p>Pioneering language designed for string manipulation, symbolic processing, and advanced pattern matching</p>
+            <div class="card-bottom">
+                <span class="coming-soon">Coming Soon</span>
+                <span class="card-num">389</span>
+            </div>
+        </a>
+
+        <!-- 390: Mumps -->
+        <a href="pages/section7-entry.html?entry=390" class="category-card mumps-lang" data-category="390">
+            <h3><img src="assets/logos/mumps.svg" alt="Mumps" class="category-logo"> Mumps</h3>
+            <p>Multi-user database and procedural language powering global healthcare electronic medical record systems</p>
+            <div class="card-bottom">
+                <span class="coming-soon">Coming Soon</span>
+                <span class="card-num">390</span>
+            </div>
+        </a>
+
+        <!-- 391: JOVIAL -->
+        <a href="pages/section7-entry.html?entry=391" class="category-card jovial-lang" data-category="391">
+            <h3><img src="assets/logos/jovial.svg" alt="JOVIAL" class="category-logo"> JOVIAL</h3>
+            <p>High-order programming language developed for the United States Air Force military avionics and radar systems</p>
+            <div class="card-bottom">
+                <span class="coming-soon">Coming Soon</span>
+                <span class="card-num">391</span>
+            </div>
+        </a>
+
+        <!-- 392: CORAL -->
+        <a href="pages/section7-entry.html?entry=392" class="category-card coral-lang" data-category="392">
+            <h3><img src="assets/logos/coral.svg" alt="CORAL" class="category-logo"> CORAL</h3>
+            <p>Real-time systems programming language originally created by the British Royal Radar Establishment for military computers</p>
+            <div class="card-bottom">
+                <span class="coming-soon">Coming Soon</span>
+                <span class="card-num">392</span>
+            </div>
+        </a>
+
+        <!-- 393: Coral 66 -->
+        <a href="pages/section7-entry.html?entry=393" class="category-card coral66-lang" data-category="393">
+            <h3><img src="assets/logos/coral66.svg" alt="Coral 66" class="category-logo"> Coral 66</h3>
+            <p>Standardized British military real-time computing language adopted by the Ministry of Defence</p>
+            <div class="card-bottom">
+                <span class="coming-soon">Coming Soon</span>
+                <span class="card-num">393</span>
+            </div>
+        </a>
+
+        <!-- 394: NELIAC -->
+        <a href="pages/section7-entry.html?entry=394" class="category-card neliac-lang" data-category="394">
+            <h3><img src="assets/logos/neliac.svg" alt="NELIAC" class="category-logo"> NELIAC</h3>
+            <p>Dialect of ALGOL 58 developed at the US Naval Electronics Laboratory, one of the earliest self-compiling systems</p>
+            <div class="card-bottom">
+                <span class="coming-soon">Coming Soon</span>
+                <span class="card-num">394</span>
+            </div>
+        </a>
+
+        <!-- 395: FLOW-MATIC -->
+        <a href="pages/section7-entry.html?entry=395" class="category-card flow-matic" data-category="395">
+            <h3><img src="assets/logos/flow-matic.svg" alt="FLOW-MATIC" class="category-logo"> FLOW-MATIC</h3>
+            <p>Pioneering business-data processing language invented by Grace Hopper that directly gave birth to COBOL</p>
+            <div class="card-bottom">
+                <span class="coming-soon">Coming Soon</span>
+                <span class="card-num">395</span>
+            </div>
+        </a>
+
+        <!-- 396: FORTRAN 77 -->
+        <a href="pages/section7-entry.html?entry=396" class="category-card fortran77-lang" data-category="396">
+            <h3><img src="assets/logos/fortran77.svg" alt="FORTRAN 77" class="category-logo"> FORTRAN 77</h3>
+            <p>Major revision of Fortran that introduced structured programming, character strings, and BLOCK IF statements</p>
+            <div class="card-bottom">
+                <span class="coming-soon">Coming Soon</span>
+                <span class="card-num">396</span>
+            </div>
+        </a>
+
+        <!-- 397: Fortran 90 -->
+        <a href="pages/section7-entry.html?entry=397" class="category-card fortran90-lang" data-category="397">
+            <h3><img src="assets/logos/fortran90.svg" alt="Fortran 90" class="category-logo"> Fortran 90</h3>
+            <p>Revolutionary modernization of Fortran introducing array syntax, free-form source, modules, dynamic memory, and recursion</p>
+            <div class="card-bottom">
+                <span class="coming-soon">Coming Soon</span>
+                <span class="card-num">397</span>
+            </div>
+        </a>
+
+        <!-- 398: HPF -->
+        <a href="pages/section7-entry.html?entry=398" class="category-card hpf-lang" data-category="398">
+            <h3><img src="assets/logos/hpf.svg" alt="HPF" class="category-logo"> HPF</h3>
+            <p>Extension of Fortran 90 designed to support data-parallel computation across distributed-memory supercomputers</p>
+            <div class="card-bottom">
+                <span class="coming-soon">Coming Soon</span>
+                <span class="card-num">398</span>
+            </div>
+        </a>
+
+        <!-- 399: Cilk -->
+        <a href="pages/section7-entry.html?entry=399" class="category-card cilk-lang" data-category="399">
+            <h3><img src="assets/logos/cilk.svg" alt="Cilk" class="category-logo"> Cilk</h3>
+            <p>Language extension for C and C++ designed for multithreaded parallel computing with provably efficient work-stealing</p>
+            <div class="card-bottom">
+                <span class="coming-soon">Coming Soon</span>
+                <span class="card-num">399</span>
+            </div>
+        </a>
+
+        <!-- 400: UPC -->
+        <a href="pages/section7-entry.html?entry=400" class="category-card upc-lang" data-category="400">
+            <h3><img src="assets/logos/upc.svg" alt="UPC" class="category-logo"> UPC</h3>
+            <p>Unified Parallel C extension for high-performance computing on Partitioned Global Address Space (PGAS) architectures</p>
+            <div class="card-bottom">
+                <span class="coming-soon">Coming Soon</span>
+                <span class="card-num">400</span>
             </div>
         </a>
 

@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128">
+  <defs>
+    <linearGradient id="ascG" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#6366F1"/>
+      <stop offset="100%" stop-color="#4338CA"/>
+    </linearGradient>
+  </defs>
+  <rect width="128" height="128" rx="28" fill="url(#ascG)"/>
+  <text x="64" y="82" font-family="'Poppins', sans-serif" font-size="44" font-weight="800" text-anchor="middle" fill="#FFFFFF">AS</text>
+  <path d="M34 94 H94" stroke="#A5B4FC" stroke-width="6" stroke-linecap="round"/>
+</svg>

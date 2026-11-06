@@ -1903,6 +1903,232 @@ section h2{
 }
 
 /* ==========================
+   SECTION NAVIGATION (SECTIONS 1–7)
+========================== */
+.section-nav-wrapper {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin: 0 auto 24px auto;
+    padding: 0 10px;
+}
+
+.section-nav-group {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    background: #111827;
+    padding: 8px 12px;
+    border-radius: 18px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+    max-width: 100%;
+}
+
+.section-nav-btn {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 16px;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    background: #1E293B;
+    color: #CBD5E1;
+    font-family: 'Poppins', sans-serif;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    min-width: 105px;
+}
+
+.section-nav-btn .sec-btn-title {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #FFFFFF;
+}
+
+.section-nav-btn .sec-btn-range {
+    font-size: 0.72rem;
+    color: #94A3B8;
+    margin-top: 2px;
+}
+
+.section-nav-btn:hover {
+    background: #334155;
+    color: #FFFFFF;
+    transform: translateY(-2px);
+    border-color: rgba(79, 70, 229, 0.5);
+}
+
+.section-nav-btn.active {
+    background: linear-gradient(135deg, #4F46E5, #06B6D4);
+    border-color: transparent;
+    color: #FFFFFF;
+    box-shadow: 0 4px 16px rgba(79, 70, 229, 0.4);
+}
+
+.section-nav-btn.active .sec-btn-title,
+.section-nav-btn.active .sec-btn-range {
+    color: #FFFFFF;
+}
+
+/* ==========================
+   SECTION 7: LANGUAGES 351–400
+   (Calibrated to Match Entries 1–300 Jewel-Tone Palette & Logos)
+========================== */
+.flix-lang{
+    background:linear-gradient(135deg,#8C1833,#5A0E20);
+}
+.idris2-lang{
+    background:linear-gradient(135deg,#70153B,#440C24);
+}
+.liquid-haskell{
+    background:linear-gradient(135deg,#0C5A85,#073B57);
+}
+.purescript-lang{
+    background:linear-gradient(135deg,#0D665E,#07423D);
+}
+.grain-lang{
+    background:linear-gradient(135deg,#8C6B0B,#594306);
+}
+.assemblyscript-lang{
+    background:linear-gradient(135deg,#3C3E8A,#252659);
+}
+.wasm-text{
+    background:linear-gradient(135deg,#423296,#291F5C);
+}
+.moonbit-lang{
+    background:linear-gradient(135deg,#5E1F94,#3B1261);
+}
+.vlang-lang{
+    background:linear-gradient(135deg,#2C4F78,#19324D);
+}
+.odin-lang{
+    background:linear-gradient(135deg,#0C5B8A,#063A59);
+}
+.jai-lang{
+    background:linear-gradient(135deg,#8C4E0B,#5C3206);
+}
+.c3-lang{
+    background:linear-gradient(135deg,#194396,#0E2961);
+}
+.hare-lang{
+    background:linear-gradient(135deg,#4A4543,#2B2827);
+}
+.zig-language{
+    background:linear-gradient(135deg,#945E0B,#5E3B06);
+}
+.cyclone-lang{
+    background:linear-gradient(135deg,#0B615A,#063E3A);
+}
+.vala-language{
+    background:linear-gradient(135deg,#502496,#311461);
+}
+.seed7-lang{
+    background:linear-gradient(135deg,#125E2B,#0A3D1B);
+}
+.euphoria-lang{
+    background:linear-gradient(135deg,#94380B,#5C2206);
+}
+.boo-lang{
+    background:linear-gradient(135deg,#2E3642,#181E26);
+}
+.nemerle-lang{
+    background:linear-gradient(135deg,#0D5B8C,#073859);
+}
+.cobra-lang{
+    background:linear-gradient(135deg,#126930,#09421E);
+}
+.ironruby-lang{
+    background:linear-gradient(135deg,#851717,#540D0D);
+}
+.rubinius-lang{
+    background:linear-gradient(135deg,#751414,#470A0A);
+}
+.truffleruby-lang{
+    background:linear-gradient(135deg,#7A0F29,#4D0819);
+}
+.opal-lang{
+    background:linear-gradient(135deg,#135E7D,#0A3A4D);
+}
+.crystal-language{
+    background:linear-gradient(135deg,#242D38,#141A21);
+}
+.mint-lang{
+    background:linear-gradient(135deg,#0C6E4E,#074732);
+}
+.imba-lang{
+    background:linear-gradient(135deg,#94213B,#5E1224);
+}
+.livescript-lang{
+    background:linear-gradient(135deg,#204E94,#123061);
+}
+.dart-native{
+    background:linear-gradient(135deg,#095475,#053347);
+}
+.algol60-lang{
+    background:linear-gradient(135deg,#2E2775,#1B1747);
+}
+.algol68-lang{
+    background:linear-gradient(135deg,#231F69,#14113D);
+}
+.simula-lang{
+    background:linear-gradient(135deg,#0B5E41,#063D2A);
+}
+.bcpl-lang{
+    background:linear-gradient(135deg,#571E0B,#381206);
+}
+.b-lang{
+    background:linear-gradient(135deg,#162E69,#0C1C42);
+}
+.cpl-lang{
+    background:linear-gradient(135deg,#27313D,#161C24);
+}
+.plm-lang{
+    background:linear-gradient(135deg,#0C4F73,#073147);
+}
+.pl0-lang{
+    background:linear-gradient(135deg,#312C85,#1C1952);
+}
+.snobol-lang{
+    background:linear-gradient(135deg,#7D228A,#4E1357);
+}
+.mumps-lang{
+    background:linear-gradient(135deg,#0A556B,#053645);
+}
+.jovial-lang{
+    background:linear-gradient(135deg,#0B5B87,#063854);
+}
+.coral-lang{
+    background:linear-gradient(135deg,#8C3142,#571C27);
+}
+.coral66-lang{
+    background:linear-gradient(135deg,#872037,#541121);
+}
+.neliac-lang{
+    background:linear-gradient(135deg,#2B333D,#181E24);
+}
+.flow-matic{
+    background:linear-gradient(135deg,#0D6B63,#07423D);
+}
+.fortran77-lang{
+    background:linear-gradient(135deg,#4D2394,#2E135E);
+}
+.fortran90-lang{
+    background:linear-gradient(135deg,#421887,#260B54);
+}
+.hpf-lang{
+    background:linear-gradient(135deg,#184196,#0E275E);
+}
+.cilk-lang{
+    background:linear-gradient(135deg,#0B6144,#063B29);
+}
+.upc-lang{
+    background:linear-gradient(135deg,#531D85,#310F54);
+}
+
+/* ==========================
    FEATURED EXAMPLES
 ========================== */
 

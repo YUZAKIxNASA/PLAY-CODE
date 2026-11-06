@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128">
+  <defs>
+    <linearGradient id="hareG" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#78716C"/>
+      <stop offset="100%" stop-color="#44403C"/>
+    </linearGradient>
+  </defs>
+  <rect width="128" height="128" rx="28" fill="url(#hareG)"/>
+  <path d="M50 28 C46 44 48 58 56 68 C46 72 40 82 44 94 C48 102 60 102 70 96 C82 102 92 98 94 88 C96 74 88 64 74 62 C82 52 82 36 78 28 C74 40 70 54 64 56 C58 52 54 38 50 28 Z" fill="#F5F5F4"/>
+</svg>

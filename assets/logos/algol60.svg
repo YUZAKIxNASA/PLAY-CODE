@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128">
+  <defs>
+    <linearGradient id="a60G" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4338CA"/>
+      <stop offset="100%" stop-color="#312E81"/>
+    </linearGradient>
+  </defs>
+  <rect width="128" height="128" rx="28" fill="url(#a60G)"/>
+  <text x="64" y="60" font-family="'Poppins', sans-serif" font-size="28" font-weight="800" text-anchor="middle" fill="#FFFFFF">ALGOL</text>
+  <text x="64" y="94" font-family="'Poppins', sans-serif" font-size="34" font-weight="800" text-anchor="middle" fill="#A5B4FC">60</text>
+</svg>

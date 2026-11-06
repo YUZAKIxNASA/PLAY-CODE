@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128">
+  <defs>
+    <linearGradient id="f90G" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#6D28D9"/>
+      <stop offset="100%" stop-color="#3B0764"/>
+    </linearGradient>
+  </defs>
+  <rect width="128" height="128" rx="28" fill="url(#f90G)"/>
+  <text x="64" y="56" font-family="'Poppins', sans-serif" font-size="24" font-weight="800" text-anchor="middle" fill="#FFFFFF">Fortran</text>
+  <text x="64" y="92" font-family="'Poppins', sans-serif" font-size="34" font-weight="800" text-anchor="middle" fill="#E9D5FF">90</text>
+</svg>
