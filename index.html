@@ -91,46 +91,47 @@ console.log("CodePlay");
 
 <section class="categories" id="categories">
 
-    <!-- Refined Explore Categories Section Header -->
-        <!-- Explore Categories Section Header Box -->
+    <!-- Explore Categories Section Header Box -->
     <div class="categories-heading-box">
         <h2 class="categories-title">Explore Categories</h2>
     </div>
 
+    <!-- Showing Pagination / Results Status Box -->
+    <div class="section-meta-box">
+        <span class="section-counter-badge" id="section-counter-badge">Showing Page 1 of 5: Languages 1–50 (50 of 251 Entries)</span>
+    </div>
 
+    <!-- Controls Panel: Search Box & Cards Per Page -->
+    <div class="categories-controls-wrapper">
+        <div class="categories-controls-panel">
+            <!-- Dedicated Explore Categories Search Box -->
+            <div class="explore-search-wrap">
+                <span class="explore-search-icon" aria-hidden="true">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                    </svg>
+                </span>
+                <input type="text" id="explore-search-input" placeholder="Search by item or language name..." aria-label="Search languages by name or category">
+                <button type="button" id="explore-search-clear" class="explore-search-clear-btn" title="Clear search" aria-label="Clear search" style="display: none;">✕</button>
+            </div>
 
-        <div class="section-nav-wrapper">
-        <div class="section-tabs" role="tablist" aria-label="Programming Language Sections">
-            <button type="button" class="section-tab-btn active" id="tab-section-1" onclick="switchCategorySection(1)" aria-selected="true" aria-controls="category-grid-1">
-                <span class="tab-title">Section 1</span>
-                <span class="tab-range">1–50</span>
-            </button>
-            <button type="button" class="section-tab-btn" id="tab-section-2" onclick="switchCategorySection(2)" aria-selected="false" aria-controls="category-grid-2">
-                <span class="tab-title">Section 2</span>
-                <span class="tab-range">51–100</span>
-            </button>
-            <button type="button" class="section-tab-btn" id="tab-section-3" onclick="switchCategorySection(3)" aria-selected="false" aria-controls="category-grid-3">
-                <span class="tab-title">Section 3</span>
-                <span class="tab-range">101–150</span>
-            </button>
-            <button type="button" class="section-tab-btn" id="tab-section-4" onclick="switchCategorySection(4)" aria-selected="false" aria-controls="category-grid-4">
-                <span class="tab-title">Section 4</span>
-                <span class="tab-range">151–200</span>
-            </button>
-            <button type="button" class="section-tab-btn" id="tab-section-5" onclick="switchCategorySection(5)" aria-selected="false" aria-controls="category-grid-5">
-                <span class="tab-title">Section 5</span>
-                <span class="tab-range">201–250</span>
-            </button>
+            <!-- Cards Per Page Controls -->
+            <div class="display-count-bar" aria-label="Cards Per Page">
+                <span class="count-label"><span class="count-icon">📄</span> Cards Per Page:</span>
+                <div class="display-count-group" role="group" aria-label="Items per view">
+                    <button type="button" class="display-count-btn" data-count="12" onclick="setDisplayCount('12')">12</button>
+                    <button type="button" class="display-count-btn" data-count="36" onclick="setDisplayCount('36')">36</button>
+                    <button type="button" class="display-count-btn active" data-count="50" onclick="setDisplayCount('50')">50</button>
+                    <button type="button" class="display-count-btn" data-count="100" onclick="setDisplayCount('100')">100</button>
+                    <button type="button" class="display-count-btn" data-count="all" onclick="setDisplayCount('all')">All</button>
+                </div>
+            </div>
         </div>
     </div>
 
-    <!-- Showing Section Label Box -->
-    <div class="section-meta-box">
-        <span class="section-counter-badge" id="section-counter-badge">Showing Section 1: Languages 1–50 (50 Languages)</span>
-    </div>
-
-<!-- Section 1 Grid (Categories 1–50 + Projects) -->
-    <div class="category-grid" id="category-grid-1" data-section="1">
+    <!-- Single Continuous Category Grid (All Categories 1–250 + Projects) -->
+    <div class="category-grid" id="category-grid">
                 <!-- html -->
         <a href="pages/html.html" class="category-card html">
             <h3><img src="assets/logos/html5.svg" alt="HTML5" class="category-logo"> HTML</h3>
@@ -638,11 +639,7 @@ console.log("CodePlay");
             </div>
         </a>
 
-    </div>
-
-    <!-- Section 2 Grid (Categories 51–100) -->
-    <div class="category-grid" id="category-grid-2" data-section="2" style="display:none;">
-
+        <!-- Section 2 Cards (Categories 51–100) -->
         <!-- 51: Obliq -->
         <div class="category-card obliq" data-category="51">
             <h3><img src="assets/logos/obliq.svg" alt="Obliq" class="category-logo"> Obliq</h3>
@@ -1143,11 +1140,7 @@ console.log("CodePlay");
             </div>
         </div>
 
-    </div>
-
-    <!-- Section 3 Grid (Categories 101–150) -->
-    <div class="category-grid" id="category-grid-3" data-section="3" style="display:none;">
-
+        <!-- Section 3 Cards (Categories 101–150) -->
         <!-- 101: Mojo -->
         <div class="category-card mojo" data-category="101">
             <h3><img src="assets/logos/mojo.svg" alt="Mojo" class="category-logo"> Mojo</h3>
@@ -1648,11 +1641,7 @@ console.log("CodePlay");
             </div>
         </div>
 
-    </div>
-
-    <!-- Section 4 Grid (Categories 151–200) -->
-    <div class="category-grid" id="category-grid-4" data-section="4" style="display:none;">
-
+        <!-- Section 4 Cards (Categories 151–200) -->
         <!-- 151: GLSL -->
         <div class="category-card glsl" data-category="151">
             <h3><img src="assets/logos/glsl.svg" alt="GLSL" class="category-logo"> GLSL</h3>
@@ -2104,10 +2093,7 @@ console.log("CodePlay");
             </div>
         </div>
 
-    </div>
-
-        <!-- Section 5 Grid (Categories 201–250) -->
-    <div class="category-grid" id="category-grid-5" data-section="5" style="display: none;">
+        <!-- Section 5 Cards (Categories 201–250) -->
         <!-- 201: HiveQL -->
         <a href="pages/section5-entry.html?entry=201" class="category-card hiveql" data-category="201">
             <h3><img src="assets/logos/hiveql.svg" alt="HiveQL" class="category-logo"> HiveQL</h3>
@@ -2560,6 +2546,13 @@ console.log("CodePlay");
         </a>
     </div>
 
+    <!-- Dynamic Pagination Controls (Bottom) -->
+    <div class="pagination-wrapper pagination-wrapper-bottom" id="pagination-wrapper-bottom">
+        <div class="pagination-container" id="pagination-container-bottom" role="navigation" aria-label="Languages Pagination Controls Bottom">
+            <!-- Dynamically populated -->
+        </div>
+    </div>
+
 </section>
 
 <section class="featured">
@@ -2689,138 +2682,7 @@ console.log("CodePlay");
 
 </footer>
 
-<script>
-    // Section Switcher Logic (Sections 1 to 5: 1–250)
-    let currentCategorySection = 1;
-
-    function switchCategorySection(sectionNum) {
-        currentCategorySection = sectionNum;
-        const grids = [
-            document.getElementById('category-grid-1'),
-            document.getElementById('category-grid-2'),
-            document.getElementById('category-grid-3'),
-            document.getElementById('category-grid-4'),
-            document.getElementById('category-grid-5')
-        ];
-
-        const tabs = [
-            document.getElementById('tab-section-1'),
-            document.getElementById('tab-section-2'),
-            document.getElementById('tab-section-3'),
-            document.getElementById('tab-section-4'),
-            document.getElementById('tab-section-5')
-        ];
-        const badge = document.getElementById('section-counter-badge');
-
-        grids.forEach((g, idx) => {
-            if (g) g.style.display = (idx + 1 === sectionNum) ? 'grid' : 'none';
-        });
-
-        tabs.forEach((t, idx) => {
-            if (t) {
-                const isActive = (idx + 1 === sectionNum);
-                t.classList.toggle('active', isActive);
-                t.setAttribute('aria-selected', isActive ? 'true' : 'false');
-            }
-        });
-
-        if (badge) {
-            if (sectionNum === 1) badge.textContent = 'Showing Section 1: Languages 1–50 (50 Languages)';
-            else if (sectionNum === 2) badge.textContent = 'Showing Section 2: Languages 51–100 (50 Languages)';
-            else if (sectionNum === 3) badge.textContent = 'Showing Section 3: Languages 101–150 (50 Languages)';
-            else if (sectionNum === 4) badge.textContent = 'Showing Section 4: Languages 151–200 (50 Languages)';
-            else if (sectionNum === 5) badge.textContent = 'Showing Section 5: Languages 201–250 (50 Languages)';
-        }
-    }
-
-    // URL parameter or hash check on load (?section=2..5 or #section-2..5)
-    const urlParams = new URLSearchParams(window.location.search);
-    const secParam = urlParams.get('section');
-    if (secParam === '2' || window.location.hash === '#section-2') {
-        switchCategorySection(2);
-    } else if (secParam === '3' || window.location.hash === '#section-3') {
-        switchCategorySection(3);
-    } else if (secParam === '4' || window.location.hash === '#section-4') {
-        switchCategorySection(4);
-    } else if (secParam === '5' || window.location.hash === '#section-5') {
-        switchCategorySection(5);
-    }
-
-    // Search filter across all 5 sections and example cards
-    const searchInput = document.querySelector('.search-box input');
-    if (searchInput) {
-        searchInput.addEventListener('input', (e) => {
-            const query = e.target.value.toLowerCase().trim();
-            const grids = [
-                document.getElementById('category-grid-1'),
-                document.getElementById('category-grid-2'),
-                document.getElementById('category-grid-3'),
-                document.getElementById('category-grid-4'),
-                document.getElementById('category-grid-5')
-            ];
-            const badge = document.getElementById('section-counter-badge');
-
-            if (query) {
-                // When actively querying, open all 5 grids so no language is missed
-                grids.forEach(g => { if (g) g.style.display = 'grid'; });
-
-                let matchCount = 0;
-                const cards = document.querySelectorAll('.category-card, .example-card');
-                cards.forEach(card => {
-                    const text = card.textContent.toLowerCase();
-                    if (text.includes(query)) {
-                        card.style.display = 'flex';
-                        if (card.classList.contains('category-card')) matchCount++;
-                    } else {
-                        card.style.display = 'none';
-                    }
-                });
-                if (badge) badge.textContent = `Found ${matchCount} matching category cards for "${query}"`;
-            } else {
-                // Restore active section visibility and cards
-                const cards = document.querySelectorAll('.category-card, .example-card');
-                cards.forEach(card => card.style.display = 'flex');
-                switchCategorySection(currentCategorySection);
-            }
-        });
-
-        searchInput.addEventListener('keydown', (e) => {
-            if (e.key === 'Enter') {
-                const query = searchInput.value.trim().toLowerCase();
-                if (!query) return;
-
-                if (query.includes('css')) {
-                    window.location.href = 'pages/css.html';
-                } else if (query.includes('js') || query.includes('javascript')) {
-                    window.location.href = 'pages/javascript.html';
-                } else if (query.includes('project')) {
-                    window.location.href = 'pages/projects.html';
-                } else if (query.includes('editor')) {
-                    window.location.href = 'pages/editor.html';
-                } else if (query.includes('php')) {
-                    window.location.href = 'pages/php.html';
-                } else if (query.includes('python')) {
-                    window.location.href = 'pages/python.html';
-                } else if (query.includes('sql')) {
-                    window.location.href = 'pages/sql.html';
-                } else if (query.includes('typescript')) {
-                    window.location.href = 'pages/typescript.html';
-                } else if (query.includes('jquery')) {
-                    window.location.href = 'pages/jquery.html';
-                } else if (query.includes('html')) {
-                    window.location.href = 'pages/html.html';
-                } else {
-                    const firstVisible = Array.from(document.querySelectorAll('.category-card'))
-                        .find(card => card.style.display !== 'none' && card.href);
-                    if (firstVisible) {
-                        window.location.href = firstVisible.href;
-                    }
-                }
-            }
-        });
-    }
-</script>
-
+<script type="module" src="app.js"></script>
 </body>
 </html>
  

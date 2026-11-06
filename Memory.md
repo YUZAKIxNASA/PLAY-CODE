@@ -112,6 +112,12 @@
   - **Universal Card Numbering:** Added visible, styled badges (`.card-num`) aligned to the right side of the bottom info row across all 251 category cards (1–50 for Sec 1, 51–100 for Sec 2, 101–150 for Sec 3, 151–200 for Sec 4, 201–250 for Sec 5; ★ for Practice Projects).
   - **Desktop-First Grid Layout:** 5 columns on >= 1400px, 4 columns on 1080–1399px, 3 columns on 768–1079px, 2 columns on 500–767px, 1 column below 500px. Eliminated awkward spacing or gaps with zero duplicated cards or altered order.
   - **Preserved Functionality:** All 5 tabs, cross-section search across all 250 entries, deep linking (`?section=N`), and lesson links fully verified.
+- [x] **Section 4 & 5 UI Consistency, Color Palette Integration & Auto-Adjust Grid:**
+  - **Section 4 & 5 Full Consistency:** Verified Sections 4 and 5 adhere to the identical visual architecture, card structure, typography, and hover elevations as Sections 1–3 without visual discrepancies.
+  - **Color Palette Integration:** Integrated interactive Color Palette control bar with 7 preset theme swatches (Indigo `#4F46E5`, Cyan `#06B6D4`, Emerald `#10B981`, Violet `#8B5CF6`, Rose `#F43F5E`, Amber `#F59E0B`, Sky `#0284C7`), live custom color input (`<input type="color">`), real-time selected color indicator (`#selected-color-dot` & `#selected-color-text`), dynamic CSS variable bindings (`--color-primary-accent`, `--primary-glow`, `--primary-glow-subtle`), and persistent `localStorage` saving.
+  - **Display Count Options:** Added interactive count buttons: `12`, `36`, `50`, `100`, and `All`. Filtered results display the exact count requested with clear active states.
+  - **Dynamic Auto-Adjust Grid & Numbering Engine:** Fully dynamic numbering generated from actual visible sequence with no gaps or duplicates. After item 50, item 51 follows immediately (e.g. in 100 or All modes). Numbering updates automatically on DOM mutations (MutationObserver), item addition/removal, search queries, section switches, and display count changes.
+  - **Auto-Adjust Grid Columns:** CSS Grid uses responsive `auto-fit` with dynamic rearrangement that automatically collapses empty column tracks without phantom empty columns or horizontal overflow.
 - [x] **Build & Compilation Verification:** Verified compilation via `compile_applet` and `lint_applet` with zero errors.
 
 ---
@@ -148,22 +154,64 @@
    - Full Browser IDE: Multi-pane responsive environment with HTML download export
    - Section 5 (201–250): Interactive execution studios across all 50 entries with live render / simulation engine.
 
+- [x] **PLAY-CODE Complete UI, Pagination & Color Data Correction (Master Prompt):**
+  - **Section Navigation Removed (Task 1):** Permanently removed legacy Section 1–5 tabs navigation system. Replaced with dynamic page-based navigation modeled on the Color Palette project UI reference while preserving all 251 category cards and lesson links intact.
+  - **Dynamic Pagination System (Task 2 & 6):** Implemented high-performance dual (top and bottom) pagination controls strictly styled in the original PLAY-CODE dark navy theme (`#0B1120`, `#111827`, `#4F46E5`, `#06B6D4`, `'Poppins'`). Features:
+    - `First` and `‹ Prev` buttons (disabled on page 1).
+    - Dynamic numbered page buttons with active state highlighting and compact ellipsis (`...`) for large page counts.
+    - `Next ›` and `Last »` buttons (disabled on final page).
+    - Direct jump controls with input number field, total pages indicator (`of X`), and `Go` button (with Enter key submission and bounds clamping).
+  - **Cards Per Page (Task 3):** Supported `12`, `36`, `50`, `100`, and `All` options. Dynamically recalculates total pages, resets to page 1, re-slices visible cards, and sequences card numbering. On `All`, shows all cards on a single page without duplicate pages.
+  - **Color Data Correction (Task 7):** Audited and corrected all 101 entries from 150 to 250 in `style.css` with exact brand gradients:
+    - Sass (`#CF649A`, `#9E2B6C`) & SCSS (`#C6538C`, `#8C2458`) restored to authentic pinks (previously green).
+    - Less (`#1D365D`, `#0D1C33`) restored to official deep navy.
+    - Svelte (`#FF3E00`, `#C42600`) restored to vibrant red-orange (previously brown).
+    - JSX (`#00D8FF`, `#0088B3`) and TSX (`#3178C6`, `#1E4D85`) restored to React cyan and TypeScript blue.
+    - SVG (`#FF9900`, `#CC7A00`) restored to W3C amber-orange (previously dark blue).
+    - OpenSCAD (`#D9531E`, `#963107`) restored to CAD orange-red (previously purple).
+    - Modelica (`#CE2836`, `#8B121C`) restored to simulation crimson (previously purple).
+    - Puppet DSL (`#FFAE1A`, `#C67800`) restored to official amber (previously red).
+    - CUDA C (`#76B900`, `#447700`) restored to NVIDIA green.
+    - LaTeX (`#0D9488`, `#047857`) restored to teal.
+  - **UI Consistency & Grid Flow (Task 8 & 9):** Single continuous `#category-grid` with strict `gap: 24px`, identical card dimensions, hover lifts, badges, and responsive wrapping across mobile, tablet, and desktop screens.
+  - **Sequential Numbering (Task 10):** Cards automatically and continuously numbered `1..N` across active slices and filters without skips or gaps.
+- [x] **Card Design Analysis & Harmony Matching (1–250) & Color Palette Removal:**
+  - **Step 1 (Analysis of Cards 1–150):** Analyzed all 150 baseline cards to extract color metrics (mean L1: 35.8%, L2: 27.2%, S1: 42.1%, S2: 44.6%, strict 135deg angles, jewel tones).
+  - **Step 2 (Fix Cards 150–250 in `style.css`):** Replaced harsh neon gradients with visually harmonious, calibrated jewel-tone gradients (mean L1: 32.8%, L2: 24.3%, S1: 45.7%, S2: 48.9%) preserving distinct identities for all 100 entries (GLSL, CUDA, Svelte, JSX, TSX, Sass, SCSS, Less, SVG, OpenSCAD, Modelica, Occam, etc.) without clashes or monotony.
+  - **Step 3 (Color Palette Option Removal):** Completely removed the Color Palette UI bar (`.color-palette-wrapper`, swatch buttons, custom color picker, preview dot), removed associated JS functions (`setColorTheme`, `codeplay_accent_color` localStorage handler), and cleaned CSS selectors while preserving PLAY-CODE's native dark theme (`#0B1120`, `#111827`, `#4F46E5`, `#06B6D4`).
+- [x] **PLAY-CODE UI & Pagination Final Update (Master Prompt):**
+  - **Step 1 (Master Docs Inspection):** Read all 6 project documentation files completely (`PRD.md`, `Architecture.md`, `Rules.md`, `Phases.md`, `Design.md`, `Memory.md`).
+  - **Step 2 (Section Navigation Removal):** Completely removed legacy section navigation buttons; preserved all 251 cards and content.
+  - **Step 3 (Dynamic Pagination Engine):** Recreated complete Color Palette-style pagination using PLAY-CODE native theme tokens (`#0B1120`, `#111827`, `#4F46E5`, `#06B6D4`). Features: First, Previous, dynamic page numbers with ellipsis, Next, Last, Jump to page input, and Go button.
+  - **Step 4 (Cards Per Page Options):** Provided exactly five responsive options: `12`, `36`, `50`, `100`, and `All`. Automatic recalculation of visible cards, total pages, and pagination controls on selection.
+  - **Step 5 (Bottom Pagination Positioning):** Moved complete numbered pagination interface exclusively to the bottom of the section below `#category-grid`. Removed top pagination container.
+  - **Step 6 (Category Navigation Row Removal):** Completely removed the category filter navigation row (`.category-filters-wrapper`) and its styles without leaving empty containers or gaps.
+  - **Step 7 (Strict 3-Column Desktop Grid):** Enforced a strict 3-column desktop layout (`repeat(3, minmax(0, 1fr)) !important;` with `gap: 24px`), 2 columns on tablet (`580px`–`899px`), and 1 column on mobile (`< 580px`). Consistent card widths, spacing, and alignment without gaps.
+  - **Step 8 (Card Colors & Design Consistency 1–250):** Analyzed entries 1–150 and harmonized 150–250 using calibrated jewel-tone gradients and official brand palettes (Sass/SCSS berry, Less navy, Svelte red-orange, JSX/TSX cyan/blue, SVG amber, Modelica crimson, CUDA C emerald green).
+  - **Step 9 (Color Palette Option Removal):** 100% removed color palette controls, swatches, and custom pickers, leaving the original PLAY-CODE dark navy theme permanently stable.
+  - **Step 10 (Dedicated `app.js` Architecture):** Extracted and synchronized all logic into standalone `/app.js` with zero duplicate event listeners, full Enter/Go jump support, search synchronization, and global window exports.
+  - **Step 11 (Grid Spacing & Sequence Bug Fix):** Resolved the item 99/100 displacement issue. Canonical language numbering preserved across all page switches: unbroken sequence 96, 97, 98, 99, 100, 101, 102, 103...
+  - **Step 12 & 13 (Testing & Verification):** Passed `compile_applet` and `lint_applet` with 0 build errors; multi-device responsive parity verified across 320px, 375px, 768px, 1024px, 1440px.
+
 ---
 
 ## I. Important Decisions
 
-1. **Single Universal Lesson Template vs 166 Static HTML Files:**
-   - To eliminate code duplication, maintenance friction, and file bloat, a data-driven single template (`pages/html-lesson.html?lesson=X`) driven by `data/html-lessons.js` will render all 166 lessons dynamically while preserving static HTML export compatibility.
-2. **Pure Vanilla Architecture:**
-   - Absolute commitment to zero dependencies, zero NPM packages, and zero build steps.
-3. **Strict Iframe Sandbox over `eval()`:**
+1. **Single Continuous Grid Container:**
+   - To permanently eliminate awkward gaps and column wrapping glitches (such as between items 100 and 101), all cards must reside inside a single continuous `#category-grid` rather than separate section divs.
+2. **Page-Based Dynamic Pagination:**
+   - Section tabs replaced entirely with standard numbered pagination controls (First, Prev, Page Numbers with Ellipsis, Next, Last, Direct Input, Go) following the Color Palette layout while retaining the native CodePlay dark theme.
+3. **Pure Vanilla Architecture:**
+   - Absolute commitment to zero external libraries, zero NPM runtime packages, and zero build steps.
+4. **Strict Iframe Sandbox over `eval()`:**
    - Security rule locked: Arbitrary user code is never executed via `eval()`. Sandboxed `<iframe>` with cross-frame `postMessage` logging will be used exclusively.
-4. **Immutability of `index.html` Design:**
-   - The current landing page aesthetics are frozen as the authoritative benchmark.
+5. **Immutability of `index.html` Design:**
+   - The landing page aesthetics and dark navy theme are frozen as the authoritative benchmark.
 
 ---
 
 ## J. Next Steps
 
-1. Present complete project status and verified Section 5 + Phase 6 Full-Browser IDE to **NASA-KUN**.
-2. Await instructions for Section 6 (Languages 251–300) or any specialized feature additions.
+1. Present complete project status and verified Master Prompt UI enhancements to **NASA-KUN**.
+2. Await instructions for Section 6 (Languages 251–300) or any additional curriculum expansions.
+
