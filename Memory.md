@@ -193,6 +193,26 @@
   - **Step 11 (Grid Spacing & Sequence Bug Fix):** Resolved the item 99/100 displacement issue. Canonical language numbering preserved across all page switches: unbroken sequence 96, 97, 98, 99, 100, 101, 102, 103...
   - **Step 12 & 13 (Testing & Verification):** Passed `compile_applet` and `lint_applet` with 0 build errors; multi-device responsive parity verified across 320px, 375px, 768px, 1024px, 1440px.
 
+- [x] **PLAY-CODE Color Correction (150–250) & Project Option Reordering (Master Prompt):**
+  - **Task 1 — Card Colors and Design Fix (150–250):**
+    - Inspected cards 1–150 as authoritative reference for jewel-tone gradients (`linear-gradient(135deg, color1, color2)`), contrast, typography, and badges.
+    - Extracted brand colors from official SVG logos for all 101 entries (150 through 250).
+    - Directly calibrated all 101 entries in `style.css` to match their logo color family, resolving all mismatched cards flagged in the user reference image:
+      - Futhark (#155): Replaced red gradient with emerald green (`#1E6E55` to `#124A38`).
+      - Cg (#157): Replaced purple gradient with forest green (`#2E733B` to `#1D4D26`).
+      - Slang (#159): Replaced brown gradient with electric purple (`#6A2EB8` to `#481B85`).
+      - WGSL (#160): Replaced teal gradient with violet purple (`#7634B0` to `#511D7D`).
+      - Frege (#161): Replaced red gradient with steel slate blue (`#34547B` to `#203754`).
+      - Eta (#162): Replaced purple gradient with sage teal (`#3B5B5B` to `#253D3D`).
+      - Xtend (#167): Replaced navy gradient with olive lime (`#506922` to `#364714`).
+      - RPython (#172): Replaced magenta gradient with dark teal (`#226E6C` to `#144A48`).
+      - Occam (#250): Replaced blue gradient with deep purple (`#461973` to `#2C0D4A`).
+    - Verified all remaining entries (Svelte, JSX, TSX, Sass, SCSS, Less, Markdown, LaTeX, SVG, Modelica, Maxima, Axiom, etc.) have rich, coordinated gradients.
+  - **Task 2 — Move Star-Marked Project Option to the Last Position:**
+    - Reordered the Practice Projects option (Star `★` card) from former position 51 (between language 50 'D' and language 51 'Obliq') to the final position 251 (directly after card 250 'Occam') in `#category-grid` inside `index.html`.
+    - Maintained continuous numerical sequence 1 through 250 for all programming languages without interruption or missing numbers.
+    - Preserved `pages/projects.html` destination, `.category-card.project` styling, star icon, and click functionality.
+
 ---
 
 ## I. Important Decisions
@@ -214,4 +234,5 @@
 
 1. Present complete project status and verified Master Prompt UI enhancements to **NASA-KUN**.
 2. Await instructions for Section 6 (Languages 251–300) or any additional curriculum expansions.
+
 
