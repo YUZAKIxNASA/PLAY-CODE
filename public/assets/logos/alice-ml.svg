@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128">
+  <defs>
+    <linearGradient id="aliceG" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#7C3AED"/>
+      <stop offset="100%" stop-color="#4C1D95"/>
+    </linearGradient>
+  </defs>
+  <rect width="128" height="128" rx="28" fill="url(#aliceG)"/>
+  <text x="64" y="62" font-family="'Poppins', sans-serif" font-size="28" font-weight="800" text-anchor="middle" fill="#FFFFFF">ALICE</text>
+  <text x="64" y="92" font-family="'Poppins', sans-serif" font-size="26" font-weight="800" text-anchor="middle" fill="#DDD6FE">ML</text>
+</svg>

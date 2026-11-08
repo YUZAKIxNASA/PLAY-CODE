@@ -1,4 +1,11 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
-  <rect width="128" height="128" rx="24" fill="#6B4C85"/>
-  <text x="64" y="82" font-family="serif" font-size="64" font-style="italic" font-weight="bold" fill="#FFFFFF" text-anchor="middle">ε</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128">
+  <defs>
+    <linearGradient id="epiG" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#EC4899"/>
+      <stop offset="100%" stop-color="#831843"/>
+    </linearGradient>
+  </defs>
+  <rect width="128" height="128" rx="28" fill="url(#epiG)"/>
+  <text x="64" y="78" font-family="'Poppins', sans-serif" font-size="44" font-weight="800" text-anchor="middle" fill="#FDF2F8">E</text>
+  <line x1="34" y1="92" x2="94" y2="92" stroke="#F472B6" stroke-width="5" stroke-linecap="round"/>
 </svg>

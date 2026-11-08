@@ -1,4 +1,10 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
-  <rect width="128" height="128" rx="24" fill="#455A64"/>
-  <path d="M40 36c16-16 48-16 48 8s-48 16-48 40 32 24 48 8" fill="none" stroke="#FFFFFF" stroke-width="10" stroke-linecap="round"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128">
+  <defs>
+    <linearGradient id="saslG" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#14B8A6"/>
+      <stop offset="100%" stop-color="#042F2E"/>
+    </linearGradient>
+  </defs>
+  <rect width="128" height="128" rx="28" fill="url(#saslG)"/>
+  <text x="64" y="78" font-family="'Poppins', sans-serif" font-size="34" font-weight="800" text-anchor="middle" fill="#CCFBF1">SASL</text>
 </svg>

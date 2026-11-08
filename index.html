@@ -98,10 +98,10 @@ console.log("CodePlay");
 
     <!-- Showing Pagination / Results Status Box -->
     <div class="section-meta-box">
-        <span class="section-counter-badge" id="section-counter-badge">Showing Page 1 of 7: Section 1 (Languages 1–50) — 50 of 351 Entries</span>
+        <span class="section-counter-badge" id="section-counter-badge">Showing Page 1 of 8: Section 1 (Languages 1–50) — 50 of 401 Entries</span>
     </div>
 
-    <!-- Section Navigation Buttons (Sections 1–7) -->
+    <!-- Section Navigation Buttons (Sections 1–8) -->
     <div class="section-nav-wrapper" role="navigation" aria-label="Explore Categories Section Navigation">
         <div class="section-nav-group">
             <button type="button" class="section-nav-btn active" data-section="1" onclick="goToSection(1)">
@@ -131,6 +131,10 @@ console.log("CodePlay");
             <button type="button" class="section-nav-btn" data-section="7" onclick="goToSection(7)">
                 <span class="sec-btn-title">Section 7</span>
                 <span class="sec-btn-range">351–400</span>
+            </button>
+            <button type="button" class="section-nav-btn" data-section="8" onclick="goToSection(8)">
+                <span class="sec-btn-title">Section 8</span>
+                <span class="sec-btn-range">401–450</span>
             </button>
         </div>
     </div>
@@ -164,7 +168,7 @@ console.log("CodePlay");
         </div>
     </div>
 
-    <!-- Single Continuous Category Grid (All Categories 1–400 + Projects) -->
+    <!-- Single Continuous Category Grid (All Categories 1–450 + Projects) -->
     <div class="category-grid" id="category-grid">
                 <!-- html -->
         <a href="pages/html.html" class="category-card html">
@@ -3570,7 +3574,507 @@ console.log("CodePlay");
             </div>
         </a>
 
-        <!-- Projects (Moved to Last Position) -->
+        <!-- 401: Co-array Fortran -->
+        <a href="pages/section8-entry.html?entry=401" class="category-card coarray-fortran" data-category="401">
+            <h3><img src="assets/logos/coarray-fortran.svg" alt="Co-array Fortran" class="category-logo"> Co-array Fortran</h3>
+            <p>Extension of Fortran supporting Partitioned Global Address Space (PGAS) parallel processing for supercomputers.</p>
+            <div class="card-bottom">
+                <span class="coming-soon">Coming Soon</span>
+                <span class="card-num">401</span>
+            </div>
+        </a>
+
+        <!-- 402: Titanium -->
+        <a href="pages/section8-entry.html?entry=402" class="category-card titanium-lang" data-category="402">
+            <h3><img src="assets/logos/titanium.svg" alt="Titanium" class="category-logo"> Titanium</h3>
+            <p>Dialect of Java designed for high-performance distributed scientific computing across supercomputer clusters.</p>
+            <div class="card-bottom">
+                <span class="coming-soon">Coming Soon</span>
+                <span class="card-num">402</span>
+            </div>
+        </a>
+
+        <!-- 403: ZPL -->
+        <a href="pages/section8-entry.html?entry=403" class="category-card zpl-lang" data-category="403">
+            <h3><img src="assets/logos/zpl.svg" alt="ZPL" class="category-logo"> ZPL</h3>
+            <p>High-level array programming language designed for efficient, portable data-parallel scientific computation.</p>
+            <div class="card-bottom">
+                <span class="coming-soon">Coming Soon</span>
+                <span class="card-num">403</span>
+            </div>
+        </a>
+
+        <!-- 404: NESL -->
+        <a href="pages/section8-entry.html?entry=404" class="category-card nesl-lang" data-category="404">
+            <h3><img src="assets/logos/nesl.svg" alt="NESL" class="category-logo"> NESL</h3>
+            <p>First-order functional language supporting nested data-parallelism on supercomputers and parallel architectures.</p>
+            <div class="card-bottom">
+                <span class="coming-soon">Coming Soon</span>
+                <span class="card-num">404</span>
+            </div>
+        </a>
+
+        <!-- 405: SISAL -->
+        <a href="pages/section8-entry.html?entry=405" class="category-card sisal-lang" data-category="405">
+            <h3><img src="assets/logos/sisal.svg" alt="SISAL" class="category-logo"> SISAL</h3>
+            <p>Pure functional dataflow language designed to deliver Fortran-competitive performance on parallel multiprocessors.</p>
+            <div class="card-bottom">
+                <span class="coming-soon">Coming Soon</span>
+                <span class="card-num">405</span>
+            </div>
+        </a>
+
+        <!-- 406: Id -->
+        <a href="pages/section8-entry.html?entry=406" class="category-card id-lang" data-category="406">
+            <h3><img src="assets/logos/id-lang.svg" alt="Id" class="category-logo"> Id</h3>
+            <p>Non-strict functional dataflow language featuring I-structures for implicit fine-grained parallel computation.</p>
+            <div class="card-bottom">
+                <span class="coming-soon">Coming Soon</span>
+                <span class="card-num">406</span>
+            </div>
+        </a>
+
+        <!-- 407: pH -->
+        <a href="pages/section8-entry.html?entry=407" class="category-card ph-lang" data-category="407">
+            <h3><img src="assets/logos/ph-lang.svg" alt="pH" class="category-logo"> pH</h3>
+            <p>Implicitly parallel, non-strict functional language combining Haskell syntax with Id's fine-grained dataflow model.</p>
+            <div class="card-bottom">
+                <span class="coming-soon">Coming Soon</span>
+                <span class="card-num">407</span>
+            </div>
+        </a>
+
+        <!-- 408: Miranda -->
+        <a href="pages/section8-entry.html?entry=408" class="category-card miranda-lang" data-category="408">
+            <h3><img src="assets/logos/miranda.svg" alt="Miranda" class="category-logo"> Miranda</h3>
+            <p>Purely functional, non-strict programming language created by David Turner, introducing modern lazy evaluation semantics.</p>
+            <div class="card-bottom">
+                <span class="coming-soon">Coming Soon</span>
+                <span class="card-num">408</span>
+            </div>
+        </a>
+
+        <!-- 409: Hope -->
+        <a href="pages/section8-entry.html?entry=409" class="category-card hope-lang" data-category="409">
+            <h3><img src="assets/logos/hope.svg" alt="Hope" class="category-logo"> Hope</h3>
+            <p>Early polymorphic functional language that pioneered algebraic data types and pattern matching equations.</p>
+            <div class="card-bottom">
+                <span class="coming-soon">Coming Soon</span>
+                <span class="card-num">409</span>
+            </div>
+        </a>
+
+        <!-- 410: ML -->
+        <a href="pages/section8-entry.html?entry=410" class="category-card ml-lang" data-category="410">
+            <h3><img src="assets/logos/ml.svg" alt="ML" class="category-logo"> ML</h3>
+            <p>Groundbreaking metalanguage designed by Robin Milner, pioneering Hindley-Milner polymorphic type inference.</p>
+            <div class="card-bottom">
+                <span class="coming-soon">Coming Soon</span>
+                <span class="card-num">410</span>
+            </div>
+        </a>
+
+        <!-- 411: Standard ML -->
+        <a href="pages/section8-entry.html?entry=411" class="category-card standard-ml" data-category="411">
+            <h3><img src="assets/logos/standard-ml.svg" alt="Standard ML" class="category-logo"> Standard ML</h3>
+            <p>Formally specified modular functional language featuring strong typing, pattern matching, and signature functors.</p>
+            <div class="card-bottom">
+                <span class="coming-soon">Coming Soon</span>
+                <span class="card-num">411</span>
+            </div>
+        </a>
+
+        <!-- 412: SML/NJ -->
+        <a href="pages/section8-entry.html?entry=412" class="category-card sml-nj" data-category="412">
+            <h3><img src="assets/logos/sml-nj.svg" alt="SML/NJ" class="category-logo"> SML/NJ</h3>
+            <p>Interactive compiler and runtime system for Standard ML optimized for compiler research and development.</p>
+            <div class="card-bottom">
+                <span class="coming-soon">Coming Soon</span>
+                <span class="card-num">412</span>
+            </div>
+        </a>
+
+        <!-- 413: Caml -->
+        <a href="pages/section8-entry.html?entry=413" class="category-card caml-lang" data-category="413">
+            <h3><img src="assets/logos/caml.svg" alt="Caml" class="category-logo"> Caml</h3>
+            <p>Strongly typed functional language from Inria based on the Categorical Abstract Machine, directly preceding OCaml.</p>
+            <div class="card-bottom">
+                <span class="coming-soon">Coming Soon</span>
+                <span class="card-num">413</span>
+            </div>
+        </a>
+
+        <!-- 414: Alice ML -->
+        <a href="pages/section8-entry.html?entry=414" class="category-card alice-ml" data-category="414">
+            <h3><img src="assets/logos/alice-ml.svg" alt="Alice ML" class="category-logo"> Alice ML</h3>
+            <p>Extension of Standard ML designed for open distributed computing, concurrent futures, and constraint programming.</p>
+            <div class="card-bottom">
+                <span class="coming-soon">Coming Soon</span>
+                <span class="card-num">414</span>
+            </div>
+        </a>
+
+        <!-- 415: Poly/ML -->
+        <a href="pages/section8-entry.html?entry=415" class="category-card poly-ml" data-category="415">
+            <h3><img src="assets/logos/poly-ml.svg" alt="Poly/ML" class="category-logo"> Poly/ML</h3>
+            <p>High-performance, portable implementation of Standard ML featuring fast native code generation and thread support.</p>
+            <div class="card-bottom">
+                <span class="coming-soon">Coming Soon</span>
+                <span class="card-num">415</span>
+            </div>
+        </a>
+
+        <!-- 416: MLton -->
+        <a href="pages/section8-entry.html?entry=416" class="category-card mlton-lang" data-category="416">
+            <h3><img src="assets/logos/mlton.svg" alt="MLton" class="category-logo"> MLton</h3>
+            <p>Whole-program optimizing compiler for Standard ML that produces exceptionally fast, standalone native binaries.</p>
+            <div class="card-bottom">
+                <span class="coming-soon">Coming Soon</span>
+                <span class="card-num">416</span>
+            </div>
+        </a>
+
+        <!-- 417: Concurrent ML -->
+        <a href="pages/section8-entry.html?entry=417" class="category-card concurrent-ml" data-category="417">
+            <h3><img src="assets/logos/concurrent-ml.svg" alt="Concurrent ML" class="category-logo"> Concurrent ML</h3>
+            <p>Functional language extending Standard ML with first-class synchronous events and message-passing concurrency.</p>
+            <div class="card-bottom">
+                <span class="coming-soon">Coming Soon</span>
+                <span class="card-num">417</span>
+            </div>
+        </a>
+
+        <!-- 418: Clean -->
+        <a href="pages/section8-entry.html?entry=418" class="category-card clean-lang" data-category="418">
+            <h3><img src="assets/logos/clean.svg" alt="Clean" class="category-logo"> Clean</h3>
+            <p>Pure lazy functional programming language based on graph rewriting, featuring uniqueness typing for safe I/O.</p>
+            <div class="card-bottom">
+                <span class="coming-soon">Coming Soon</span>
+                <span class="card-num">418</span>
+            </div>
+        </a>
+
+        <!-- 419: Gofer -->
+        <a href="pages/section8-entry.html?entry=419" class="category-card gofer-lang" data-category="419">
+            <h3><img src="assets/logos/gofer.svg" alt="Gofer" class="category-logo"> Gofer</h3>
+            <p>Experimental functional language created by Mark Jones, pioneering constructor classes that directly shaped Haskell 98.</p>
+            <div class="card-bottom">
+                <span class="coming-soon">Coming Soon</span>
+                <span class="card-num">419</span>
+            </div>
+        </a>
+
+        <!-- 420: Hugs -->
+        <a href="pages/section8-entry.html?entry=420" class="category-card hugs-lang" data-category="420">
+            <h3><img src="assets/logos/hugs.svg" alt="Hugs" class="category-logo"> Hugs</h3>
+            <p>Lightweight, highly portable interactive interpreter implementing the Haskell 98 functional programming standard.</p>
+            <div class="card-bottom">
+                <span class="coming-soon">Coming Soon</span>
+                <span class="card-num">420</span>
+            </div>
+        </a>
+
+        <!-- 421: Orwell -->
+        <a href="pages/section8-entry.html?entry=421" class="category-card orwell-lang" data-category="421">
+            <h3><img src="assets/logos/orwell.svg" alt="Orwell" class="category-logo"> Orwell</h3>
+            <p>Non-strict, purely functional programming language developed at Oxford University by Philip Wadler to succeed KRC.</p>
+            <div class="card-bottom">
+                <span class="coming-soon">Coming Soon</span>
+                <span class="card-num">421</span>
+            </div>
+        </a>
+
+        <!-- 422: KRC -->
+        <a href="pages/section8-entry.html?entry=422" class="category-card krc-lang" data-category="422">
+            <h3><img src="assets/logos/krc.svg" alt="KRC" class="category-logo"> KRC</h3>
+            <p>Early lazy functional language created by David Turner, introducing ZF-expressions (list comprehensions).</p>
+            <div class="card-bottom">
+                <span class="coming-soon">Coming Soon</span>
+                <span class="card-num">422</span>
+            </div>
+        </a>
+
+        <!-- 423: SASL -->
+        <a href="pages/section8-entry.html?entry=423" class="category-card sasl-lang" data-category="423">
+            <h3><img src="assets/logos/sasl.svg" alt="SASL" class="category-logo"> SASL</h3>
+            <p>Pioneering functional language by David Turner, among the earliest implementations of lazy evaluation via SK combinators.</p>
+            <div class="card-bottom">
+                <span class="coming-soon">Coming Soon</span>
+                <span class="card-num">423</span>
+            </div>
+        </a>
+
+        <!-- 424: Lazy ML -->
+        <a href="pages/section8-entry.html?entry=424" class="category-card lazy-ml" data-category="424">
+            <h3><img src="assets/logos/lazy-ml.svg" alt="Lazy ML" class="category-logo"> Lazy ML</h3>
+            <p>Early call-by-need lazy dialect of the Standard ML family, compiled via the innovative G-machine architecture.</p>
+            <div class="card-bottom">
+                <span class="coming-soon">Coming Soon</span>
+                <span class="card-num">424</span>
+            </div>
+        </a>
+
+        <!-- 425: Epigram -->
+        <a href="pages/section8-entry.html?entry=425" class="category-card epigram-lang" data-category="425">
+            <h3><img src="assets/logos/epigram.svg" alt="Epigram" class="category-logo"> Epigram</h3>
+            <p>Experimental dependently typed functional programming language featuring a 2D interactive proof editing environment.</p>
+            <div class="card-bottom">
+                <span class="coming-soon">Coming Soon</span>
+                <span class="card-num">425</span>
+            </div>
+        </a>
+
+        <!-- 426: Cayenne -->
+        <a href="pages/section8-entry.html?entry=426" class="category-card cayenne-lang" data-category="426">
+            <h3><img src="assets/logos/cayenne.svg" alt="Cayenne" class="category-logo"> Cayenne</h3>
+            <p>Early functional language combining Haskell-like syntax with first-class dependent types by Lennart Augustsson.</p>
+            <div class="card-bottom">
+                <span class="coming-soon">Coming Soon</span>
+                <span class="card-num">426</span>
+            </div>
+        </a>
+
+        <!-- 427: ATS -->
+        <a href="pages/section8-entry.html?entry=427" class="category-card ats-lang" data-category="427">
+            <h3><img src="assets/logos/ats.svg" alt="ATS" class="category-logo"> ATS</h3>
+            <p>Systems programming language that unifies dependent and linear types with the raw performance and control of C.</p>
+            <div class="card-bottom">
+                <span class="coming-soon">Coming Soon</span>
+                <span class="card-num">427</span>
+            </div>
+        </a>
+
+        <!-- 428: Dafny -->
+        <a href="pages/section8-entry.html?entry=428" class="category-card dafny-lang" data-category="428">
+            <h3><img src="assets/logos/dafny.svg" alt="Dafny" class="category-logo"> Dafny</h3>
+            <p>Verification-aware language with built-in specifications, loop invariants, and automated SMT proof verification.</p>
+            <div class="card-bottom">
+                <span class="coming-soon">Coming Soon</span>
+                <span class="card-num">428</span>
+            </div>
+        </a>
+
+        <!-- 429: Whiley -->
+        <a href="pages/section8-entry.html?entry=429" class="category-card whiley-lang" data-category="429">
+            <h3><img src="assets/logos/whiley.svg" alt="Whiley" class="category-logo"> Whiley</h3>
+            <p>Systems language featuring extended static verification and flow-sensitive typing to eliminate runtime pointer and index errors.</p>
+            <div class="card-bottom">
+                <span class="coming-soon">Coming Soon</span>
+                <span class="card-num">429</span>
+            </div>
+        </a>
+
+        <!-- 430: Boogie -->
+        <a href="pages/section8-entry.html?entry=430" class="category-card boogie-lang" data-category="430">
+            <h3><img src="assets/logos/boogie.svg" alt="Boogie" class="category-logo"> Boogie</h3>
+            <p>Intermediate verification language created by Microsoft Research for building automated deductive software verifiers.</p>
+            <div class="card-bottom">
+                <span class="coming-soon">Coming Soon</span>
+                <span class="card-num">430</span>
+            </div>
+        </a>
+
+        <!-- 431: Why3 -->
+        <a href="pages/section8-entry.html?entry=431" class="category-card why3-lang" data-category="431">
+            <h3><img src="assets/logos/why3.svg" alt="Why3" class="category-logo"> Why3</h3>
+            <p>Platform for deductive program verification featuring the WhyML language and interfaces to multiple theorem provers.</p>
+            <div class="card-bottom">
+                <span class="coming-soon">Coming Soon</span>
+                <span class="card-num">431</span>
+            </div>
+        </a>
+
+        <!-- 432: F* -->
+        <a href="pages/section8-entry.html?entry=432" class="category-card f-star-lang" data-category="432">
+            <h3><img src="assets/logos/f-star.svg" alt="F*" class="category-logo"> F*</h3>
+            <p>Proof-oriented functional language with dependent types and monadic effects developed by Microsoft Research and Inria.</p>
+            <div class="card-bottom">
+                <span class="coming-soon">Coming Soon</span>
+                <span class="card-num">432</span>
+            </div>
+        </a>
+
+        <!-- 433: Isabelle -->
+        <a href="pages/section8-entry.html?entry=433" class="category-card isabelle-lang" data-category="433">
+            <h3><img src="assets/logos/isabelle.svg" alt="Isabelle" class="category-logo"> Isabelle</h3>
+            <p>Generic interactive theorem proving framework based on Higher-Order Logic (HOL), used to verify seL4 and math proofs.</p>
+            <div class="card-bottom">
+                <span class="coming-soon">Coming Soon</span>
+                <span class="card-num">433</span>
+            </div>
+        </a>
+
+        <!-- 434: HOL -->
+        <a href="pages/section8-entry.html?entry=434" class="category-card hol-lang" data-category="434">
+            <h3><img src="assets/logos/hol.svg" alt="HOL" class="category-logo"> HOL</h3>
+            <p>Foundational interactive theorem proving environment based on Robin Milner's LCF approach for formal logic.</p>
+            <div class="card-bottom">
+                <span class="coming-soon">Coming Soon</span>
+                <span class="card-num">434</span>
+            </div>
+        </a>
+
+        <!-- 435: ACL2 -->
+        <a href="pages/section8-entry.html?entry=435" class="category-card acl2-lang" data-category="435">
+            <h3><img src="assets/logos/acl2.svg" alt="ACL2" class="category-logo"> ACL2</h3>
+            <p>Industrial-strength computational logic and theorem prover based on Common Lisp, used for verifying microprocessor designs.</p>
+            <div class="card-bottom">
+                <span class="coming-soon">Coming Soon</span>
+                <span class="card-num">435</span>
+            </div>
+        </a>
+
+        <!-- 436: PVS -->
+        <a href="pages/section8-entry.html?entry=436" class="category-card pvs-lang" data-category="436">
+            <h3><img src="assets/logos/pvs.svg" alt="PVS" class="category-logo"> PVS</h3>
+            <p>Prototype Verification System combining expressive higher-order logic specifications with powerful interactive theorem proving.</p>
+            <div class="card-bottom">
+                <span class="coming-soon">Coming Soon</span>
+                <span class="card-num">436</span>
+            </div>
+        </a>
+
+        <!-- 437: Twelf -->
+        <a href="pages/section8-entry.html?entry=437" class="category-card twelf-lang" data-category="437">
+            <h3><img src="assets/logos/twelf.svg" alt="Twelf" class="category-logo"> Twelf</h3>
+            <p>Implementation of the Edinburgh Logical Framework (LF) for specifying deductive systems and verifying language semantics.</p>
+            <div class="card-bottom">
+                <span class="coming-soon">Coming Soon</span>
+                <span class="card-num">437</span>
+            </div>
+        </a>
+
+        <!-- 438: Maude -->
+        <a href="pages/section8-entry.html?entry=438" class="category-card maude-lang" data-category="438">
+            <h3><img src="assets/logos/maude.svg" alt="Maude" class="category-logo"> Maude</h3>
+            <p>High-performance reflective language and system supporting equational and rewriting logic for formal specification.</p>
+            <div class="card-bottom">
+                <span class="coming-soon">Coming Soon</span>
+                <span class="card-num">438</span>
+            </div>
+        </a>
+
+        <!-- 439: CafeOBJ -->
+        <a href="pages/section8-entry.html?entry=439" class="category-card cafeobj-lang" data-category="439">
+            <h3><img src="assets/logos/cafeobj.svg" alt="CafeOBJ" class="category-logo"> CafeOBJ</h3>
+            <p>Algebraic specification language based on hidden sorted algebra and behavioral logic for concurrent systems.</p>
+            <div class="card-bottom">
+                <span class="coming-soon">Coming Soon</span>
+                <span class="card-num">439</span>
+            </div>
+        </a>
+
+        <!-- 440: OBJ -->
+        <a href="pages/section8-entry.html?entry=440" class="category-card obj-lang" data-category="440">
+            <h3><img src="assets/logos/obj.svg" alt="OBJ" class="category-logo"> OBJ</h3>
+            <p>Pioneering algebraic specification language created by Joseph Goguen based on order-sorted equational logic.</p>
+            <div class="card-bottom">
+                <span class="coming-soon">Coming Soon</span>
+                <span class="card-num">440</span>
+            </div>
+        </a>
+
+        <!-- 441: Z Notation -->
+        <a href="pages/section8-entry.html?entry=441" class="category-card z-notation" data-category="441">
+            <h3><img src="assets/logos/z-notation.svg" alt="Z Notation" class="category-logo"> Z Notation</h3>
+            <p>Formal specification language based on Zermelo-Fraenkel set theory and first-order predicate logic using schemas.</p>
+            <div class="card-bottom">
+                <span class="coming-soon">Coming Soon</span>
+                <span class="card-num">441</span>
+            </div>
+        </a>
+
+        <!-- 442: B Method -->
+        <a href="pages/section8-entry.html?entry=442" class="category-card b-method" data-category="442">
+            <h3><img src="assets/logos/b-method.svg" alt="B Method" class="category-logo"> B Method</h3>
+            <p>Rigorous formal method covering the complete software lifecycle from abstract machines to verified code via refinement.</p>
+            <div class="card-bottom">
+                <span class="coming-soon">Coming Soon</span>
+                <span class="card-num">442</span>
+            </div>
+        </a>
+
+        <!-- 443: VDM -->
+        <a href="pages/section8-entry.html?entry=443" class="category-card vdm-lang" data-category="443">
+            <h3><img src="assets/logos/vdm.svg" alt="VDM" class="category-logo"> VDM</h3>
+            <p>Pioneer model-oriented formal method developed at IBM for specifying and verifying complex software.</p>
+            <div class="card-bottom">
+                <span class="coming-soon">Coming Soon</span>
+                <span class="card-num">443</span>
+            </div>
+        </a>
+
+        <!-- 444: Alloy -->
+        <a href="pages/section8-entry.html?entry=444" class="category-card alloy-lang" data-category="444">
+            <h3><img src="assets/logos/alloy.svg" alt="Alloy" class="category-logo"> Alloy</h3>
+            <p>Declarative modeling language based on first-order relational logic with automated counterexample finding via SAT solvers.</p>
+            <div class="card-bottom">
+                <span class="coming-soon">Coming Soon</span>
+                <span class="card-num">444</span>
+            </div>
+        </a>
+
+        <!-- 445: TLA+ -->
+        <a href="pages/section8-entry.html?entry=445" class="category-card tlaplus-lang" data-category="445">
+            <h3><img src="assets/logos/tlaplus.svg" alt="TLA+" class="category-logo"> TLA+</h3>
+            <p>High-level formal specification language by Leslie Lamport for modeling and verifying concurrent and distributed systems.</p>
+            <div class="card-bottom">
+                <span class="coming-soon">Coming Soon</span>
+                <span class="card-num">445</span>
+            </div>
+        </a>
+
+        <!-- 446: Event-B -->
+        <a href="pages/section8-entry.html?entry=446" class="category-card event-b-lang" data-category="446">
+            <h3><img src="assets/logos/event-b.svg" alt="Event-B" class="category-logo"> Event-B</h3>
+            <p>Evolution of the B-Method tailored for modeling and proving distributed, event-driven, and concurrent reactive systems.</p>
+            <div class="card-bottom">
+                <span class="coming-soon">Coming Soon</span>
+                <span class="card-num">446</span>
+            </div>
+        </a>
+
+        <!-- 447: Promela -->
+        <a href="pages/section8-entry.html?entry=447" class="category-card promela-lang" data-category="447">
+            <h3><img src="assets/logos/promela.svg" alt="Promela" class="category-logo"> Promela</h3>
+            <p>Process Meta Language for modeling and verifying concurrent communication protocols with the SPIN model checker.</p>
+            <div class="card-bottom">
+                <span class="coming-soon">Coming Soon</span>
+                <span class="card-num">447</span>
+            </div>
+        </a>
+
+        <!-- 448: Esterel -->
+        <a href="pages/section8-entry.html?entry=448" class="category-card esterel-lang" data-category="448">
+            <h3><img src="assets/logos/esterel.svg" alt="Esterel" class="category-logo"> Esterel</h3>
+            <p>Synchronous reactive programming language designed for programming deterministic embedded real-time systems and circuits.</p>
+            <div class="card-bottom">
+                <span class="coming-soon">Coming Soon</span>
+                <span class="card-num">448</span>
+            </div>
+        </a>
+
+        <!-- 449: Lustre -->
+        <a href="pages/section8-entry.html?entry=449" class="category-card lustre-lang" data-category="449">
+            <h3><img src="assets/logos/lustre.svg" alt="Lustre" class="category-logo"> Lustre</h3>
+            <p>Declarative synchronous dataflow language used to develop critical safety-grade avionics software via SCADE.</p>
+            <div class="card-bottom">
+                <span class="coming-soon">Coming Soon</span>
+                <span class="card-num">449</span>
+            </div>
+        </a>
+
+        <!-- 450: Signal -->
+        <a href="pages/section8-entry.html?entry=450" class="category-card signal-lang" data-category="450">
+            <h3><img src="assets/logos/signal.svg" alt="Signal" class="category-logo"> Signal</h3>
+            <p>Declarative polychronous dataflow language based on relational clock equations for multi-clock embedded systems.</p>
+            <div class="card-bottom">
+                <span class="coming-soon">Coming Soon</span>
+                <span class="card-num">450</span>
+            </div>
+        </a>
+
+<!-- Projects (Moved to Last Position) -->
         <a href="pages/projects.html" class="category-card project">
             <h3><img src="assets/logos/projects.svg" alt="Projects" class="category-logo"> Projects</h3>
             <p>Real world practice</p>

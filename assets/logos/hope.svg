@@ -1,5 +1,11 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
-  <rect width="128" height="128" rx="24" fill="#7D3C5E"/>
-  <path d="M32 96L64 32l32 64M44 76h40" stroke="#FFFFFF" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
-  <circle cx="64" cy="32" r="7" fill="#FBCFE8"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128">
+  <defs>
+    <linearGradient id="hopeG" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#E11D48"/>
+      <stop offset="100%" stop-color="#881337"/>
+    </linearGradient>
+  </defs>
+  <rect width="128" height="128" rx="28" fill="url(#hopeG)"/>
+  <text x="64" y="78" font-family="'Poppins', sans-serif" font-size="34" font-weight="800" text-anchor="middle" fill="#FFE4E6">HOPE</text>
+  <path d="M48 92 C54 86, 74 86, 80 92" stroke="#FDA4AF" stroke-width="4" fill="none" stroke-linecap="round"/>
 </svg>

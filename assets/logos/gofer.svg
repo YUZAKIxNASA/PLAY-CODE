@@ -1,6 +1,11 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
-  <rect width="128" height="128" rx="24" fill="#4A6572"/>
-  <circle cx="64" cy="64" r="40" fill="none" stroke="#FFFFFF" stroke-width="7"/>
-  <path d="M84 64H58v18h26" fill="none" stroke="#FFFFFF" stroke-width="7" stroke-linecap="round"/>
-  <line x1="46" y1="44" x2="82" y2="44" stroke="#F9AA33" stroke-width="6" stroke-linecap="round"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128">
+  <defs>
+    <linearGradient id="goferG" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#6366F1"/>
+      <stop offset="100%" stop-color="#312E81"/>
+    </linearGradient>
+  </defs>
+  <rect width="128" height="128" rx="28" fill="url(#goferG)"/>
+  <text x="64" y="78" font-family="'Poppins', sans-serif" font-size="32" font-weight="800" text-anchor="middle" fill="#E0E7FF">Gofer</text>
+  <path d="M38 36 L64 26 L90 36" stroke="#C7D2FE" stroke-width="4" stroke-linecap="round" fill="none"/>
 </svg>

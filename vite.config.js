@@ -34,7 +34,8 @@ export default defineConfig({
         editorPage: resolve(__dirname, 'pages/editor.html'),
         section5Entry: resolve(__dirname, 'pages/section5-entry.html'),
         section6Entry: resolve(__dirname, 'pages/section6-entry.html'),
-        section7Entry: resolve(__dirname, 'pages/section7-entry.html')
+        section7Entry: resolve(__dirname, 'pages/section7-entry.html'),
+        section8Entry: resolve(__dirname, 'pages/section8-entry.html')
       }
     }
   }

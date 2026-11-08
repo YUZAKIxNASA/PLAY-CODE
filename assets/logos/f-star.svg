@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128">
+  <defs>
+    <linearGradient id="fsG" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4F46E5"/>
+      <stop offset="100%" stop-color="#1E1B4B"/>
+    </linearGradient>
+  </defs>
+  <rect width="128" height="128" rx="28" fill="url(#fsG)"/>
+  <text x="50" y="82" font-family="'Poppins', sans-serif" font-size="52" font-weight="800" fill="#FFFFFF">F</text>
+  <text x="84" y="74" font-family="'Poppins', sans-serif" font-size="52" font-weight="800" fill="#38BDF8">*</text>
+</svg>

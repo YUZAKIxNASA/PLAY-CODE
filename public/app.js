@@ -80,6 +80,16 @@
         goToPage(totalPages);
     }
 
+    function goToSection(sectionNum) {
+        currentDisplayCount = '50';
+        const countBtns = document.querySelectorAll('.display-count-btn');
+        countBtns.forEach(btn => {
+            btn.classList.toggle('active', btn.dataset.count === '50');
+        });
+        const target = Math.max(1, Math.min(parseInt(sectionNum, 10) || 1, 8));
+        goToPage(target);
+    }
+
     function goToInputPage(inputEl) {
         let val;
         if (inputEl && inputEl.value !== undefined) {
@@ -263,7 +273,12 @@
         let perPage = totalItems;
         if (currentDisplayCount !== 'all') {
             perPage = parseInt(currentDisplayCount, 10) || 50;
-            totalPages = Math.max(1, Math.ceil(totalItems / perPage));
+            if (currentDisplayCount === '50' && !query && totalItems > 400 && totalItems <= 405) {
+                // Section 8 (401–450) harmoniously includes the trailing Projects card at position 401
+                totalPages = 8;
+            } else {
+                totalPages = Math.max(1, Math.ceil(totalItems / perPage));
+            }
         } else {
             totalPages = 1;
         }
@@ -282,7 +297,11 @@
 
         if (currentDisplayCount !== 'all') {
             startIndex = (currentPage - 1) * perPage;
-            endIndex = Math.min(startIndex + perPage, totalItems);
+            if (currentDisplayCount === '50' && !query && currentPage === 8) {
+                endIndex = totalItems; // Includes card 401 (Projects) seamlessly on Section 8
+            } else {
+                endIndex = Math.min(startIndex + perPage, totalItems);
+            }
         }
 
         const visibleCards = matchingCards.slice(startIndex, endIndex);
@@ -312,7 +331,18 @@
         // F. Render Pagination at Bottom
         renderPaginationControls('pagination-container-bottom');
 
-        // G. Update Section Information Status Box
+        // G. Update Section Navigation buttons active state
+        const secNavBtns = document.querySelectorAll('.section-nav-btn');
+        secNavBtns.forEach(btn => {
+            const sec = parseInt(btn.dataset.section, 10);
+            if (currentDisplayCount === '50' && !query && currentPage === sec) {
+                btn.classList.add('active');
+            } else {
+                btn.classList.remove('active');
+            }
+        });
+
+        // H. Update Section Information Status Box
         if (badge) {
             if (totalItems === 0) {
                 badge.textContent = `No languages found matching "${query}"`;
@@ -320,15 +350,33 @@
                 if (query) {
                     badge.textContent = `Showing All ${totalItems} Matching Results for "${query}"`;
                 } else {
-                    badge.textContent = `Showing All Languages: 1–${totalItems} (${totalItems} Entries)`;
+                    badge.textContent = `Showing All Languages: 1–450 & Projects (${totalItems} Entries)`;
                 }
             } else {
-                const startNum = startIndex + 1;
-                const endNum = endIndex;
                 if (query) {
-                    badge.textContent = `Showing Page ${currentPage} of ${totalPages}: Matches ${startNum}–${endNum} (${totalItems} Results for "${query}")`;
+                    badge.textContent = `Showing Page ${currentPage} of ${totalPages}: Matches ${startIndex + 1}–${endIndex} (${totalItems} Results for "${query}")`;
+                } else if (currentDisplayCount === '50') {
+                    if (currentPage === 1) {
+                        badge.textContent = `Showing Page 1 of 8: Section 1 (Languages 1–50) — 50 of ${totalItems} Entries`;
+                    } else if (currentPage === 2) {
+                        badge.textContent = `Showing Page 2 of 8: Section 2 (Languages 51–100) — 50 of ${totalItems} Entries`;
+                    } else if (currentPage === 3) {
+                        badge.textContent = `Showing Page 3 of 8: Section 3 (Languages 101–150) — 50 of ${totalItems} Entries`;
+                    } else if (currentPage === 4) {
+                        badge.textContent = `Showing Page 4 of 8: Section 4 (Languages 151–200) — 50 of ${totalItems} Entries`;
+                    } else if (currentPage === 5) {
+                        badge.textContent = `Showing Page 5 of 8: Section 5 (Languages 201–250) — 50 of ${totalItems} Entries`;
+                    } else if (currentPage === 6) {
+                        badge.textContent = `Showing Page 6 of 8: Section 6 (Languages 251–300) — 50 of ${totalItems} Entries`;
+                    } else if (currentPage === 7) {
+                        badge.textContent = `Showing Page 7 of 8: Section 7 (Languages 351–400) — 50 of ${totalItems} Entries`;
+                    } else if (currentPage === 8) {
+                        badge.textContent = `Showing Page 8 of 8: Section 8 (Languages 401–450 & Projects) — 51 of ${totalItems} Entries`;
+                    } else {
+                        badge.textContent = `Showing Page ${currentPage} of ${totalPages} — ${visibleCards.length} of ${totalItems} Entries`;
+                    }
                 } else {
-                    badge.textContent = `Showing Page ${currentPage} of ${totalPages}: Languages ${startNum}–${endNum} (${visibleCards.length} of ${totalItems} Entries)`;
+                    badge.textContent = `Showing Page ${currentPage} of ${totalPages}: Items ${startIndex + 1}–${endIndex} (${visibleCards.length} of ${totalItems} Entries)`;
                 }
             }
         }
@@ -462,6 +510,7 @@
     window.goToNextPage = goToNextPage;
     window.goToLastPage = goToLastPage;
     window.goToInputPage = goToInputPage;
+    window.goToSection = goToSection;
     window.setDisplayCount = setDisplayCount;
     window.updateDynamicGridAndNumbering = updateDynamicGridAndNumbering;
 

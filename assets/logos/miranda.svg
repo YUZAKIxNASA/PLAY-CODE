@@ -1,7 +1,11 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
-  <rect width="128" height="128" rx="24" fill="#3A506B"/>
-  <polygon points="28,88 28,46 46,68 64,42 82,68 100,46 100,88" fill="#FFFFFF"/>
-  <circle cx="28" cy="36" r="5" fill="#93C5FD"/>
-  <circle cx="64" cy="32" r="5" fill="#93C5FD"/>
-  <circle cx="100" cy="36" r="5" fill="#93C5FD"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128">
+  <defs>
+    <linearGradient id="miraG" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0284C7"/>
+      <stop offset="100%" stop-color="#0369A1"/>
+    </linearGradient>
+  </defs>
+  <rect width="128" height="128" rx="28" fill="url(#miraG)"/>
+  <text x="64" y="66" font-family="'Poppins', sans-serif" font-size="44" font-weight="800" text-anchor="middle" fill="#FFFFFF">M</text>
+  <text x="64" y="96" font-family="'Poppins', sans-serif" font-size="18" font-weight="600" text-anchor="middle" fill="#BAE6FD">MIRANDA</text>
 </svg>

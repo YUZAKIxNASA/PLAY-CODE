@@ -64,6 +64,10 @@ Every new page (`pages/*.html`), interactive component, code workspace, and moda
 | **Section 2 (51–100)** | 50 unique high-contrast gradient pairs (Obliq #51 to Verona #100) |
 | **Section 3 (101–150)** | 50 unique high-contrast gradient pairs (Mojo #101 to HLSL #150) |
 | **Section 4 (151–200)** | 50 unique high-contrast gradient pairs (GLSL #151 to CQL #200) with Sky Cyan active accent (`#0EA5E9` to `#0284C7`) |
+| **Section 5 (201–250)** | 50 unique logo-calibrated jewel-tone gradients (HiveQL #201 to Occam #250) |
+| **Section 6 (251–300)** | 50 unique logo-calibrated jewel-tone gradients (Limbo #251 to Lingo #300) |
+| **Section 7 (351–400)** | 50 unique logo-calibrated jewel-tone gradients (Flix #351 to UPC #400) |
+| **Section 8 (401–450)** | 50 unique logo-matched jewel-tone gradients (Co-array Fortran #401 to Signal #450) |
 
 ---
 
@@ -121,6 +125,12 @@ Every new page (`pages/*.html`), interactive component, code workspace, and moda
   - Shape: Fully rounded pill (`border-radius: 50px`)
   - Colors: Surface `#111827`, Text `#FFFFFF`, Placeholder `#9CA3AF`, No border.
 - **Nav Links:** Flex layout with `gap: 20px`, text color `#EAFFEA`, weight `500`.
+
+### 5.1.1 Explore Categories Controls Panel (`.categories-controls-panel`)
+- **Container Layout:** Vertical column flow (`flex-direction: column`) with `align-items: stretch; gap: 12px;`
+- **Surface & Shape:** Dark surface `#111827`, border `1px solid rgba(255, 255, 255, 0.08)`, border-radius `18px`, compact padding `14px 20px`.
+- **Search Input (`.explore-search-wrap`):** Full container width, compact height `52px` (50–58px specification), border-radius `12px`, surface `#0B1120`, vertically centered search icon and placeholder.
+- **Cards Per Page (`.display-count-bar`):** Directly below search input, horizontal row with label and responsive options (`12`, `36`, `50`, `100`, `All`). On mobile screens `< 520px`, wraps to full-width flexible buttons without clipping.
 
 ### 5.2 Buttons & Badges
 - **Primary Button (`.btn-primary`):**
