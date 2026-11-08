@@ -2310,6 +2310,161 @@ section h2{
 }
 
 /* ==========================
+   SECTION 9: LANGUAGES 451–500
+   (Calibrated to Match Entries 451–500 SVG Logo Palettes)
+========================== */
+.scade-lang{
+    background:linear-gradient(135deg,#312E81,#1E1B4B);
+}
+.giotto-lang{
+    background:linear-gradient(135deg,#064E3B,#022C22);
+}
+.ptolemy-lang{
+    background:linear-gradient(135deg,#1E3A8A,#172554);
+}
+.systemc-lang{
+    background:linear-gradient(135deg,#334155,#0F172A);
+}
+.bluespec-lang{
+    background:linear-gradient(135deg,#0369A1,#082F49);
+}
+.chisel-lang{
+    background:linear-gradient(135deg,#991B1B,#450A0A);
+}
+.clash-lang{
+    background:linear-gradient(135deg,#5B21B6,#2E1065);
+}
+.myhdl-lang{
+    background:linear-gradient(135deg,#1D4ED8,#B45309);
+}
+.amaranth-lang{
+    background:linear-gradient(135deg,#86198F,#4A044E);
+}
+.spinalhdl-lang{
+    background:linear-gradient(135deg,#0F766E,#134E4A);
+}
+.handel-c-lang{
+    background:linear-gradient(135deg,#92400E,#451A03);
+}
+.impulse-c-lang{
+    background:linear-gradient(135deg,#C2410C,#7C2D12);
+}
+.vivado-hls-lang{
+    background:linear-gradient(135deg,#831843,#111827);
+}
+.abel-lang{
+    background:linear-gradient(135deg,#1E40AF,#1E1B4B);
+}
+.cupl-lang{
+    background:linear-gradient(135deg,#0E7490,#164E63);
+}
+.palasm-lang{
+    background:linear-gradient(135deg,#78350F,#3B1503);
+}
+.ahdl-lang{
+    background:linear-gradient(135deg,#2563EB,#1E3A8A);
+}
+.lucid-lang{
+    background:linear-gradient(135deg,#0891B2,#065F46);
+}
+.linda-lang{
+    background:linear-gradient(135deg,#6B21A8,#3B0764);
+}
+.orc-lang{
+    background:linear-gradient(135deg,#4F46E5,#1E1B4B);
+}
+.join-java-lang{
+    background:linear-gradient(135deg,#B45309,#1E293B);
+}
+.polyphonic-csharp{
+    background:linear-gradient(135deg,#6D28D9,#0E7490);
+}
+.c-omega-lang{
+    background:linear-gradient(135deg,#1E3A8A,#4C1D95);
+}
+.scribble-lang{
+    background:linear-gradient(135deg,#047857,#064E3B);
+}
+.bpel-lang{
+    background:linear-gradient(135deg,#D97706,#78350F);
+}
+.bpmn-lang{
+    background:linear-gradient(135deg,#0284C7,#1E3A8A);
+}
+.uml-lang{
+    background:linear-gradient(135deg,#3730A3,#1E1B4B);
+}
+.ocl-lang{
+    background:linear-gradient(135deg,#0F766E,#042F2E);
+}
+.sysml-lang{
+    background:linear-gradient(135deg,#3B82F6,#1E293B);
+}
+.atl-lang{
+    background:linear-gradient(135deg,#A21CAF,#581C87);
+}
+.ioke-lang{
+    background:linear-gradient(135deg,#BE123C,#4C0519);
+}
+.slate-lang{
+    background:linear-gradient(135deg,#334155,#0F172A);
+}
+.newspeak-lang{
+    background:linear-gradient(135deg,#0284C7,#0F172A);
+}
+.lisaac-lang{
+    background:linear-gradient(135deg,#4D7C0F,#14532D);
+}
+.kevo-lang{
+    background:linear-gradient(135deg,#0D9488,#115E59);
+}
+.cecil-lang{
+    background:linear-gradient(135deg,#2563EB,#312E81);
+}
+.emerald-lang{
+    background:linear-gradient(135deg,#059669,#064E3B);
+}
+.beta-lang{
+    background:linear-gradient(135deg,#1D4ED8,#0F172A);
+}
+.sather-lang{
+    background:linear-gradient(135deg,#1E3A8A,#B45309);
+}
+.green-lang{
+    background:linear-gradient(135deg,#15803D,#052E16);
+}
+.ada-95-lang{
+    background:linear-gradient(135deg,#1E3A8A,#312E81);
+}
+.ada-2012-lang{
+    background:linear-gradient(135deg,#3730A3,#0E7490);
+}
+.turing-lang{
+    background:linear-gradient(135deg,#B45309,#451A03);
+}
+.euclid-lang{
+    background:linear-gradient(135deg,#0369A1,#0C4A6E);
+}
+.concurrent-pascal{
+    background:linear-gradient(135deg,#6D28D9,#2E1065);
+}
+.object-pascal{
+    background:linear-gradient(135deg,#B91C1C,#450A0A);
+}
+.free-pascal-lang{
+    background:linear-gradient(135deg,#EA580C,#7C2D12);
+}
+.oxygene-lang{
+    background:linear-gradient(135deg,#0891B2,#155E75);
+}
+.modula-lang{
+    background:linear-gradient(135deg,#166534,#14532D);
+}
+.lua-fennel{
+    background:linear-gradient(135deg,#4338CA,#1E1B4B);
+}
+
+/* ==========================
    FEATURED EXAMPLES
 ========================== */
 

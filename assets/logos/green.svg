@@ -1,5 +1,11 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
-  <rect width="128" height="128" rx="24" fill="#35682D"/>
-  <path d="M64 24C44 24 28 40 28 60c0 28 36 44 36 44s36-16 36-44c0-20-16-36-36-36z" fill="#FFFFFF"/>
-  <path d="M64 36v56M64 52c10-6 16-4 18 0M64 68c-10-6-16-4-18 0" stroke="#35682D" stroke-width="4" stroke-linecap="round"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128">
+  <defs>
+    <linearGradient id="g_490" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#15803D"/>
+      <stop offset="100%" stop-color="#052E16"/>
+    </linearGradient>
+  </defs>
+  <rect width="128" height="128" rx="28" fill="url(#g_490)"/>
+  <path d="M64 24 L96 38 V66 C96 86 64 104 64 104 C64 104 32 86 32 66 V38 Z" fill="none" stroke="#86EFAC" stroke-width="6" stroke-linejoin="round"/>
+  <text x="64" y="72" font-family="'Poppins', sans-serif" font-weight="700" font-size="20" fill="#86EFAC" text-anchor="middle">DoD</text>
 </svg>

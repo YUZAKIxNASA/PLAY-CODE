@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128">
+  <defs>
+    <linearGradient id="g_467" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2563EB"/>
+      <stop offset="100%" stop-color="#1E3A8A"/>
+    </linearGradient>
+  </defs>
+  <rect width="128" height="128" rx="28" fill="url(#g_467)"/>
+  <rect x="34" y="34" width="60" height="60" rx="8" fill="none" stroke="#93C5FD" stroke-width="6"/>
+  <text x="64" y="70" font-family="'Poppins', sans-serif" font-weight="700" font-size="18" fill="#93C5FD" text-anchor="middle">AHDL</text>
+</svg>

@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128">
+  <defs>
+    <linearGradient id="g_498" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0891B2"/>
+      <stop offset="100%" stop-color="#155E75"/>
+    </linearGradient>
+  </defs>
+  <rect width="128" height="128" rx="28" fill="url(#g_498)"/>
+  <ellipse cx="64" cy="64" rx="40" ry="18" fill="none" stroke="#67E8F9" stroke-width="5" transform="rotate(-30 64 64)"/>
+  <ellipse cx="64" cy="64" rx="40" ry="18" fill="none" stroke="#67E8F9" stroke-width="5" transform="rotate(30 64 64)"/>
+  <text x="64" y="72" font-family="'Poppins', sans-serif" font-weight="700" font-size="24" fill="#67E8F9" text-anchor="middle">O₂</text>
+</svg>

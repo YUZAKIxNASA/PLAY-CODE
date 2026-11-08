@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128">
+  <defs>
+    <linearGradient id="g_454" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#334155"/>
+      <stop offset="100%" stop-color="#0F172A"/>
+    </linearGradient>
+  </defs>
+  <rect width="128" height="128" rx="28" fill="url(#g_454)"/>
+  <rect x="34" y="34" width="60" height="60" rx="8" fill="none" stroke="#94A3B8" stroke-width="6"/>
+  <text x="64" y="72" font-family="'Poppins', sans-serif" font-weight="700" font-size="28" fill="#94A3B8" text-anchor="middle">SC</text>
+  <path d="M46 22 V34 M64 22 V34 M82 22 V34 M46 94 V106 M64 94 V106 M82 94 V106 M22 46 H34 M22 64 H34 M22 82 H34 M94 46 H106 M94 64 H106 M94 82 H106" stroke="#94A3B8" stroke-width="4" stroke-linecap="round"/>
+</svg>

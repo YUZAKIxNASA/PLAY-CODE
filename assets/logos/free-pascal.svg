@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128">
+  <defs>
+    <linearGradient id="g_497" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#EA580C"/>
+      <stop offset="100%" stop-color="#7C2D12"/>
+    </linearGradient>
+  </defs>
+  <rect width="128" height="128" rx="28" fill="url(#g_497)"/>
+  <rect x="30" y="30" width="68" height="68" rx="14" fill="none" stroke="#FDBA74" stroke-width="6"/>
+  <text x="64" y="72" font-family="'Poppins', sans-serif" font-weight="700" font-size="24" fill="#FDBA74" text-anchor="middle">FPC</text>
+</svg>

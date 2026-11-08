@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128">
+  <defs>
+    <linearGradient id="g_466" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#78350F"/>
+      <stop offset="100%" stop-color="#3B1503"/>
+    </linearGradient>
+  </defs>
+  <rect width="128" height="128" rx="28" fill="url(#g_466)"/>
+  <line x1="36" y1="36" x2="92" y2="36" stroke="#FDE047" stroke-width="4"/>
+  <line x1="36" y1="54" x2="92" y2="54" stroke="#FDE047" stroke-width="4"/>
+  <line x1="36" y1="72" x2="92" y2="72" stroke="#FDE047" stroke-width="4"/>
+  <line x1="36" y1="90" x2="92" y2="90" stroke="#FDE047" stroke-width="4"/>
+  <line x1="48" y1="28" x2="48" y2="98" stroke="#FDE047" stroke-width="4"/>
+  <line x1="64" y1="28" x2="64" y2="98" stroke="#FDE047" stroke-width="4"/>
+  <line x1="80" y1="28" x2="80" y2="98" stroke="#FDE047" stroke-width="4"/>
+  <circle cx="64" cy="54" r="5" fill="#FDE047"/>
+  <circle cx="48" cy="72" r="5" fill="#FDE047"/>
+  <circle cx="80" cy="90" r="5" fill="#FDE047"/>
+</svg>
