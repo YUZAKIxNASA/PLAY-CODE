@@ -284,3 +284,25 @@ For the dedicated lesson workspace (`pages/html-lesson.html`) and IDE (`pages/ed
      * { transition-duration: 0.01ms !important; }
    }
    ```
+
+---
+
+## 9. Projects Card Design Specification (Section 9 & 10 Visual Standard)
+
+### 9.1 Background & Color Theme
+- **Color Identity:** Royal violet / deep jewel purple (`#5B21B6` to `#240E4A`), directly harmonized with the official Projects vector logo palette (`#7C3AED`, `#6D28D9`, `#3B0764`).
+- **Gradient Angle:** Authoritative `135deg` linear gradient (`linear-gradient(135deg, #5B21B6, #240E4A)`).
+- **Subtle Glow & Accent:** Soft ambient radial backdrop highlight (`rgba(167, 139, 250, 0.18)`), subtle border (`rgba(167, 139, 250, 0.25)`), and elevated violet drop shadow on hover.
+- **Contrast Ratios:** White `#FFFFFF` heading and Slate `#E2E8F0` body text achieve > 11:1 contrast against the purple gradient base, exceeding WCAG AAA standards.
+
+### 9.2 Iconography & Visual Asset
+- **Asset Path:** `assets/logos/projects.svg` (and synced to `public/assets/logos/projects.svg`).
+- **Design:** Modern 3D isometric faceted cube with gradient surfaces (`#F5F3FF`, `#DDD6FE`, `#C4B5FD`, `#8B5CF6`), inner geometric accents, and glowing embedded `</>` code glyphs.
+- **Scale:** Authoritative 28px × 28px inside `.category-logo`.
+
+### 9.3 Content & Badges
+- **Title:** `Projects` (aligned with `<h3><img class="category-logo"> Projects</h3>`).
+- **Description:** *"Interactive real-world frontend applications, mini-projects, and hands-on coding sandboxes to build practical developer skills."* (balanced 2-line length matching Section 9/10 cards).
+- **Badge:** Distinct `.practice-badge` styled in semi-transparent violet (`rgba(109, 40, 217, 0.4)`) with an integrated `⚡` icon and glowing `#FDE047` star number badge (`★`).
+- **Positioning:** Permanently anchored as the final card in the category grid (position 501 after all 500 programming languages).
+

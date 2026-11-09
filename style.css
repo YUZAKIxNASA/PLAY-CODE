@@ -1055,9 +1055,70 @@ section h2{
     background:linear-gradient(135deg,#46505C,#343C46);
 }
 
-.project{
-    background:linear-gradient(135deg,#7C3AED,#5B21B6);
+/* Projects Card (Theme-matched to Projects Logo & Section 9 Standard) */
+.project,
+.category-card.project {
+    background: linear-gradient(135deg, #5B21B6, #240E4A);
+    border: 1px solid rgba(167, 139, 250, 0.25);
+    box-shadow: 0 4px 20px -2px rgba(76, 29, 149, 0.3);
+    position: relative;
+    overflow: hidden;
 }
+
+.category-card.project::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 130px;
+    height: 130px;
+    background: radial-gradient(circle at top right, rgba(167, 139, 250, 0.18), transparent 70%);
+    pointer-events: none;
+}
+
+.category-card.project:hover,
+.project:hover {
+    transform: translateY(-8px);
+    border-color: rgba(196, 181, 253, 0.55);
+    box-shadow: 0 16px 36px -4px rgba(109, 40, 217, 0.45), 0 0 20px rgba(139, 92, 246, 0.2);
+}
+
+.category-card.project h3 {
+    color: #FFFFFF;
+}
+
+.category-card.project p {
+    color: #E2E8F0;
+    line-height: 1.55;
+}
+
+.category-card.project .practice-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: rgba(109, 40, 217, 0.4);
+    color: #F5F3FF;
+    border: 1px solid rgba(196, 181, 253, 0.35);
+    padding: 3px 10px;
+    border-radius: 12px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+}
+
+.category-card.project .practice-badge::before {
+    content: "⚡";
+    font-size: 0.75rem;
+}
+
+.category-card.project .card-num {
+    background: rgba(30, 10, 60, 0.7);
+    border: 1px solid rgba(216, 180, 254, 0.45);
+    color: #FDE047;
+    font-size: 0.95rem;
+    box-shadow: 0 0 10px rgba(250, 204, 21, 0.25);
+}
+
 
 /* Categories 51–100 (Section 2) */
 
@@ -2465,6 +2526,161 @@ section h2{
 }
 
 /* ==========================
+   SECTION 10: LANGUAGES 501–550
+   (Calibrated to Match Entries 501–550 SVG Logo Palettes)
+========================== */
+.category-card[data-category="501"], .lua-fennel-embed{
+    background:linear-gradient(135deg,#065F46,#022C22);
+}
+.category-card[data-category="502"], .moonscript-lang{
+    background:linear-gradient(135deg,#1E293B,#0F172A);
+}
+.category-card[data-category="503"], .terra-lang{
+    background:linear-gradient(135deg,#0284C7,#082F49);
+}
+.category-card[data-category="504"], .wren-lang{
+    background:linear-gradient(135deg,#9A3412,#431407);
+}
+.category-card[data-category="505"], .pike-lang{
+    background:linear-gradient(135deg,#881337,#311B92);
+}
+.category-card[data-category="506"], .io-language{
+    background:linear-gradient(135deg,#991B1B,#450A0A);
+}
+.category-card[data-category="507"], .gravity-lang{
+    background:linear-gradient(135deg,#92400E,#451A03);
+}
+.category-card[data-category="508"], .lily-lang{
+    background:linear-gradient(135deg,#6B21A8,#3B0764);
+}
+.category-card[data-category="509"], .mun-lang{
+    background:linear-gradient(135deg,#0F766E,#042F2E);
+}
+.category-card[data-category="510"], .nelua-lang{
+    background:linear-gradient(135deg,#1E40AF,#0C4A6E);
+}
+.category-card[data-category="511"], .tiny-c-lang{
+    background:linear-gradient(135deg,#1E293B,#0F172A);
+}
+.category-card[data-category="512"], .ring-lang{
+    background:linear-gradient(135deg,#9D174D,#4C0519);
+}
+.category-card[data-category="513"], .dyalog-apl{
+    background:linear-gradient(135deg,#0E7490,#164E63);
+}
+.category-card[data-category="514"], .bqn-lang{
+    background:linear-gradient(135deg,#047857,#022C22);
+}
+.category-card[data-category="515"], .uiua-lang{
+    background:linear-gradient(135deg,#6D28D9,#3B0764);
+}
+.category-card[data-category="516"], .nial-lang{
+    background:linear-gradient(135deg,#3730A3,#1E1B4B);
+}
+.category-card[data-category="517"], .a-plus-lang{
+    background:linear-gradient(135deg,#1E3A8A,#0F172A);
+}
+.category-card[data-category="518"], .kona-lang{
+    background:linear-gradient(135deg,#0284C7,#082F49);
+}
+.category-card[data-category="519"], .ngn-k-lang{
+    background:linear-gradient(135deg,#15803D,#052E16);
+}
+.category-card[data-category="520"], .klong-lang{
+    background:linear-gradient(135deg,#92400E,#451A03);
+}
+.category-card[data-category="521"], .joy-lang{
+    background:linear-gradient(135deg,#C2410C,#7C2D12);
+}
+.category-card[data-category="522"], .cat-lang{
+    background:linear-gradient(135deg,#334155,#0F172A);
+}
+.category-card[data-category="523"], .kitten-lang{
+    background:linear-gradient(135deg,#9D174D,#4C0519);
+}
+.category-card[data-category="524"], .factor-language{
+    background:linear-gradient(135deg,#C2410C,#7C2D12);
+}
+.category-card[data-category="525"], .retro-lang{
+    background:linear-gradient(135deg,#065F46,#022C22);
+}
+.category-card[data-category="526"], .eighth-lang{
+    background:linear-gradient(135deg,#1D4ED8,#0F172A);
+}
+.category-card[data-category="527"], .postscript-level-3{
+    background:linear-gradient(135deg,#9F1239,#4C0519);
+}
+.category-card[data-category="528"], .rpl-lang{
+    background:linear-gradient(135deg,#0369A1,#082F49);
+}
+.category-card[data-category="529"], .stapel-lang{
+    background:linear-gradient(135deg,#0284C7,#0F172A);
+}
+.category-card[data-category="530"], .pop-11-lang{
+    background:linear-gradient(135deg,#581C87,#1E1B4B);
+}
+.category-card[data-category="531"], .inform-6-lang{
+    background:linear-gradient(135deg,#15803D,#052E16);
+}
+.category-card[data-category="532"], .inform-7-lang{
+    background:linear-gradient(135deg,#047857,#022C22);
+}
+.category-card[data-category="533"], .tads-3-lang{
+    background:linear-gradient(135deg,#92400E,#451A03);
+}
+.category-card[data-category="534"], .hugo-lang{
+    background:linear-gradient(135deg,#86198F,#4A044E);
+}
+.category-card[data-category="535"], .dialog-language{
+    background:linear-gradient(135deg,#4338CA,#0F172A);
+}
+.category-card[data-category="536"], .z-machine-lang{
+    background:linear-gradient(135deg,#1E40AF,#0F172A);
+}
+.category-card[data-category="537"], .glulx-lang{
+    background:linear-gradient(135deg,#6D28D9,#2E1065);
+}
+.category-card[data-category="538"], .ink-lang{
+    background:linear-gradient(135deg,#0F766E,#022C22);
+}
+.category-card[data-category="539"], .choicescript-lang{
+    background:linear-gradient(135deg,#854D0E,#3B1A04);
+}
+.category-card[data-category="540"], .yarn-spinner-lang{
+    background:linear-gradient(135deg,#1D4ED8,#172554);
+}
+.category-card[data-category="541"], .twine-harlowe-lang{
+    background:linear-gradient(135deg,#0D9488,#134E4A);
+}
+.category-card[data-category="542"], .twine-sugarcube-lang{
+    background:linear-gradient(135deg,#0284C7,#082F49);
+}
+.category-card[data-category="543"], .renpy-lang{
+    background:linear-gradient(135deg,#9D174D,#4C0519);
+}
+.category-card[data-category="544"], .fungo-lang{
+    background:linear-gradient(135deg,#881337,#1F040B);
+}
+.category-card[data-category="545"], .quickbasic-lang{
+    background:linear-gradient(135deg,#1D4ED8,#0C2340);
+}
+.category-card[data-category="546"], .qbasic-lang{
+    background:linear-gradient(135deg,#1E40AF,#0F172A);
+}
+.category-card[data-category="547"], .gw-basic-lang{
+    background:linear-gradient(135deg,#15803D,#052E16);
+}
+.category-card[data-category="548"], .turbo-basic-lang{
+    background:linear-gradient(135deg,#B91C1C,#450A0A);
+}
+.category-card[data-category="549"], .powerbasic-lang{
+    background:linear-gradient(135deg,#4338CA,#1E1B4B);
+}
+.category-card[data-category="550"], .rhino-lang{
+    background:linear-gradient(135deg,#334155,#18181B);
+}
+
+/* ==========================
    FEATURED EXAMPLES
 ========================== */
 
@@ -2724,7 +2940,7 @@ section h2{
     position:relative;
 }
 
-section h2::after{
+section:not(.profile-section) h2:not(.profile-name)::after{
     content:"";
     width:80px;
     height:4px;
@@ -2828,6 +3044,19 @@ section h2::after{
     align-items: center;
     gap: 8px;
 }
+
+.profile-section h2::after,
+.profile-section h3::after,
+.profile-name::after,
+.profile-name::before,
+.verified-badge::after,
+.verified-badge::before {
+    display: none !important;
+    content: none !important;
+    width: 0 !important;
+    height: 0 !important;
+}
+
 
 .verified-badge {
     display: inline-flex;

@@ -1,4 +1,36 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
-  <rect width="128" height="128" rx="24" fill="#7C3AED"/>
-  <path fill="#FFFFFF" d="M64 20L22 42v44l42 22 42-22V42L64 20zm0 14.2l28.6 15L64 64.2 35.4 49.2 64 34.2zm-32 23.3l27 14.2v29.5l-27-14.1V57.5zm37 43.7V71.7l27-14.2v29.6l-27 14.1z"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128">
+  <defs>
+    <linearGradient id="proj_bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#7C3AED"/>
+      <stop offset="50%" stop-color="#6D28D9"/>
+      <stop offset="100%" stop-color="#3B0764"/>
+    </linearGradient>
+    <linearGradient id="facet_top" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F5F3FF"/>
+      <stop offset="100%" stop-color="#DDD6FE"/>
+    </linearGradient>
+    <linearGradient id="facet_left" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#C4B5FD"/>
+      <stop offset="100%" stop-color="#8B5CF6"/>
+    </linearGradient>
+    <linearGradient id="facet_right" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#A78BFA"/>
+      <stop offset="100%" stop-color="#6D28D9"/>
+    </linearGradient>
+  </defs>
+  <rect width="128" height="128" rx="28" fill="url(#proj_bg)"/>
+  <!-- Isometric Project Cube with Depth and Facets -->
+  <polygon points="64,22 98,42 64,62 30,42" fill="url(#facet_top)"/>
+  <polygon points="30,42 64,62 64,104 30,84" fill="url(#facet_left)"/>
+  <polygon points="64,62 98,42 98,84 64,104" fill="url(#facet_right)"/>
+  <!-- Top Surface Inner Accent -->
+  <polygon points="64,30 88,44 64,56 40,44" fill="none" stroke="#8B5CF6" stroke-width="2.5" stroke-linejoin="round"/>
+  <!-- Left Face Code Bracket < -->
+  <path d="M51 68 L42 74 L51 80" fill="none" stroke="#FFFFFF" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Right Face Code Bracket > -->
+  <path d="M77 68 L86 74 L77 80" fill="none" stroke="#FFFFFF" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Center Slash / -->
+  <line x1="67" y1="67" x2="61" y2="81" stroke="#F5F3FF" stroke-width="3" stroke-linecap="round"/>
+  <!-- Polished Corner Highlights -->
+  <circle cx="64" cy="62" r="2.5" fill="#FFFFFF"/>
 </svg>

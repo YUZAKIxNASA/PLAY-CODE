@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128">
+  <defs>
+    <linearGradient id="g534" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#701A75"/>
+      <stop offset="100%" stop-color="#4A044E"/>
+    </linearGradient>
+  </defs>
+  <rect width="128" height="128" rx="28" fill="url(#g534)"/>
+  <circle cx="64" cy="64" r="38" fill="none" stroke="#F472B6" stroke-width="5"/>
+  <text x="64" y="76" font-family="'Poppins', sans-serif" font-size="28" font-weight="900" fill="#FDF2F8" text-anchor="middle">HUG</text>
+</svg>
