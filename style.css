@@ -2681,6 +2681,162 @@ section h2{
 }
 
 /* ==========================
+   SECTION 11 GRADIENTS
+   (Calibrated to Match Entries 551–600 SVG Logo Palettes)
+========================== */
+.category-card[data-category="551"], .nashorn-lang{
+    background:linear-gradient(135deg,#991B1B,#450A0A);
+}
+.category-card[data-category="552"], .graaljs-lang{
+    background:linear-gradient(135deg,#C2410C,#431407);
+}
+.category-card[data-category="553"], .quickjs-lang{
+    background:linear-gradient(135deg,#0284C7,#082F49);
+}
+.category-card[data-category="554"], .duktape-lang{
+    background:linear-gradient(135deg,#B45309,#3A1502);
+}
+.category-card[data-category="555"], .jerryscript-lang{
+    background:linear-gradient(135deg,#1D4ED8,#0F172A);
+}
+.category-card[data-category="556"], .espruino-lang{
+    background:linear-gradient(135deg,#047857,#022C22);
+}
+.category-card[data-category="557"], .ecmascript-lang{
+    background:linear-gradient(135deg,#A16207,#361A04);
+}
+.category-card[data-category="558"], .flow-lang{
+    background:linear-gradient(135deg,#0E7490,#083344);
+}
+.category-card[data-category="559"], .dart2-lang{
+    background:linear-gradient(135deg,#0284C7,#0A2540);
+}
+.category-card[data-category="560"], .opa-lang{
+    background:linear-gradient(135deg,#6D28D9,#1E0847);
+}
+.category-card[data-category="561"], .urweb-lang{
+    background:linear-gradient(135deg,#1E3A8A,#08112C);
+}
+.category-card[data-category="562"], .links-lang{
+    background:linear-gradient(135deg,#0F766E,#042F2E);
+}
+.category-card[data-category="563"], .eliom-lang{
+    background:linear-gradient(135deg,#9A3412,#330F04);
+}
+.category-card[data-category="564"], .haxe-lang{
+    background:linear-gradient(135deg,#C2410C,#3F1206);
+}
+.category-card[data-category="565"], .kotlinjs-lang{
+    background:linear-gradient(135deg,#6B21A8,#1E1B4B);
+}
+.category-card[data-category="566"], .scalajs-lang{
+    background:linear-gradient(135deg,#9F1239,#3A0211);
+}
+.category-card[data-category="567"], .fable-lang{
+    background:linear-gradient(135deg,#0369A1,#081B38);
+}
+.category-card[data-category="568"], .bridgenet-lang{
+    background:linear-gradient(135deg,#4338CA,#0F172A);
+}
+.category-card[data-category="569"], .blazor-lang{
+    background:linear-gradient(135deg,#512BD4,#1B0F40);
+}
+.category-card[data-category="570"], .razor-lang{
+    background:linear-gradient(135deg,#3730A3,#151139);
+}
+.category-card[data-category="571"], .aspclassic-lang{
+    background:linear-gradient(135deg,#0284C7,#062F46);
+}
+.category-card[data-category="572"], .coldfusion-lang{
+    background:linear-gradient(135deg,#0284C7,#07253D);
+}
+.category-card[data-category="573"], .cfml-lang{
+    background:linear-gradient(135deg,#0369A1,#081B30);
+}
+.category-card[data-category="574"], .lasso-lang{
+    background:linear-gradient(135deg,#B45309,#351302);
+}
+.category-card[data-category="575"], .zope-lang{
+    background:linear-gradient(135deg,#047857,#01221A);
+}
+.category-card[data-category="576"], .ssjs-lang{
+    background:linear-gradient(135deg,#1E40AF,#0E1A3D);
+}
+.category-card[data-category="577"], .mason-lang{
+    background:linear-gradient(135deg,#9A3412,#290802);
+}
+.category-card[data-category="578"], .embperl-lang{
+    background:linear-gradient(135deg,#92400E,#2A1102);
+}
+.category-card[data-category="579"], .tcl-websh-lang{
+    background:linear-gradient(135deg,#881337,#2D020D);
+}
+.category-card[data-category="580"], .webdna-lang{
+    background:linear-gradient(135deg,#0D9488,#032423);
+}
+.category-card[data-category="581"], .agda2-lang{
+    background:linear-gradient(135deg,#166534,#03200F);
+}
+.category-card[data-category="582"], .cedille-lang{
+    background:linear-gradient(135deg,#6B21A8,#180030);
+}
+.category-card[data-category="583"], .arend-lang{
+    background:linear-gradient(135deg,#701A75,#24053B);
+}
+.category-card[data-category="584"], .zephyr-lang{
+    background:linear-gradient(135deg,#0369A1,#082F49);
+}
+.category-card[data-category="585"], .sail-lang{
+    background:linear-gradient(135deg,#1E40AF,#09132A);
+}
+.category-card[data-category="586"], .p4-lang{
+    background:linear-gradient(135deg,#1D4ED8,#110E38);
+}
+.category-card[data-category="587"], .rego-lang{
+    background:linear-gradient(135deg,#0F766E,#042C2A);
+}
+.category-card[data-category="588"], .cedar-lang{
+    background:linear-gradient(135deg,#166534,#042411);
+}
+.category-card[data-category="589"], .cel-lang{
+    background:linear-gradient(135deg,#1D4ED8,#071533);
+}
+.category-card[data-category="590"], .starlark-bazel-lang{
+    background:linear-gradient(135deg,#166534,#03361A);
+}
+.category-card[data-category="591"], .pkl-lang{
+    background:linear-gradient(135deg,#C2410C,#3A0F03);
+}
+.category-card[data-category="592"], .kcl-lang{
+    background:linear-gradient(135deg,#0369A1,#052136);
+}
+.category-card[data-category="593"], .nickel-lang{
+    background:linear-gradient(135deg,#334155,#0B1120);
+}
+.category-card[data-category="594"], .jsonnet-tanka-lang{
+    background:linear-gradient(135deg,#B45309,#331302);
+}
+.category-card[data-category="595"], .terraform-hcl2-lang{
+    background:linear-gradient(135deg,#5B21B6,#1A0D3E);
+}
+.category-card[data-category="596"], .bicep-lang{
+    background:linear-gradient(135deg,#1E40AF,#081438);
+}
+.category-card[data-category="597"], .pulumi-lang{
+    background:linear-gradient(135deg,#6D28D9,#4C0519);
+}
+.category-card[data-category="598"], .cloudformation-lang{
+    background:linear-gradient(135deg,#C2410C,#3F1206);
+}
+.category-card[data-category="599"], .ballerina-swan-lang{
+    background:linear-gradient(135deg,#0F766E,#022625);
+}
+.category-card[data-category="600"], .smithy-lang{
+    background:linear-gradient(135deg,#334155,#291202);
+}
+
+
+/* ==========================
    FEATURED EXAMPLES
 ========================== */
 

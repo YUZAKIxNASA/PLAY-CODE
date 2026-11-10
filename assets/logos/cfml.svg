@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128">
+  <defs>
+    <linearGradient id="cfmlG" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0369A1"/>
+      <stop offset="100%" stop-color="#081B30"/>
+    </linearGradient>
+  </defs>
+  <rect width="128" height="128" rx="28" fill="url(#cfmlG)"/>
+  <path d="M44 48 L28 64 L44 80" stroke="#38BDF8" stroke-width="7" stroke-linecap="round" fill="none"/>
+  <path d="M84 48 L100 64 L84 80" stroke="#38BDF8" stroke-width="7" stroke-linecap="round" fill="none"/>
+  <text x="64" y="72" font-family="'Poppins', sans-serif" font-size="20" font-weight="800" fill="#FFFFFF" text-anchor="middle">CF</text>
+</svg>

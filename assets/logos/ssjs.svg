@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128">
+  <defs>
+    <linearGradient id="ssjsG" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1E40AF"/>
+      <stop offset="100%" stop-color="#0F172A"/>
+    </linearGradient>
+  </defs>
+  <rect width="128" height="128" rx="28" fill="url(#ssjsG)"/>
+  <rect x="30" y="32" width="68" height="24" rx="6" fill="#3B82F6"/>
+  <rect x="30" y="64" width="68" height="24" rx="6" fill="#2563EB"/>
+  <circle cx="86" cy="44" r="3" fill="#93C5FD"/>
+  <circle cx="86" cy="76" r="3" fill="#93C5FD"/>
+  <text x="50" y="80" font-family="'Poppins', sans-serif" font-size="14" font-weight="800" fill="#FDE047">JS</text>
+</svg>

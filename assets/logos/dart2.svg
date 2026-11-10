@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128">
+  <defs>
+    <linearGradient id="dartG" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0284C7"/>
+      <stop offset="100%" stop-color="#0F172A"/>
+    </linearGradient>
+  </defs>
+  <rect width="128" height="128" rx="28" fill="url(#dartG)"/>
+  <path d="M34 68 L64 34 L88 34 L48 88 Z" fill="#38BDF8"/>
+  <path d="M64 94 L94 64 L94 44 L54 94 Z" fill="#0284C7"/>
+  <text x="96" y="104" font-family="'Poppins', sans-serif" font-size="28" font-weight="900" fill="#38BDF8">2</text>
+</svg>
