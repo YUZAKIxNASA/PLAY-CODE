@@ -1,5 +1,11 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
-  <rect width="128" height="128" rx="24" fill="#7A4069"/>
-  <polygon points="64,22 96,86 64,74 32,86" fill="#FFFFFF"/>
-  <circle cx="64" cy="102" r="6" fill="#F5D0FE"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128">
+  <defs>
+    <linearGradient id="ausG" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#B91C1C"/>
+      <stop offset="100%" stop-color="#450A0A"/>
+    </linearGradient>
+  </defs>
+  <rect width="128" height="128" rx="28" fill="url(#ausG)"/>
+  <polygon points="64,30 94,94 76,94 64,68 52,94 34,94" fill="#FCA5A5"/>
+  <line x1="46" y1="72" x2="82" y2="72" stroke="#FFFFFF" stroke-width="6"/>
 </svg>

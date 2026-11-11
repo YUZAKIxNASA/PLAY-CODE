@@ -2834,6 +2834,306 @@ section h2{
 .category-card[data-category="600"], .smithy-lang{
     background:linear-gradient(135deg,#334155,#291202);
 }
+.category-card[data-category="601"], .protobuf-lang{
+    background:linear-gradient(135deg,#2563EB,#1E3A8A);
+}
+.category-card[data-category="602"], .thrift-lang{
+    background:linear-gradient(135deg,#EA580C,#7C2D12);
+}
+.category-card[data-category="603"], .avro-idl-lang{
+    background:linear-gradient(135deg,#0891B2,#155E75);
+}
+.category-card[data-category="604"], .capnproto-lang{
+    background:linear-gradient(135deg,#0284C7,#0C4A6E);
+}
+.category-card[data-category="605"], .flatbuffers-lang{
+    background:linear-gradient(135deg,#0D9488,#115E59);
+}
+.category-card[data-category="606"], .openapi-lang{
+    background:linear-gradient(135deg,#65A30D,#365314);
+}
+.category-card[data-category="607"], .raml-lang{
+    background:linear-gradient(135deg,#0284C7,#075985);
+}
+.category-card[data-category="608"], .wsdl-lang{
+    background:linear-gradient(135deg,#1E40AF,#0F172A);
+}
+.category-card[data-category="609"], .corba-idl-lang{
+    background:linear-gradient(135deg,#9F1239,#4C0519);
+}
+.category-card[data-category="610"], .midl-lang{
+    background:linear-gradient(135deg,#1E40AF,#081438);
+}
+.category-card[data-category="611"], .asn1-lang{
+    background:linear-gradient(135deg,#4338CA,#1E1B4B);
+}
+.category-card[data-category="612"], .abnf-lang{
+    background:linear-gradient(135deg,#475569,#0F172A);
+}
+.category-card[data-category="613"], .ebnf-lang{
+    background:linear-gradient(135deg,#B45309,#451A03);
+}
+.category-card[data-category="614"], .antlr-lang{
+    background:linear-gradient(135deg,#DC2626,#7F1D1D);
+}
+.category-card[data-category="615"], .yacc-lang{
+    background:linear-gradient(135deg,#D97706,#78350F);
+}
+.category-card[data-category="616"], .bison-lang{
+    background:linear-gradient(135deg,#1E40AF,#172554);
+}
+.category-card[data-category="617"], .lex-lang{
+    background:linear-gradient(135deg,#92400E,#451A03);
+}
+.category-card[data-category="618"], .flex-lang{
+    background:linear-gradient(135deg,#0D9488,#115E59);
+}
+.category-card[data-category="619"], .peg-lang{
+    background:linear-gradient(135deg,#7C3AED,#4C1D95);
+}
+.category-card[data-category="620"], .rascal-lang{
+    background:linear-gradient(135deg,#EA580C,#7C2D12);
+}
+.category-card[data-category="621"], .spoofax-lang{
+    background:linear-gradient(135deg,#0284C7,#0C4A6E);
+}
+.category-card[data-category="622"], .stratego-lang{
+    background:linear-gradient(135deg,#4F46E5,#1E1B4B);
+}
+.category-card[data-category="623"], .txl-lang{
+    background:linear-gradient(135deg,#991B1B,#450A0A);
+}
+.category-card[data-category="624"], .nearley-lang{
+    background:linear-gradient(135deg,#059669,#064E3B);
+}
+.category-card[data-category="625"], .lark-lang{
+    background:linear-gradient(135deg,#15803D,#064E3B);
+}
+.category-card[data-category="626"], .ohm-lang{
+    background:linear-gradient(135deg,#7E22CE,#3B0764);
+}
+.category-card[data-category="627"], .swi-prolog-lang{
+    background:linear-gradient(135deg,#0284C7,#082F49);
+}
+.category-card[data-category="628"], .visual-prolog-lang{
+    background:linear-gradient(135deg,#BE123C,#4C0519);
+}
+.category-card[data-category="629"], .logtalk-lang{
+    background:linear-gradient(135deg,#1D4ED8,#0F172A);
+}
+.category-card[data-category="630"], .ciao-lang{
+    background:linear-gradient(135deg,#D97706,#78350F);
+}
+.category-card[data-category="631"], .picat-lang{
+    background:linear-gradient(135deg,#6D28D9,#3B0764);
+}
+.category-card[data-category="632"], .asp-logic-lang{
+    background:linear-gradient(135deg,#3730A3,#1E1B4B);
+}
+.category-card[data-category="633"], .clingo-lang{
+    background:linear-gradient(135deg,#EA580C,#431407);
+}
+.category-card[data-category="634"], .minizinc-lang{
+    background:linear-gradient(135deg,#0284C7,#082F49);
+}
+.category-card[data-category="635"], .essence-lang{
+    background:linear-gradient(135deg,#7C3AED,#2E1065);
+}
+.category-card[data-category="636"], .opl-lang{
+    background:linear-gradient(135deg,#1D4ED8,#022D74);
+}
+.category-card[data-category="637"], .ampl-lang{
+    background:linear-gradient(135deg,#B91C1C,#450A0A);
+}
+.category-card[data-category="638"], .gams-lang{
+    background:linear-gradient(135deg,#0284C7,#0C4A6E);
+}
+.category-card[data-category="639"], .aimms-lang{
+    background:linear-gradient(135deg,#EA580C,#7C2D12);
+}
+.category-card[data-category="640"], .lingo-opt-lang{
+    background:linear-gradient(135deg,#059669,#064E3B);
+}
+.category-card[data-category="641"], .pyomo-lang{
+    background:linear-gradient(135deg,#15803D,#052E16);
+}
+.category-card[data-category="642"], .jump-lang{
+    background:linear-gradient(135deg,#7E22CE,#3B0764);
+}
+.category-card[data-category="643"], .cvx-lang{
+    background:linear-gradient(135deg,#881337,#311B92);
+}
+.category-card[data-category="644"], .stan-lang{
+    background:linear-gradient(135deg,#B91C1C,#450A0A);
+}
+.category-card[data-category="645"], .bugs-lang{
+    background:linear-gradient(135deg,#0F766E,#042F2E);
+}
+.category-card[data-category="646"], .jags-lang{
+    background:linear-gradient(135deg,#0284C7,#0C4A6E);
+}
+.category-card[data-category="647"], .pymc-lang{
+    background:linear-gradient(135deg,#0891B2,#164E63);
+}
+.category-card[data-category="648"], .turing-jl-lang{
+    background:linear-gradient(135deg,#4338CA,#1E1B4B);
+}
+.category-card[data-category="649"], .pyro-lang{
+    background:linear-gradient(135deg,#EA580C,#7C2D12);
+}
+.category-card[data-category="650"], .church-lang{
+    background:linear-gradient(135deg,#3730A3,#151139);
+}
+.category-card[data-category="651"], .venture-lang{
+    background:linear-gradient(135deg,#D97706,#451A03);
+}
+.category-card[data-category="652"], .anglican-lang{
+    background:linear-gradient(135deg,#6B21A8,#3B0764);
+}
+.category-card[data-category="653"], .webppl-lang{
+    background:linear-gradient(135deg,#0284C7,#0C4A6E);
+}
+.category-card[data-category="654"], .gen-lang{
+    background:linear-gradient(135deg,#E11D48,#4C0519);
+}
+.category-card[data-category="655"], .futhark-gpu-lang{
+    background:linear-gradient(135deg,#059669,#064E3B);
+}
+.category-card[data-category="656"], .triton-lang{
+    background:linear-gradient(135deg,#0D9488,#042F2E);
+}
+.category-card[data-category="657"], .taichi-lang{
+    background:linear-gradient(135deg,#4F46E5,#1E1B4B);
+}
+.category-card[data-category="658"], .mojo-lang{
+    background:linear-gradient(135deg,#EA580C,#7C2D12);
+}
+.category-card[data-category="659"], .codon-lang{
+    background:linear-gradient(135deg,#E11D48,#1E293B);
+}
+.category-card[data-category="660"], .lux-lang{
+    background:linear-gradient(135deg,#D97706,#451A03);
+}
+.category-card[data-category="661"], .bend-lang{
+    background:linear-gradient(135deg,#A21CAF,#4A044E);
+}
+.category-card[data-category="662"], .vale-lang{
+    background:linear-gradient(135deg,#2563EB,#1E3A8A);
+}
+.category-card[data-category="663"], .austral-lang{
+    background:linear-gradient(135deg,#B91C1C,#450A0A);
+}
+.category-card[data-category="664"], .verona-lang{
+    background:linear-gradient(135deg,#0284C7,#0F172A);
+}
+.category-card[data-category="665"], .lobster-lang{
+    background:linear-gradient(135deg,#DC2626,#7F1D1D);
+}
+.category-card[data-category="666"], .wing-lang{
+    background:linear-gradient(135deg,#7C3AED,#2E1065);
+}
+.category-card[data-category="667"], .pluto-lang{
+    background:linear-gradient(135deg,#0284C7,#1E3A8A);
+}
+.category-card[data-category="668"], .cone-lang{
+    background:linear-gradient(135deg,#B45309,#451A03);
+}
+.category-card[data-category="669"], .inko-lang{
+    background:linear-gradient(135deg,#4338CA,#1E1B4B);
+}
+.category-card[data-category="670"], .gluon-lang{
+    background:linear-gradient(135deg,#059669,#064E3B);
+}
+.category-card[data-category="671"], .dyon-lang{
+    background:linear-gradient(135deg,#0F766E,#042F2E);
+}
+.category-card[data-category="672"], .rhai-lang{
+    background:linear-gradient(135deg,#C2410C,#431407);
+}
+.category-card[data-category="673"], .gleam-lang{
+    background:linear-gradient(135deg,#EC4899,#831843);
+}
+.category-card[data-category="674"], .roc-lang{
+    background:linear-gradient(135deg,#06B6D4,#155E75);
+}
+.category-card[data-category="675"], .grain-lang{
+    background:linear-gradient(135deg,#D97706,#78350F);
+}
+.category-card[data-category="676"], .mojo-lang-alt{
+    background:linear-gradient(135deg,#EA580C,#431407);
+}
+.category-card[data-category="677"], .nim-lang{
+    background:linear-gradient(135deg,#F59E0B,#14532D);
+}
+.category-card[data-category="678"], .hylo-lang{
+    background:linear-gradient(135deg,#6366F1,#1E1B4B);
+}
+.category-card[data-category="679"], .val-lang{
+    background:linear-gradient(135deg,#1D4ED8,#0F172A);
+}
+.category-card[data-category="680"], .sorbet-lang{
+    background:linear-gradient(135deg,#7C3AED,#312E81);
+}
+.category-card[data-category="681"], .mypy-lang{
+    background:linear-gradient(135deg,#2563EB,#0F172A);
+}
+.category-card[data-category="682"], .pyre-lang{
+    background:linear-gradient(135deg,#B91C1C,#450A0A);
+}
+.category-card[data-category="683"], .hack-type-checker-lang{
+    background:linear-gradient(135deg,#0284C7,#0F172A);
+}
+.category-card[data-category="684"], .reason-lang{
+    background:linear-gradient(135deg,#EA580C,#7C2D12);
+}
+.category-card[data-category="685"], .bucklescript-lang{
+    background:linear-gradient(135deg,#9F1239,#4C0519);
+}
+.category-card[data-category="686"], .melange-lang{
+    background:linear-gradient(135deg,#B45309,#451A03);
+}
+.category-card[data-category="687"], .gren-lang{
+    background:linear-gradient(135deg,#10B981,#064E3B);
+}
+.category-card[data-category="688"], .derw-lang{
+    background:linear-gradient(135deg,#7C3AED,#3B0764);
+}
+.category-card[data-category="689"], .elm-review-lang{
+    background:linear-gradient(135deg,#0D9488,#134E4A);
+}
+.category-card[data-category="690"], .idris-blodwen-lang{
+    background:linear-gradient(135deg,#6B21A8,#1E1B4B);
+}
+.category-card[data-category="691"], .granule-lang{
+    background:linear-gradient(135deg,#334155,#0F172A);
+}
+.category-card[data-category="692"], .linear-haskell-lang{
+    background:linear-gradient(135deg,#5B21B6,#1E1B4B);
+}
+.category-card[data-category="693"], .haskell-ghcjs-lang{
+    background:linear-gradient(135deg,#6D28D9,#0F172A);
+}
+.category-card[data-category="694"], .eta-jvm-lang{
+    background:linear-gradient(135deg,#0F766E,#022C22);
+}
+.category-card[data-category="695"], .asterius-lang{
+    background:linear-gradient(135deg,#D97706,#1E293B);
+}
+.category-card[data-category="696"], .mu-lang{
+    background:linear-gradient(135deg,#B45309,#292524);
+}
+.category-card[data-category="697"], .hasura-actions-lang{
+    background:linear-gradient(135deg,#06B6D4,#083344);
+}
+.category-card[data-category="698"], .prisma-schema-lang{
+    background:linear-gradient(135deg,#0D9488,#0F172A);
+}
+.category-card[data-category="699"], .drizzle-lang{
+    background:linear-gradient(135deg,#65A30D,#1A2E05);
+}
+.category-card[data-category="700"], .sequelize-lang{
+    background:linear-gradient(135deg,#0284C7,#0C4A6E);
+}
 
 
 /* ==========================

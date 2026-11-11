@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128">
+  <defs>
+    <linearGradient id="idlG" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#9F1239"/>
+      <stop offset="100%" stop-color="#4C0519"/>
+    </linearGradient>
+  </defs>
+  <rect width="128" height="128" rx="28" fill="url(#idlG)"/>
+  <text x="64" y="74" font-family="'Poppins', sans-serif" font-size="36" font-weight="900" fill="#FDA4AF" text-anchor="middle">IDL</text>
+  <path d="M34 88 H94" stroke="#F43F5E" stroke-width="6" stroke-linecap="round"/>
+</svg>

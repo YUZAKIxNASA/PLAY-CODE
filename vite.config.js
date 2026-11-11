@@ -37,7 +37,10 @@ export default defineConfig({
         section7Entry: resolve(__dirname, 'pages/section7-entry.html'),
         section8Entry: resolve(__dirname, 'pages/section8-entry.html'),
         section9Entry: resolve(__dirname, 'pages/section9-entry.html'),
-        section10Entry: resolve(__dirname, 'pages/section10-entry.html')
+        section10Entry: resolve(__dirname, 'pages/section10-entry.html'),
+        section11Entry: resolve(__dirname, 'pages/section11-entry.html'),
+        section12Entry: resolve(__dirname, 'pages/section12-entry.html'),
+        section13Entry: resolve(__dirname, 'pages/section13-entry.html')
       }
     }
   }

@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128">
+  <defs>
+    <linearGradient id="txlG" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#991B1B"/>
+      <stop offset="100%" stop-color="#450A0A"/>
+    </linearGradient>
+  </defs>
+  <rect width="128" height="128" rx="28" fill="url(#txlG)"/>
+  <text x="64" y="74" font-family="'Poppins', sans-serif" font-size="34" font-weight="900" fill="#FCA5A5" text-anchor="middle">TXL</text>
+  <path d="M34 86 H94" stroke="#EF4444" stroke-width="5" stroke-linecap="round"/>
+</svg>

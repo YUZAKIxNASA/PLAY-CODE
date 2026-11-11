@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128">
+  <defs>
+    <linearGradient id="midlG" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1E40AF"/>
+      <stop offset="100%" stop-color="#081438"/>
+    </linearGradient>
+  </defs>
+  <rect width="128" height="128" rx="28" fill="url(#midlG)"/>
+  <rect x="34" y="34" width="26" height="26" fill="#3B82F6"/>
+  <rect x="68" y="34" width="26" height="26" fill="#60A5FA"/>
+  <rect x="34" y="68" width="26" height="26" fill="#2563EB"/>
+  <rect x="68" y="68" width="26" height="26" fill="#93C5FD"/>
+</svg>
