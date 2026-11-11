@@ -3134,6 +3134,156 @@ section h2{
 .category-card[data-category="700"], .sequelize-lang{
     background:linear-gradient(135deg,#0284C7,#0C4A6E);
 }
+.category-card[data-category="701"], .ecto-lang{
+    background:linear-gradient(135deg,#7C3AED,#1E0B2E);
+}
+.category-card[data-category="702"], .active-record-lang{
+    background:linear-gradient(135deg,#CC0000,#500000);
+}
+.category-card[data-category="703"], .linq-lang{
+    background:linear-gradient(135deg,#512BD4,#1E1058);
+}
+.category-card[data-category="704"], .entity-sql-lang{
+    background:linear-gradient(135deg,#0078D4,#0A2540);
+}
+.category-card[data-category="705"], .hql-lang{
+    background:linear-gradient(135deg,#B45309,#42340E);
+}
+.category-card[data-category="706"], .jpql-lang{
+    background:linear-gradient(135deg,#EA2D2E,#5E0808);
+}
+.category-card[data-category="707"], .oql-lang{
+    background:linear-gradient(135deg,#0D9488,#042F2E);
+}
+.category-card[data-category="708"], .dmx-lang{
+    background:linear-gradient(135deg,#D97706,#451A03);
+}
+.category-card[data-category="709"], .mdx-lang{
+    background:linear-gradient(135deg,#0284C7,#0C4A6E);
+}
+.category-card[data-category="710"], .dax-lang{
+    background:linear-gradient(135deg,#EAB308,#543D02);
+}
+.category-card[data-category="711"], .m-language-lang{
+    background:linear-gradient(135deg,#0F766E,#042F2E);
+}
+.category-card[data-category="712"], .power-fx-lang{
+    background:linear-gradient(135deg,#7C3AED,#2E1065);
+}
+.category-card[data-category="713"], .excel-formulas-lang{
+    background:linear-gradient(135deg,#107C41,#06381C);
+}
+.category-card[data-category="714"], .google-apps-script-lang{
+    background:linear-gradient(135deg,#1A73E8,#0D3A78);
+}
+.category-card[data-category="715"], .lotus-script-lang{
+    background:linear-gradient(135deg,#D97706,#451A03);
+}
+.category-card[data-category="716"], .visual-foxpro-lang{
+    background:linear-gradient(135deg,#C2410C,#431407);
+}
+.category-card[data-category="717"], .foxpro-lang{
+    background:linear-gradient(135deg,#EA580C,#7C2D12);
+}
+.category-card[data-category="718"], .dbase-lang{
+    background:linear-gradient(135deg,#B45309,#451A03);
+}
+.category-card[data-category="719"], .clipper-lang{
+    background:linear-gradient(135deg,#0891B2,#083344);
+}
+.category-card[data-category="720"], .harbour-lang{
+    background:linear-gradient(135deg,#0284C7,#0F172A);
+}
+.category-card[data-category="721"], .xbase-lang{
+    background:linear-gradient(135deg,#475569,#0F172A);
+}
+.category-card[data-category="722"], .progress-4gl-lang{
+    background:linear-gradient(135deg,#059669,#064E3B);
+}
+.category-card[data-category="723"], .openedge-abl-lang{
+    background:linear-gradient(135deg,#16A34A,#052E16);
+}
+.category-card[data-category="724"], .informix-4gl-lang{
+    background:linear-gradient(135deg,#1D4ED8,#0F172A);
+}
+.category-card[data-category="725"], .powerbuilder-lang{
+    background:linear-gradient(135deg,#9F1239,#4C0519);
+}
+.category-card[data-category="726"], .powerscript-lang{
+    background:linear-gradient(135deg,#6B21A8,#2E0854);
+}
+.category-card[data-category="727"], .gupta-sqlwindows-lang{
+    background:linear-gradient(135deg,#2563EB,#1E293B);
+}
+.category-card[data-category="728"], .centura-lang{
+    background:linear-gradient(135deg,#1E40AF,#081438);
+}
+.category-card[data-category="729"], .magic-lang{
+    background:linear-gradient(135deg,#7C3AED,#3B0764);
+}
+.category-card[data-category="730"], .uniface-lang{
+    background:linear-gradient(135deg,#0284C7,#0C4A6E);
+}
+.category-card[data-category="731"], .natural-lang{
+    background:linear-gradient(135deg,#0284C7,#075985);
+}
+.category-card[data-category="732"], .adabas-lang{
+    background:linear-gradient(135deg,#1E3A8A,#0B132B);
+}
+.category-card[data-category="733"], .mumps-cache-lang{
+    background:linear-gradient(135deg,#0891B2,#0C2340);
+}
+.category-card[data-category="734"], .objectscript-lang{
+    background:linear-gradient(135deg,#2563EB,#0A1C40);
+}
+.category-card[data-category="735"], .pick-basic-lang{
+    background:linear-gradient(135deg,#B45309,#381E05);
+}
+.category-card[data-category="736"], .unibasic-lang{
+    background:linear-gradient(135deg,#EA580C,#431407);
+}
+.category-card[data-category="737"], .business-basic-lang{
+    background:linear-gradient(135deg,#15803D,#052E16);
+}
+.category-card[data-category="738"], .dibol-lang{
+    background:linear-gradient(135deg,#1D4ED8,#0F172A);
+}
+.category-card[data-category="739"], .dataflex-lang{
+    background:linear-gradient(135deg,#B91C1C,#450A0A);
+}
+.category-card[data-category="740"], .clarion-lang{
+    background:linear-gradient(135deg,#D97706,#451A03);
+}
+.category-card[data-category="741"], .plpgsql-lang{
+    background:linear-gradient(135deg,#336791,#16324F);
+}
+.category-card[data-category="742"], .mysql-stored-procedures-lang{
+    background:linear-gradient(135deg,#00758F,#022938);
+}
+.category-card[data-category="743"], .sqlite-sql-lang{
+    background:linear-gradient(135deg,#0284C7,#072B3D);
+}
+.category-card[data-category="744"], .sql-pl-lang{
+    background:linear-gradient(135deg,#0043CE,#051A4D);
+}
+.category-card[data-category="745"], .transact-sql-extended-lang{
+    background:linear-gradient(135deg,#CC292B,#4A0E0F);
+}
+.category-card[data-category="746"], .oracle-forms-lang{
+    background:linear-gradient(135deg,#C74634,#4A150F);
+}
+.category-card[data-category="747"], .oracle-reports-lang{
+    background:linear-gradient(135deg,#B45309,#451A03);
+}
+.category-card[data-category="748"], .oracle-proc-lang{
+    background:linear-gradient(135deg,#B91C1C,#380B0B);
+}
+.category-card[data-category="749"], .embedded-sql-lang{
+    background:linear-gradient(135deg,#334155,#0F172A);
+}
+.category-card[data-category="750"], .sqlj-lang{
+    background:linear-gradient(135deg,#B45309,#291802);
+}
 
 
 /* ==========================

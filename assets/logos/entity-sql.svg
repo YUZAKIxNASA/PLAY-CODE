@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128">
+  <defs>
+    <linearGradient id="esqlG" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0078D4"/>
+      <stop offset="100%" stop-color="#0A2540"/>
+    </linearGradient>
+  </defs>
+  <rect width="128" height="128" rx="28" fill="url(#esqlG)"/>
+  <polygon points="64,28 96,48 96,80 64,100 32,80 32,48" fill="none" stroke="#BAE6FD" stroke-width="8" stroke-linejoin="round"/>
+  <line x1="32" y1="48" x2="64" y2="68" stroke="#BAE6FD" stroke-width="6"/>
+  <line x1="96" y1="48" x2="64" y2="68" stroke="#BAE6FD" stroke-width="6"/>
+  <line x1="64" y1="100" x2="64" y2="68" stroke="#BAE6FD" stroke-width="6"/>
+</svg>
