@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128">
+  <defs>
+    <linearGradient id="cuisG" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0F766E"/>
+      <stop offset="100%" stop-color="#042F2E"/>
+    </linearGradient>
+  </defs>
+  <rect width="128" height="128" rx="28" fill="url(#cuisG)"/>
+  <circle cx="64" cy="54" r="26" stroke="#2DD4BF" stroke-width="6" fill="none"/>
+  <circle cx="64" cy="54" r="14" fill="#FACC15"/>
+  <text x="64" y="106" font-family="system-ui, sans-serif" font-size="16" font-weight="900" fill="#CCFBF1" text-anchor="middle">CUIS</text>
+</svg>

@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128">
+  <defs>
+    <linearGradient id="blocklyG" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#16A34A"/>
+      <stop offset="100%" stop-color="#052E16"/>
+    </linearGradient>
+  </defs>
+  <rect width="128" height="128" rx="28" fill="url(#blocklyG)"/>
+  <!-- Puzzle Connector Tab -->
+  <path d="M36 38 H56 C56 46 62 50 66 50 C70 50 76 46 76 38 H92 V68 H84 C78 68 74 72 74 76 C74 80 78 84 84 84 H92 V94 H36 Z" fill="#BBF7D0" stroke="#FFFFFF" stroke-width="4"/>
+  <circle cx="66" cy="66" r="8" fill="#059669"/>
+</svg>

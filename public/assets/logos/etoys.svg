@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128">
+  <defs>
+    <linearGradient id="etoysG" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#CA8A04"/>
+      <stop offset="100%" stop-color="#422006"/>
+    </linearGradient>
+  </defs>
+  <rect width="128" height="128" rx="28" fill="url(#etoysG)"/>
+  <circle cx="50" cy="50" r="18" fill="#38BDF8"/>
+  <circle cx="78" cy="50" r="18" fill="#F43F5E"/>
+  <rect x="42" y="66" width="44" height="16" rx="8" fill="#4ADE80"/>
+  <text x="64" y="106" font-family="system-ui, sans-serif" font-size="16" font-weight="900" fill="#FEF08A" text-anchor="middle">ETOYS</text>
+</svg>

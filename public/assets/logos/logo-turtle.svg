@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128">
+  <defs>
+    <linearGradient id="turtleG" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#059669"/>
+      <stop offset="100%" stop-color="#022C22"/>
+    </linearGradient>
+  </defs>
+  <rect width="128" height="128" rx="28" fill="url(#turtleG)"/>
+  <!-- Classic Turtle Shell & Head -->
+  <polygon points="64,28 72,42 56,42" fill="#86EFAC"/>
+  <circle cx="64" cy="62" r="22" fill="#34D399" stroke="#ECFDF5" stroke-width="4"/>
+  <circle cx="42" cy="48" r="6" fill="#86EFAC"/>
+  <circle cx="86" cy="48" r="6" fill="#86EFAC"/>
+  <circle cx="42" cy="76" r="6" fill="#86EFAC"/>
+  <circle cx="86" cy="76" r="6" fill="#86EFAC"/>
+  <text x="64" y="106" font-family="system-ui, sans-serif" font-size="14" font-weight="900" fill="#D1FAE5" text-anchor="middle">LOGO</text>
+</svg>

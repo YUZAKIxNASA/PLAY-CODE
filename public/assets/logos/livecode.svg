@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128">
+  <defs>
+    <linearGradient id="lcG" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0284C7"/>
+      <stop offset="100%" stop-color="#082F49"/>
+    </linearGradient>
+  </defs>
+  <rect width="128" height="128" rx="28" fill="url(#lcG)"/>
+  <path d="M42 38 V88 H72" stroke="#FFFFFF" stroke-width="8" stroke-linecap="round" fill="none"/>
+  <path d="M72 52 L86 64 L72 76" stroke="#38BDF8" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  <text x="64" y="110" font-family="system-ui, sans-serif" font-size="13" font-weight="900" fill="#BAE6FD" text-anchor="middle">LIVECODE</text>
+</svg>

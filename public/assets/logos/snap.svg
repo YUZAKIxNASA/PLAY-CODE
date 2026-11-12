@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128">
+  <defs>
+    <linearGradient id="snapG" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#E11D48"/>
+      <stop offset="100%" stop-color="#4C0519"/>
+    </linearGradient>
+  </defs>
+  <rect width="128" height="128" rx="28" fill="url(#snapG)"/>
+  <!-- Interlocking Block Glyph -->
+  <path d="M34 42 H54 C54 48 60 52 64 52 C68 52 74 48 74 42 H94 V86 H74 C74 80 68 76 64 76 C60 76 54 80 54 86 H34 Z" fill="#FFE4E6" stroke="#FFFFFF" stroke-width="3"/>
+  <text x="64" y="70" font-family="system-ui, sans-serif" font-size="18" font-weight="900" fill="#BE123C" text-anchor="middle">Snap!</text>
+</svg>

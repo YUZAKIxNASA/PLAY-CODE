@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128">
+  <defs>
+    <linearGradient id="qb64G" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0055AA"/>
+      <stop offset="100%" stop-color="#001A40"/>
+    </linearGradient>
+  </defs>
+  <rect width="128" height="128" rx="28" fill="url(#qb64G)"/>
+  <rect x="28" y="32" width="72" height="52" rx="6" fill="#000080" stroke="#FFFFFF" stroke-width="3"/>
+  <text x="64" y="65" font-family="monospace" font-size="18" font-weight="900" fill="#FFFF00" text-anchor="middle">QB64</text>
+  <text x="64" y="108" font-family="system-ui, sans-serif" font-size="12" font-weight="800" fill="#E0F2FE" text-anchor="middle">QBASIC 64</text>
+</svg>

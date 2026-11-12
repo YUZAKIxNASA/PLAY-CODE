@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128">
+  <defs>
+    <linearGradient id="glbG" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#047857"/>
+      <stop offset="100%" stop-color="#022C22"/>
+    </linearGradient>
+  </defs>
+  <rect width="128" height="128" rx="28" fill="url(#glbG)"/>
+  <path d="M38 72 L64 36 L90 72 Z" stroke="#34D399" stroke-width="6" fill="none"/>
+  <circle cx="64" cy="62" r="8" fill="#FACC15"/>
+  <text x="64" y="106" font-family="system-ui, sans-serif" font-size="14" font-weight="900" fill="#D1FAE5" text-anchor="middle">GLBASIC</text>
+</svg>

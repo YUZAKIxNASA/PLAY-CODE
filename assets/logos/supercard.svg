@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128">
+  <defs>
+    <linearGradient id="scardG" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#7C3AED"/>
+      <stop offset="100%" stop-color="#2E1065"/>
+    </linearGradient>
+  </defs>
+  <rect width="128" height="128" rx="28" fill="url(#scardG)"/>
+  <!-- Overlapping Cards Stack -->
+  <rect x="42" y="32" width="48" height="58" rx="6" fill="#DDD6FE" stroke="#A78BFA" stroke-width="3"/>
+  <rect x="34" y="42" width="48" height="58" rx="6" fill="#FFFFFF" stroke="#C4B5FD" stroke-width="3"/>
+  <text x="58" y="78" font-family="system-ui, sans-serif" font-size="28" font-weight="900" fill="#7C3AED">S</text>
+  <text x="64" y="114" font-family="system-ui, sans-serif" font-size="11" font-weight="900" fill="#EDE9FE" text-anchor="middle">SUPERCARD</text>
+</svg>

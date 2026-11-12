@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128">
+  <defs>
+    <linearGradient id="starG" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1E3A8A"/>
+      <stop offset="100%" stop-color="#030712"/>
+    </linearGradient>
+  </defs>
+  <rect width="128" height="128" rx="28" fill="url(#starG)"/>
+  <!-- Glowing Multi-pointed Star -->
+  <polygon points="64,26 74,48 98,52 80,68 86,92 64,78 42,92 48,68 30,52 54,48" fill="#FACC15"/>
+  <text x="64" y="112" font-family="system-ui, sans-serif" font-size="13" font-weight="900" fill="#FEF08A" text-anchor="middle">STARLOGO</text>
+</svg>

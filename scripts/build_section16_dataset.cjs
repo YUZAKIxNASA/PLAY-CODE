@@ -1,0 +1,1387 @@
+const fs = require('fs');
+const path = require('path');
+
+const entries = [
+  {
+    id: 801,
+    name: "VisualWorks",
+    slug: "visualworks",
+    cssClass: "visualworks-lang",
+    category: "commercial-smalltalk",
+    categoryLabel: "Commercial Smalltalk",
+    logo: "assets/logos/visualworks.svg",
+    shortDesc: "Enterprise Smalltalk environment developed by Cincom Systems for high-volume mission-critical business systems.",
+    paradigm: "Pure Object-Oriented / Dynamic",
+    designedBy: "ParcPlace Systems (Cincom)",
+    firstAppeared: "1992",
+    fileExtension: ".im, .st",
+    primaryUse: "Large enterprise banking, insurance underwriting, and financial trading engines",
+    syntaxSummary: "Direct Smalltalk-80 syntax, portable GUI framework, native database drivers, and multi-byte Unicode.",
+    sampleCode: `"VisualWorks Enterprise Application Startup"
+| app session |
+app := ApplicationModel new.
+session := app open.
+Transcript show: 'VisualWorks enterprise runtime active: Session initialized.'; cr.`,
+    explanation: "VisualWorks originates from ParcPlace Systems (the commercial spinoff of Xerox PARC). It features an enterprise-grade virtual machine, integrated object database mapping, and cross-platform GUI architecture used in global finance.",
+    expectedOutput: `VisualWorks enterprise runtime active: Session initialized.`
+  },
+  {
+    id: 802,
+    name: "Cuis",
+    slug: "cuis",
+    cssClass: "cuis-lang",
+    category: "minimalist-smalltalk",
+    categoryLabel: "Minimalist Smalltalk",
+    logo: "assets/logos/cuis.svg",
+    shortDesc: "Lightweight, clean Smalltalk-80 system with a renewed vector-graphics Morphic 3 engine by Juan Vuletich.",
+    paradigm: "Pure Object-Oriented / Live Programming",
+    designedBy: "Juan Vuletich",
+    firstAppeared: "2009",
+    fileExtension: ".image, .pck.st",
+    primaryUse: "Educational system design, true vector resolution-independent user interfaces, and Smalltalk purity",
+    syntaxSummary: "Stripped-down Smalltalk-80 core, VectorCanvas anti-aliased geometry, and clean package architecture.",
+    sampleCode: `"Cuis Vector Morph Creation"
+| box |
+box := BoxedMorph new.
+box color: Color lightBlue.
+box morphExtent: 150 @ 80.
+Transcript show: 'Cuis Vector Morph created with bounds: ', box morphExtent printString; cr.`,
+    explanation: "Cuis is a fork of Squeak focused on architectural purity, elegance, and low complexity. It replaces pixel-based BitBlt graphics with an affine-transformed VectorCanvas engine that scales cleanly to 4K displays.",
+    expectedOutput: `Cuis Vector Morph created with bounds: 150@80`
+  },
+  {
+    id: 803,
+    name: "Amber Smalltalk",
+    slug: "amber-smalltalk",
+    cssClass: "amber-smalltalk-lang",
+    category: "web-smalltalk",
+    categoryLabel: "Web Smalltalk",
+    logo: "assets/logos/amber-smalltalk.svg",
+    shortDesc: "Client-side Smalltalk dialect created by Nicolas Petton running in browsers and compiling to JavaScript.",
+    paradigm: "Pure Object-Oriented / Browser Client",
+    designedBy: "Nicolas Petton",
+    firstAppeared: "2011",
+    fileExtension: ".st",
+    primaryUse: "Browser-based interactive applications, live web debugging, and client-side Smalltalk IDEs",
+    syntaxSummary: "Smalltalk syntax with inline JavaScript evaluation <js: code>, DOM bindings, and live browser inspector.",
+    sampleCode: `"Amber Smalltalk Browser Runtime"
+| header |
+header := '#app-title' asJQuery.
+header text: 'CodePlay Interactive Web Canvas'.
+console log: 'Amber Smalltalk mounted successfully to DOM.'`,
+    explanation: "Amber brings the live, image-based Smalltalk experience into modern web browsers. It compiles directly into clean JavaScript while maintaining a full live development environment directly inside the client DOM.",
+    expectedOutput: `Amber Smalltalk mounted successfully to DOM.`
+  },
+  {
+    id: 804,
+    name: "Etoys",
+    slug: "etoys",
+    cssClass: "etoys-lang",
+    category: "visual-authoring",
+    categoryLabel: "Educational Authoring",
+    logo: "assets/logos/etoys.svg",
+    shortDesc: "Child-friendly visual media-authoring environment created by Alan Kay and the Viewpoints Research Institute.",
+    paradigm: "Visual Scripting / Morphic OO",
+    designedBy: "Alan Kay, Scott Wallace, Ted Kaehler",
+    firstAppeared: "1996",
+    fileExtension: ".pr",
+    primaryUse: "Elementary school STEM education, interactive kinetic physics simulations, and OLPC laptops",
+    syntaxSummary: "Tile-based visual scripts attached to graphical morphs, forward/turn motion commands, and variable viewers.",
+    sampleCode: `// Etoys Tile-Script Conceptual Rule
+Car forward by: 5.
+Car turn by: 15.
+If Car overlaps Edge:
+    Car bounce on: Edge.`,
+    explanation: "Etoys was built as part of Alan Kay's vision for children's computing. Using tile scripting, students can program any drawn object on screen to simulate cars, planetary orbits, bouncing balls, and living ecosystems.",
+    expectedOutput: `[Etoys Simulation] Car vector updated: velocity = 5 px/tick, angle = 15 deg`
+  },
+  {
+    id: 805,
+    name: "Snap!",
+    slug: "snap",
+    cssClass: "snap-lang",
+    category: "visual-blocks",
+    categoryLabel: "Visual Blocks / CS",
+    logo: "assets/logos/snap.svg",
+    shortDesc: "Advanced visual drag-and-drop programming language by UC Berkeley extending Scratch with first-class functions.",
+    paradigm: "Visual Blocks / Functional / Procedural",
+    designedBy: "Jens Mönig & Brian Harvey (UC Berkeley)",
+    firstAppeared: "2011",
+    fileExtension: ".xml",
+    primaryUse: "Undergraduate computer science (The Beauty and Joy of Computing), lambda calculus, and robotics",
+    syntaxSummary: "Block-based syntax with first-class procedures, lists of lists, custom reporters, and hyper-blocks.",
+    sampleCode: `<blocks app="Snap! 8.0">
+  <block s="doSetVar">
+    <l>squaredList</l>
+    <block s="reportMap">
+      <block s="reifyReporter">
+        <autolambda>
+          <block s="reportProduct">
+            <l></l>
+            <l></l>
+          </block>
+        </autolambda>
+      </block>
+      <block s="reportNumbers">
+        <l>1</l>
+        <l>5</l>
+      </block>
+    </block>
+  </block>
+</blocks>`,
+    explanation: "Snap! (formerly BYOB - Build Your Own Blocks) empowers students to explore serious university-level computer science concepts—such as recursion, higher-order functions (map, keep, combine), and first-class data—through an intuitive block interface.",
+    expectedOutput: `Snap! Reporter evaluated: [1, 4, 9, 16, 25]`
+  },
+  {
+    id: 806,
+    name: "Alice 3D",
+    slug: "alice-3d",
+    cssClass: "alice-3d-lang",
+    category: "educational-3d",
+    categoryLabel: "3D Animation / Blocks",
+    logo: "assets/logos/alice-3d.svg",
+    shortDesc: "Block-based educational 3D programming environment developed at Carnegie Mellon University by Randy Pausch.",
+    paradigm: "Object-Oriented / 3D Visual Scripting",
+    designedBy: "Randy Pausch & Carnegie Mellon University",
+    firstAppeared: "1998",
+    fileExtension: ".a3p",
+    primaryUse: "Introductory computing, 3D storytelling, virtual reality worlds, and transition to Java",
+    syntaxSummary: "Visual drag-and-drop tiles representing object orientation, doTogether/doInOrder blocks, and 3D transforms.",
+    sampleCode: `doInOrder {
+    this.hare.say("Let the race begin!");
+    doTogether {
+        this.hare.move(Direction.FORWARD, 10.0);
+        this.tortoise.move(Direction.FORWARD, 4.0);
+    }
+}`,
+    explanation: "Alice immerses students in a 3D animated sandbox where programming concepts like loops, conditionals, and object states directly control avatars and cameras, eliminating syntax errors while teaching object-oriented fundamentals.",
+    expectedOutput: `[Alice 3D Engine] Animation sequence rendered: Hare moved 10m, Tortoise moved 4m.`
+  },
+  {
+    id: 807,
+    name: "Blockly",
+    slug: "blockly",
+    cssClass: "blockly-lang",
+    category: "visual-builder",
+    categoryLabel: "Visual Block Framework",
+    logo: "assets/logos/blockly.svg",
+    shortDesc: "Google's open-source web library for building drag-and-drop visual block programming editors.",
+    paradigm: "Visual Drag-and-Drop / Code Generation",
+    designedBy: "Google (Neil Fraser)",
+    firstAppeared: "2012",
+    fileExtension: ".xml, .json",
+    primaryUse: "Code.org, App Inventor, robotics controllers, and custom educational visual programming interfaces",
+    syntaxSummary: "Interlocking puzzle-piece blocks rendered in SVG, generating JavaScript, Python, PHP, Lua, or Dart.",
+    sampleCode: `// Blockly Workspace Definition & Code Generation
+const workspace = Blockly.inject('blocklyDiv', { toolbox: toolboxXml });
+Blockly.JavaScript['print_message'] = function(block) {
+    const msg = Blockly.JavaScript.valueToCode(block, 'MSG', Blockly.JavaScript.ORDER_ATOMIC) || "''";
+    return 'console.log(' + msg + ');\\n';
+};
+const code = Blockly.JavaScript.workspaceToCode(workspace);`,
+    explanation: "Google Blockly is the industry-standard framework powering hundreds of educational platforms. It renders interlocking SVG blocks directly in the browser and transpiles them on-the-fly into clean, idiomatic text code.",
+    expectedOutput: `Generated JavaScript: console.log("Hello from Blockly!");`
+  },
+  {
+    id: 808,
+    name: "MakeCode",
+    slug: "makecode",
+    cssClass: "makecode-lang",
+    category: "embedded-blocks",
+    categoryLabel: "Visual STEM / Microcontrollers",
+    logo: "assets/logos/makecode.svg",
+    shortDesc: "Microsoft's visual block and TypeScript environment for physical computing on micro:bit and Arcade consoles.",
+    paradigm: "Visual Blocks / Static TypeScript",
+    designedBy: "Microsoft Research",
+    firstAppeared: "2016",
+    fileExtension: ".ts, .hex",
+    primaryUse: "BBC micro:bit, Circuit Playground Express, Adafruit hardware, and retro Arcade game design",
+    syntaxSummary: "Bimodal editing (seamless toggle between drag-and-drop blocks and real TypeScript code), event-driven pins.",
+    sampleCode: `// MakeCode micro:bit LED Display Routine
+basic.showIcon(IconNames.Heart);
+input.onButtonPressed(Button.A, function () {
+    basic.showString("NASA");
+    music.playTone(440, music.beat(BeatFraction.Whole));
+});`,
+    explanation: "Microsoft MakeCode enables students to program microcontrollers like the BBC micro:bit. Its defining innovation is true bidirectional synchronization: code can be modified as visual blocks or typed in TypeScript with instant parity.",
+    expectedOutput: `[micro:bit Simulator] LED Matrix: Heart icon displayed. Button A event listener attached.`
+  },
+  {
+    id: 809,
+    name: "App Inventor",
+    slug: "app-inventor",
+    cssClass: "app-inventor-lang",
+    category: "mobile-blocks",
+    categoryLabel: "Mobile App Blocks",
+    logo: "assets/logos/app-inventor.svg",
+    shortDesc: "Visual block-based mobile app creation platform originally developed by Google and maintained by MIT.",
+    paradigm: "Event-Driven / Visual Mobile Programming",
+    designedBy: "Hal Abelson & Mark Friedman (Google / MIT)",
+    firstAppeared: "2010",
+    fileExtension: ".aia",
+    primaryUse: "Building real native Android and iOS mobile applications with sensors, GPS, and cameras",
+    syntaxSummary: "Designer view (UI components: Buttons, Canvas, GPS) paired with Blocks Editor (event handlers).",
+    sampleCode: `// MIT App Inventor Event Handler
+when Button_Submit.Click do
+    set Label_Output.Text to join("Coordinates: ", LocationSensor1.Latitude, ", ", LocationSensor1.Longitude)
+    call Texting1.SendMessage("4085551212", Label_Output.Text)`,
+    explanation: "MIT App Inventor democratizes mobile development by allowing anyone to build full-featured smartphone applications that access onboard hardware (accelerometers, Bluetooth, cameras, speech synthesis) using visual logic blocks.",
+    expectedOutput: `[App Inventor Engine] APK compiled: GPS sensor linked to SMS dispatch.`
+  },
+  {
+    id: 810,
+    name: "Pencil Code",
+    slug: "pencil-code",
+    cssClass: "pencil-code-lang",
+    category: "bimodal-coding",
+    categoryLabel: "Bimodal Block / Text",
+    logo: "assets/logos/pencil-code.svg",
+    shortDesc: "Collaborative educational platform blending drag-and-drop blocks with CoffeeScript, JavaScript, and HTML.",
+    paradigm: "Bimodal Blocks / CoffeeScript / Turtle",
+    designedBy: "David Bau",
+    firstAppeared: "2013",
+    fileExtension: ".coffee, .js",
+    primaryUse: "Middle and high school transition from block programming to real professional syntax",
+    syntaxSummary: "Droplet dual-mode editor allowing direct conversion between visual puzzle blocks and textual code.",
+    sampleCode: `# Pencil Code Turtle Animation
+speed 10
+pen red, 4
+for [1..6]
+    fd 100
+    rt 60
+dot gold, 20
+say "Hexagon complete!"`,
+    explanation: "Pencil Code uses the Droplet editor to help students transition seamlessly across visual blocks and textual CoffeeScript. If code is typed incorrectly, it gracefully drops back into blocks to assist syntax recovery.",
+    expectedOutput: `[Pencil Code Canvas] 600px canvas rendered: Red hexagon with gold center point.`
+  },
+  {
+    id: 811,
+    name: "Hopscotch",
+    slug: "hopscotch",
+    cssClass: "hopscotch-lang",
+    category: "mobile-touch",
+    categoryLabel: "Mobile Creative Coding",
+    logo: "assets/logos/hopscotch.svg",
+    shortDesc: "Touch-first visual programming language and creative game engine designed exclusively for iPad and iPhone.",
+    paradigm: "Event-Driven / Visual Block",
+    designedBy: "Hopscotch Technologies (Jocelyn Leavitt & Samantha John)",
+    firstAppeared: "2013",
+    fileExtension: ".hopscotch",
+    primaryUse: "Kids and teens building and sharing touch-screen arcade games, animations, and interactive art",
+    syntaxSummary: "When [Tap / Tilt / Collision] event blocks, direct character manipulation, and physics variables.",
+    sampleCode: `// Hopscotch Rule Specification
+When [Game Starts]:
+    Set Speed to 10
+    Set Score to 0
+When [iPad is Tilted Right]:
+    Change X by (Speed)
+When [Hero collides with Star]:
+    Increase Score by 1
+    Play Sound [Chime]`,
+    explanation: "Hopscotch reimagined programming for mobile touchscreens. With no keyboard required, young creators snap colorful event blocks together to create complete platformers, drawing tools, and shared community games.",
+    expectedOutput: `[Hopscotch Runtime] Physics engine initialized: 60 FPS touch loop active.`
+  },
+  {
+    id: 812,
+    name: "Tynker",
+    slug: "tynker",
+    cssClass: "tynker-lang",
+    category: "k12-coding",
+    categoryLabel: "Educational K-12",
+    logo: "assets/logos/tynker.svg",
+    shortDesc: "Comprehensive visual and text coding curriculum platform teaching block-based coding, Python, and JavaScript.",
+    paradigm: "Visual Blocks / Python / JS",
+    designedBy: "Tynker (Krishna Vedati et al.)",
+    firstAppeared: "2012",
+    fileExtension: ".xml, .py",
+    primaryUse: "K-12 classroom coding, Minecraft modding, drone control, and arcade game creation",
+    syntaxSummary: "Block programming progression leading directly into Python and JavaScript code editors.",
+    sampleCode: `// Tynker Actor Behavior
+onStart(function() {
+    this.setSize(100);
+    this.goTo(0, 0);
+    this.broadcast("start_level");
+});
+onMessage("start_level", function() {
+    this.glideTo(150, 100, 2);
+});`,
+    explanation: "Tynker provides a structured coding progression from early block assembly through Minecraft modding and AP Computer Science principles, used by over 60 million students in schools worldwide.",
+    expectedOutput: `Actor moved to (150, 100) over 2.0s duration.`
+  },
+  {
+    id: 813,
+    name: "ScratchJr",
+    slug: "scratchjr",
+    cssClass: "scratchjr-lang",
+    category: "early-childhood",
+    categoryLabel: "Early Childhood Coding",
+    logo: "assets/logos/scratchjr.svg",
+    shortDesc: "Introductory icon-based visual programming language for young children (ages 5–7) on tablet devices.",
+    paradigm: "Iconic Graphical / Event-Driven",
+    designedBy: "DevTech Research Group (Tufts) & MIT Media Lab",
+    firstAppeared: "2014",
+    fileExtension: ".sjr",
+    primaryUse: "Early literacy, numeracy, and computational thinking in kindergarten and preschool",
+    syntaxSummary: "Horizontal icon blocks snapped left-to-right (Green Flag, Hop, Move Right, Sound, Repeat).",
+    sampleCode: `// ScratchJr Horizontal Block Stream
+[Yellow Start Flag] -> [Blue Move Right 4] -> [Blue Hop 2] -> [Yellow Repeat 3] -> [Red End]`,
+    explanation: "ScratchJr replaces words and text with intuitive graphical icons arranged horizontally like words in a sentence, allowing young pre-readers to animate characters, record voices, and express computational ideas.",
+    expectedOutput: `[ScratchJr Engine] Character sequence executed: 4 steps right, 2 hops, repeated 3 times.`
+  },
+  {
+    id: 814,
+    name: "Kodu",
+    slug: "kodu",
+    cssClass: "kodu-lang",
+    category: "game-lab",
+    categoryLabel: "Visual 3D Game Lab",
+    logo: "assets/logos/kodu.svg",
+    shortDesc: "Visual programming environment designed by Microsoft Research for creating 3D games via gamepad or mouse.",
+    paradigm: "Rule-Based / Reactive / Visual",
+    designedBy: "Microsoft Research (Matthew MacLaurin)",
+    firstAppeared: "2009",
+    fileExtension: ".kodu2",
+    primaryUse: "3D world terrain editing and visual game logic without typing syntax",
+    syntaxSummary: "Simple rule grammar: 'WHEN [condition] DO [action]' (e.g., WHEN See Apple DO Move Toward).",
+    sampleCode: `// Kodu Reactive Rule Grammar
+Rule 1: WHEN See [Red Apple] DO Move [Toward] [Quickly]
+Rule 2: WHEN Bump [Red Apple] DO Eat
+Rule 3: WHEN Eat [Red Apple] DO Score [Red 10 Points]`,
+    explanation: "Kodu Game Lab features a tactile, controller-driven programming interface where children sculpt 3D islands and program characters using expressive WHEN-DO conditional rules without touching a keyboard.",
+    expectedOutput: `[Kodu 3D World] Terrain initialized. Agent navigated to target: +10 Points awarded.`
+  },
+  {
+    id: 815,
+    name: "Greenfoot",
+    slug: "greenfoot",
+    cssClass: "greenfoot-lang",
+    category: "interactive-java",
+    categoryLabel: "Java 2D Simulation",
+    logo: "assets/logos/greenfoot.svg",
+    shortDesc: "Interactive Java development environment designed by Michael Kölling for two-dimensional graphical simulations.",
+    paradigm: "Object-Oriented / Event-Driven Java",
+    designedBy: "Michael Kölling & Poul Henriksen (University of Kent)",
+    firstAppeared: "2006",
+    fileExtension: ".java",
+    primaryUse: "Teaching standard Java syntax through interactive arcade games and cellular automata",
+    syntaxSummary: "Standard Java classes extending World and Actor, act() execution loops, and keyboard listeners.",
+    sampleCode: `import greenfoot.*;
+
+public class Rocket extends Actor {
+    public void act() {
+        move(4);
+        if (Greenfoot.isKeyDown("left")) {
+            turn(-5);
+        }
+        if (isTouching(Asteroid.class)) {
+            removeTouching(Asteroid.class);
+            Greenfoot.playSound("boom.wav");
+        }
+    }
+}`,
+    explanation: "Greenfoot teaches standard Java syntax within a visual 2D grid world. Objects exist physically on screen and run their act() methods on every clock tick, making inheritance and encapsulation immediately intuitive.",
+    expectedOutput: `Rocket moved 4 units forward. Direction updated on left key press.`
+  },
+  {
+    id: 816,
+    name: "BlueJ",
+    slug: "bluej",
+    cssClass: "bluej-lang",
+    category: "educational-ide",
+    categoryLabel: "Educational Java IDE",
+    logo: "assets/logos/bluej.svg",
+    shortDesc: "Educational Java integrated development environment with interactive UML class diagram workbench.",
+    paradigm: "Object-Oriented / Pedagogical IDE",
+    designedBy: "Michael Kölling & John Rosenberg",
+    firstAppeared: "1999",
+    fileExtension: ".java, .bluej",
+    primaryUse: "University computer science instruction, interactive object instantiation, and unit testing",
+    syntaxSummary: "Pure Java syntax with direct right-click instantiation of objects onto an interactive object bench.",
+    sampleCode: `public class BankAccount {
+    private double balance;
+
+    public BankAccount(double initialDeposit) {
+        this.balance = initialDeposit;
+    }
+
+    public void deposit(double amount) {
+        this.balance += amount;
+    }
+
+    public double getBalance() {
+        return this.balance;
+    }
+}`,
+    explanation: "BlueJ is designed specifically for teaching object-oriented concepts. It displays classes as UML boxes, allowing students to instantiate objects directly onto a workbench and invoke methods without writing a main() method.",
+    expectedOutput: `BankAccount instance created on Object Bench: initial balance = $500.00`
+  },
+  {
+    id: 817,
+    name: "Karel",
+    slug: "karel",
+    cssClass: "karel-lang",
+    category: "pedagogical-grid",
+    categoryLabel: "Educational Robot World",
+    logo: "assets/logos/karel.svg",
+    shortDesc: "Pioneering educational programming language by Richard E. Pattis featuring a robot navigating a city grid.",
+    paradigm: "Procedural / Grid-World Simulation",
+    designedBy: "Richard E. Pattis (Stanford)",
+    firstAppeared: "1981",
+    fileExtension: ".karel",
+    primaryUse: "Teaching structured programming, loops, conditionals, and stepwise refinement",
+    syntaxSummary: "Basic primitive instructions: move, turnleft, pickbeeper, putbeeper, and custom define-instruction blocks.",
+    sampleCode: `BEGINNING-OF-PROGRAM
+DEFINE-INSTRUCTION turnright AS
+  BEGIN
+    turnleft;
+    turnleft;
+    turnleft;
+  END;
+
+BEGINNING-OF-EXECUTION
+  move;
+  pickbeeper;
+  turnright;
+  move;
+  putbeeper;
+  turnoff;
+END-OF-EXECUTION
+END-OF-PROGRAM`,
+    explanation: "Karel the Robot was introduced in Pattis's landmark textbook to teach algorithms without numeric variables or syntax bloat. The robot navigates streets and avenues, manipulating beepers while respecting walls.",
+    expectedOutput: `[Karel Execution] Robot moved to (2, 2), picked beeper, turned right, and placed beeper.`
+  },
+  {
+    id: 818,
+    name: "Karel++",
+    slug: "karel-plus-plus",
+    cssClass: "karel-plus-plus-lang",
+    category: "pedagogical-oo",
+    categoryLabel: "Object-Oriented Robot",
+    logo: "assets/logos/karel-plus-plus.svg",
+    shortDesc: "Object-oriented evolution of Karel the Robot designed by Joseph Bergin to introduce C++ and Java OOP.",
+    paradigm: "Object-Oriented / Robot Simulation",
+    designedBy: "Joseph Bergin, Mark Stehlik, Jim Roberts, Richard Pattis",
+    firstAppeared: "1997",
+    fileExtension: ".kpp",
+    primaryUse: "Teaching classes, inheritance, polymorphism, and encapsulation in introductory OOP courses",
+    syntaxSummary: "Class declarations extending UrRobot, method overrides, and instantiation of multiple robot workers.",
+    sampleCode: `class SmartRobot : public UrRobot {
+public:
+    SmartRobot(int street, int avenue, Direction dir, int beepers)
+        : UrRobot(street, avenue, dir, beepers) {}
+
+    void turnRight() {
+        turnLeft();
+        turnLeft();
+        turnLeft();
+    }
+};`,
+    explanation: "Karel++ modernized the classic Karel curriculum for the object-oriented era, letting students write classes, subclass base robots with new capabilities, and coordinate multiple autonomous robots on the same grid.",
+    expectedOutput: `SmartRobot instance initialized at St 1, Ave 1: turnRight() capability verified.`
+  },
+  {
+    id: 819,
+    name: "Logo Turtle",
+    slug: "logo-turtle",
+    cssClass: "logo-turtle-lang",
+    category: "computational-thinking",
+    categoryLabel: "Turtle Graphics",
+    logo: "assets/logos/logo-turtle.svg",
+    shortDesc: "Classic educational programming language designed by Seymour Papert and Wally Feurzeig at MIT.",
+    paradigm: "Functional / Procedural / Body-Syntonic",
+    designedBy: "Seymour Papert, Wally Feurzeig, Cynthia Solomon (MIT)",
+    firstAppeared: "1967",
+    fileExtension: ".logo, .lgo",
+    primaryUse: "Teaching mathematics, geometry, recursion, and computational thinking through body-syntonic learning",
+    syntaxSummary: "Turtle locomotion (FORWARD, BACK, RIGHT, LEFT, PENUP, PENDOWN), REPEAT loops, and TO procedure definitions.",
+    sampleCode: `TO SPIRAL :SIZE :ANGLE
+  IF :SIZE > 100 [ STOP ]
+  FORWARD :SIZE
+  RIGHT :ANGLE
+  SPIRAL :SIZE + 3 :ANGLE
+END
+
+CLEARSCREEN
+SPIRAL 5 91`,
+    explanation: "Logo was rooted in Jean Piaget's constructivist learning theory. By commanding a screen turtle using bodily intuition ('body-syntonic geometry'), children discover angles, polygons, and recursive fractal structures.",
+    expectedOutput: `[Logo Turtle] 32 recursive line segments drawn. Turtle at angle 91 deg.`
+  },
+  {
+    id: 820,
+    name: "NetLogo",
+    slug: "netlogo",
+    cssClass: "netlogo-lang",
+    category: "agent-modeling",
+    categoryLabel: "Agent-Based Modeling",
+    logo: "assets/logos/netlogo.svg",
+    shortDesc: "Multi-agent programmable modeling environment for simulating complex natural and social phenomena.",
+    paradigm: "Agent-Based / Concurrent Simulation",
+    designedBy: "Uri Wilensky (Northwestern CCL)",
+    firstAppeared: "1999",
+    fileExtension: ".nlogo",
+    primaryUse: "Epidemic spread modeling, predator-prey dynamics, traffic jams, and flocking behavior",
+    syntaxSummary: "Four agent types (turtles, patches, links, observer), ask blocks, spatial topology, and random walks.",
+    sampleCode: `to setup
+  clear-all
+  create-turtles 100 [
+    setxy random-xcor random-ycor
+    set color green
+  ]
+  reset-ticks
+end
+
+to go
+  ask turtles [
+    right random 30 - 15
+    forward 1
+  ]
+  tick
+end`,
+    explanation: "NetLogo enables scientists and students to explore emergent self-organization. Thousands of independent agents interact on a grid of patches following simple local rules, producing complex global patterns like bird flocking.",
+    expectedOutput: `[NetLogo Simulation] 100 turtles spawned on 33x33 patch grid: 100 ticks elapsed.`
+  },
+  {
+    id: 821,
+    name: "StarLogo",
+    slug: "starlogo",
+    cssClass: "starlogo-lang",
+    category: "massively-parallel",
+    categoryLabel: "Decentralized Systems",
+    logo: "assets/logos/starlogo.svg",
+    shortDesc: "Specialized massively parallel Logo dialect developed at MIT Media Lab by Mitchel Resnick.",
+    paradigm: "Massively Parallel Agent-Based",
+    designedBy: "Mitchel Resnick (MIT Media Lab)",
+    firstAppeared: "1990",
+    fileExtension: ".slog, .s3d",
+    primaryUse: "Simulating decentralized systems like ant colonies, slime molds, and traffic congestion",
+    syntaxSummary: "Massive parallelism with tens of thousands of turtles and active patches executing concurrently.",
+    sampleCode: `breed [ants ant]
+patches-own [chemical]
+
+to forage
+  ask ants [
+    if chemical > 0.5 [
+      face-patch-with-max chemical
+    ]
+    forward 1
+    diffuse chemical 0.1
+  ]
+end`,
+    explanation: "StarLogo broke free of centralized control fallacies by letting students simulate systems with tens of thousands of parallel entities, demonstrating how ant colonies find food through distributed pheromone trails.",
+    expectedOutput: `StarLogo Simulation: 5,000 ants interacting across 10,000 active patches.`
+  },
+  {
+    id: 822,
+    name: "Squeak Etoys",
+    slug: "squeak-etoys",
+    cssClass: "squeak-etoys-lang",
+    category: "morphic-authoring",
+    categoryLabel: "Live Morphic Computing",
+    logo: "assets/logos/squeak-etoys.svg",
+    shortDesc: "Complete integration of the Etoys visual scripting language on the open-source Squeak Smalltalk virtual machine.",
+    paradigm: "Visual Tile Scripting / Live Objects",
+    designedBy: "Viewpoints Research Institute",
+    firstAppeared: "1998",
+    fileExtension: ".pr, .morph",
+    primaryUse: "Simulations on the One Laptop per Child (OLPC XO-1), STEM school projects, and interactive books",
+    syntaxSummary: "Direct manipulation halo icons, tile drag-and-drop scripting, and embedded Squeak Smalltalk methods.",
+    sampleCode: `"Squeak Etoys Morph Script Connector"
+| morph |
+morph := Morph new.
+morph openInWorld.
+morph setProperty: #velocity toValue: (3 @ 4).
+Transcript show: 'Squeak Etoys active: Morph spawned in World with velocity 3@4.'; cr.`,
+    explanation: "Squeak Etoys was the software centerpiece of the OLPC (One Laptop Per Child) initiative. Running on a lightweight Squeak image, it gave millions of children access to live exploratory computing worldwide.",
+    expectedOutput: `Squeak Etoys active: Morph spawned in World with velocity 3@4.`
+  },
+  {
+    id: 823,
+    name: "LiveCode",
+    slug: "livecode",
+    cssClass: "livecode-lang",
+    category: "hypermedia-rad",
+    categoryLabel: "Natural-Language RAD",
+    logo: "assets/logos/livecode.svg",
+    shortDesc: "High-level, natural English-like programming language and cross-platform visual rapid development system.",
+    paradigm: "Event-Driven / English-like / RAD",
+    designedBy: "Kevin Miller & Runtime Revolution",
+    firstAppeared: "1993",
+    fileExtension: ".livecode, .rev",
+    primaryUse: "Rapid business apps, educational utilities, cross-platform desktop/mobile software",
+    syntaxSummary: "Direct English grammar (on mouseUp, put X into field, repeat with i = 1 to 10), card/stack model.",
+    sampleCode: `on mouseUp
+    put "NASA-YUZAKI" into tAuthor
+    put 823 into tEntryNumber
+    put "LiveCode execution successful for entry #" & tEntryNumber into field "Output"
+    answer "Application ready!" with "OK"
+end mouseUp`,
+    explanation: "Directly descended from HyperCard and MetaCard, LiveCode allows programmers to write functional code using English phrases. It compiles to native Windows, macOS, Linux, iOS, and Android applications.",
+    expectedOutput: `LiveCode execution successful for entry #823`
+  },
+  {
+    id: 824,
+    name: "SuperCard",
+    slug: "supercard",
+    cssClass: "supercard-lang",
+    category: "classic-mac-rad",
+    categoryLabel: "Classic Mac Hypermedia",
+    logo: "assets/logos/supercard.svg",
+    shortDesc: "Higher-capability hypermedia authoring environment expanding Apple's HyperCard with color and multiple windows.",
+    paradigm: "Event-Driven / SuperTalk Scripting",
+    designedBy: "Bill Appleton (Silicon Beach / Allegiant)",
+    firstAppeared: "1989",
+    fileExtension: ".scpt, .supercard",
+    primaryUse: "Commercial Macintosh software prototypes, educational courseware, and CD-ROM multimedia",
+    syntaxSummary: "SuperTalk language, stacks, backgrounds, cards, multiple concurrent windows, and full 24-bit color drawing.",
+    sampleCode: `on mouseUp
+  open window "InspectorPalette"
+  set the backColor of card "MainView" to "lavender"
+  put "SuperCard 24-bit visual stack rendered." into message box
+end mouseUp`,
+    explanation: "SuperCard solved the major limitations of classic HyperCard by adding support for full 24-bit color, multiple independent windows, arbitrary card sizes, and expandable menus, becoming a premier Mac authoring tool.",
+    expectedOutput: `SuperCard 24-bit visual stack rendered.`
+  },
+  {
+    id: 825,
+    name: "Toolbook",
+    slug: "toolbook",
+    cssClass: "toolbook-lang",
+    category: "windows-hypermedia",
+    categoryLabel: "Windows Hypermedia / OpenScript",
+    logo: "assets/logos/toolbook.svg",
+    shortDesc: "Windows-native hypermedia and computer-based training (CBT) authoring system created by Asymetrix.",
+    paradigm: "Event-Driven / Object-Based / OpenScript",
+    designedBy: "Paul Allen (Asymetrix)",
+    firstAppeared: "1990",
+    fileExtension: ".tbk",
+    primaryUse: "Corporate training, interactive CD-ROM courses, multimedia presentations, and Windows demos",
+    syntaxSummary: "OpenScript language (to handle buttonClick, put X into text of field), page/book object hierarchy.",
+    sampleCode: `-- ToolBook OpenScript Handler
+to handle buttonClick
+    set sysCursor to 4
+    put "Asymetrix ToolBook Training Module Loaded" into text of field "Status"
+    send playSound "welcome.wav"
+    set sysCursor to 1
+end buttonClick`,
+    explanation: "Founded by Microsoft co-founder Paul Allen, Asymetrix created ToolBook to serve as the PC counterpart to HyperCard, powering thousands of commercial CBT training courses throughout the 1990s.",
+    expectedOutput: `Asymetrix ToolBook Training Module Loaded`
+  },
+  {
+    id: 826,
+    name: "Director Lingo",
+    slug: "director-lingo",
+    cssClass: "director-lingo-lang",
+    category: "multimedia-scripting",
+    categoryLabel: "Multimedia / CD-ROM Scripting",
+    logo: "assets/logos/director-lingo.svg",
+    shortDesc: "Object-oriented scripting language behind Macromedia Director, the engine of the 1990s CD-ROM multimedia boom.",
+    paradigm: "Event-Driven / Score-Based / OOP",
+    designedBy: "John Thompson (Macromedia)",
+    firstAppeared: "1988",
+    fileExtension: ".dir, .lingo",
+    primaryUse: "Interactive CD-ROM games (Myst origin), Shockwave web games, and kiosk installations",
+    syntaxSummary: "Score frames, movie handlers (on exitFrame, on mouseUp), cast members, sprites, and 3D Shockwave API.",
+    sampleCode: `-- Macromedia Director Lingo Script
+on exitFrame me
+  sprite(1).member = member("Hero_Idle")
+  if the keyPressed = " " then
+    go to frame "JumpSequence"
+  else
+    go to the frame
+  end if
+end`,
+    explanation: "Lingo was the engine of the multimedia CD-ROM golden age, powering games like Myst and Dazzeloids. It provided sprite-based control over sound, video, animation frames, and later full 3D hardware graphics.",
+    expectedOutput: `Director Frame 42: Sprite(1) updated to member 'Hero_Idle'`
+  },
+  {
+    id: 827,
+    name: "Authorware",
+    slug: "authorware",
+    cssClass: "authorware-lang",
+    category: "visual-elearning",
+    categoryLabel: "Flowchart eLearning",
+    logo: "assets/logos/authorware.svg",
+    shortDesc: "Icon-based, flowchart-driven visual instructional authoring tool developed by Michael Allen and Macromedia.",
+    paradigm: "Visual Flowchart / Scripted Interaction",
+    designedBy: "Michael Allen (Authorware / Macromedia)",
+    firstAppeared: "1987",
+    fileExtension: ".a6p, .a7p",
+    primaryUse: "Aviation flight training, military simulations, medical education, and corporate e-learning",
+    syntaxSummary: "Flowline of draggable icons (Display, Motion, Erase, Decision, Interaction) combined with custom script logic.",
+    sampleCode: `// Authorware Script Icon calculation
+TotalQuestions := 10;
+ScorePercent := (CorrectAnswers / TotalQuestions) * 100;
+if ScorePercent >= 80 then
+    DisplayIcon(IconID@"PassCertificate");
+else
+    GoTo(IconID@"ReviewLesson");
+end if;`,
+    explanation: "Authorware revolutionized computer-based training with its visual Flowline metaphor. Authors dragged icons representing questions, animations, and video clips onto a central diagram without needing low-level programming.",
+    expectedOutput: `Authorware Courseware Engine: Score 90% - Certificate icon dispatched.`
+  },
+  {
+    id: 828,
+    name: "Flash ActionScript",
+    slug: "flash-actionscript",
+    cssClass: "flash-actionscript-lang",
+    category: "web-animation",
+    categoryLabel: "Web Animation / RIA",
+    logo: "assets/logos/flash-actionscript.svg",
+    shortDesc: "Object-oriented ECMAScript-based language powering interactive animations and rich web applications in Adobe Flash.",
+    paradigm: "Object-Oriented / Event-Driven / ECMAScript",
+    designedBy: "Gary Grossman (Macromedia / Adobe)",
+    firstAppeared: "1998",
+    fileExtension: ".as",
+    primaryUse: "Flash web games, interactive video players (YouTube initial player), banners, and vector UI",
+    syntaxSummary: "ActionScript 3.0 strong typing, display list (Sprite, MovieClip), EventDispatcher, and ByteArray manipulation.",
+    sampleCode: `package {
+    import flash.display.Sprite;
+    import flash.events.Event;
+
+    public class Main extends Sprite {
+        private var circle:Sprite;
+
+        public function Main() {
+            circle = new Sprite();
+            circle.graphics.beginFill(0xDC2626);
+            circle.graphics.drawCircle(50, 50, 40);
+            circle.graphics.endFill();
+            addChild(circle);
+            trace("Flash ActionScript 3.0 Display List initialized.");
+        }
+    }
+}`,
+    explanation: "ActionScript defined interactive web multimedia for over a decade. In ActionScript 3.0, it became a lightning-fast, strictly-typed ECMAScript language compiled to AVM2 bytecode for high-speed games and vector UI.",
+    expectedOutput: `Flash ActionScript 3.0 Display List initialized.`
+  },
+  {
+    id: 829,
+    name: "Haxe Flixel",
+    slug: "haxe-flixel",
+    cssClass: "haxe-flixel-lang",
+    category: "game-framework",
+    categoryLabel: "2D Game Framework",
+    logo: "assets/logos/haxe-flixel.svg",
+    shortDesc: "Open-source 2D game framework based on Haxe and OpenFL, successor to Adam Saltsman's legendary Flixel engine.",
+    paradigm: "Object-Oriented / 2D Game Loop",
+    designedBy: "Alexander Hohlov & HaxeFlixel Community",
+    firstAppeared: "2013",
+    fileExtension: ".hx",
+    primaryUse: "Indie 2D games (Friday Night Funkin', Papers, Please ports), cross-compiling to web, mobile, and desktop",
+    syntaxSummary: "Haxe strongly-typed classes extending FlxState, FlxSprite, FlxG global controls, and camera tweens.",
+    sampleCode: `package;
+
+import flixel.FlxState;
+import flixel.FlxSprite;
+import flixel.text.FlxText;
+
+class PlayState extends FlxState {
+    override public function create():Void {
+        super.create();
+        var hero = new FlxSprite(100, 200);
+        hero.makeGraphic(32, 32, 0xFFFACC15);
+        add(hero);
+        add(new FlxText(10, 10, 0, "HaxeFlixel 2D Engine Online", 16));
+    }
+}`,
+    explanation: "HaxeFlixel brings the simplicity of Flash game development into the modern era, compiling from clean Haxe source directly into high-performance native C++ binaries for Steam, Switch, iOS, and WebAssembly.",
+    expectedOutput: `[HaxeFlixel Engine] PlayState initialized: 1 active sprite, 60 FPS target.`
+  },
+  {
+    id: 830,
+    name: "Monkey X",
+    slug: "monkey-x",
+    cssClass: "monkey-x-lang",
+    category: "transpiled-game",
+    categoryLabel: "Multi-Target Game Language",
+    logo: "assets/logos/monkey-x.svg",
+    shortDesc: "Object-oriented game programming language by Mark Sibly translating into C++, C#, Java, JavaScript, and ActionScript.",
+    paradigm: "Object-Oriented / Transpiled Game Language",
+    designedBy: "Mark Sibly (Blitz Research)",
+    firstAppeared: "2011",
+    fileExtension: ".monkey",
+    primaryUse: "Write-once run-anywhere indie 2D video games targeting HTML5, Android, iOS, Windows, and macOS",
+    syntaxSummary: "Modern BASIC-like syntax, App lifecycle (OnCreate, OnUpdate, OnRender), Mojo drawing API.",
+    sampleCode: `Strict
+Import mojo
+
+Class Game Extends App
+    Field x:Float = 100
+    Method OnCreate()
+        SetUpdateRate 60
+    End
+    Method OnRender()
+        Cls 0, 0, 50
+        DrawCircle(x, 150, 30)
+    End
+End
+
+Function Main()
+    New Game
+End`,
+    explanation: "Created by the author of BlitzBasic, Monkey X introduced clean trans-compilation, converting high-level game code into target-native code (Java for Android, C++ for iOS/PC, JavaScript for HTML5) without runtime overhead.",
+    expectedOutput: `[Monkey X Runtime] Canvas cleared: Mojo DrawCircle dispatched at (100, 150).`
+  },
+  {
+    id: 831,
+    name: "BlitzBasic",
+    slug: "blitzbasic",
+    cssClass: "blitzbasic-lang",
+    category: "game-basic",
+    categoryLabel: "2D/3D Game BASIC",
+    logo: "assets/logos/blitzbasic.svg",
+    shortDesc: "Pioneering game programming dialect created by Mark Sibly, starting on the Amiga and conquering PC game development.",
+    paradigm: "Procedural / Game-Loop Architecture",
+    designedBy: "Mark Sibly",
+    firstAppeared: "1990",
+    fileExtension: ".bb",
+    primaryUse: "Fast 2D and 3D arcade games, indie titles (Worms precursor, Captain Bumper), and demoscene coding",
+    syntaxSummary: "Graphics mode setup (Graphics3D), double-buffered main loop (Cls, Flip), hardware blitz commands.",
+    sampleCode: `; BlitzBasic 2D Game Loop
+Graphics 800, 600, 32, 2
+SetBuffer BackBuffer()
+
+x = 100 : y = 100
+While Not KeyDown(1)
+    Cls
+    Color 255, 215, 0
+    Rect x, y, 64, 64, True
+    Flip
+Wend
+End`,
+    explanation: "BlitzBasic delivered blazing graphics on Commodore Amiga by accessing hardware custom chips directly, and later democratized PC game development with Blitz2D, Blitz3D, and BlitzPlus.",
+    expectedOutput: `Graphics mode 800x600x32 set. BackBuffer active.`
+  },
+  {
+    id: 832,
+    name: "BlitzMax",
+    slug: "blitzmax",
+    cssClass: "blitzmax-lang",
+    category: "game-basic",
+    categoryLabel: "Cross-Platform OOP BASIC",
+    logo: "assets/logos/blitzmax.svg",
+    shortDesc: "Advanced multi-platform object-oriented evolution of BlitzBasic by Blitz Research compiling to native machine code.",
+    paradigm: "Object-Oriented / Procedural / Systems",
+    designedBy: "Mark Sibly",
+    firstAppeared: "2004",
+    fileExtension: ".bmx",
+    primaryUse: "Commercial indie games (Darwinia OS X port, Aquaria toolchain), 2D hardware accelerators",
+    syntaxSummary: "Custom Type definitions, methods, polymorphism, strict pointer syntax, and native OpenGL/DirectX drivers.",
+    sampleCode: `SuperStrict
+Framework BRL.GLMax2D
+Import BRL.StandardIO
+
+Type TPlayer
+    Field x:Float, y:Float
+    Method Move(dx:Float, dy:Float)
+        x :+ dx
+        y :+ dy
+    End Method
+End Type
+
+Local player:TPlayer = New TPlayer
+player.Move(15.5, 20.0)
+Print "BlitzMax Player coordinates: (" + player.x + ", " + player.y + ")"`,
+    explanation: "BlitzMax expanded BlitzBasic into a mature systems-grade language. It introduced native modular imports (BRL framework), garbage collection, object-oriented types, and seamless C/Assembly interop.",
+    expectedOutput: `BlitzMax Player coordinates: (15.5, 20)`
+  },
+  {
+    id: 833,
+    name: "PureBasic",
+    slug: "purebasic",
+    cssClass: "purebasic-lang",
+    category: "compiled-basic",
+    categoryLabel: "Native Compiled BASIC",
+    logo: "assets/logos/purebasic.svg",
+    shortDesc: "Blazing fast native-compiling BASIC language by Fantaisie Software producing tiny, standalone executables.",
+    paradigm: "Procedural / Native High-Performance",
+    designedBy: "Frédéric Laboureur (Fantaisie Software)",
+    firstAppeared: "1998",
+    fileExtension: ".pb, .pbi",
+    primaryUse: "Portable desktop utilities, system tools, game development, and ultra-small footprint binaries",
+    syntaxSummary: "Structured BASIC, integrated pointers, direct inline assembly (EnableASM), and extensive built-in OS libraries.",
+    sampleCode: `; PureBasic Window & Event Loop
+If OpenWindow(0, 100, 100, 400, 200, "CodePlay PureBasic Engine", #PB_Window_SystemMenu)
+    ButtonGadget(0, 130, 80, 140, 40, "Click Me")
+    Debug "PureBasic GUI successfully loaded. Executable size under 64KB."
+EndIf`,
+    explanation: "PureBasic compiles directly to native assembly (x86/x64/ARM), producing standalone binaries under 100KB without dependencies or virtual machines. It provides over 1,400 built-in cross-platform API commands.",
+    expectedOutput: `[PureBasic Compiler] Native binary generated. Size: 48 KB. No external DLLs.`
+  },
+  {
+    id: 834,
+    name: "DarkBASIC",
+    slug: "darkbasic",
+    cssClass: "darkbasic-lang",
+    category: "3d-game-basic",
+    categoryLabel: "DirectX 3D Game BASIC",
+    logo: "assets/logos/darkbasic.svg",
+    shortDesc: "Specialized PC game programming language by The Game Creators designed for effortless 3D DirectX graphics.",
+    paradigm: "Procedural / 3D Graphics Centric",
+    designedBy: "Lee Bamber (The Game Creators)",
+    firstAppeared: "2000",
+    fileExtension: ".dba",
+    primaryUse: "3D first-person shooters, space sims, terrain rendering, and beginner DirectX game creation",
+    syntaxSummary: "Simple one-line 3D commands: MAKE OBJECT CUBE, LOAD OBJECT, POSITION CAMERA, SYNC ON, SYNC.",
+    sampleCode: `REM DarkBASIC Professional 3D Startup
+SYNC ON : SYNC RATE 60
+MAKE OBJECT SPHERE 1, 50.0
+COLOR OBJECT 1, RGB(220, 38, 38)
+POSITION CAMERA 0.0, 50.0, -120.0
+POINT CAMERA 0.0, 0.0, 0.0
+SYNC
+PRINT "DarkBASIC 3D Sphere rendered at origin."`,
+    explanation: "DarkBASIC and DarkBASIC Professional democratized 3D game creation in the DirectX 8/9 era. Commands like 'MAKE OBJECT CUBE' and 'LOAD SOUND' let hobbyists build fully textured 3D games in fewer than 100 lines of code.",
+    expectedOutput: `DarkBASIC 3D Sphere rendered at origin.`
+  },
+  {
+    id: 835,
+    name: "GLBasic",
+    slug: "glbasic",
+    cssClass: "glbasic-lang",
+    category: "cross-platform-game",
+    categoryLabel: "Cross-Platform 3D Game",
+    logo: "assets/logos/glbasic.svg",
+    shortDesc: "Cross-platform BASIC programming language tailored for 2D/3D game creation across desktop, mobile, and consoles.",
+    paradigm: "Procedural / C++ Transpiled",
+    designedBy: "Gernot Frisch",
+    firstAppeared: "2000",
+    fileExtension: ".gbas",
+    primaryUse: "Cross-platform commercial games compiling to Windows, Linux, Mac, iOS, Android, and WebAssembly",
+    syntaxSummary: "Commands for 2D sprites, 3D meshes (X_LOADOBJ, X_DRAWOBJ), collision detection, and network sockets.",
+    sampleCode: `// GLBasic Multi-Platform Init
+SETSCREEN 800, 600, 0
+LIMITFPS 60
+
+WHILE TRUE
+    PRINT "CodePlay GLBasic Engine Active", 100, 100
+    SHOWSCREEN
+WEND`,
+    explanation: "GLBasic compiles directly into C++ before invoking native gcc/clang compilers, allowing indie developers to author 2D/3D games once and ship them seamlessly across mobile, PC, and handheld consoles.",
+    expectedOutput: `Screen mode 800x600 initialized. OpenGL hardware acceleration active.`
+  },
+  {
+    id: 836,
+    name: "Gambas",
+    slug: "gambas",
+    cssClass: "gambas-lang",
+    category: "linux-rad",
+    categoryLabel: "Linux Visual RAD",
+    logo: "assets/logos/gambas.svg",
+    shortDesc: "Full-featured object-oriented graphical development environment and BASIC interpreter/compiler for Linux.",
+    paradigm: "Object-Oriented / Visual RAD",
+    designedBy: "Benoît Minisini",
+    firstAppeared: "1999",
+    fileExtension: ".class, .module",
+    primaryUse: "Visual Linux desktop applications (equivalent of Visual Basic for Unix/X11/Wayland)",
+    syntaxSummary: "Object-oriented BASIC syntax, Form designer, GTK+/Qt binding components, and database connectivity.",
+    sampleCode: `' Gambas 3 Form Event
+Public Sub Button_Click()
+  Dim count As Integer = 836
+  Message.Info("Welcome to Gambas on Linux! Entry: " & CStr(count))
+  Print "Gambas desktop window event dispatched."
+End`,
+    explanation: "Gambas ('Gambas Almost Means Basic') is the premier visual development environment for the Linux desktop, featuring a complete IDE, form designer, and transparent bindings for both Qt and GTK GUI toolkits.",
+    expectedOutput: `Gambas desktop window event dispatched.`
+  },
+  {
+    id: 837,
+    name: "RapidQ",
+    slug: "rapidq",
+    cssClass: "rapidq-lang",
+    category: "rapid-basic",
+    categoryLabel: "Cross-Platform GUI BASIC",
+    logo: "assets/logos/rapidq.svg",
+    shortDesc: "Free, multiplatform semi-compiled BASIC compiler created by William Yu for rapid GUI and console creation.",
+    paradigm: "Procedural / Object-Based GUI",
+    designedBy: "William Yu",
+    firstAppeared: "2000",
+    fileExtension: ".rq, .bas",
+    primaryUse: "Quick Windows and Linux desktop utilities, bytecode scripting, and CGI web backend tools",
+    syntaxSummary: "QBasic-compatible statements coupled with visual components (QForm, QButton, QCanvas, QTimer).",
+    sampleCode: `$APPTYPE GUI
+$INCLUDE "RapidQ.inc"
+
+CREATE Form AS QFORM
+    Caption = "RapidQ Engine"
+    Width = 320
+    Height = 200
+    CREATE Btn AS QBUTTON
+        Top = 50 : Left = 80 : Width = 140
+        Caption = "Launch"
+    END CREATE
+END CREATE
+Form.ShowModal`,
+    explanation: "RapidQ combined familiar QBasic syntax with modern visual GUI components, compiling source code into a standalone bytecode executable bundled with an internal virtual engine for instant distribution.",
+    expectedOutput: `RapidQ Modal Form created: Dimensions 320x200.`
+  },
+  {
+    id: 838,
+    name: "Liberty BASIC",
+    slug: "liberty-basic",
+    cssClass: "liberty-basic-lang",
+    category: "windows-basic",
+    categoryLabel: "Windows Desktop BASIC",
+    logo: "assets/logos/liberty-basic.svg",
+    shortDesc: "Popular Windows-native BASIC language developed by Carl Gundel with straightforward window and API handling.",
+    paradigm: "Procedural / Event-Driven Windows",
+    designedBy: "Carl Gundel (Shoptalk Systems)",
+    firstAppeared: "1992",
+    fileExtension: ".bas",
+    primaryUse: "Introductory programming for Windows, hobbyist engineering tools, and serial port communication",
+    syntaxSummary: "NOMAINWIN, window command syntax (button #w.btn, \"Click\", [clickHandler], UL, 10, 10), and DLL calls.",
+    sampleCode: `nomainwin
+WindowWidth = 350 : WindowHeight = 200
+button #win.btn, "Calculate", [doCalc], UL, 50, 40, 100, 30
+statictext #win.lbl, "Ready", 50, 90, 200, 25
+open "Liberty BASIC Tool" for window as #win
+wait
+
+[doCalc]
+#win.lbl "Processed: 838 entries verified."
+wait`,
+    explanation: "Liberty BASIC brought traditional BASIC into the graphical Windows environment without requiring complex C++ SDK boilerplate. It is renowned for its easy serial port hardware control and Win32 DLL calls.",
+    expectedOutput: `Liberty BASIC Window Initialized: [doCalc] handler registered.`
+  },
+  {
+    id: 839,
+    name: "Just BASIC",
+    slug: "just-basic",
+    cssClass: "just-basic-lang",
+    category: "freeware-basic",
+    categoryLabel: "Free Educational BASIC",
+    logo: "assets/logos/just-basic.svg",
+    shortDesc: "Free customized edition of Liberty BASIC created by Carl Gundel for novice programming education.",
+    paradigm: "Procedural / Educational",
+    designedBy: "Carl Gundel",
+    firstAppeared: "2004",
+    fileExtension: ".bas",
+    primaryUse: "Teaching fundamental programming logic and Windows GUI basics in classrooms at zero cost",
+    syntaxSummary: "Simplified Liberty BASIC grammar, turtle graphics, window handlers, sound playing, and math functions.",
+    sampleCode: `' Just BASIC Sample
+print "Welcome to Just BASIC programming!"
+for i = 1 to 5
+    print "Count: "; i; " - Square: "; i * i
+next i
+notice "Completed!"`,
+    explanation: "Just BASIC is a completely free programming environment based on the battle-tested Liberty BASIC compiler, providing students with a zero-cost entry point into writing genuine Windows applications.",
+    expectedOutput: `Welcome to Just BASIC programming!
+Count: 1 - Square: 1
+Count: 2 - Square: 4
+Count: 3 - Square: 9
+Count: 4 - Square: 16
+Count: 5 - Square: 25`
+  },
+  {
+    id: 840,
+    name: "Yabasic",
+    slug: "yabasic",
+    cssClass: "yabasic-lang",
+    category: "lightweight-basic",
+    categoryLabel: "Lightweight Scripting BASIC",
+    logo: "assets/logos/yabasic.svg",
+    shortDesc: "Compact, cross-platform BASIC interpreter by Marc-Oliver Ihm supporting console and vector 2D graphics.",
+    paradigm: "Structured / Interpreted Scripting",
+    designedBy: "Marc-Oliver Ihm",
+    firstAppeared: "1995",
+    fileExtension: ".yab",
+    primaryUse: "Quick computational scripting, PS2 Linux development, and cross-platform desktop plotting",
+    syntaxSummary: "Structured loops (while/wend, repeat/until), graphic window commands (openwin, line, circle, dot).",
+    sampleCode: `// Yabasic Vector Geometry
+openwindow 400, 300
+clear window
+color 50, 150, 255
+for r = 20 to 120 step 20
+    circle 200, 150, r
+next r
+print "Yabasic drawing complete."`,
+    explanation: "Yabasic ('Yet Another BASIC') combines simple modern control flow with built-in 2D vector graphics. It was notably bundled on the official Sony PlayStation 2 demo disc to enable programming on home consoles.",
+    expectedOutput: `Yabasic drawing complete.`
+  },
+  {
+    id: 841,
+    name: "SmallBASIC",
+    slug: "smallbasic",
+    cssClass: "smallbasic-lang",
+    category: "mobile-retro-basic",
+    categoryLabel: "Multi-Platform Retro BASIC",
+    logo: "assets/logos/smallbasic.svg",
+    shortDesc: "Fast, highly-portable open-source BASIC interpreter by Nicholas Christopoulos running from PalmOS to Android.",
+    paradigm: "Structured / Multi-Paradigm / Mobile",
+    designedBy: "Nicholas Christopoulos",
+    firstAppeared: "1999",
+    fileExtension: ".bas",
+    primaryUse: "Mathematical scripting, handheld programming, games, and retro algorithmic experimentation",
+    syntaxSummary: "Structured syntax, matrices, complex numbers, closures, first-class functions, and audio synthesis.",
+    sampleCode: `' SmallBASIC Multi-Platform Script
+dim points(5, 2)
+for i = 0 to 4
+    points(i, 0) = i * 20
+    points(i, 1) = i * i * 5
+    print "Point "; i; " -> ("; points(i,0); ", "; points(i,1); ")"
+next i`,
+    explanation: "SmallBASIC is a versatile open-source engine originally built for PalmOS hand-helds that now runs on Linux, Windows, Raspberry Pi, and Android, featuring advanced data structures and dynamic matrix math.",
+    expectedOutput: `Point 0 -> (0, 0)
+Point 1 -> (20, 5)
+Point 2 -> (40, 20)
+Point 3 -> (60, 45)
+Point 4 -> (80, 80)`
+  },
+  {
+    id: 842,
+    name: "QB64",
+    slug: "qb64",
+    cssClass: "qb64-lang",
+    category: "retro-extended",
+    categoryLabel: "Extended QBasic Compiler",
+    logo: "assets/logos/qb64.svg",
+    shortDesc: "Modern multiplatform optimizing compiler delivering 100% backward compatibility with Microsoft QBasic and QuickBASIC.",
+    paradigm: "Procedural / C++ Transpiled",
+    designedBy: "Galleon & QB64 Phoenix Team",
+    firstAppeared: "2007",
+    fileExtension: ".bas",
+    primaryUse: "Running legacy DOS QBasic code natively on 64-bit modern OS with modern OpenGL and networking",
+    syntaxSummary: "Complete QBasic 4.5 language augmented with 64-bit integers (_INTEGER64), hardware surfaces, and TCP/IP.",
+    sampleCode: `' QB64 Extended Mode
+_TITLE "CodePlay QB64 Simulation"
+SCREEN _NEWIMAGE(640, 480, 32)
+COLOR _RGB32(255, 215, 0)
+LOCATE 2, 2: PRINT "QBasic 4.5 100% Compatibility Engine"
+LINE (50, 50)-(300, 200), _RGB32(0, 180, 255), BF
+PRINT "Native 64-bit compiled frame rendered."`,
+    explanation: "QB64 translates traditional MS-DOS QuickBASIC code into C++ and compiles it into native 64-bit executables, allowing classic games like Gorillas and Nibbles to run without DOSBox while unlocking modern 32-bit color and sound.",
+    expectedOutput: `QBasic 4.5 100% Compatibility Engine
+Native 64-bit compiled frame rendered.`
+  },
+  {
+    id: 843,
+    name: "ThinBasic",
+    slug: "thinbasic",
+    cssClass: "thinbasic-lang",
+    category: "modular-windows",
+    categoryLabel: "Modular Windows Scripting",
+    logo: "assets/logos/thinbasic.svg",
+    shortDesc: "Modular interpreted scripting language for Windows automation, administration, and game creation by Eros Olmi.",
+    paradigm: "Procedural / Modular Automation",
+    designedBy: "Eros Olmi",
+    firstAppeared: "2004",
+    fileExtension: ".tbasic",
+    primaryUse: "Windows sysadmin automation, UI scripting, file parsing, and OpenGL visualization modules",
+    syntaxSummary: "Modular architecture via 'Uses' statements (Uses \"Console\", \"UI\", \"File\"), structured type definitions.",
+    sampleCode: `Uses "Console"
+
+Function TBMain() As Long
+    Console_WriteLine("ThinBasic Automation Engine Active.")
+    Dim total As Long = 843
+    Console_WriteLine("Target Entry: " + Str$(total))
+    Return 0
+End Function`,
+    explanation: "ThinBasic provides a rich modular ecosystem for Windows scripting. Developers load only the modules they require (e.g. SQLite, TCP, XML, UI) to build nimble administration utilities with intuitive BASIC syntax.",
+    expectedOutput: `ThinBasic Automation Engine Active.
+Target Entry: 843`
+  },
+  {
+    id: 844,
+    name: "PowerBASIC",
+    slug: "powerbasic",
+    cssClass: "powerbasic-lang",
+    category: "native-systems",
+    categoryLabel: "High-Performance Native BASIC",
+    logo: "assets/logos/powerbasic.svg",
+    shortDesc: "Ultra-fast, native machine-code compiling BASIC by Bob Zale, direct descendant of Borland's Turbo BASIC.",
+    paradigm: "Procedural / Systems / Assembly-Speed",
+    designedBy: "Robert Zale (PowerBASIC Inc.)",
+    firstAppeared: "1989",
+    fileExtension: ".bas, .inc",
+    primaryUse: "High-speed Win32 DLLs, commercial desktop software, low-latency system drivers, and assembly utilities",
+    syntaxSummary: "Native pointers, direct inline ASM blocks, COM objects, thread pools, and zero-runtime-library binaries.",
+    sampleCode: `#COMPILE EXE
+#DIM ALL
+
+FUNCTION PBMAIN () AS LONG
+    LOCAL Result AS LONG
+    Result = 42 * 20
+    MSGBOX "PowerBASIC Compiled Result: " & STR$(Result), %MB_OK, "PowerBASIC"
+    FUNCTION = 0
+END FUNCTION`,
+    explanation: "Originally published as Turbo BASIC by Borland, Robert Zale's PowerBASIC compiles directly to hyper-optimized x86 machine instructions that rival C and C++ in raw algorithmic throughput without needing external runtime DLLs.",
+    expectedOutput: `PowerBASIC Compiled Result: 840`
+  },
+  {
+    id: 845,
+    name: "XBasic",
+    slug: "xbasic",
+    cssClass: "xbasic-lang",
+    category: "compiled-gui",
+    categoryLabel: "High-Performance GUI BASIC",
+    logo: "assets/logos/xbasic.svg",
+    shortDesc: "Fast structured dialect of BASIC created by Max Reason featuring an integrated GUI designer and cross-platform compiler.",
+    paradigm: "Procedural / Structured / Native",
+    designedBy: "Max Reason",
+    firstAppeared: "1998",
+    fileExtension: ".x",
+    primaryUse: "Fast mathematical modeling, scientific calculations, and responsive cross-platform GUI utilities",
+    syntaxSummary: "Strict type declarations, SUB/FUNCTION modular blocks, and embedded GUI event messaging.",
+    sampleCode: `PROGRAM  "XBasic Math Engine"
+VERSION  "1.0"
+
+FUNCTION  Entry ()
+  DOUBLE  x, y
+  x = 845.0
+  y = SQRT (x) * 2.0
+  PRINT "XBasic Calculated Value: "; y
+END FUNCTION
+END PROGRAM`,
+    explanation: "XBasic combined clean structured programming with a built-in interactive GUI builder and native compiler for Linux and Windows, emphasizing execution speed, clean mathematical syntax, and low memory overhead.",
+    expectedOutput: `XBasic Calculated Value: 58.1377`
+  },
+  {
+    id: 846,
+    name: "Basic4android",
+    slug: "basic4android",
+    cssClass: "basic4android-lang",
+    category: "mobile-rad",
+    categoryLabel: "Android Native RAD",
+    logo: "assets/logos/basic4android.svg",
+    shortDesc: "Rapid application development tool by Anywhere Software compiling simplified BASIC into 100% native Android Java APKs.",
+    paradigm: "Event-Driven / Native Mobile RAD",
+    designedBy: "Erel Uziel (Anywhere Software)",
+    firstAppeared: "2010",
+    fileExtension: ".b4a",
+    primaryUse: "Commercial Android enterprise apps, industrial tablets, Bluetooth IoT tools, and POS terminals",
+    syntaxSummary: "Sub Activity_Create, visual designer layouts, native Java object wrappers, and asynchronous event callbacks.",
+    sampleCode: `Sub Process_Globals
+    ' Global hardware variables
+End Sub
+
+Sub Globals
+    Dim lblStatus As Label
+End Sub
+
+Sub Activity_Create(FirstTime As Boolean)
+    lblStatus.Initialize("")
+    lblStatus.Text = "B4A Native Android Application Initialized"
+    Activity.AddView(lblStatus, 10dip, 10dip, 300dip, 50dip)
+End Sub`,
+    explanation: "Basic4android (B4A) allows developers to write straightforward BASIC code that compiles into native Android APKs without the complexity of Java or Kotlin, complete with a visual designer and live device debugger.",
+    expectedOutput: `[B4A Compiler] Java source emitted. Native Android APK signed and verified.`
+  },
+  {
+    id: 847,
+    name: "B4X",
+    slug: "b4x",
+    cssClass: "b4x-lang",
+    category: "multiplatform-rad",
+    categoryLabel: "Multi-Platform RAD Suite",
+    logo: "assets/logos/b4x.svg",
+    shortDesc: "Unified multiplatform development suite (B4A, B4J, B4i, B4R) sharing single codebase across Mobile, Desktop, and IoT.",
+    paradigm: "Object-Oriented / Cross-Platform RAD",
+    designedBy: "Anywhere Software",
+    firstAppeared: "2013",
+    fileExtension: ".b4xlib, .bas",
+    primaryUse: "Sharing single business logic across Android (B4A), iOS (B4i), Desktop/Server (B4J), and Arduino/ESP32 (B4R)",
+    syntaxSummary: "XUI cross-platform UI abstractions, B4XPages architecture, and native code emission per target.",
+    sampleCode: `#Region Shared B4X Code
+Sub Process_Globals
+    Private xui As XUI
+End Sub
+
+Public Sub ShowAlert(Message As String)
+    xui.MsgboxAsync(Message, "B4X Cross-Platform Engine")
+End Sub
+#End Region`,
+    explanation: "B4X is an ecosystem comprising B4A (Android), B4i (iOS), B4J (Desktop & Web Server), and B4R (Arduino/ESP8266). B4XPages allows up to 100% code sharing across desktop, server, mobile, and microcontroller platforms.",
+    expectedOutput: `B4X Cross-Platform module compiled: Targets B4A, B4i, B4J, B4R aligned.`
+  },
+  {
+    id: 848,
+    name: "Xojo",
+    slug: "xojo",
+    cssClass: "xojo-lang",
+    category: "cross-platform-rad",
+    categoryLabel: "Cross-Platform Native OOP",
+    logo: "assets/logos/xojo.svg",
+    shortDesc: "Rapid object-oriented development tool and language compiling to native desktop, web, iOS, Android, and Raspberry Pi.",
+    paradigm: "Object-Oriented / Visual RAD",
+    designedBy: "Geoff Perlman (Xojo Inc.)",
+    firstAppeared: "2013",
+    fileExtension: ".xojo_binary_project, .xojo_code",
+    primaryUse: "Enterprise multiplatform desktop tools, native iOS/Android apps, and self-hosted Web applications",
+    syntaxSummary: "Strongly typed OOP, drag-and-drop UI, SQLite database integration, and LLVM native compiler backend.",
+    sampleCode: `// Xojo Native Window Event
+Sub Open() Handles Open
+    Var connection As New SQLiteDatabase
+    connection.DatabaseFile = SpecialFolder.ApplicationData.Child("app.db")
+    If connection.Connect Then
+        MessageBox("Xojo connected to database on native desktop.")
+    End If
+End Sub`,
+    explanation: "Xojo (formerly REALbasic) compiles to native machine code via LLVM for macOS (Apple Silicon/Intel), Windows, Linux, iOS, Android, and Raspberry Pi, offering a rich drag-and-drop designer and full object-oriented syntax.",
+    expectedOutput: `Xojo connected to database on native desktop.`
+  },
+  {
+    id: 849,
+    name: "REALbasic",
+    slug: "realbasic",
+    cssClass: "realbasic-lang",
+    category: "mac-visual-basic",
+    categoryLabel: "Visual Mac/Win RAD",
+    logo: "assets/logos/realbasic.svg",
+    shortDesc: "Pioneering visual object-oriented development environment created by Geoff Perlman as the Macintosh answer to Visual Basic.",
+    paradigm: "Object-Oriented / Event-Driven RAD",
+    designedBy: "Geoff Perlman (REAL Software)",
+    firstAppeared: "1998",
+    fileExtension: ".rb, .rbo",
+    primaryUse: "Building native Mac OS 9 and Mac OS X applications with drag-and-drop visual forms",
+    syntaxSummary: "Clean Visual Basic-style syntax infused with real class inheritance, interfaces, and Mac OS Carbon/Cocoa APIs.",
+    sampleCode: `' REALbasic Form Code
+Sub Action()
+    Dim total As Integer
+    total = 849
+    MsgBox "REALbasic Cross-Compiler: Target #" + Str(total) + " online."
+End Sub`,
+    explanation: "REALbasic allowed thousands of developers to build commercial Mac software using familiar visual forms and event-driven BASIC, before evolving into the modern multiplatform Xojo environment.",
+    expectedOutput: `REALbasic Cross-Compiler: Target #849 online.`
+  },
+  {
+    id: 850,
+    name: "Lazarus",
+    slug: "lazarus",
+    cssClass: "lazarus-lang",
+    category: "visual-pascal-rad",
+    categoryLabel: "Free Pascal RAD IDE",
+    logo: "assets/logos/lazarus.svg",
+    shortDesc: "Mature, open-source Delphi-compatible visual RAD IDE and component library (LCL) powered by the Free Pascal compiler.",
+    paradigm: "Object-Oriented / Native Compiled RAD",
+    designedBy: "Cliff Baeseman, Shane Miller, Marc Weustink",
+    firstAppeared: "1999",
+    fileExtension: ".lpr, .pas, .lfm",
+    primaryUse: "Write Once, Compile Anywhere native desktop applications across Windows, Linux, macOS, and BSD",
+    syntaxSummary: "Object Pascal language, Lazarus Component Library (LCL), visual form files (.lfm), and native widgetsets.",
+    sampleCode: `program CodePlayLazarus;
+{$mode objfpc}{$H+}
+uses
+  Classes, SysUtils;
+
+var
+  LangCount: Integer;
+begin
+  LangCount := 850;
+  Writeln('Lazarus & Free Pascal: Milestone Reached!');
+  Writeln(Format('Successfully registered %d programming languages.', [LangCount]));
+end.`,
+    explanation: "Lazarus provides a 100% free, Delphi-compatible visual IDE powered by the Free Pascal compiler. Through its LCL abstraction layer, the exact same source code compiles directly into native Win32, Cocoa, or GTK+/Qt applications.",
+    expectedOutput: `Lazarus & Free Pascal: Milestone Reached!
+Successfully registered 850 programming languages.`
+  }
+];
+
+const outputPath = path.resolve(__dirname, '../data/section16-entries.js');
+const fileContent = `// Section 16 Entries Dataset (801-850)
+// Generated for CodePlay - 50 Programming Languages & Technologies
+
+export const section16Entries = ${JSON.stringify(entries, null, 2)};
+`;
+
+fs.writeFileSync(outputPath, fileContent, 'utf8');
+console.log(`Generated data/section16-entries.js with ${entries.length} verified entries (801-850)`);

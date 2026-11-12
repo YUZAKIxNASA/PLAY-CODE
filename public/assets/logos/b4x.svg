@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128">
+  <defs>
+    <linearGradient id="b4xG" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1D4ED8"/>
+      <stop offset="100%" stop-color="#081846"/>
+    </linearGradient>
+  </defs>
+  <rect width="128" height="128" rx="28" fill="url(#b4xG)"/>
+  <rect x="34" y="38" width="60" height="42" rx="8" fill="#F97316"/>
+  <text x="64" y="68" font-family="system-ui, sans-serif" font-size="24" font-weight="900" fill="#FFFFFF" text-anchor="middle">B4X</text>
+  <text x="64" y="106" font-family="system-ui, sans-serif" font-size="12" font-weight="800" fill="#DBEAFE" text-anchor="middle">RAD SUITE</text>
+</svg>

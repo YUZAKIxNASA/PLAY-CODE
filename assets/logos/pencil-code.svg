@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128">
+  <defs>
+    <linearGradient id="pencilG" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#D97706"/>
+      <stop offset="100%" stop-color="#451A03"/>
+    </linearGradient>
+  </defs>
+  <rect width="128" height="128" rx="28" fill="url(#pencilG)"/>
+  <!-- Diagonal Pencil -->
+  <polygon points="34,94 48,90 86,52 72,38 34,76" fill="#FDE047"/>
+  <polygon points="34,94 42,86 38,82" fill="#1F2937"/>
+  <polygon points="86,52 72,38 80,30 94,44" fill="#FB7185"/>
+  <text x="64" y="112" font-family="system-ui, sans-serif" font-size="12" font-weight="900" fill="#FEF3C7" text-anchor="middle">PENCIL CODE</text>
+</svg>
