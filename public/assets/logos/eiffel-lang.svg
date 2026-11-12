@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128">
+  <defs>
+    <linearGradient id="g854" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1E40AF"/>
+      <stop offset="100%" stop-color="#0F172A"/>
+    </linearGradient>
+  </defs>
+  <rect width="128" height="128" rx="28" fill="url(#g854)"/>
+  <path d="M64 20 L58 50 L48 76 L34 90 H50 L54 78 H74 L78 90 H94 L80 76 L70 50 Z" fill="#93C5FD" stroke="#FFFFFF" stroke-width="2"/>
+  <line x1="48" y1="62" x2="80" y2="62" stroke="#1E3A8A" stroke-width="4"/>
+  <text x="64" y="112" font-family="system-ui, sans-serif" font-size="14" font-weight="900" fill="#DBEAFE" text-anchor="middle">EIFFEL</text>
+</svg>

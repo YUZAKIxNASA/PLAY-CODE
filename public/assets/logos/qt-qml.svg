@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128">
+  <defs>
+    <linearGradient id="g880" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#15803D"/>
+      <stop offset="100%" stop-color="#072D15"/>
+    </linearGradient>
+  </defs>
+  <rect width="128" height="128" rx="28" fill="url(#g880)"/>
+  <polygon points="34,26 98,26 98,74 84,86 30,86 30,40" fill="#22C55E" stroke="#FFFFFF" stroke-width="2.5"/>
+  <text x="64" y="66" font-family="system-ui, sans-serif" font-size="26" font-weight="900" fill="#FFFFFF" text-anchor="middle">QML</text>
+  <text x="64" y="110" font-family="system-ui, sans-serif" font-size="14" font-weight="900" fill="#DCFCE7" text-anchor="middle">QT QML</text>
+</svg>

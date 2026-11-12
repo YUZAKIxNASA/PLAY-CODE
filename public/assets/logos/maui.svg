@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128">
+  <defs>
+    <linearGradient id="g874" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#5B21B6"/>
+      <stop offset="100%" stop-color="#240E4A"/>
+    </linearGradient>
+  </defs>
+  <rect width="128" height="128" rx="28" fill="url(#g874)"/>
+  <rect x="28" y="26" width="72" height="58" rx="14" fill="#7C3AED" stroke="#DDD6FE" stroke-width="2.5"/>
+  <text x="64" y="64" font-family="system-ui, sans-serif" font-size="22" font-weight="900" fill="#FFFFFF" text-anchor="middle">.NET</text>
+  <text x="64" y="110" font-family="system-ui, sans-serif" font-size="14" font-weight="900" fill="#EDE9FE" text-anchor="middle">MAUI</text>
+</svg>

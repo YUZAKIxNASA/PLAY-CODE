@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128">
+  <defs>
+    <linearGradient id="g887" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#991B1B"/>
+      <stop offset="100%" stop-color="#3B0A0A"/>
+    </linearGradient>
+  </defs>
+  <rect width="128" height="128" rx="28" fill="url(#g887)"/>
+  <rect x="30" y="26" width="68" height="56" rx="6" fill="#7F1D1D" stroke="#FCA5A5" stroke-width="3"/>
+  <text x="64" y="64" font-family="system-ui, sans-serif" font-size="26" font-weight="900" fill="#FFFFFF" text-anchor="middle">AWT</text>
+  <text x="64" y="110" font-family="system-ui, sans-serif" font-size="13" font-weight="900" fill="#FEE2E2" text-anchor="middle">JAVA AWT</text>
+</svg>

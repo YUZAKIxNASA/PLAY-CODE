@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128">
+  <defs>
+    <linearGradient id="g852" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#9D174D"/>
+      <stop offset="100%" stop-color="#4C0519"/>
+    </linearGradient>
+  </defs>
+  <rect width="128" height="128" rx="28" fill="url(#g852)"/>
+  <circle cx="64" cy="54" r="26" stroke="#F9A8D4" stroke-width="8" fill="none"/>
+  <circle cx="64" cy="54" r="14" stroke="#FFFFFF" stroke-width="4" fill="none"/>
+  <circle cx="84" cy="36" r="6" fill="#FDE047"/>
+  <text x="64" y="108" font-family="system-ui, sans-serif" font-size="14" font-weight="900" fill="#FCE7F3" text-anchor="middle">RING LANG</text>
+</svg>

@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128">
+  <defs>
+    <linearGradient id="g885" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#B45309"/>
+      <stop offset="100%" stop-color="#421904"/>
+    </linearGradient>
+  </defs>
+  <rect width="128" height="128" rx="28" fill="url(#g885)"/>
+  <rect x="28" y="26" width="72" height="58" rx="12" fill="#D97706" stroke="#FEF3C7" stroke-width="2.5"/>
+  <text x="64" y="66" font-family="system-ui, sans-serif" font-size="32" font-weight="900" fill="#FFFFFF" text-anchor="middle">JFX</text>
+  <text x="64" y="110" font-family="system-ui, sans-serif" font-size="14" font-weight="900" fill="#FEF3C7" text-anchor="middle">JAVAFX</text>
+</svg>

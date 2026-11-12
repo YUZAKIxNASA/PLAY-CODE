@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128">
+  <defs>
+    <linearGradient id="g883" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#9F1239"/>
+      <stop offset="100%" stop-color="#3E0718"/>
+    </linearGradient>
+  </defs>
+  <rect width="128" height="128" rx="28" fill="url(#g883)"/>
+  <path d="M34 78 C40 44, 68 24, 96 26 C88 52, 68 72, 34 78 Z" fill="#FB7185" stroke="#FFFFFF" stroke-width="2.5"/>
+  <line x1="34" y1="78" x2="88" y2="32" stroke="#FFFFFF" stroke-width="3"/>
+  <text x="64" y="110" font-family="system-ui, sans-serif" font-size="18" font-weight="900" fill="#FFE4E6" text-anchor="middle">TK GUI</text>
+</svg>

@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128">
+  <defs>
+    <linearGradient id="g897" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#334155"/>
+      <stop offset="100%" stop-color="#0F172A"/>
+    </linearGradient>
+  </defs>
+  <rect width="128" height="128" rx="28" fill="url(#g897)"/>
+  <polygon points="38,26 52,26 52,52 78,26 94,26 66,54 94,86 78,86 52,58 52,86 38,86" fill="#38BDF8" stroke="#FFFFFF" stroke-width="2"/>
+  <text x="64" y="110" font-family="system-ui, sans-serif" font-size="15" font-weight="900" fill="#E2E8F0" text-anchor="middle">KIVY</text>
+</svg>

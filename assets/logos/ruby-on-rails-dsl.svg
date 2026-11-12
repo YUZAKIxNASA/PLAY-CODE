@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128">
+  <defs>
+    <linearGradient id="g856" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#B91C1C"/>
+      <stop offset="100%" stop-color="#450A0A"/>
+    </linearGradient>
+  </defs>
+  <rect width="128" height="128" rx="28" fill="url(#g856)"/>
+  <path d="M32 88 C36 52, 60 32, 92 32" stroke="#FCA5A5" stroke-width="6" fill="none" stroke-linecap="round"/>
+  <path d="M50 88 C52 60, 70 46, 94 46" stroke="#FFFFFF" stroke-width="5" fill="none" stroke-linecap="round"/>
+  <polygon points="84,64 98,74 84,88 70,74" fill="#EF4444" stroke="#FFFFFF" stroke-width="2"/>
+  <text x="64" y="112" font-family="system-ui, sans-serif" font-size="12" font-weight="900" fill="#FEE2E2" text-anchor="middle">RAILS DSL</text>
+</svg>

@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128">
+  <defs>
+    <linearGradient id="g863" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#16A34A"/>
+      <stop offset="100%" stop-color="#052E16"/>
+    </linearGradient>
+  </defs>
+  <rect width="128" height="128" rx="28" fill="url(#g863)"/>
+  <rect x="28" y="26" width="72" height="60" rx="10" fill="#14532D" stroke="#86EFAC" stroke-width="3"/>
+  <text x="52" y="66" font-family="system-ui, sans-serif" font-size="30" font-weight="900" fill="#FFFFFF" text-anchor="middle">Se</text>
+  <path d="M68 58 L76 66 L92 48" stroke="#4ADE80" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  <text x="64" y="110" font-family="system-ui, sans-serif" font-size="13" font-weight="900" fill="#DCFCE7" text-anchor="middle">SELENESE</text>
+</svg>

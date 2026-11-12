@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128">
+  <defs>
+    <linearGradient id="g870" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0284C7"/>
+      <stop offset="100%" stop-color="#082F49"/>
+    </linearGradient>
+  </defs>
+  <rect width="128" height="128" rx="28" fill="url(#g870)"/>
+  <polygon points="68,22 36,54 46,64 88,22" fill="#7DD3FC"/>
+  <polygon points="68,52 50,70 60,80 88,52" fill="#38BDF8"/>
+  <polygon points="60,80 70,90 88,90 70,70" fill="#0EA5E9"/>
+  <text x="64" y="112" font-family="system-ui, sans-serif" font-size="12" font-weight="900" fill="#E0F2FE" text-anchor="middle">FLUTTER DART</text>
+</svg>

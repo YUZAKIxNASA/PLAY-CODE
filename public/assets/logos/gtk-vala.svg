@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128">
+  <defs>
+    <linearGradient id="g882" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#502496"/>
+      <stop offset="100%" stop-color="#27104D"/>
+    </linearGradient>
+  </defs>
+  <rect width="128" height="128" rx="28" fill="url(#g882)"/>
+  <path d="M36 28 L64 84 L92 28" stroke="#C4B5FD" stroke-width="9" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  <circle cx="64" cy="40" r="8" fill="#4ADE80"/>
+  <text x="64" y="110" font-family="system-ui, sans-serif" font-size="14" font-weight="900" fill="#EDE9FE" text-anchor="middle">GTK VALA</text>
+</svg>

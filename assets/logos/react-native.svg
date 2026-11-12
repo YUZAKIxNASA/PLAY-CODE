@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128">
+  <defs>
+    <linearGradient id="g871" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0E7490"/>
+      <stop offset="100%" stop-color="#082F49"/>
+    </linearGradient>
+  </defs>
+  <rect width="128" height="128" rx="28" fill="url(#g871)"/>
+  <ellipse cx="64" cy="54" rx="34" ry="13" stroke="#67E8F9" stroke-width="3.5" fill="none"/>
+  <ellipse cx="64" cy="54" rx="34" ry="13" transform="rotate(60 64 54)" stroke="#67E8F9" stroke-width="3.5" fill="none"/>
+  <ellipse cx="64" cy="54" rx="34" ry="13" transform="rotate(120 64 54)" stroke="#67E8F9" stroke-width="3.5" fill="none"/>
+  <circle cx="64" cy="54" r="6" fill="#FFFFFF"/>
+  <text x="64" y="110" font-family="system-ui, sans-serif" font-size="11" font-weight="900" fill="#CFFAFE" text-anchor="middle">REACT NATIVE</text>
+</svg>

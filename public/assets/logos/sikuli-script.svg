@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128">
+  <defs>
+    <linearGradient id="g862" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#B45309"/>
+      <stop offset="100%" stop-color="#451A03"/>
+    </linearGradient>
+  </defs>
+  <rect width="128" height="128" rx="28" fill="url(#g862)"/>
+  <path d="M24 56 Q64 24 104 56 Q64 88 24 56 Z" fill="#FDE68A" stroke="#FFFFFF" stroke-width="3"/>
+  <circle cx="64" cy="56" r="14" fill="#92400E"/>
+  <circle cx="64" cy="56" r="6" fill="#FBBF24"/>
+  <text x="64" y="110" font-family="system-ui, sans-serif" font-size="14" font-weight="900" fill="#FEF3C7" text-anchor="middle">SIKULI</text>
+</svg>
