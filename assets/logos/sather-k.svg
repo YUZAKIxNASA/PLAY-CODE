@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128">
+  <defs>
+    <linearGradient id="satherG" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0F766E"/>
+      <stop offset="100%" stop-color="#042F2E"/>
+    </linearGradient>
+  </defs>
+  <rect width="128" height="128" rx="28" fill="url(#satherG)"/>
+  <path d="M44 48 C44 40 52 36 64 36 C76 36 82 42 82 48 C82 60 46 58 46 72 C46 80 54 84 64 84 C76 84 84 78 84 70" stroke="#FACC15" stroke-width="7" stroke-linecap="round" fill="none"/>
+  <text x="96" y="86" font-family="system-ui, sans-serif" font-size="22" font-weight="900" fill="#2DD4BF">-K</text>
+</svg>

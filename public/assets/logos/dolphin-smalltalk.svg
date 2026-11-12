@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128">
+  <defs>
+    <linearGradient id="dolphinG" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0284C7"/>
+      <stop offset="100%" stop-color="#072744"/>
+    </linearGradient>
+  </defs>
+  <rect width="128" height="128" rx="28" fill="url(#dolphinG)"/>
+  <path d="M34 76 C38 46 64 36 84 46 C94 52 98 60 92 68 C84 76 70 66 60 70 C48 76 42 78 34 76 Z" fill="#BAE6FD"/>
+  <circle cx="78" cy="50" r="3" fill="#0369A1"/>
+  <text x="64" y="104" font-family="system-ui, sans-serif" font-size="13" font-weight="900" fill="#E0F2FE" text-anchor="middle">DOLPHIN</text>
+</svg>

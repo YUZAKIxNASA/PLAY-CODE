@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128">
+  <defs>
+    <linearGradient id="plsG" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4F46E5"/>
+      <stop offset="100%" stop-color="#1E1B4B"/>
+    </linearGradient>
+  </defs>
+  <rect width="128" height="128" rx="28" fill="url(#plsG)"/>
+  <text x="44" y="66" font-family="system-ui, sans-serif" font-size="34" font-weight="900" fill="#FFFFFF">PL</text>
+  <text x="78" y="70" font-family="system-ui, sans-serif" font-size="36" font-weight="900" fill="#6EE7B7">/</text>
+  <text x="94" y="90" font-family="system-ui, sans-serif" font-size="30" font-weight="900" fill="#A5B4FC">S</text>
+</svg>

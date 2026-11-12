@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128">
+  <defs>
+    <linearGradient id="ob2G" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0284C7"/>
+      <stop offset="100%" stop-color="#032D52"/>
+    </linearGradient>
+  </defs>
+  <rect width="128" height="128" rx="28" fill="url(#ob2G)"/>
+  <circle cx="56" cy="56" r="26" stroke="#FFFFFF" stroke-width="6" fill="none"/>
+  <text x="88" y="72" font-family="system-ui, sans-serif" font-size="32" font-weight="900" fill="#FBBF24">-2</text>
+  <text x="64" y="106" font-family="system-ui, sans-serif" font-size="13" font-weight="800" fill="#E0F2FE" text-anchor="middle">OBERON</text>
+</svg>

@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128">
+  <defs>
+    <linearGradient id="jclG" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#D97706"/>
+      <stop offset="100%" stop-color="#451A03"/>
+    </linearGradient>
+  </defs>
+  <rect width="128" height="128" rx="28" fill="url(#jclG)"/>
+  <rect x="24" y="32" width="80" height="52" rx="6" fill="#FEF3C7" stroke="#92400E" stroke-width="3"/>
+  <line x1="32" y1="44" x2="52" y2="44" stroke="#92400E" stroke-width="4"/>
+  <line x1="32" y1="56" x2="88" y2="56" stroke="#92400E" stroke-width="4"/>
+  <line x1="32" y1="68" x2="74" y2="68" stroke="#92400E" stroke-width="4"/>
+  <text x="64" y="106" font-family="system-ui, monospace" font-size="16" font-weight="900" fill="#FDE68A" text-anchor="middle">//PROC</text>
+</svg>

@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128">
+  <defs>
+    <linearGradient id="st80G" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#B45309"/>
+      <stop offset="100%" stop-color="#451A03"/>
+    </linearGradient>
+  </defs>
+  <rect width="128" height="128" rx="28" fill="url(#st80G)"/>
+  <circle cx="64" cy="52" r="24" stroke="#FDE68A" stroke-width="5" fill="none"/>
+  <circle cx="64" cy="52" r="14" fill="#F59E0B"/>
+  <text x="64" y="104" font-family="system-ui, sans-serif" font-size="15" font-weight="900" fill="#FEF3C7" text-anchor="middle">SMALLTALK-80</text>
+</svg>

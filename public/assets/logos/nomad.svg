@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128">
+  <defs>
+    <linearGradient id="nomadG" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#6B21A8"/>
+      <stop offset="100%" stop-color="#280545"/>
+    </linearGradient>
+  </defs>
+  <rect width="128" height="128" rx="28" fill="url(#nomadG)"/>
+  <polygon points="64,28 100,88 28,88" stroke="#FBBF24" stroke-width="6" fill="none" stroke-linejoin="round"/>
+  <circle cx="64" cy="68" r="8" fill="#FDE68A"/>
+  <text x="64" y="108" font-family="system-ui, sans-serif" font-size="14" font-weight="900" fill="#E9D5FF" text-anchor="middle">NOMAD2</text>
+</svg>

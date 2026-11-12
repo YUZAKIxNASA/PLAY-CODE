@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128">
+  <defs>
+    <linearGradient id="squeakG" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#047857"/>
+      <stop offset="100%" stop-color="#022C22"/>
+    </linearGradient>
+  </defs>
+  <rect width="128" height="128" rx="28" fill="url(#squeakG)"/>
+  <!-- Squeak Mouse Glyph -->
+  <ellipse cx="64" cy="62" rx="24" ry="18" fill="#A7F3D0"/>
+  <circle cx="48" cy="42" r="10" fill="#6EE7B7"/>
+  <circle cx="80" cy="42" r="10" fill="#6EE7B7"/>
+  <circle cx="56" cy="58" r="3" fill="#065F46"/>
+  <circle cx="72" cy="58" r="3" fill="#065F46"/>
+  <text x="64" y="106" font-family="system-ui, sans-serif" font-size="14" font-weight="900" fill="#D1FAE5" text-anchor="middle">SQUEAK</text>
+</svg>

@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128">
+  <defs>
+    <linearGradient id="eglG" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0F62FE"/>
+      <stop offset="100%" stop-color="#001D6C"/>
+    </linearGradient>
+  </defs>
+  <rect width="128" height="128" rx="28" fill="url(#eglG)"/>
+  <rect x="24" y="32" width="80" height="10" rx="3" fill="#FFFFFF"/>
+  <rect x="24" y="48" width="80" height="10" rx="3" fill="#78A9FF"/>
+  <rect x="24" y="64" width="80" height="10" rx="3" fill="#BAE6FD"/>
+  <text x="64" y="98" font-family="system-ui, sans-serif" font-size="22" font-weight="900" fill="#F1C21B" text-anchor="middle">EGL</text>
+</svg>

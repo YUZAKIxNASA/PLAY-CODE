@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128">
+  <defs>
+    <linearGradient id="hlasmG" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#374151"/>
+      <stop offset="100%" stop-color="#111827"/>
+    </linearGradient>
+  </defs>
+  <rect width="128" height="128" rx="28" fill="url(#hlasmG)"/>
+  <path d="M34 38 V90 H48 V68 H74 V90 H88 V38 H74 V56 H48 V38 Z" fill="#F59E0B"/>
+  <text x="64" y="106" font-family="system-ui, monospace" font-size="12" font-weight="900" fill="#E5E7EB" text-anchor="middle">HLASM 390</text>
+</svg>

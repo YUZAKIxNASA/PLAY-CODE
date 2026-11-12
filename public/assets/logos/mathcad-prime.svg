@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128">
+  <defs>
+    <linearGradient id="mathcadG" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#B91C1C"/>
+      <stop offset="100%" stop-color="#450A0A"/>
+    </linearGradient>
+  </defs>
+  <rect width="128" height="128" rx="28" fill="url(#mathcadG)"/>
+  <path d="M34 88 V40 L54 66 L74 40 V88" stroke="#FFFFFF" stroke-width="7" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  <text x="94" y="54" font-family="system-ui, sans-serif" font-size="24" font-weight="900" fill="#FCA5A5">′</text>
+  <text x="64" y="108" font-family="system-ui, sans-serif" font-size="11" font-weight="900" fill="#FECACA" text-anchor="middle">MATHCAD</text>
+</svg>

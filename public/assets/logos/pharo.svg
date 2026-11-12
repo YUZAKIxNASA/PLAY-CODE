@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128">
+  <defs>
+    <linearGradient id="pharoG" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4338CA"/>
+      <stop offset="100%" stop-color="#1E1B4B"/>
+    </linearGradient>
+  </defs>
+  <rect width="128" height="128" rx="28" fill="url(#pharoG)"/>
+  <!-- Lighthouse Beacon Beam -->
+  <polygon points="64,30 54,82 74,82" fill="#E0E7FF"/>
+  <circle cx="64" cy="38" r="9" fill="#38BDF8"/>
+  <polygon points="64,38 24,56 24,70" fill="rgba(56, 189, 248, 0.4)"/>
+  <polygon points="64,38 104,56 104,70" fill="rgba(56, 189, 248, 0.4)"/>
+  <text x="64" y="106" font-family="system-ui, sans-serif" font-size="16" font-weight="900" fill="#FFFFFF" text-anchor="middle">PHARO</text>
+</svg>

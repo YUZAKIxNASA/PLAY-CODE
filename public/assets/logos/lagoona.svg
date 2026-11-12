@@ -1,9 +1,12 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
-  <rect width="128" height="128" rx="24" fill="#2C6E6E"/>
-  <rect x="30" y="30" width="32" height="32" rx="6" fill="#FFFFFF"/>
-  <rect x="66" y="30" width="32" height="32" rx="6" fill="#A4E5E0"/>
-  <rect x="30" y="66" width="32" height="32" rx="6" fill="#A4E5E0"/>
-  <rect x="66" y="66" width="32" height="32" rx="6" fill="#FFFFFF"/>
-  <circle cx="46" cy="46" r="6" fill="#2C6E6E"/>
-  <circle cx="82" cy="82" r="6" fill="#2C6E6E"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128">
+  <defs>
+    <linearGradient id="lagG" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0891B2"/>
+      <stop offset="100%" stop-color="#083344"/>
+    </linearGradient>
+  </defs>
+  <rect width="128" height="128" rx="28" fill="url(#lagG)"/>
+  <path d="M32 76 C44 56 60 56 64 64 C68 72 84 72 96 52" stroke="#67E8F9" stroke-width="7" stroke-linecap="round" fill="none"/>
+  <circle cx="64" cy="40" r="12" fill="#A5F3FC"/>
+  <text x="64" y="104" font-family="system-ui, sans-serif" font-size="14" font-weight="900" fill="#FFFFFF" text-anchor="middle">LAGOONA</text>
 </svg>

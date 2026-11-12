@@ -1,5 +1,12 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
-  <rect width="128" height="128" rx="24" fill="#274C77"/>
-  <circle cx="64" cy="64" r="42" fill="none" stroke="#60A5FA" stroke-width="6"/>
-  <polygon points="64,28 76,58 106,64 76,70 64,100 52,70 22,64 52,58" fill="#FFFFFF"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128">
+  <defs>
+    <linearGradient id="blueG" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2563EB"/>
+      <stop offset="100%" stop-color="#172554"/>
+    </linearGradient>
+  </defs>
+  <rect width="128" height="128" rx="28" fill="url(#blueG)"/>
+  <circle cx="64" cy="56" r="26" fill="#3B82F6" stroke="#BFDBFE" stroke-width="4"/>
+  <text x="64" y="64" font-family="system-ui, sans-serif" font-size="24" font-weight="900" fill="#FFFFFF" text-anchor="middle">B</text>
+  <text x="64" y="104" font-family="system-ui, sans-serif" font-size="15" font-weight="900" fill="#93C5FD" text-anchor="middle">BLUE</text>
 </svg>

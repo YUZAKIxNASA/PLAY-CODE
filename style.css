@@ -3284,6 +3284,156 @@ section h2{
 .category-card[data-category="750"], .sqlj-lang{
     background:linear-gradient(135deg,#B45309,#291802);
 }
+.category-card[data-category="751"], .ibm-egl-lang{
+    background:linear-gradient(135deg,#0F62FE,#001D6C);
+}
+.category-card[data-category="752"], .ibm-rexx-lang{
+    background:linear-gradient(135deg,#A2191F,#40070A);
+}
+.category-card[data-category="753"], .ibm-rpg-iv-lang{
+    background:linear-gradient(135deg,#00539A,#001736);
+}
+.category-card[data-category="754"], .ibm-cl-lang{
+    background:linear-gradient(135deg,#057A55,#012B1C);
+}
+.category-card[data-category="755"], .ibm-assembler-hlasm-lang{
+    background:linear-gradient(135deg,#374151,#111827);
+}
+.category-card[data-category="756"], .ibm-pls-lang{
+    background:linear-gradient(135deg,#4F46E5,#1E1B4B);
+}
+.category-card[data-category="757"], .ibm-pascal-vs-lang{
+    background:linear-gradient(135deg,#831843,#350619);
+}
+.category-card[data-category="758"], .jcl-procs-lang{
+    background:linear-gradient(135deg,#D97706,#451A03);
+}
+.category-card[data-category="759"], .easytrieve-lang{
+    background:linear-gradient(135deg,#2563EB,#0F2B6B);
+}
+.category-card[data-category="760"], .cics-lang{
+    background:linear-gradient(135deg,#BE123C,#4C0519);
+}
+.category-card[data-category="761"], .ims-dli-lang{
+    background:linear-gradient(135deg,#0D9488,#042F2E);
+}
+.category-card[data-category="762"], .idms-lang{
+    background:linear-gradient(135deg,#7E22CE,#2E0854);
+}
+.category-card[data-category="763"], .natural-adabas-lang{
+    background:linear-gradient(135deg,#15803D,#052E16);
+}
+.category-card[data-category="764"], .mark-iv-lang{
+    background:linear-gradient(135deg,#1E3A8A,#08102B);
+}
+.category-card[data-category="765"], .focus-lang{
+    background:linear-gradient(135deg,#0284C7,#082F49);
+}
+.category-card[data-category="766"], .nomad-lang{
+    background:linear-gradient(135deg,#6B21A8,#280545);
+}
+.category-card[data-category="767"], .ramis-lang{
+    background:linear-gradient(135deg,#C2410C,#431407);
+}
+.category-card[data-category="768"], .santa-claus-language-lang{
+    background:linear-gradient(135deg,#DC2626,#5B0808);
+}
+.category-card[data-category="769"], .labtalk-lang{
+    background:linear-gradient(135deg,#EA580C,#591C03);
+}
+.category-card[data-category="770"], .igor-pro-lang{
+    background:linear-gradient(135deg,#0284C7,#082F49);
+}
+.category-card[data-category="771"], .idl-interactive-data-language-lang{
+    background:linear-gradient(135deg,#0369A1,#03264A);
+}
+.category-card[data-category="772"], .pv-wave-lang{
+    background:linear-gradient(135deg,#0F766E,#042F2E);
+}
+.category-card[data-category="773"], .yorick-lang{
+    background:linear-gradient(135deg,#16A34A,#052E16);
+}
+.category-card[data-category="774"], .ncl-lang{
+    background:linear-gradient(135deg,#0284C7,#083344);
+}
+.category-card[data-category="775"], .grads-lang{
+    background:linear-gradient(135deg,#1E40AF,#0A163B);
+}
+.category-card[data-category="776"], .root-cpp-cint-lang{
+    background:linear-gradient(135deg,#0284C7,#0C2442);
+}
+.category-card[data-category="777"], .mathcad-prime-lang{
+    background:linear-gradient(135deg,#B91C1C,#450A0A);
+}
+.category-card[data-category="778"], .ascend-lang{
+    background:linear-gradient(135deg,#6D28D9,#2E1065);
+}
+.category-card[data-category="779"], .gnu-data-language-lang{
+    background:linear-gradient(135deg,#831843,#300516);
+}
+.category-card[data-category="780"], .euler-math-toolbox-lang{
+    background:linear-gradient(135deg,#047857,#022C22);
+}
+.category-card[data-category="781"], .mercury-logic-lang{
+    background:linear-gradient(135deg,#0E7490,#083344);
+}
+.category-card[data-category="782"], .godel-lang{
+    background:linear-gradient(135deg,#92400E,#3B1804);
+}
+.category-card[data-category="783"], .oz-mozart-lang{
+    background:linear-gradient(135deg,#6B21A8,#230438);
+}
+.category-card[data-category="784"], .aldor-lang{
+    background:linear-gradient(135deg,#3730A3,#141147);
+}
+.category-card[data-category="785"], .sather-k-lang{
+    background:linear-gradient(135deg,#0F766E,#042F2E);
+}
+.category-card[data-category="786"], .obliq-lang{
+    background:linear-gradient(135deg,#0284C7,#021C35);
+}
+.category-card[data-category="787"], .modula-3-src-lang{
+    background:linear-gradient(135deg,#1D4ED8,#081846);
+}
+.category-card[data-category="788"], .oberon-2-lang{
+    background:linear-gradient(135deg,#0284C7,#032D52);
+}
+.category-card[data-category="789"], .active-oberon-lang{
+    background:linear-gradient(135deg,#D97706,#451A03);
+}
+.category-card[data-category="790"], .zonnon-lang{
+    background:linear-gradient(135deg,#047857,#022C22);
+}
+.category-card[data-category="791"], .lagoona-lang{
+    background:linear-gradient(135deg,#0891B2,#083344);
+}
+.category-card[data-category="792"], .component-oberon-lang{
+    background:linear-gradient(135deg,#1E3A8A,#0B132B);
+}
+.category-card[data-category="793"], .blue-lang{
+    background:linear-gradient(135deg,#2563EB,#172554);
+}
+.category-card[data-category="794"], .mesa-lang{
+    background:linear-gradient(135deg,#BE123C,#4C0519);
+}
+.category-card[data-category="795"], .cedar-mesa-lang{
+    background:linear-gradient(135deg,#15803D,#052E16);
+}
+.category-card[data-category="796"], .smalltalk-80-lang{
+    background:linear-gradient(135deg,#B45309,#451A03);
+}
+.category-card[data-category="797"], .squeak-lang{
+    background:linear-gradient(135deg,#047857,#022C22);
+}
+.category-card[data-category="798"], .pharo-lang{
+    background:linear-gradient(135deg,#4338CA,#1E1B4B);
+}
+.category-card[data-category="799"], .dolphin-smalltalk-lang{
+    background:linear-gradient(135deg,#0284C7,#072744);
+}
+.category-card[data-category="800"], .gnu-smalltalk-lang{
+    background:linear-gradient(135deg,#831843,#3B071E);
+}
 
 
 /* ==========================

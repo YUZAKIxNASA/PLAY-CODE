@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128">
+  <defs>
+    <linearGradient id="igorG" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0284C7"/>
+      <stop offset="100%" stop-color="#082F49"/>
+    </linearGradient>
+  </defs>
+  <rect width="128" height="128" rx="28" fill="url(#igorG)"/>
+  <path d="M26 64 C40 36 50 36 64 64 C78 92 88 92 102 64" stroke="#38BDF8" stroke-width="8" stroke-linecap="round" fill="none"/>
+  <circle cx="64" cy="64" r="6" fill="#FFFFFF"/>
+  <text x="64" y="102" font-family="system-ui, sans-serif" font-size="14" font-weight="900" fill="#E0F2FE" text-anchor="middle">IGOR PRO</text>
+</svg>
