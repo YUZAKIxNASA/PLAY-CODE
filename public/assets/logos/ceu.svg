@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128">
+  <defs><linearGradient id="g933" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#059669"/><stop offset="100%" stop-color="#022C22"/></linearGradient></defs>
+  <rect width="128" height="128" rx="28" fill="url(#g933)"/>
+  <circle cx="64" cy="53" r="26" fill="#10B981" stroke="#A7F3D0" stroke-width="3"/>
+     <path d="M52 53 L62 63 L78 43" stroke="#FFFFFF" stroke-width="5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="64" y="109" font-family="system-ui, sans-serif" font-size="15" font-weight="900" fill="#D1FAE5" text-anchor="middle">CÉU</text>
+</svg>

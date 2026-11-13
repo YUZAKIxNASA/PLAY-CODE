@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128">
+  <defs><linearGradient id="g944" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#334155"/><stop offset="100%" stop-color="#0F172A"/></linearGradient></defs>
+  <rect width="128" height="128" rx="28" fill="url(#g944)"/>
+  <polygon points="64,22 96,42 86,78 42,78 32,42" fill="#475569" stroke="#CBD5E1" stroke-width="3"/>
+     <text x="64" y="60" font-family="monospace" font-size="18" font-weight="900" fill="#FFFFFF" text-anchor="middle">CMS2</text>
+  <text x="64" y="109" font-family="system-ui, sans-serif" font-size="15" font-weight="900" fill="#E2E8F0" text-anchor="middle">CMS-2</text>
+</svg>

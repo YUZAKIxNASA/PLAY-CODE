@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128">
+  <defs><linearGradient id="g938" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#334155"/><stop offset="100%" stop-color="#0B0F1A"/></linearGradient></defs>
+  <rect width="128" height="128" rx="28" fill="url(#g938)"/>
+  <rect x="26" y="24" width="76" height="56" rx="8" fill="#0F172A" stroke="#4ADE80" stroke-width="3"/>
+     <rect x="38" y="36" width="12" height="12" fill="#4ADE80"/>
+     <rect x="58" y="48" width="12" height="12" fill="#4ADE80"/>
+     <rect x="78" y="36" width="12" height="12" fill="#4ADE80"/>
+  <text x="64" y="109" font-family="system-ui, sans-serif" font-size="15" font-weight="900" fill="#E2E8F0" text-anchor="middle">CHIP-8</text>
+</svg>

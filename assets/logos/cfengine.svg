@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128">
+  <defs><linearGradient id="g934" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#9A3412"/><stop offset="100%" stop-color="#3D1306"/></linearGradient></defs>
+  <rect width="128" height="128" rx="28" fill="url(#g934)"/>
+  <polygon points="64,22 96,38 90,74 64,86 38,74 32,38" fill="#C2410C" stroke="#FDBA74" stroke-width="3"/>
+     <text x="64" y="60" font-family="monospace" font-size="20" font-weight="900" fill="#FFFFFF" text-anchor="middle">CF</text>
+  <text x="64" y="109" font-family="system-ui, sans-serif" font-size="13" font-weight="900" fill="#FFEDD5" text-anchor="middle">CFENGINE</text>
+</svg>

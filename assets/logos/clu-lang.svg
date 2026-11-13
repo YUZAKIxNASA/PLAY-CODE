@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128">
+  <defs><linearGradient id="g943" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#9F1239"/><stop offset="100%" stop-color="#3B0716"/></linearGradient></defs>
+  <rect width="128" height="128" rx="28" fill="url(#g943)"/>
+  <rect x="28" y="26" width="72" height="54" rx="14" fill="#BE123C" stroke="#FDA4AF" stroke-width="3"/>
+     <text x="64" y="61" font-family="monospace" font-size="24" font-weight="900" fill="#FFFFFF" text-anchor="middle">CLU</text>
+  <text x="64" y="109" font-family="system-ui, sans-serif" font-size="15" font-weight="900" fill="#FFE4E6" text-anchor="middle">CLU</text>
+</svg>

@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128">
+  <defs><linearGradient id="g917" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#9F1239"/><stop offset="100%" stop-color="#3E0718"/></linearGradient></defs>
+  <rect width="128" height="128" rx="28" fill="url(#g917)"/>
+  <path d="M28 74 L48 30 L64 60 L80 30 L100 74" stroke="#FDA4AF" stroke-width="6" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+     <text x="64" y="84" font-family="monospace" font-size="16" font-weight="900" fill="#FFFFFF" text-anchor="middle">E</text>
+  <text x="64" y="109" font-family="system-ui, sans-serif" font-size="15" font-weight="900" fill="#FFE4E6" text-anchor="middle">AMIGA E</text>
+</svg>

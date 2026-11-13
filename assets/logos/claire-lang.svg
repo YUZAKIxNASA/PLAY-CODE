@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128">
+  <defs><linearGradient id="g940" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#5B21B6"/><stop offset="100%" stop-color="#240E4A"/></linearGradient></defs>
+  <rect width="128" height="128" rx="28" fill="url(#g940)"/>
+  <circle cx="64" cy="53" r="26" fill="none" stroke="#C4B5FD" stroke-width="4"/>
+     <text x="64" y="61" font-family="serif" font-size="24" font-weight="900" fill="#FFFFFF" text-anchor="middle">Cl</text>
+  <text x="64" y="109" font-family="system-ui, sans-serif" font-size="15" font-weight="900" fill="#EDE9FE" text-anchor="middle">CLAIRE</text>
+</svg>

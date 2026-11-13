@@ -86,7 +86,7 @@
         countBtns.forEach(btn => {
             btn.classList.toggle('active', btn.dataset.count === '50');
         });
-        const target = Math.max(1, Math.min(parseInt(sectionNum, 10) || 1, 18));
+        const target = Math.max(1, Math.min(parseInt(sectionNum, 10) || 1, 19));
         goToPage(target);
     }
 
@@ -273,9 +273,9 @@
         let perPage = totalItems;
         if (currentDisplayCount !== 'all') {
             perPage = parseInt(currentDisplayCount, 10) || 50;
-            if (currentDisplayCount === '50' && !query && totalItems > 900 && totalItems <= 905) {
-                // Section 18 (851–900) harmoniously includes the trailing Projects card at position 901
-                totalPages = 18;
+            if (currentDisplayCount === '50' && !query && totalItems > 950 && totalItems <= 955) {
+                // Section 19 (901–950) harmoniously includes the trailing Projects card at position 951
+                totalPages = 19;
             } else {
                 totalPages = Math.max(1, Math.ceil(totalItems / perPage));
             }
@@ -297,8 +297,8 @@
 
         if (currentDisplayCount !== 'all') {
             startIndex = (currentPage - 1) * perPage;
-            if (currentDisplayCount === '50' && !query && currentPage === 18) {
-                endIndex = totalItems; // Includes card 901 (Projects) seamlessly on Section 18
+            if (currentDisplayCount === '50' && !query && currentPage === 19) {
+                endIndex = totalItems; // Includes card 951 (Projects) seamlessly on Section 19
             } else {
                 endIndex = Math.min(startIndex + perPage, totalItems);
             }
@@ -350,18 +350,18 @@
                 if (query) {
                     badge.textContent = `Showing All ${totalItems} Matching Results for "${query}"`;
                 } else {
-                    badge.textContent = `Showing All Languages: 1–900 & Projects (${totalItems} Entries)`;
+                    badge.textContent = `Showing All Languages: 1–950 & Projects (${totalItems} Entries)`;
                 }
             } else {
                 if (query) {
                     badge.textContent = `Showing Page ${currentPage} of ${totalPages}: Matches ${startIndex + 1}–${endIndex} (${totalItems} Results for "${query}")`;
                 } else if (currentDisplayCount === '50') {
-                    if (currentPage >= 1 && currentPage <= 17) {
+                    if (currentPage >= 1 && currentPage <= 18) {
                         const rangeStart = (currentPage - 1) * 50 + 1;
                         const rangeEnd = currentPage * 50;
-                        badge.textContent = `Showing Page ${currentPage} of 18: Section ${currentPage} (Languages ${rangeStart}–${rangeEnd}) — 50 of ${totalItems} Entries`;
-                    } else if (currentPage === 18) {
-                        badge.textContent = `Showing Page 18 of 18: Section 18 (Languages 851–900 & Projects) — 51 of ${totalItems} Entries`;
+                        badge.textContent = `Showing Page ${currentPage} of 19: Section ${currentPage} (Languages ${rangeStart}–${rangeEnd}) — 50 of ${totalItems} Entries`;
+                    } else if (currentPage === 19) {
+                        badge.textContent = `Showing Page 19 of 19: Section 19 (Languages 901–950 & Projects) — 51 of ${totalItems} Entries`;
                     } else {
                         badge.textContent = `Showing Page ${currentPage} of ${totalPages} — ${visibleCards.length} of ${totalItems} Entries`;
                     }

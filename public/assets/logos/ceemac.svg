@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128">
+  <defs><linearGradient id="g932" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#7E22CE"/><stop offset="100%" stop-color="#350B5C"/></linearGradient></defs>
+  <rect width="128" height="128" rx="28" fill="url(#g932)"/>
+  <rect x="26" y="26" width="22" height="52" rx="4" fill="#F472B6"/>
+     <rect x="53" y="26" width="22" height="52" rx="4" fill="#38BDF8"/>
+     <rect x="80" y="26" width="22" height="52" rx="4" fill="#4ADE80"/>
+  <text x="64" y="109" font-family="system-ui, sans-serif" font-size="15" font-weight="900" fill="#F3E8FF" text-anchor="middle">CEEMAC</text>
+</svg>
