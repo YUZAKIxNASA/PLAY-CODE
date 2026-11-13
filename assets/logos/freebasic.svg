@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128">
+  <defs><linearGradient id="g323" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#1E40AF"/><stop offset="100%" stop-color="#0C1D54"/></linearGradient></defs>
+  <rect width="128" height="128" rx="28" fill="url(#g323)"/>
+  <polygon points="34,26 94,26 88,68 64,86 40,68" fill="#2563EB" stroke="#FFFFFF" stroke-width="2.5"/>
+  <text x="64" y="62" font-family="system-ui, sans-serif" font-size="26" font-weight="900" fill="#FDE047" text-anchor="middle">FB</text>
+  <text x="64" y="108" font-family="system-ui, sans-serif" font-size="13" font-weight="900" fill="#DBEAFE" text-anchor="middle">FREEBASIC</text>
+</svg>

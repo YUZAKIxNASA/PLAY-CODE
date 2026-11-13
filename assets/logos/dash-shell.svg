@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128">
+  <defs><linearGradient id="g307" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#374151"/><stop offset="100%" stop-color="#111827"/></linearGradient></defs>
+  <rect width="128" height="128" rx="28" fill="url(#g307)"/>
+  <line x1="30" y1="54" x2="98" y2="54" stroke="#60A5FA" stroke-width="10" stroke-linecap="round"/>
+  <circle cx="94" cy="54" r="6" fill="#FFFFFF"/>
+  <text x="64" y="108" font-family="system-ui, sans-serif" font-size="15" font-weight="900" fill="#F3F4F6" text-anchor="middle">DASH</text>
+</svg>

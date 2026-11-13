@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128">
+  <defs><linearGradient id="g316" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#1E3A8A"/><stop offset="100%" stop-color="#091336"/></linearGradient></defs>
+  <rect width="128" height="128" rx="28" fill="url(#g316)"/>
+  <rect x="24" y="26" width="80" height="56" rx="8" fill="#0F172A" stroke="#60A5FA" stroke-width="2.5"/>
+  <text x="64" y="61" font-family="monospace" font-size="22" font-weight="900" fill="#93C5FD" text-anchor="middle">C:&gt;_</text>
+  <text x="64" y="108" font-family="system-ui, sans-serif" font-size="13" font-weight="900" fill="#DBEAFE" text-anchor="middle">DOS BATCH</text>
+</svg>

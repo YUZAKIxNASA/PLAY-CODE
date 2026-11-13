@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128">
+  <defs><linearGradient id="g347" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#15803D"/><stop offset="100%" stop-color="#072D15"/></linearGradient></defs>
+  <rect width="128" height="128" rx="28" fill="url(#g347)"/>
+  <polygon points="64,22 94,38 94,70 64,86 34,70 34,38" fill="#16A34A" stroke="#FFFFFF" stroke-width="2.5"/>
+  <text x="64" y="63" font-family="system-ui, sans-serif" font-size="24" font-weight="900" fill="#FFFFFF" text-anchor="middle">JS</text>
+  <text x="64" y="108" font-family="system-ui, sans-serif" font-size="14" font-weight="900" fill="#DCFCE7" text-anchor="middle">NODE.JS</text>
+</svg>

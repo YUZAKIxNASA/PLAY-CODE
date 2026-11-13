@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128">
+  <defs><linearGradient id="g326" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#0F766E"/><stop offset="100%" stop-color="#052926"/></linearGradient></defs>
+  <rect width="128" height="128" rx="28" fill="url(#g326)"/>
+  <rect x="28" y="28" width="32" height="54" rx="6" fill="#14B8A6"/>
+  <rect x="68" y="28" width="32" height="54" rx="6" fill="#5EEAD4"/>
+  <text x="64" y="108" font-family="system-ui, sans-serif" font-size="14" font-weight="900" fill="#CCFBF1" text-anchor="middle">MODULA-2</text>
+</svg>

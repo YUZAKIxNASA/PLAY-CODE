@@ -86,7 +86,7 @@
         countBtns.forEach(btn => {
             btn.classList.toggle('active', btn.dataset.count === '50');
         });
-        const target = Math.max(1, Math.min(parseInt(sectionNum, 10) || 1, 17));
+        const target = Math.max(1, Math.min(parseInt(sectionNum, 10) || 1, 18));
         goToPage(target);
     }
 
@@ -273,9 +273,9 @@
         let perPage = totalItems;
         if (currentDisplayCount !== 'all') {
             perPage = parseInt(currentDisplayCount, 10) || 50;
-            if (currentDisplayCount === '50' && !query && totalItems > 850 && totalItems <= 855) {
-                // Section 17 (851–900) harmoniously includes the trailing Projects card at position 851
-                totalPages = 17;
+            if (currentDisplayCount === '50' && !query && totalItems > 900 && totalItems <= 905) {
+                // Section 18 (851–900) harmoniously includes the trailing Projects card at position 901
+                totalPages = 18;
             } else {
                 totalPages = Math.max(1, Math.ceil(totalItems / perPage));
             }
@@ -297,8 +297,8 @@
 
         if (currentDisplayCount !== 'all') {
             startIndex = (currentPage - 1) * perPage;
-            if (currentDisplayCount === '50' && !query && currentPage === 17) {
-                endIndex = totalItems; // Includes card 851 (Projects) seamlessly on Section 17
+            if (currentDisplayCount === '50' && !query && currentPage === 18) {
+                endIndex = totalItems; // Includes card 901 (Projects) seamlessly on Section 18
             } else {
                 endIndex = Math.min(startIndex + perPage, totalItems);
             }
@@ -356,40 +356,12 @@
                 if (query) {
                     badge.textContent = `Showing Page ${currentPage} of ${totalPages}: Matches ${startIndex + 1}–${endIndex} (${totalItems} Results for "${query}")`;
                 } else if (currentDisplayCount === '50') {
-                    if (currentPage === 1) {
-                        badge.textContent = `Showing Page 1 of 17: Section 1 (Languages 1–50) — 50 of ${totalItems} Entries`;
-                    } else if (currentPage === 2) {
-                        badge.textContent = `Showing Page 2 of 17: Section 2 (Languages 51–100) — 50 of ${totalItems} Entries`;
-                    } else if (currentPage === 3) {
-                        badge.textContent = `Showing Page 3 of 17: Section 3 (Languages 101–150) — 50 of ${totalItems} Entries`;
-                    } else if (currentPage === 4) {
-                        badge.textContent = `Showing Page 4 of 17: Section 4 (Languages 151–200) — 50 of ${totalItems} Entries`;
-                    } else if (currentPage === 5) {
-                        badge.textContent = `Showing Page 5 of 17: Section 5 (Languages 201–250) — 50 of ${totalItems} Entries`;
-                    } else if (currentPage === 6) {
-                        badge.textContent = `Showing Page 6 of 17: Section 6 (Languages 251–300) — 50 of ${totalItems} Entries`;
-                    } else if (currentPage === 7) {
-                        badge.textContent = `Showing Page 7 of 17: Section 7 (Languages 351–400) — 50 of ${totalItems} Entries`;
-                    } else if (currentPage === 8) {
-                        badge.textContent = `Showing Page 8 of 17: Section 8 (Languages 401–450) — 50 of ${totalItems} Entries`;
-                    } else if (currentPage === 9) {
-                        badge.textContent = `Showing Page 9 of 17: Section 9 (Languages 451–500) — 50 of ${totalItems} Entries`;
-                    } else if (currentPage === 10) {
-                        badge.textContent = `Showing Page 10 of 17: Section 10 (Languages 501–550) — 50 of ${totalItems} Entries`;
-                    } else if (currentPage === 11) {
-                        badge.textContent = `Showing Page 11 of 17: Section 11 (Languages 551–600) — 50 of ${totalItems} Entries`;
-                    } else if (currentPage === 12) {
-                        badge.textContent = `Showing Page 12 of 17: Section 12 (Languages 601–650) — 50 of ${totalItems} Entries`;
-                    } else if (currentPage === 13) {
-                        badge.textContent = `Showing Page 13 of 17: Section 13 (Languages 651–700) — 50 of ${totalItems} Entries`;
-                    } else if (currentPage === 14) {
-                        badge.textContent = `Showing Page 14 of 17: Section 14 (Languages 701–750) — 50 of ${totalItems} Entries`;
-                    } else if (currentPage === 15) {
-                        badge.textContent = `Showing Page 15 of 17: Section 15 (Languages 751–800) — 50 of ${totalItems} Entries`;
-                    } else if (currentPage === 16) {
-                        badge.textContent = `Showing Page 16 of 17: Section 16 (Languages 801–850) — 50 of ${totalItems} Entries`;
-                    } else if (currentPage === 17) {
-                        badge.textContent = `Showing Page 17 of 17: Section 17 (Languages 851–900 & Projects) — 51 of ${totalItems} Entries`;
+                    if (currentPage >= 1 && currentPage <= 17) {
+                        const rangeStart = (currentPage - 1) * 50 + 1;
+                        const rangeEnd = currentPage * 50;
+                        badge.textContent = `Showing Page ${currentPage} of 18: Section ${currentPage} (Languages ${rangeStart}–${rangeEnd}) — 50 of ${totalItems} Entries`;
+                    } else if (currentPage === 18) {
+                        badge.textContent = `Showing Page 18 of 18: Section 18 (Languages 851–900 & Projects) — 51 of ${totalItems} Entries`;
                     } else {
                         badge.textContent = `Showing Page ${currentPage} of ${totalPages} — ${visibleCards.length} of ${totalItems} Entries`;
                     }

@@ -1,11 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128">
-  <defs>
-    <linearGradient id="g_546" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#37474F"/>
-      <stop offset="100%" stop-color="#212121"/>
-    </linearGradient>
-  </defs>
-  <rect width="128" height="128" rx="28" fill="url(#g_546)"/>
-  <rect x="28" y="38" width="72" height="52" rx="10" fill="none" stroke="#00E5FF" stroke-width="5"/>
-  <text x="64" y="72" font-family="'Poppins', sans-serif" font-weight="700" font-size="18" fill="#00E5FF" text-anchor="middle">HHVM</text>
+  <defs><linearGradient id="g346" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#334155"/><stop offset="100%" stop-color="#0F172A"/></linearGradient></defs>
+  <rect width="128" height="128" rx="28" fill="url(#g346)"/>
+  <rect x="26" y="28" width="76" height="52" rx="10" fill="#1E293B" stroke="#38BDF8" stroke-width="3"/>
+  <text x="64" y="63" font-family="system-ui, sans-serif" font-size="24" font-weight="900" fill="#38BDF8" text-anchor="middle">HHVM</text>
+  <text x="64" y="108" font-family="system-ui, sans-serif" font-size="14" font-weight="900" fill="#E2E8F0" text-anchor="middle">HHVM JIT</text>
 </svg>

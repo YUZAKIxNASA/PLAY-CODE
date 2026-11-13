@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128">
+  <defs><linearGradient id="g321" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#1D4ED8"/><stop offset="100%" stop-color="#0A1D52"/></linearGradient></defs>
+  <rect width="128" height="128" rx="28" fill="url(#g321)"/>
+  <rect x="28" y="26" width="72" height="56" rx="10" fill="#1E3A8A" stroke="#93C5FD" stroke-width="2.5"/>
+  <text x="64" y="65" font-family="system-ui, sans-serif" font-size="30" font-weight="900" fill="#FFFFFF" text-anchor="middle">VB6</text>
+  <text x="64" y="108" font-family="system-ui, sans-serif" font-size="12" font-weight="900" fill="#DBEAFE" text-anchor="middle">VISUAL BASIC 6</text>
+</svg>

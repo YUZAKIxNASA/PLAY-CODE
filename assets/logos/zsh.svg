@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128">
+  <defs><linearGradient id="g302" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#0F766E"/><stop offset="100%" stop-color="#042F2E"/></linearGradient></defs>
+  <rect width="128" height="128" rx="28" fill="url(#g302)"/>
+  <polygon points="34,32 94,32 54,68 94,68 94,80 34,80 74,44 34,44" fill="#5EEAD4"/>
+  <text x="64" y="108" font-family="system-ui, sans-serif" font-size="16" font-weight="900" fill="#CCFBF1" text-anchor="middle">ZSH</text>
+</svg>

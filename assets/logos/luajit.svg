@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128">
+  <defs><linearGradient id="g342" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#1E3A8A"/><stop offset="100%" stop-color="#091336"/></linearGradient></defs>
+  <rect width="128" height="128" rx="28" fill="url(#g342)"/>
+  <circle cx="60" cy="56" r="24" fill="#2563EB" stroke="#FFFFFF" stroke-width="2.5"/>
+  <circle cx="88" cy="30" r="8" fill="#FACC15"/>
+  <text x="60" y="64" font-family="system-ui, sans-serif" font-size="18" font-weight="900" fill="#FFFFFF" text-anchor="middle">JIT</text>
+  <text x="64" y="108" font-family="system-ui, sans-serif" font-size="15" font-weight="900" fill="#DBEAFE" text-anchor="middle">LUAJIT</text>
+</svg>

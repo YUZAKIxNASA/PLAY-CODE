@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128">
+  <defs><linearGradient id="g349" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#6B21A8"/><stop offset="100%" stop-color="#2E0A49"/></linearGradient></defs>
+  <rect width="128" height="128" rx="28" fill="url(#g349)"/>
+  <ellipse cx="64" cy="56" rx="30" ry="22" fill="#FDE68A" stroke="#FFFFFF" stroke-width="2.5"/>
+  <circle cx="52" cy="52" r="3.5" fill="#4C1D95"/>
+  <circle cx="76" cy="52" r="3.5" fill="#4C1D95"/>
+  <path d="M58 60 Q64 66 70 60" stroke="#F43F5E" stroke-width="3" fill="none" stroke-linecap="round"/>
+  <text x="64" y="108" font-family="system-ui, sans-serif" font-size="16" font-weight="900" fill="#F3E8FF" text-anchor="middle">BUN</text>
+</svg>

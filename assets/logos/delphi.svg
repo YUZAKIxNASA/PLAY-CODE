@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128">
+  <defs><linearGradient id="g325" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#B91C1C"/><stop offset="100%" stop-color="#450A0A"/></linearGradient></defs>
+  <rect width="128" height="128" rx="28" fill="url(#g325)"/>
+  <polygon points="64,22 96,54 64,86 32,54" fill="#DC2626" stroke="#FFFFFF" stroke-width="3"/>
+  <text x="64" y="64" font-family="system-ui, sans-serif" font-size="28" font-weight="900" fill="#FFFFFF" text-anchor="middle">D</text>
+  <text x="64" y="108" font-family="system-ui, sans-serif" font-size="15" font-weight="900" fill="#FEE2E2" text-anchor="middle">DELPHI</text>
+</svg>

@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128">
+  <defs><linearGradient id="g330" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#334155"/><stop offset="100%" stop-color="#0F172A"/></linearGradient></defs>
+  <rect width="128" height="128" rx="28" fill="url(#g330)"/>
+  <rect x="28" y="28" width="72" height="54" rx="10" fill="#1E293B" stroke="#CBD5E1" stroke-width="2.5"/>
+  <text x="64" y="64" font-family="monospace" font-size="24" font-weight="900" fill="#F8FAFC" text-anchor="middle">SBCL</text>
+  <text x="64" y="108" font-family="system-ui, sans-serif" font-size="14" font-weight="900" fill="#E2E8F0" text-anchor="middle">STEEL BANK CL</text>
+</svg>

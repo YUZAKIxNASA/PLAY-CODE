@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128">
+  <defs><linearGradient id="g343" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#0284C7"/><stop offset="100%" stop-color="#072B45"/></linearGradient></defs>
+  <rect width="128" height="128" rx="28" fill="url(#g343)"/>
+  <rect x="38" y="28" width="52" height="52" rx="10" transform="rotate(14 64 54)" fill="#38BDF8" stroke="#FFFFFF" stroke-width="2.5"/>
+  <rect x="55" y="45" width="18" height="18" rx="3" transform="rotate(14 64 54)" fill="#082F49"/>
+  <text x="64" y="108" font-family="system-ui, sans-serif" font-size="15" font-weight="900" fill="#E0F2FE" text-anchor="middle">LUAU</text>
+</svg>
