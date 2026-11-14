@@ -47,7 +47,8 @@ export default defineConfig({
         section16Entry: resolve(__dirname, 'pages/section16-entry.html'),
         section17Entry: resolve(__dirname, 'pages/section17-entry.html'),
         section19Entry: resolve(__dirname, 'pages/section19-entry.html'),
-        section20Entry: resolve(__dirname, 'pages/section20-entry.html')
+        section20Entry: resolve(__dirname, 'pages/section20-entry.html'),
+        section21Entry: resolve(__dirname, 'pages/section21-entry.html')
       }
     }
   }
