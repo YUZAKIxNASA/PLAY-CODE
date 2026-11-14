@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128">
+  <defs>
+    <linearGradient id="bg-1136" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#B45309"/>
+      <stop offset="100%" stop-color="#3E1B06"/>
+    </linearGradient>
+  </defs>
+  <rect width="128" height="128" rx="28" fill="url(#bg-1136)"/>
+  <rect x="4" y="4" width="120" height="120" rx="24" fill="none" stroke="#FDE68A" stroke-opacity="0.28" stroke-width="2"/>
+  <path d="M22 36 L64 16 L106 36 M22 92 L64 112 L106 92" fill="none" stroke="#FDE68A" stroke-width="3.5" stroke-linecap="round" stroke-opacity="0.45"/>
+  <text x="64" y="74" text-anchor="middle" font-family="Poppins, Arial, sans-serif" font-weight="700" font-size="30" fill="#FFFFFF" letter-spacing="0.5">SPT</text>
+  <circle cx="102" cy="26" r="5" fill="#FDE68A" fill-opacity="0.85"/>
+</svg>

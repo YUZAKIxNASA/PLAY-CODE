@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128">
+  <defs>
+    <linearGradient id="bg-1113" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#7E22CE"/>
+      <stop offset="100%" stop-color="#3B0764"/>
+    </linearGradient>
+  </defs>
+  <rect width="128" height="128" rx="28" fill="url(#bg-1113)"/>
+  <rect x="4" y="4" width="120" height="120" rx="24" fill="none" stroke="#D8B4FE" stroke-opacity="0.28" stroke-width="2"/>
+  <circle cx="64" cy="64" r="44" fill="none" stroke="#D8B4FE" stroke-width="3" stroke-opacity="0.35"/>
+  <text x="64" y="74" text-anchor="middle" font-family="Poppins, Arial, sans-serif" font-weight="700" font-size="23" fill="#FFFFFF" letter-spacing="0.5">TACL</text>
+  <circle cx="102" cy="26" r="5" fill="#D8B4FE" fill-opacity="0.85"/>
+</svg>
